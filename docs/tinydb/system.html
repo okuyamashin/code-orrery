@@ -21,8 +21,6 @@
     padding: 4px 8px; font: 12px Menlo, monospace; cursor: pointer; text-decoration: none; }
   button.on, #nav button.cur { border-color: #6fe8ff; color: #e6fbff; }
   #nav button small { color: var(--muted); margin-left: 6px; }
-  #legend { left: 20px; bottom: 14px; font-size: 11.5px; color: var(--muted); line-height: 1.7; max-width: 760px; }
-  .sw { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin: 0 4px 2px 8px; border-radius: 2px; }
   #info { right: 20px; bottom: 16px; width: 300px; max-height: 46vh; overflow: auto; font: 12px Menlo, monospace;
     color: var(--fg); background: rgba(3, 16, 34, .85); border: 1px solid var(--line); border-radius: 6px;
     padding: 10px 12px; display: none; }
@@ -32,10 +30,10 @@
   .core-lbl.small .n { font-size: 15px; }
   .core-lbl.small .s { display: none; }
   .mod-lbl { font: 600 14px Menlo, monospace; letter-spacing: 4px; color: #3d6fa8; text-shadow: 0 0 8px #000; }
-  @media (max-width: 700px) { #legend, #nav { display: none; } }
-  /* ツアー */
-  #play { inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
-  #play button { font: 700 18px Menlo, monospace; letter-spacing: 3px; padding: 16px 34px; border-radius: 40px;
+  @media (max-width: 700px) { #nav { display: none; } }
+  /* ツアー: 再生ボタンは見る邪魔にならないよう左下に置く */
+  #play { left: 20px; bottom: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  #play button { font: 700 15px Menlo, monospace; letter-spacing: 3px; padding: 11px 26px; border-radius: 40px;
     border: 1px solid #6fe8ff; color: #e6fbff; background: rgba(4, 30, 60, .78);
     box-shadow: 0 0 24px rgba(80, 200, 255, .45), inset 0 0 18px rgba(80, 200, 255, .25); }
   #play button:hover { background: rgba(10, 60, 110, .85); }
@@ -51,10 +49,9 @@
   #caption .bar { display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-top: 8px; }
   #caption .step { font: 11px Menlo, monospace; color: var(--muted); }
   @keyframes blink { 50% { opacity: 0; } }
-  body.touring #legend { opacity: .35; }
   body.touring #info { display: none !important; }
   /* 動画書き出し用の描画モード */
-  body.render #nav, body.render #controls, body.render #play, body.render #legend, body.render #caption .bar { display: none !important; }
+  body.render #nav, body.render #controls, body.render #play, body.render #caption .bar { display: none !important; }
   body.render #caption { bottom: 6vh; }
 </style>
 <style id="labelcss"></style>
@@ -69,7 +66,6 @@
   <button id="btnRotate" class="on">rotate</button>
   <a class="btn" href="class_sphere.html">single</a>
 </div>
-<div id="legend" class="hud"></div>
 <div id="info" class="hud"></div>
 <div id="play" class="hud">
   <button id="btnPlay">▶ PLAY</button>
@@ -375,9 +371,6 @@ for (const n of order) {
 const totalLines = names.reduce((s, n) => s + DATA.classes[n].lines, 0);
 document.getElementById("subtitle").textContent =
   `${names.length} classes · ${Object.keys(modules).length} modules · ${totalLines} lines in methods · ${DATA.links.length} cross-class links`;
-document.getElementById("legend").innerHTML =
-  Object.values(LINK).map(s => `<span class="sw" style="background:#${s.color.toString(16).padStart(6, "0")}${s.dashed ? ";opacity:.6" : ""}"></span>${s.label}`).join("") +
-  `<br>太い管 = 継承（琥珀色の途切れた管 = 型チェック時だけの継承）／ 惑星をクリックか左の一覧で接近、overview で全体へ戻る`;
 
 let focused = null;
 let fly = null; // { from, to, fromT, toT, t0, dur }

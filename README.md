@@ -6,6 +6,8 @@ Every class is a planet. Its methods are gates on the surface, its fields orbit 
 
 The first target is [tinydb](https://github.com/msiemens/tinydb).
 
+**Live demo:** <https://okuyamashin.github.io/code-orrery/> (press **PLAY** for the narrated tour)
+
 ## Quick start
 
 ```bash
@@ -50,6 +52,16 @@ python3 -m venv .venv
 
 This writes a 1920×1080, 30 fps mp4 plus YouTube chapters, subtitles and a thumbnail to `diagrams/video/`. Videos are not stored in this repository.
 
+## GitHub Pages
+
+The live demo is served from `docs/`. `docs/index.html` is the landing page; `docs/tinydb/` is a copy of the viewer in `diagrams/3d/` (the video renderer keeps using `diagrams/3d/`). After regenerating the data, refresh the copy:
+
+```bash
+python3 analysis/publish_pages.py
+```
+
+To publish, set the repository's Pages source to the `main` branch and the `/docs` folder.
+
 ## Layout
 
 | Path | Contents |
@@ -58,6 +70,7 @@ This writes a 1920×1080, 30 fps mp4 plus YouTube chapters, subtitles and a thum
 | `diagrams/*.svg` | 2D glyph and class diagrams |
 | `diagrams/3d/` | Three.js viewer: `system.html` (whole system with tour), `class_sphere.html` (one class) |
 | `diagrams/video/` | Subtitles, chapters and timeline from the last render |
+| `docs/` | GitHub Pages site: landing page and a copy of the viewer for tinydb |
 
 ## Visual vocabulary
 

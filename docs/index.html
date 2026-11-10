@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>code-orrery</title>
+<meta name="description" content="A Python codebase shown as a planetary system in a 3D net space.">
+<meta property="og:title" content="code-orrery">
+<meta property="og:description" content="A Python codebase shown as a planetary system in a 3D net space. First target: tinydb.">
+<meta property="og:image" content="tinydb/preview.jpg">
+<style>
+  :root { --bg: #02060f; --fg: #d6f1ff; --muted: #6f93bd; --line: #1b4f8a; --accent: #6fe8ff; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--fg);
+    font-family: -apple-system, "Hiragino Sans", "Segoe UI", sans-serif; }
+  body { min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 20% 10%, rgba(40, 120, 220, .16), transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(120, 60, 200, .10), transparent 50%),
+      var(--bg); }
+  main { max-width: 980px; margin: 0 auto; padding: 56px 16px 40px; }
+  h1 { margin: 0; font: 700 34px/1.1 Menlo, Consolas, monospace; letter-spacing: 4px; color: #eefbff;
+    text-shadow: 0 0 18px rgba(111, 232, 255, .45); }
+  .tag { margin: 10px 0 0; color: var(--muted); font-size: 15px; line-height: 1.6; }
+  .tag span { display: block; font-size: 13px; }
+  .card { margin-top: 36px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+    background: rgba(4, 18, 38, .7); box-shadow: 0 0 40px rgba(40, 140, 255, .12); }
+  .card a.shot { display: block; position: relative; }
+  .card img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+  .card a.shot::after { content: "▶ PLAY"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    font: 700 16px Menlo, monospace; letter-spacing: 3px; padding: 12px 28px; border-radius: 40px;
+    border: 1px solid var(--accent); color: #e6fbff; background: rgba(4, 30, 60, .72);
+    box-shadow: 0 0 24px rgba(80, 200, 255, .45); opacity: .92; }
+  .body { padding: 18px 20px 20px; }
+  .body h2 { margin: 0; font: 700 22px Menlo, monospace; color: #f0fbff; }
+  .body .meta { margin-top: 4px; font: 12px Menlo, monospace; color: var(--muted); }
+  .body p { margin: 12px 0 0; line-height: 1.65; font-size: 14.5px; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+  .links a { text-decoration: none; color: #e6fbff; border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 12px; font: 13px Menlo, monospace; background: rgba(6, 26, 51, .85); }
+  .links a.primary { border-color: var(--accent); box-shadow: 0 0 14px rgba(111, 232, 255, .25); }
+  .links a:hover { background: rgba(10, 50, 95, .9); }
+  .legend { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 22px;
+    font-size: 13px; color: #b7d8f2; }
+  .legend div b { color: #eefbff; font-weight: 600; }
+  .sw { display: inline-block; width: 18px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+  footer { margin-top: 36px; font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+  footer a { color: #8fc4ee; }
+  @media (max-width: 520px) { h1 { font-size: 26px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>code-orrery</h1>
+  <p class="tag">A Python codebase shown as a planetary system in a 3D net space.
+    <span>Python のコードを、3D のネット空間に浮かぶ惑星系として見せます。</span></p>
+
+  <section class="card">
+    <a class="shot" href="tinydb/system.html" aria-label="Open the tinydb planetary system">
+      <img src="tinydb/preview.jpg" alt="tinydb shown as a planetary system: glowing planets connected by lines of light" width="1920" height="1080">
+    </a>
+    <div class="body">
+      <h2>tinydb</h2>
+      <div class="meta">14 classes · 7 modules · 51 cross-class links · tinydb 4.9.0</div>
+      <p>This is <a href="https://github.com/msiemens/tinydb" style="color:#8fc4ee">tinydb</a>, a tiny document-oriented database written in Python.
+        Open the planetary system and press <b>PLAY</b> for a narrated tour (sound on), or click any planet to fly to it.</p>
+      <p style="color:#9dbcd8;font-size:13.5px">これは Python の小さな文書指向データベース tinydb です。惑星系を開いて PLAY を押すと、読み上げ付きのツアーが始まります（音が出ます）。惑星をクリックすると、その惑星へ飛べます。</p>
+      <div class="links">
+        <a class="primary" href="tinydb/system.html">Planetary system · narrated tour</a>
+        <a href="tinydb/class_sphere.html">Single class view</a>
+        <a href="tinydb/class_sphere.html?c=Query">Query</a>
+        <a href="tinydb/class_sphere.html?c=Storage">Storage</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="legend" aria-label="How to read it">
+    <div><b>Planet</b> = class. Size grows with lines of code.</div>
+    <div><b>Gate</b> = method. Bright ring with an opening = public, dark ring = private.</div>
+    <div><b>Shapes around the core</b> = fields, properties, class variables. Amber = changes after construction.</div>
+    <div><b>Arcs over a planet</b> = calls inside the class.</div>
+    <div><span class="sw" style="background:#b8f6ff"></span>method call
+      <span class="sw" style="background:#5cf08a;margin-left:10px"></span>creation
+      <span class="sw" style="background:#ff7ad9;margin-left:10px"></span>implicit call</div>
+    <div><b>Thick conduit</b> = inheritance.</div>
+  </section>
+
+  <footer>
+    The structure comes from static analysis, so some dynamic calls are inferred or missing. Descriptions are read from tinydb's own docstrings.<br>
+    Needs a WebGL-capable browser. Three.js is loaded from a CDN.<br>
+    Source: <a href="https://github.com/okuyamashin/code-orrery">github.com/okuyamashin/code-orrery</a> (MIT) ·
+    tinydb by Markus Siemens (<a href="https://github.com/msiemens/tinydb">MIT</a>)
+  </footer>
+</main>
+</body>
+</html>

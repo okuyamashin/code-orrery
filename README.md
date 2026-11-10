@@ -7,6 +7,7 @@ Every class is a planet. Its methods are gates on the surface, its fields orbit 
 The first target is [tinydb](https://github.com/msiemens/tinydb).
 
 **Live demo:** <https://okuyamashin.github.io/code-orrery/> (press **PLAY** for the narrated tour)
+
 **Video:** [A 3D tour of tinydb on YouTube](https://youtu.be/5UfSXObGKEc) (3:28, English narration, English and Japanese subtitles)
 
 ## Quick start

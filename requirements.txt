@@ -1,0 +1,3 @@
+# Only needed for analysis/render_video.py (the analysis and 3D viewer use the standard library only)
+playwright
+imageio-ffmpeg

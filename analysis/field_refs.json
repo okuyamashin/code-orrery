@@ -1,0 +1,1302 @@
+{
+  "database.TinyDB": {
+    "__init__": {
+      "_opened": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_tables": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "default_storage_class": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__repr__": {
+      "__len__": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tables": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "table": {
+      "_tables": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "storage": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "table_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "tables": {
+      "storage": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "drop_tables": {
+      "_tables": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "storage": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "drop_table": {
+      "_tables": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "storage": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "storage": {
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "close": {
+      "_opened": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "storage": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__enter__": {},
+    "__exit__": {
+      "_opened": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "close": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__getattr__": {
+      "default_table_name": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__len__": {
+      "default_table_name": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__iter__": {
+      "default_table_name": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "middlewares.Middleware": {
+    "__init__": {
+      "_storage_cls": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "storage": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__call__": {
+      "_storage_cls": {
+        "kind": "field",
+        "ops": [
+          "call"
+        ]
+      },
+      "storage": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__getattr__": {
+      "__dict__": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "middlewares.CachingMiddleware": {
+    "__init__": {
+      "_cache_modified_count": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_closed": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "read": {
+      "_closed": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "storage": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "write": {
+      "WRITE_CACHE_SIZE": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "_cache_modified_count": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "_closed": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flush": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "flush": {
+      "_cache_modified_count": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "_closed": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "storage": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "close": {
+      "_closed": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flush": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "storage": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "mypy_plugin.TinyDBPlugin": {
+    "__init__": {
+      "named_placeholders": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "get_dynamic_class_hook": {
+      "lookup_fully_qualified": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "queries.QueryLike": {
+    "__call__": {},
+    "__hash__": {}
+  },
+  "queries.QueryInstance": {
+    "__init__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_test": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "is_cacheable": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__call__": {
+      "_test": {
+        "kind": "field",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__hash__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__repr__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__eq__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__and__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "is_cacheable": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__or__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "is_cacheable": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__invert__": {
+      "_hash": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "is_cacheable": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "queries.Query": {
+    "__init__": {
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__repr__": {},
+    "__hash__": {},
+    "__getattr__": {
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "is_cacheable": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__getitem__": {
+      "__getattr__": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "_generate_test": {
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "is_cacheable": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__eq__": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__ne__": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__lt__": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__le__": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__gt__": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__ge__": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "exists": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "matches": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "search": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "test": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "any": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "all": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "one_of": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fragment": {
+      "_generate_test": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "noop": {},
+    "map": {
+      "_path": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "storages.Storage": {
+    "read": {},
+    "write": {},
+    "close": {}
+  },
+  "storages.JSONStorage": {
+    "__init__": {
+      "_handle": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_mode": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "kwargs": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "close": {
+      "_handle": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "read": {
+      "_handle": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "write": {
+      "_handle": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "_mode": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "kwargs": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "storages.MemoryStorage": {
+    "__init__": {
+      "memory": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "read": {
+      "memory": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "write": {
+      "memory": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "table.Document": {
+    "__init__": {
+      "doc_id": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "table.Table": {
+    "__init__": {
+      "_name": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_next_id": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_query_cache": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_read_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "query_cache_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__repr__": {
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "name": {
+      "_name": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "storage": {
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "insert": {
+      "_get_next_id": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_next_id": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_class": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "insert_multiple": {
+      "_get_next_id": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "_next_id": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_class": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "document_id_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "all": {},
+    "search": {
+      "_query_cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "_read_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_id_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "get": {
+      "_read_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_id_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "contains": {
+      "get": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "update": {
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "update_multiple": {
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "upsert": {
+      "document_class": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "insert": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "update": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "remove": {
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "truncate": {
+      "_next_id": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "_update_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "count": {
+      "search": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "clear_cache": {
+      "_query_cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__len__": {
+      "_read_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__iter__": {
+      "_read_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_id_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "_get_next_id": {
+      "_next_id": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "_read_table": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_id_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "_read_table": {
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "_update_table": {
+      "_storage": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "clear_cache": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "document_id_class": {
+        "kind": "classvar",
+        "ops": [
+          "call"
+        ]
+      },
+      "name": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "utils.LRUCache": {
+    "__init__": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "capacity": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "lru": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "length": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "clear": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__len__": {
+      "length": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__contains__": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__setitem__": {
+      "set": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "__delitem__": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__getitem__": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__iter__": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "get": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "set": {
+      "cache": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "capacity": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "length": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "utils.FrozenDict": {
+    "__hash__": {
+      "items": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "_immutable": {},
+    "update": {},
+    "pop": {}
+  }
+}

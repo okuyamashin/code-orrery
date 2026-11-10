@@ -1,0 +1,15 @@
+# Target project (clone it yourself, see README)
+/tinydb/
+
+# Rendered videos and large binaries
+*.mp4
+*.mov
+*.webm
+diagrams/video/*.png
+
+# Local environment
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/

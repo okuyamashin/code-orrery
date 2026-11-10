@@ -1,0 +1,248 @@
+{
+ "timeline": [
+  {
+   "index": 0,
+   "start": 0.0,
+   "speechStart": 1.0,
+   "speechDur": 19.458367346938775,
+   "end": 21.358367346938774
+  },
+  {
+   "index": 1,
+   "start": 21.358367346938774,
+   "speechStart": 23.058367346938773,
+   "speechDur": 13.258639455782314,
+   "end": 37.21700680272109
+  },
+  {
+   "index": 2,
+   "start": 37.21700680272109,
+   "speechStart": 38.91700680272109,
+   "speechDur": 12.956780045351474,
+   "end": 52.77378684807256
+  },
+  {
+   "index": 3,
+   "start": 52.77378684807256,
+   "speechStart": 54.473786848072564,
+   "speechDur": 6.849931972789116,
+   "end": 63.27378684807256
+  },
+  {
+   "index": 4,
+   "start": 63.27378684807256,
+   "speechStart": 64.97378684807256,
+   "speechDur": 10.031065759637189,
+   "end": 75.90485260770976
+  },
+  {
+   "index": 5,
+   "start": 75.90485260770976,
+   "speechStart": 77.60485260770976,
+   "speechDur": 9.84530612244898,
+   "end": 88.35015873015874
+  },
+  {
+   "index": 6,
+   "start": 88.35015873015874,
+   "speechStart": 90.05015873015874,
+   "speechDur": 6.919591836734694,
+   "end": 98.85015873015874
+  },
+  {
+   "index": 7,
+   "start": 98.85015873015874,
+   "speechStart": 100.55015873015874,
+   "speechDur": 7.755510204081633,
+   "end": 109.35015873015874
+  },
+  {
+   "index": 8,
+   "start": 109.35015873015874,
+   "speechStart": 111.05015873015874,
+   "speechDur": 11.006303854875284,
+   "end": 122.95646258503402
+  },
+  {
+   "index": 9,
+   "start": 122.95646258503402,
+   "speechStart": 124.65646258503402,
+   "speechDur": 10.263265306122449,
+   "end": 135.81972789115648
+  },
+  {
+   "index": 10,
+   "start": 135.81972789115648,
+   "speechStart": 137.51972789115646,
+   "speechDur": 10.007845804988662,
+   "end": 148.42757369614515
+  },
+  {
+   "index": 11,
+   "start": 148.42757369614515,
+   "speechStart": 150.12757369614513,
+   "speechDur": 7.244671201814059,
+   "end": 158.92757369614515
+  },
+  {
+   "index": 12,
+   "start": 158.92757369614515,
+   "speechStart": 160.62757369614513,
+   "speechDur": 9.241587301587302,
+   "end": 170.76916099773246
+  },
+  {
+   "index": 13,
+   "start": 170.76916099773246,
+   "speechStart": 172.46916099773244,
+   "speechDur": 7.894829931972789,
+   "end": 181.26916099773246
+  },
+  {
+   "index": 14,
+   "start": 181.26916099773246,
+   "speechStart": 182.96916099773244,
+   "speechDur": 10.959863945578231,
+   "end": 194.82902494331069
+  },
+  {
+   "index": 15,
+   "start": 194.82902494331069,
+   "speechStart": 196.52902494331067,
+   "speechDur": 4.551156462585034,
+   "end": 207.82902494331069
+  }
+ ],
+ "scenes": [
+  {
+   "title": "tinydb",
+   "sub": "14 classes · 7 modules",
+   "src": "docstring of tinydb + analysis",
+   "text": "TinyDB is a tiny, document oriented database optimized for your happiness. It has 14 classes in 7 modules, with 1557 lines of methods. The largest planet is Table, followed by Query. The 51 lines of light between planets are calls and references that cross class boundaries.",
+   "kind": "overview",
+   "name": null
+  },
+  {
+   "title": "TinyDB",
+   "sub": "tinydb.database",
+   "src": "docstring of tinydb.database.TinyDB + analysis",
+   "text": "TinyDB. The main class of TinyDB. 172 lines, 12 gates, 12 of them public. For the type checker only, it extends Table. It uses Table, Storage and JSONStorage.",
+   "kind": "planet",
+   "name": "TinyDB"
+  },
+  {
+   "title": "Table",
+   "sub": "tinydb.table",
+   "src": "docstring of tinydb.table.Table + analysis",
+   "text": "Table. Represents a single TinyDB table. 700 lines, 20 gates, 17 of them public. It uses LRUCache, Document, QueryLike and 1 more. It is used by TinyDB.",
+   "kind": "planet",
+   "name": "Table"
+  },
+  {
+   "title": "Document",
+   "sub": "tinydb.table",
+   "src": "docstring of tinydb.table.Document + analysis",
+   "text": "Document. A document stored in the database. 3 lines, 1 gate, 1 of them public. It is used by Table.",
+   "kind": "planet",
+   "name": "Document"
+  },
+  {
+   "title": "LRUCache",
+   "sub": "tinydb.utils",
+   "src": "docstring of tinydb.utils.LRUCache + analysis",
+   "text": "LRUCache. A least-recently used (LRU) cache with a fixed cache size. 48 lines, 10 gates, 10 of them public. It is used by Table.",
+   "kind": "planet",
+   "name": "LRUCache"
+  },
+  {
+   "title": "Query",
+   "sub": "tinydb.queries",
+   "src": "docstring of tinydb.queries.Query + analysis",
+   "text": "Query. TinyDB Queries. 335 lines, 22 gates, 21 of them public. It extends QueryInstance. It uses QueryInstance.",
+   "kind": "planet",
+   "name": "Query"
+  },
+  {
+   "title": "QueryInstance",
+   "sub": "tinydb.queries",
+   "src": "docstring of tinydb.queries.QueryInstance + analysis",
+   "text": "QueryInstance. A query instance. 53 lines, 9 gates, 7 of them public. It is used by Query.",
+   "kind": "planet",
+   "name": "QueryInstance"
+  },
+  {
+   "title": "QueryLike",
+   "sub": "tinydb.queries",
+   "src": "docstring of tinydb.queries.QueryLike + analysis",
+   "text": "QueryLike. A typing protocol that acts like a query. 2 lines, 2 gates, 0 of them public. It is used by Table.",
+   "kind": "planet",
+   "name": "QueryLike"
+  },
+  {
+   "title": "Storage",
+   "sub": "tinydb.storages",
+   "src": "docstring of tinydb.storages.Storage + analysis",
+   "text": "Storage. The abstract base class for all Storages. 26 lines, 3 gates, 3 of them public. It is used by TinyDB, CachingMiddleware, Table and 1 more.",
+   "kind": "planet",
+   "name": "Storage"
+  },
+  {
+   "title": "JSONStorage",
+   "sub": "tinydb.storages",
+   "src": "docstring of tinydb.storages.JSONStorage + analysis",
+   "text": "JSONStorage. Store the data in a JSON file. 75 lines, 4 gates, 4 of them public. It extends Storage. It is used by TinyDB.",
+   "kind": "planet",
+   "name": "JSONStorage"
+  },
+  {
+   "title": "MemoryStorage",
+   "sub": "tinydb.storages",
+   "src": "docstring of tinydb.storages.MemoryStorage + analysis",
+   "text": "MemoryStorage. Store the data as JSON in memory. 11 lines, 3 gates, 3 of them public. It extends Storage. No lines connect it to other classes.",
+   "kind": "planet",
+   "name": "MemoryStorage"
+  },
+  {
+   "title": "Middleware",
+   "sub": "tinydb.middlewares",
+   "src": "docstring of tinydb.middlewares.Middleware + analysis",
+   "text": "Middleware. The base class for all Middlewares. 51 lines, 3 gates, 2 of them public. It uses Storage.",
+   "kind": "planet",
+   "name": "Middleware"
+  },
+  {
+   "title": "CachingMiddleware",
+   "sub": "tinydb.middlewares",
+   "src": "docstring of tinydb.middlewares.CachingMiddleware + analysis",
+   "text": "CachingMiddleware. Add some caching to TinyDB. 51 lines, 5 gates, 3 of them public. It extends Middleware. It uses Storage.",
+   "kind": "planet",
+   "name": "CachingMiddleware"
+  },
+  {
+   "title": "FrozenDict",
+   "sub": "tinydb.utils",
+   "src": "docstring of tinydb.utils.FrozenDict + analysis",
+   "text": "FrozenDict. An immutable dictionary. 9 lines, 4 gates, 0 of them public. No lines connect it to other classes.",
+   "kind": "planet",
+   "name": "FrozenDict"
+  },
+  {
+   "title": "TinyDBPlugin",
+   "sub": "tinydb.mypy_plugin",
+   "src": "analysis",
+   "text": "TinyDBPlugin. A plugin for the mypy type checker. This class has no docstring. 21 lines, 2 gates, 0 of them public. No lines connect it to other classes.",
+   "kind": "planet",
+   "name": "TinyDBPlugin"
+  },
+  {
+   "title": "tinydb",
+   "sub": "overview",
+   "src": "",
+   "text": "That is the whole of tinydb: fourteen classes, held together by lines of light.",
+   "kind": "overview",
+   "name": null
+  }
+ ],
+ "fps": 30,
+ "total": 207.82902494331069
+}

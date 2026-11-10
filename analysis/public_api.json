@@ -1,0 +1,1535 @@
+{
+  "fixtures": {
+    "db": [
+      "inst",
+      "TinyDB"
+    ],
+    "storage": [
+      "inst",
+      "Middleware"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "database.TinyDB.__init__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__init__",
+      "lines": [
+        87,
+        98
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 34
+    },
+    {
+      "id": "database.TinyDB.__repr__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__repr__",
+      "lines": [
+        100,
+        109
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "database.TinyDB.table",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "table",
+      "lines": [
+        111,
+        133
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 18
+    },
+    {
+      "id": "database.TinyDB.tables",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "tables",
+      "lines": [
+        135,
+        161
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 3
+    },
+    {
+      "id": "database.TinyDB.drop_tables",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "drop_tables",
+      "lines": [
+        163,
+        174
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 17
+    },
+    {
+      "id": "database.TinyDB.drop_table",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "drop_table",
+      "lines": [
+        176,
+        202
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "database.TinyDB.storage",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "storage",
+      "lines": [
+        205,
+        212
+      ],
+      "property": true,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "database.TinyDB.close",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "close",
+      "lines": [
+        214,
+        230
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 10
+    },
+    {
+      "id": "database.TinyDB.__enter__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__enter__",
+      "lines": [
+        232,
+        242
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 12
+    },
+    {
+      "id": "database.TinyDB.__exit__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__exit__",
+      "lines": [
+        244,
+        249
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 12
+    },
+    {
+      "id": "database.TinyDB.__getattr__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__getattr__",
+      "lines": [
+        251,
+        255
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 81
+    },
+    {
+      "id": "database.TinyDB.__len__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__len__",
+      "lines": [
+        260,
+        268
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 16
+    },
+    {
+      "id": "database.TinyDB.__iter__",
+      "module": "database",
+      "class": "TinyDB",
+      "name": "__iter__",
+      "lines": [
+        270,
+        274
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "middlewares.Middleware.__init__",
+      "module": "middlewares",
+      "class": "Middleware",
+      "name": "__init__",
+      "lines": [
+        21,
+        23
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "middlewares.Middleware.__call__",
+      "module": "middlewares",
+      "class": "Middleware",
+      "name": "__call__",
+      "lines": [
+        25,
+        65
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "middlewares.Middleware.__getattr__",
+      "module": "middlewares",
+      "class": "Middleware",
+      "name": "__getattr__",
+      "lines": [
+        67,
+        73
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 5
+    },
+    {
+      "id": "middlewares.CachingMiddleware.__init__",
+      "module": "middlewares",
+      "class": "CachingMiddleware",
+      "name": "__init__",
+      "lines": [
+        88,
+        95
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 6
+    },
+    {
+      "id": "middlewares.CachingMiddleware.read",
+      "module": "middlewares",
+      "class": "CachingMiddleware",
+      "name": "read",
+      "lines": [
+        97,
+        106
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "middlewares.CachingMiddleware.write",
+      "module": "middlewares",
+      "class": "CachingMiddleware",
+      "name": "write",
+      "lines": [
+        108,
+        118
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "middlewares.CachingMiddleware.flush",
+      "module": "middlewares",
+      "class": "CachingMiddleware",
+      "name": "flush",
+      "lines": [
+        120,
+        130
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "middlewares.CachingMiddleware.close",
+      "module": "middlewares",
+      "class": "CachingMiddleware",
+      "name": "close",
+      "lines": [
+        132,
+        142
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "mypy_plugin.TinyDBPlugin.__init__",
+      "module": "mypy_plugin",
+      "class": "TinyDBPlugin",
+      "name": "__init__",
+      "lines": [
+        14,
+        17
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "mypy_plugin.TinyDBPlugin.get_dynamic_class_hook",
+      "module": "mypy_plugin",
+      "class": "TinyDBPlugin",
+      "name": "get_dynamic_class_hook",
+      "lines": [
+        19,
+        35
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.QueryLike.__call__",
+      "module": "queries",
+      "class": "QueryLike",
+      "name": "__call__",
+      "lines": [
+        54,
+        54
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.QueryLike.__hash__",
+      "module": "queries",
+      "class": "QueryLike",
+      "name": "__hash__",
+      "lines": [
+        56,
+        56
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.QueryInstance.__init__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__init__",
+      "lines": [
+        76,
+        85
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.QueryInstance.is_cacheable",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "is_cacheable",
+      "lines": [
+        87,
+        88
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "queries.QueryInstance.__call__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__call__",
+      "lines": [
+        90,
+        97
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 25
+    },
+    {
+      "id": "queries.QueryInstance.__hash__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__hash__",
+      "lines": [
+        99,
+        103
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 17
+    },
+    {
+      "id": "queries.QueryInstance.__repr__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__repr__",
+      "lines": [
+        105,
+        106
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "queries.QueryInstance.__eq__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__eq__",
+      "lines": [
+        108,
+        112
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.QueryInstance.__and__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__and__",
+      "lines": [
+        116,
+        124
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 3
+    },
+    {
+      "id": "queries.QueryInstance.__or__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__or__",
+      "lines": [
+        126,
+        134
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "queries.QueryInstance.__invert__",
+      "module": "queries",
+      "class": "QueryInstance",
+      "name": "__invert__",
+      "lines": [
+        136,
+        138
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.__init__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__init__",
+      "lines": [
+        174,
+        185
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 34
+    },
+    {
+      "id": "queries.Query.__repr__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__repr__",
+      "lines": [
+        187,
+        188
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.__hash__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__hash__",
+      "lines": [
+        190,
+        191
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "queries.Query.__getattr__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__getattr__",
+      "lines": [
+        193,
+        205
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 27
+    },
+    {
+      "id": "queries.Query.__getitem__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__getitem__",
+      "lines": [
+        207,
+        216
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 4
+    },
+    {
+      "id": "queries.Query._generate_test",
+      "module": "queries",
+      "class": "Query",
+      "name": "_generate_test",
+      "lines": [
+        218,
+        252
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.Query.__eq__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__eq__",
+      "lines": [
+        254,
+        265
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 60
+    },
+    {
+      "id": "queries.Query.__ne__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__ne__",
+      "lines": [
+        267,
+        278
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.__lt__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__lt__",
+      "lines": [
+        280,
+        291
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.__le__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__le__",
+      "lines": [
+        293,
+        304
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.__gt__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__gt__",
+      "lines": [
+        306,
+        317
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "queries.Query.__ge__",
+      "module": "queries",
+      "class": "Query",
+      "name": "__ge__",
+      "lines": [
+        319,
+        330
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.exists",
+      "module": "queries",
+      "class": "Query",
+      "name": "exists",
+      "lines": [
+        332,
+        341
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 7
+    },
+    {
+      "id": "queries.Query.matches",
+      "module": "queries",
+      "class": "Query",
+      "name": "matches",
+      "lines": [
+        343,
+        360
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 5
+    },
+    {
+      "id": "queries.Query.search",
+      "module": "queries",
+      "class": "Query",
+      "name": "search",
+      "lines": [
+        362,
+        381
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 3
+    },
+    {
+      "id": "queries.Query.test",
+      "module": "queries",
+      "class": "Query",
+      "name": "test",
+      "lines": [
+        383,
+        406
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 4
+    },
+    {
+      "id": "queries.Query.any",
+      "module": "queries",
+      "class": "Query",
+      "name": "any",
+      "lines": [
+        408,
+        441
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.all",
+      "module": "queries",
+      "class": "Query",
+      "name": "all",
+      "lines": [
+        443,
+        474
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.one_of",
+      "module": "queries",
+      "class": "Query",
+      "name": "one_of",
+      "lines": [
+        476,
+        487
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.fragment",
+      "module": "queries",
+      "class": "Query",
+      "name": "fragment",
+      "lines": [
+        489,
+        501
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "queries.Query.noop",
+      "module": "queries",
+      "class": "Query",
+      "name": "noop",
+      "lines": [
+        503,
+        513
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.Query.map",
+      "module": "queries",
+      "class": "Query",
+      "name": "map",
+      "lines": [
+        515,
+        529
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 3
+    },
+    {
+      "id": "storages.Storage.read",
+      "module": "storages",
+      "class": "Storage",
+      "name": "read",
+      "lines": [
+        48,
+        57
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "storages.Storage.write",
+      "module": "storages",
+      "class": "Storage",
+      "name": "write",
+      "lines": [
+        60,
+        69
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 5
+    },
+    {
+      "id": "storages.Storage.close",
+      "module": "storages",
+      "class": "Storage",
+      "name": "close",
+      "lines": [
+        71,
+        76
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "storages.JSONStorage.__init__",
+      "module": "storages",
+      "class": "JSONStorage",
+      "name": "__init__",
+      "lines": [
+        84,
+        120
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 4
+    },
+    {
+      "id": "storages.JSONStorage.close",
+      "module": "storages",
+      "class": "JSONStorage",
+      "name": "close",
+      "lines": [
+        122,
+        123
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "storages.JSONStorage.read",
+      "module": "storages",
+      "class": "JSONStorage",
+      "name": "read",
+      "lines": [
+        125,
+        140
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "storages.JSONStorage.write",
+      "module": "storages",
+      "class": "JSONStorage",
+      "name": "write",
+      "lines": [
+        142,
+        161
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "storages.MemoryStorage.__init__",
+      "module": "storages",
+      "class": "MemoryStorage",
+      "name": "__init__",
+      "lines": [
+        169,
+        175
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "storages.MemoryStorage.read",
+      "module": "storages",
+      "class": "MemoryStorage",
+      "name": "read",
+      "lines": [
+        177,
+        178
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "storages.MemoryStorage.write",
+      "module": "storages",
+      "class": "MemoryStorage",
+      "name": "write",
+      "lines": [
+        180,
+        181
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "table.Document.__init__",
+      "module": "table",
+      "class": "Document",
+      "name": "__init__",
+      "lines": [
+        30,
+        32
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 5
+    },
+    {
+      "id": "table.Table.__init__",
+      "module": "table",
+      "class": "Table",
+      "name": "__init__",
+      "lines": [
+        94,
+        114
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "table.Table.__repr__",
+      "module": "table",
+      "class": "Table",
+      "name": "__repr__",
+      "lines": [
+        116,
+        123
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "table.Table.name",
+      "module": "table",
+      "class": "Table",
+      "name": "name",
+      "lines": [
+        126,
+        130
+      ],
+      "property": true,
+      "visibility": "public",
+      "test_callers": 3
+    },
+    {
+      "id": "table.Table.storage",
+      "module": "table",
+      "class": "Table",
+      "name": "storage",
+      "lines": [
+        133,
+        137
+      ],
+      "property": true,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "table.Table.insert",
+      "module": "table",
+      "class": "Table",
+      "name": "insert",
+      "lines": [
+        139,
+        177
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 40
+    },
+    {
+      "id": "table.Table.insert_multiple",
+      "module": "table",
+      "class": "Table",
+      "name": "insert_multiple",
+      "lines": [
+        179,
+        233
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 15
+    },
+    {
+      "id": "table.Table.all",
+      "module": "table",
+      "class": "Table",
+      "name": "all",
+      "lines": [
+        235,
+        247
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 17
+    },
+    {
+      "id": "table.Table.search",
+      "module": "table",
+      "class": "Table",
+      "name": "search",
+      "lines": [
+        249,
+        297
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 10
+    },
+    {
+      "id": "table.Table.get",
+      "module": "table",
+      "class": "Table",
+      "name": "get",
+      "lines": [
+        337,
+        401
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 24
+    },
+    {
+      "id": "table.Table.contains",
+      "module": "table",
+      "class": "Table",
+      "name": "contains",
+      "lines": [
+        403,
+        425
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 6
+    },
+    {
+      "id": "table.Table.update",
+      "module": "table",
+      "class": "Table",
+      "name": "update",
+      "lines": [
+        427,
+        529
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 19
+    },
+    {
+      "id": "table.Table.update_multiple",
+      "module": "table",
+      "class": "Table",
+      "name": "update_multiple",
+      "lines": [
+        531,
+        581
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "table.Table.upsert",
+      "module": "table",
+      "class": "Table",
+      "name": "upsert",
+      "lines": [
+        583,
+        623
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "table.Table.remove",
+      "module": "table",
+      "class": "Table",
+      "name": "remove",
+      "lines": [
+        625,
+        696
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 14
+    },
+    {
+      "id": "table.Table.truncate",
+      "module": "table",
+      "class": "Table",
+      "name": "truncate",
+      "lines": [
+        698,
+        707
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "table.Table.count",
+      "module": "table",
+      "class": "Table",
+      "name": "count",
+      "lines": [
+        709,
+        716
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 21
+    },
+    {
+      "id": "table.Table.clear_cache",
+      "module": "table",
+      "class": "Table",
+      "name": "clear_cache",
+      "lines": [
+        718,
+        723
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "table.Table.__len__",
+      "module": "table",
+      "class": "Table",
+      "name": "__len__",
+      "lines": [
+        725,
+        730
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "table.Table.__iter__",
+      "module": "table",
+      "class": "Table",
+      "name": "__iter__",
+      "lines": [
+        732,
+        742
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "table.Table._get_next_id",
+      "module": "table",
+      "class": "Table",
+      "name": "_get_next_id",
+      "lines": [
+        744,
+        777
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 3
+    },
+    {
+      "id": "table.Table._read_table",
+      "module": "table",
+      "class": "Table",
+      "name": "_read_table",
+      "lines": [
+        779,
+        802
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "table.Table._update_table",
+      "module": "table",
+      "class": "Table",
+      "name": "_update_table",
+      "lines": [
+        804,
+        854
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "utils.LRUCache.__init__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__init__",
+      "lines": [
+        57,
+        59
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 11
+    },
+    {
+      "id": "utils.LRUCache.lru",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "lru",
+      "lines": [
+        62,
+        63
+      ],
+      "property": true,
+      "visibility": "public",
+      "test_callers": 10
+    },
+    {
+      "id": "utils.LRUCache.length",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "length",
+      "lines": [
+        66,
+        67
+      ],
+      "property": true,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "utils.LRUCache.clear",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "clear",
+      "lines": [
+        69,
+        70
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "utils.LRUCache.__len__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__len__",
+      "lines": [
+        72,
+        73
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 6
+    },
+    {
+      "id": "utils.LRUCache.__contains__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__contains__",
+      "lines": [
+        75,
+        76
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 4
+    },
+    {
+      "id": "utils.LRUCache.__setitem__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__setitem__",
+      "lines": [
+        78,
+        79
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 10
+    },
+    {
+      "id": "utils.LRUCache.__delitem__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__delitem__",
+      "lines": [
+        81,
+        82
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "utils.LRUCache.__getitem__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__getitem__",
+      "lines": [
+        84,
+        91
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 4
+    },
+    {
+      "id": "utils.LRUCache.__iter__",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "__iter__",
+      "lines": [
+        93,
+        94
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "utils.LRUCache.get",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "get",
+      "lines": [
+        96,
+        104
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "utils.LRUCache.set",
+      "module": "utils",
+      "class": "LRUCache",
+      "name": "set",
+      "lines": [
+        106,
+        117
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "utils.FrozenDict.__hash__",
+      "module": "utils",
+      "class": "FrozenDict",
+      "name": "__hash__",
+      "lines": [
+        129,
+        131
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "utils.FrozenDict._immutable",
+      "module": "utils",
+      "class": "FrozenDict",
+      "name": "_immutable",
+      "lines": [
+        133,
+        134
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "utils.FrozenDict.update",
+      "module": "utils",
+      "class": "FrozenDict",
+      "name": "update",
+      "lines": [
+        143,
+        144
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "utils.FrozenDict.pop",
+      "module": "utils",
+      "class": "FrozenDict",
+      "name": "pop",
+      "lines": [
+        146,
+        147
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "mypy_plugin.plugin",
+      "module": "mypy_plugin",
+      "class": null,
+      "name": "plugin",
+      "lines": [
+        38,
+        39
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "operations.delete",
+      "module": "operations",
+      "class": null,
+      "name": "delete",
+      "lines": [
+        16,
+        23
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "operations.add",
+      "module": "operations",
+      "class": null,
+      "name": "add",
+      "lines": [
+        26,
+        35
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 2
+    },
+    {
+      "id": "operations.subtract",
+      "module": "operations",
+      "class": null,
+      "name": "subtract",
+      "lines": [
+        38,
+        45
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "operations.set",
+      "module": "operations",
+      "class": null,
+      "name": "set",
+      "lines": [
+        48,
+        55
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "operations.increment",
+      "module": "operations",
+      "class": null,
+      "name": "increment",
+      "lines": [
+        58,
+        65
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "operations.decrement",
+      "module": "operations",
+      "class": null,
+      "name": "decrement",
+      "lines": [
+        68,
+        75
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "queries.is_sequence",
+      "module": "queries",
+      "class": null,
+      "name": "is_sequence",
+      "lines": [
+        28,
+        32
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "queries.where",
+      "module": "queries",
+      "class": null,
+      "name": "where",
+      "lines": [
+        531,
+        535
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 50
+    },
+    {
+      "id": "storages.touch",
+      "module": "storages",
+      "class": null,
+      "name": "touch",
+      "lines": [
+        16,
+        33
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    },
+    {
+      "id": "utils.with_typehint",
+      "module": "utils",
+      "class": null,
+      "name": "with_typehint",
+      "lines": [
+        21,
+        40
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "utils.freeze",
+      "module": "utils",
+      "class": null,
+      "name": "freeze",
+      "lines": [
+        150,
+        169
+      ],
+      "property": false,
+      "visibility": "public",
+      "test_callers": 1
+    }
+  ]
+}

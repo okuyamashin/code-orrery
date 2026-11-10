@@ -1,0 +1,372 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 1442" width="1300" height="1442">
+<style>
+  .bg { fill: #030814; }
+  .grid { stroke: #0d2a52; stroke-width: 0.6; fill: none; }
+  .star { fill: #9fd8ff; }
+  .ring { fill: none; stroke: #1b5fa8; stroke-width: 1; }
+  .ring.faint { stroke: #12355f; stroke-dasharray: 2 6; }
+  .core-disc { fill: url(#coreGrad); stroke: #5fd4ff; stroke-width: 2; }
+  .core-ring { fill: none; stroke: #5fd4ff; stroke-width: 1; opacity: .6; }
+  .ticks { fill: none; stroke: #5fd4ff; opacity: .5; }
+  .cname { fill: #e8f7ff; font: 700 26px Menlo, monospace; letter-spacing: 1px; }
+  .csub { fill: #7fc8ff; font: 12px Menlo, monospace; }
+  .val { stroke: #5fd4ff; stroke-width: 1.2; fill: #072040; }
+  .val.mut { stroke: #ffb347; fill: #3a2300; }
+  .vlabel { fill: #b7e6ff; font: 11px Menlo, monospace; }
+  .vlabel.mut { fill: #ffd08a; }
+  .gate-body { fill: #04142b; }
+  .gate { fill: none; }
+  .gdot.public { fill: #6fe8ff; } .gdot.internal { fill: #2fb5a8; } .gdot.private { fill: #2f5f9e; }
+  .public { stroke: #6fe8ff; }
+  .internal { stroke: #2fb5a8; }
+  .private { stroke: #2f5f9e; }
+  .glabel { font: 12px Menlo, monospace; }
+  .glabel.public { fill: #c9f5ff; } .glabel.internal { fill: #8fe0d6; } .glabel.private { fill: #6f96c8; }
+  .gsize { font: 10px Menlo, monospace; fill: #5f8fc0; }
+  .wire { fill: none; stroke: #7ab8ff; stroke-width: 1.3; opacity: .75; }
+  .spoke { fill: none; stroke-width: 1; opacity: .35; }
+  .spoke.read { stroke: #5fd4ff; } .spoke.write { stroke: #ffb347; opacity: .6; }
+  .title { fill: #d8f2ff; font: 700 18px -apple-system, "Hiragino Sans", sans-serif; }
+  .legend { fill: #7fa9d6; font: 12px -apple-system, "Hiragino Sans", sans-serif; }
+  .ghost { opacity: .38; }
+  .ghost .gate { stroke-dasharray: 3 3; }
+  .glabel.ghost { fill: #6f96c8; font-style: italic; opacity: .8; }
+  .abstract-ring { fill: none; stroke-dasharray: 5 4; }
+  .conduit-outer { fill: none; stroke: #04203f; stroke-linecap: round; }
+  .conduit-glow { fill: none; stroke: #1a74d6; stroke-linecap: round; opacity: .45; }
+  .conduit-core { fill: none; stroke: #a8ecff; stroke-width: 2.2; stroke-linecap: round; }
+  .conduit-flow { fill: none; stroke: #e6fbff; stroke-width: 3.5; stroke-dasharray: 2 14; stroke-linecap: round; }
+  .override { fill: none; stroke: #c99bff; stroke-width: 1.6; opacity: .85; stroke-dasharray: 8 4; }
+  .super { fill: none; stroke: #7ab8ff; stroke-width: 1.3; opacity: .75; }
+  .olabel { fill: #d9bfff; font: 11px Menlo, monospace; }
+</style>
+<defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="bigglow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter><radialGradient id="coreGrad"><stop offset="0" stop-color="#0d4f8f"/><stop offset=".7" stop-color="#062a55"/><stop offset="1" stop-color="#03152e"/></radialGradient><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7ab8ff"/></marker><marker id="arrO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c99bff"/></marker></defs>
+<rect class="bg" width="1300" height="1442"/>
+<circle class="star" cx="216" cy="1397" r="0.6" opacity="0.2"/>
+<circle class="star" cx="933" cy="1194" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1138" cy="1378" r="1.4" opacity="0.4"/>
+<circle class="star" cx="171" cy="1014" r="0.6" opacity="0.5"/>
+<circle class="star" cx="340" cy="437" r="1.0" opacity="0.6"/>
+<circle class="star" cx="621" cy="949" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1262" cy="1342" r="0.6" opacity="0.3"/>
+<circle class="star" cx="187" cy="591" r="1.0" opacity="0.4"/>
+<circle class="star" cx="996" cy="228" r="1.4" opacity="0.5"/>
+<circle class="star" cx="117" cy="750" r="0.6" opacity="0.6"/>
+<circle class="star" cx="150" cy="17" r="1.0" opacity="0.2"/>
+<circle class="star" cx="927" cy="999" r="1.4" opacity="0.3"/>
+<circle class="star" cx="480" cy="1288" r="0.6" opacity="0.4"/>
+<circle class="star" cx="65" cy="820" r="1.0" opacity="0.5"/>
+<circle class="star" cx="946" cy="297" r="1.4" opacity="0.6"/>
+<circle class="star" cx="1027" cy="419" r="0.6" opacity="0.2"/>
+<circle class="star" cx="400" cy="1331" r="1.0" opacity="0.3"/>
+<circle class="star" cx="605" cy="1400" r="1.4" opacity="0.4"/>
+<circle class="star" cx="706" cy="726" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1027" cy="1164" r="1.0" opacity="0.6"/>
+<circle class="star" cx="212" cy="1187" r="1.4" opacity="0.2"/>
+<circle class="star" cx="881" cy="884" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1054" cy="826" r="1.0" opacity="0.4"/>
+<circle class="star" cx="467" cy="1219" r="1.4" opacity="0.5"/>
+<circle class="star" cx="860" cy="634" r="0.6" opacity="0.6"/>
+<circle class="star" cx="753" cy="387" r="1.0" opacity="0.2"/>
+<circle class="star" cx="306" cy="190" r="1.4" opacity="0.3"/>
+<circle class="star" cx="167" cy="1225" r="0.6" opacity="0.4"/>
+<circle class="star" cx="1220" cy="795" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1189" cy="395" r="1.4" opacity="0.6"/>
+<circle class="star" cx="726" cy="724" r="0.6" opacity="0.2"/>
+<circle class="star" cx="819" cy="483" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1296" cy="827" r="1.4" opacity="0.4"/>
+<circle class="star" cx="153" cy="1437" r="0.6" opacity="0.5"/>
+<circle class="star" cx="438" cy="155" r="1.0" opacity="0.6"/>
+<circle class="star" cx="1059" cy="582" r="1.4" opacity="0.2"/>
+<circle class="star" cx="468" cy="901" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1269" cy="1423" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1086" cy="660" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1071" cy="882" r="0.6" opacity="0.6"/>
+<circle class="star" cx="184" cy="223" r="1.0" opacity="0.2"/>
+<circle class="star" cx="233" cy="593" r="1.4" opacity="0.3"/>
+<circle class="star" cx="114" cy="1366" r="0.6" opacity="0.4"/>
+<circle class="star" cx="575" cy="937" r="1.0" opacity="0.5"/>
+<circle class="star" cx="32" cy="628" r="1.4" opacity="0.6"/>
+<circle class="star" cx="49" cy="1126" r="0.6" opacity="0.2"/>
+<circle class="star" cx="38" cy="1012" r="1.0" opacity="0.3"/>
+<circle class="star" cx="531" cy="525" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1136" cy="789" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1201" cy="609" r="1.0" opacity="0.6"/>
+<circle class="star" cx="374" cy="1229" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1295" cy="185" r="0.6" opacity="0.3"/>
+<circle class="star" cx="624" cy="1074" r="1.0" opacity="0.4"/>
+<circle class="star" cx="949" cy="439" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1286" cy="1404" r="0.6" opacity="0.6"/>
+<circle class="star" cx="75" cy="789" r="1.0" opacity="0.2"/>
+<circle class="star" cx="852" cy="978" r="1.4" opacity="0.3"/>
+<circle class="star" cx="521" cy="1143" r="0.6" opacity="0.4"/>
+<circle class="star" cx="922" cy="1004" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1195" cy="658" r="1.4" opacity="0.6"/>
+<circle class="star" cx="232" cy="524" r="0.6" opacity="0.2"/>
+<circle class="star" cx="405" cy="933" r="1.0" opacity="0.3"/>
+<circle class="star" cx="518" cy="1308" r="1.4" opacity="0.4"/>
+<circle class="star" cx="427" cy="1163" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1048" cy="529" r="1.0" opacity="0.6"/>
+<circle class="star" cx="749" cy="842" r="1.4" opacity="0.2"/>
+<circle class="star" cx="558" cy="1239" r="0.6" opacity="0.3"/>
+<circle class="star" cx="479" cy="1211" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1120" cy="996" r="1.4" opacity="0.5"/>
+<circle class="star" cx="701" cy="1397" r="0.6" opacity="0.6"/>
+<circle class="star" cx="758" cy="30" r="1.0" opacity="0.2"/>
+<circle class="star" cx="647" cy="1368" r="1.4" opacity="0.3"/>
+<circle class="star" cx="136" cy="1159" r="0.6" opacity="0.4"/>
+<circle class="star" cx="701" cy="1196" r="1.0" opacity="0.5"/>
+<circle class="star" cx="802" cy="1182" r="1.4" opacity="0.6"/>
+<circle class="star" cx="207" cy="1189" r="0.6" opacity="0.2"/>
+<circle class="star" cx="508" cy="631" r="1.0" opacity="0.3"/>
+<circle class="star" cx="925" cy="917" r="1.4" opacity="0.4"/>
+<circle class="star" cx="338" cy="1071" r="0.6" opacity="0.5"/>
+<circle class="star" cx="139" cy="1177" r="1.0" opacity="0.6"/>
+<circle class="star" cx="440" cy="707" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1165" cy="4" r="0.6" opacity="0.3"/>
+<circle class="star" cx="318" cy="665" r="1.0" opacity="0.4"/>
+<circle class="star" cx="515" cy="606" r="1.4" opacity="0.5"/>
+<circle class="star" cx="4" cy="691" r="0.6" opacity="0.6"/>
+<circle class="star" cx="549" cy="891" r="1.0" opacity="0.2"/>
+<circle class="star" cx="946" cy="1061" r="1.4" opacity="0.3"/>
+<circle class="star" cx="891" cy="549" r="0.6" opacity="0.4"/>
+<circle class="star" cx="1016" cy="1091" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1117" cy="650" r="1.4" opacity="0.6"/>
+<circle class="star" cx="314" cy="988" r="0.6" opacity="0.2"/>
+<circle class="star" cx="379" cy="40" r="1.0" opacity="0.3"/>
+<circle class="star" cx="32" cy="488" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1273" cy="324" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1278" cy="1158" r="1.0" opacity="0.6"/>
+<circle class="star" cx="855" cy="1128" r="1.4" opacity="0.2"/>
+<circle class="star" cx="804" cy="1268" r="0.6" opacity="0.3"/>
+<circle class="star" cx="673" cy="1301" r="1.0" opacity="0.4"/>
+<circle class="star" cx="122" cy="294" r="1.4" opacity="0.5"/>
+<circle class="star" cx="867" cy="1262" r="0.6" opacity="0.6"/>
+<circle class="star" cx="644" cy="1337" r="1.0" opacity="0.2"/>
+<circle class="star" cx="673" cy="1164" r="1.4" opacity="0.3"/>
+<circle class="star" cx="1014" cy="964" r="0.6" opacity="0.4"/>
+<circle class="star" cx="1239" cy="64" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1044" cy="1336" r="1.4" opacity="0.6"/>
+<circle class="star" cx="377" cy="85" r="0.6" opacity="0.2"/>
+<circle class="star" cx="1122" cy="1074" r="1.0" opacity="0.3"/>
+<circle class="star" cx="203" cy="204" r="1.4" opacity="0.4"/>
+<circle class="star" cx="332" cy="1115" r="0.6" opacity="0.5"/>
+<circle class="star" cx="405" cy="1211" r="1.0" opacity="0.6"/>
+<circle class="star" cx="182" cy="950" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1015" cy="816" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1100" cy="56" r="1.0" opacity="0.4"/>
+<circle class="star" cx="753" cy="433" r="1.4" opacity="0.5"/>
+<circle class="star" cx="210" cy="652" r="0.6" opacity="0.6"/>
+<circle class="star" cx="747" cy="1216" r="1.0" opacity="0.2"/>
+<circle class="star" cx="1240" cy="1374" r="1.4" opacity="0.3"/>
+<circle class="star" cx="333" cy="727" r="0.6" opacity="0.4"/>
+<circle class="star" cx="354" cy="309" r="1.0" opacity="0.5"/>
+<circle class="star" cx="147" cy="21" r="1.4" opacity="0.6"/>
+<circle class="star" cx="720" cy="253" r="0.6" opacity="0.2"/>
+<circle class="star" cx="133" cy="452" r="1.0" opacity="0.3"/>
+<circle class="star" cx="714" cy="804" r="1.4" opacity="0.4"/>
+<circle class="star" cx="647" cy="819" r="0.6" opacity="0.5"/>
+<circle class="star" cx="8" cy="918" r="1.0" opacity="0.6"/>
+<circle class="star" cx="65" cy="130" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1246" cy="1080" r="0.6" opacity="0.3"/>
+<circle class="star" cx="451" cy="635" r="1.0" opacity="0.4"/>
+<circle class="star" cx="256" cy="1045" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1185" cy="1177" r="0.6" opacity="0.6"/>
+<circle class="star" cx="1150" cy="565" r="1.0" opacity="0.2"/>
+<circle class="star" cx="11" cy="1198" r="1.4" opacity="0.3"/>
+<circle class="star" cx="612" cy="679" r="0.6" opacity="0.4"/>
+<circle class="star" cx="77" cy="1309" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1110" cy="712" r="1.4" opacity="0.6"/>
+<circle class="star" cx="843" cy="1301" r="0.6" opacity="0.2"/>
+<circle class="star" cx="152" cy="1015" r="1.0" opacity="0.3"/>
+<circle class="star" cx="785" cy="133" r="1.4" opacity="0.4"/>
+<circle class="star" cx="122" cy="1160" r="0.6" opacity="0.5"/>
+<circle class="star" cx="843" cy="792" r="1.0" opacity="0.6"/>
+<circle class="star" cx="504" cy="660" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1129" cy="826" r="0.6" opacity="0.3"/>
+<circle class="star" cx="970" cy="763" r="1.0" opacity="0.4"/>
+<circle class="star" cx="639" cy="892" r="1.4" opacity="0.5"/>
+<circle class="star" cx="356" cy="1212" r="0.6" opacity="0.6"/>
+<circle class="star" cx="285" cy="1082" r="1.0" opacity="0.2"/>
+<circle class="star" cx="514" cy="496" r="1.4" opacity="0.3"/>
+<circle class="star" cx="703" cy="21" r="0.6" opacity="0.4"/>
+<circle class="star" cx="696" cy="344" r="1.0" opacity="0.5"/>
+<circle class="star" cx="33" cy="1186" r="1.4" opacity="0.6"/>
+<circle class="star" cx="298" cy="543" r="0.6" opacity="0.2"/>
+<circle class="star" cx="507" cy="933" r="1.0" opacity="0.3"/>
+<circle class="star" cx="936" cy="323" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1069" cy="4" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1238" cy="645" r="1.0" opacity="0.6"/>
+<circle class="star" cx="931" cy="1398" r="1.4" opacity="0.2"/>
+<circle class="star" cx="176" cy="1430" r="0.6" opacity="0.3"/>
+<circle class="star" cx="597" cy="357" r="1.0" opacity="0.4"/>
+<circle class="star" cx="434" cy="1121" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1035" cy="483" r="0.6" opacity="0.6"/>
+<circle class="grid" cx="650.0" cy="418.6" r="100"/>
+<circle class="grid" cx="650.0" cy="418.6" r="170"/>
+<circle class="grid" cx="650.0" cy="418.6" r="240"/>
+<circle class="grid" cx="650.0" cy="418.6" r="310"/>
+<circle class="ring" cx="650.0" cy="418.6" r="179.9"/>
+<circle class="ring faint" cx="650.0" cy="418.6" r="235.6"/>
+<circle class="grid" cx="650.0" cy="993.5" r="100"/>
+<circle class="grid" cx="650.0" cy="993.5" r="170"/>
+<circle class="grid" cx="650.0" cy="993.5" r="240"/>
+<circle class="grid" cx="650.0" cy="993.5" r="310"/>
+<circle class="ring" cx="650.0" cy="993.5" r="179.9"/>
+<circle class="ring faint" cx="650.0" cy="993.5" r="235.6"/>
+<path class="conduit-outer" stroke-width="38" d="M650.0,993.5 L650.0,418.6"/>
+<path class="conduit-glow" stroke-width="26" filter="url(#bigglow)" d="M650.0,993.5 L650.0,418.6"/>
+<path class="conduit-glow" stroke-width="14" d="M650.0,993.5 L650.0,418.6"/>
+<path class="conduit-core" d="M650.0,993.5 L650.0,418.6"/>
+<path class="conduit-flow" d="M650.0,993.5 L650.0,418.6"/>
+<path class="spoke write" d="M778.6,312.9 Q650.0,418.6 744.3,418.6"/>
+<path class="spoke write" d="M778.6,312.9 Q650.0,418.6 555.7,418.6"/>
+<path class="spoke read" d="M500.2,455.5 Q650.0,418.6 744.3,418.6"/>
+<path class="spoke write" d="M500.2,455.5 Q650.0,418.6 555.7,418.6"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="650.0" cy="418.6" r="60.3"/>
+<circle class="core-ring" cx="650.0" cy="418.6" r="50.3"/>
+<circle class="ticks" cx="650.0" cy="418.6" r="72.3" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="650.0" y="424.6" text-anchor="middle">Middleware</text>
+<text class="csub" x="650.0" y="444.6" text-anchor="middle">51 lines · 3 gates · 2 values</text>
+<g filter="url(#glow)"><circle class="val" cx="744.3" cy="418.6" r="6"/></g>
+<text class="vlabel" x="760.3" y="422.6" text-anchor="start">_storage_cls</text>
+<g filter="url(#glow)"><circle class="val mut" cx="555.7" cy="418.6" r="6"/></g>
+<text class="vlabel mut" x="539.7" y="422.6" text-anchor="end">storage</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="789.1" cy="304.4" r="13.5"/>
+<circle class="gate internal" stroke-width="1.6" cx="789.1" cy="304.4" r="13.5"/>
+<circle class="gate internal" stroke-width="1" cx="789.1" cy="304.4" r="18.5" opacity=".7"/>
+<line class="gate internal" stroke-width="1.4" x1="783.3" y1="309.1" x2="780.9" y2="311.0"/>
+<circle class="gdot internal" cx="789.1" cy="304.4" r="2.5"/>
+</g>
+<text class="glabel internal" x="810.3" y="290.9" text-anchor="start">__init__</text>
+<text class="gsize" x="810.3" y="302.9" text-anchor="start">3</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="475.3" cy="461.6" r="25.6"/>
+<path class="gate public" stroke-width="2.2" d="M450.9,453.9 A25.6,25.6 0 1 1 457.3,479.9"/>
+<circle class="gate public" stroke-width="1" cx="475.3" cy="461.6" r="30.6" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="485.9" y1="452.3" x2="490.3" y2="448.4"/>
+<line class="gate public" stroke-width="1.4" x1="488.3" y1="456.1" x2="493.7" y2="453.8"/>
+<line class="gate public" stroke-width="1.4" x1="489.4" y1="460.5" x2="495.2" y2="460.0"/>
+<line class="gate public" stroke-width="1.4" x1="489.0" y1="465.0" x2="494.7" y2="466.4"/>
+<circle class="gdot public" cx="475.3" cy="461.6" r="4.6"/>
+</g>
+<text class="glabel public" x="436.8" y="475.1" text-anchor="end">__call__</text>
+<text class="gsize" x="436.8" y="487.1" text-anchor="end">41</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="692.0" cy="243.6" r="15.9"/>
+<path class="gate public" stroke-width="2.2" d="M703.3,232.4 A15.9,15.9 0 1 1 687.1,228.5"/>
+<circle class="gate public" stroke-width="1" cx="692.0" cy="243.6" r="20.9" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="690.0" y1="252.1" x2="689.1" y2="255.6"/>
+<circle class="gdot public" cx="692.0" cy="243.6" r="2.9"/>
+</g>
+<text class="glabel public" x="699.0" y="200.5" text-anchor="middle">__getattr__</text>
+<text class="gsize" x="699.0" y="212.5" text-anchor="middle">7</text>
+<path class="spoke write" d="M744.1,859.7 Q650.0,993.5 705.4,917.2"/>
+<path class="spoke write" d="M744.1,859.7 Q650.0,993.5 739.7,1022.7"/>
+<path class="spoke write" d="M744.1,859.7 Q650.0,993.5 650.0,1087.8"/>
+<path class="spoke read" d="M811.0,970.0 Q650.0,993.5 739.7,1022.7"/>
+<path class="spoke write" d="M811.0,970.0 Q650.0,993.5 650.0,1087.8"/>
+<path class="spoke read" d="M811.0,970.0 Q650.0,993.5 560.3,1022.7"/>
+<path class="spoke read" d="M776.4,1095.3 Q650.0,993.5 594.6,917.2"/>
+<path class="spoke write" d="M776.4,1095.3 Q650.0,993.5 705.4,917.2"/>
+<path class="spoke read" d="M776.4,1095.3 Q650.0,993.5 739.7,1022.7"/>
+<path class="spoke write" d="M776.4,1095.3 Q650.0,993.5 650.0,1087.8"/>
+<path class="spoke write" d="M660.7,1155.5 Q650.0,993.5 705.4,917.2"/>
+<path class="spoke read" d="M660.7,1155.5 Q650.0,993.5 739.7,1022.7"/>
+<path class="spoke read" d="M660.7,1155.5 Q650.0,993.5 650.0,1087.8"/>
+<path class="spoke read" d="M660.7,1155.5 Q650.0,993.5 560.3,1022.7"/>
+<path class="spoke write" d="M538.1,1111.1 Q650.0,993.5 739.7,1022.7"/>
+<path class="spoke write" d="M538.1,1111.1 Q650.0,993.5 650.0,1087.8"/>
+<path class="spoke read" d="M538.1,1111.1 Q650.0,993.5 560.3,1022.7"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="650.0" cy="993.5" r="60.3"/>
+<circle class="core-ring" cx="650.0" cy="993.5" r="50.3"/>
+<circle class="ticks" cx="650.0" cy="993.5" r="72.3" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="650.0" y="999.5" text-anchor="middle">CachingMiddleware</text>
+<text class="csub" x="650.0" y="1019.5" text-anchor="middle">51 lines · 5 gates · 5 values</text>
+<g filter="url(#glow)"><circle class="val mut" cx="705.4" cy="917.2" r="6"/></g>
+<text class="vlabel mut" x="714.8" y="908.3" text-anchor="start">_cache_modified_count</text>
+<g filter="url(#glow)"><circle class="val mut" cx="739.7" cy="1022.7" r="6"/></g>
+<text class="vlabel mut" x="754.9" y="1031.6" text-anchor="start">_closed</text>
+<g filter="url(#glow)"><circle class="val mut" cx="650.0" cy="1087.8" r="6"/></g>
+<text class="vlabel mut" x="650.0" y="1117.8" text-anchor="middle">cache</text>
+<g filter="url(#glow)" class="ghost"><circle class="val" cx="560.3" cy="1022.7" r="6"/></g>
+<text class="vlabel" x="545.1" y="1031.6" text-anchor="end" opacity=".55">storage</text>
+<g filter="url(#glow)"><rect class="val" x="589.1" y="911.7" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="585.2" y="908.3" text-anchor="end">WRITE_CACHE_SIZE</text>
+<path class="wire" marker-end="url(#arr)" d="M802.5,1125.4 Q794.5,1271.4 670.8,1198.0"/>
+<path class="wire" marker-end="url(#arr)" d="M506.1,1134.6 Q543.5,1288.0 670.8,1198.0"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="753.5" cy="846.3" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M768.5,839.8 A16.4,16.4 0 1 1 754.5,830.0"/>
+<circle class="gate public" stroke-width="1" cx="753.5" cy="846.3" r="21.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="748.3" y1="853.7" x2="746.1" y2="856.8"/>
+<circle class="gdot public" cx="753.5" cy="846.3" r="2.9"/>
+</g>
+<text class="glabel public" x="770.9" y="825.5" text-anchor="start">__init__</text>
+<text class="gsize" x="770.9" y="837.5" text-anchor="start">8</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="828.0" cy="967.5" r="17.2"/>
+<path class="gate public" stroke-width="2.2" d="M843.9,974.2 A17.2,17.2 0 1 1 841.3,956.4"/>
+<line class="gate public" stroke-width="1.4" x1="818.7" y1="968.8" x2="814.7" y2="969.4"/>
+<circle class="gdot public" cx="828.0" cy="967.5" r="3.1"/>
+</g>
+<text class="glabel public" x="858.9" y="966.9" text-anchor="start">read</text>
+<text class="gsize" x="858.9" y="978.9" text-anchor="start">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="790.1" cy="1106.4" r="17.6"/>
+<path class="gate public" stroke-width="2.2" d="M796.1,1123.0 A17.6,17.6 0 1 1 807.6,1108.6"/>
+<line class="gate public" stroke-width="1.4" x1="782.6" y1="1100.3" x2="779.4" y2="1097.8"/>
+<circle class="gdot public" cx="790.1" cy="1106.4" r="3.2"/>
+</g>
+<text class="glabel public" x="814.8" y="1130.2" text-anchor="start">write</text>
+<text class="gsize" x="814.8" y="1142.2" text-anchor="start">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="661.9" cy="1173.1" r="17.6"/>
+<circle class="gate private" stroke-width="1.6" cx="661.9" cy="1173.1" r="17.6"/>
+<line class="gate private" stroke-width="1.4" x1="661.3" y1="1163.4" x2="661.0" y2="1159.3"/>
+<circle class="gdot private" cx="661.9" cy="1173.1" r="3.2"/>
+</g>
+<text class="glabel private" x="664.0" y="1218.6" text-anchor="middle">flush</text>
+<text class="gsize" x="664.0" y="1230.6" text-anchor="middle">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="526.0" cy="1123.9" r="17.6"/>
+<circle class="gate private" stroke-width="1.6" cx="526.0" cy="1123.9" r="17.6"/>
+<line class="gate private" stroke-width="1.4" x1="532.7" y1="1116.9" x2="535.5" y2="1113.9"/>
+<circle class="gdot private" cx="526.0" cy="1123.9" r="3.2"/>
+</g>
+<text class="glabel private" x="504.2" y="1150.8" text-anchor="end">close</text>
+<text class="gsize" x="504.2" y="1162.8" text-anchor="end">11</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="470.7" cy="978.6" r="25.6"/>
+<path class="gate public" stroke-width="2.2" d="M450.0,963.4 A25.6,25.6 0 1 1 447.8,990.1"/>
+<circle class="gate public" stroke-width="1" cx="470.7" cy="978.6" r="30.6" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="483.7" y1="973.1" x2="489.1" y2="970.9"/>
+<line class="gate public" stroke-width="1.4" x1="484.8" y1="977.5" x2="490.6" y2="977.1"/>
+<line class="gate public" stroke-width="1.4" x1="484.4" y1="982.0" x2="490.1" y2="983.4"/>
+<line class="gate public" stroke-width="1.4" x1="482.6" y1="986.1" x2="487.6" y2="989.3"/>
+<circle class="gdot public" cx="470.7" cy="978.6" r="4.6"/>
+</g></g>
+<text class="glabel ghost" x="431.2" y="979.3" text-anchor="end">__call__</text>
+<text class="gsize" x="431.2" y="991.3" text-anchor="end" opacity=".6">from Middleware</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="547.1" cy="845.9" r="15.9"/>
+<path class="gate public" stroke-width="2.2" d="M546.2,830.1 A15.9,15.9 0 1 1 532.6,839.6"/>
+<circle class="gate public" stroke-width="1" cx="547.1" cy="845.9" r="20.9" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="552.1" y1="853.1" x2="554.2" y2="856.1"/>
+<circle class="gdot public" cx="547.1" cy="845.9" r="2.9"/>
+</g></g>
+<text class="glabel ghost" x="530.0" y="825.4" text-anchor="end">__getattr__</text>
+<text class="gsize" x="530.0" y="837.4" text-anchor="end" opacity=".6">from Middleware</text>
+<path class="override" marker-end="url(#arrO)" d="M759.5,827.9 Q841.1,579.9 792.7,323.5"/>
+<path class="super" marker-end="url(#arr)" d="M762.4,829.2 Q891.0,583.2 795.7,322.7"/>
+<text class="title" x="32" y="44">Middleware — inheritance family</text>
+<text class="legend" x="32" y="1352">コア = クラス（行数で大きさ）／ 丸 = フィールド、ひし形 = property、四角 = クラス変数、琥珀色 = __init__ 以外でも書き換わる</text>
+<text class="legend" x="32" y="1372">ゲート = メソッド（行数で大きさ、10 行ごとに目盛り 1 本）／ 切れ目のある明るいリング = public、青緑 = internal、暗い青 = class-local、二重リング = 特殊メソッド</text>
+<text class="legend" x="32" y="1392">外側の弧 = 同じクラス内の呼び出し ／ 内向きの線 = 値の参照（水色 = 読み、琥珀色 = 書き）</text>
+<text class="legend" x="32" y="1412">太い管 = 継承 ／ 半透明の破線ゲート = 継承したメソッド（影）／ 破線のソケット = 抽象メソッド ／ 紫の破線 = 上書き（子 → 親）／ 青い線 = super() 呼び出し</text>
+</svg>

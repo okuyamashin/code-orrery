@@ -1,0 +1,258 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2080 1114" width="2080" height="1114" font-family="Menlo, Consolas, monospace" font-size="12">
+<style>
+  :root { --bg:#fbfaf7; --box:#ffffff; --head:#eef1f6; --line:#3b4252; --text:#1f2430; --muted:#6b7280; --accent:#8a5a00; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16181d; --box:#1f232b; --head:#2a303b; --line:#9aa4b5; --text:#e6e8ec; --muted:#9aa1ad; --accent:#e0b058; }
+  }
+  .bg { fill: var(--bg); }
+  .box { fill: var(--box); stroke: var(--line); stroke-width: 1.2; }
+  .head { fill: var(--head); stroke: var(--line); stroke-width: 1.2; }
+  .sep { stroke: var(--line); stroke-width: 1; }
+  text { fill: var(--text); }
+  .muted { fill: var(--muted); font-size: 10.5px; }
+  .name { font-weight: 700; font-size: 13.5px; }
+  .abstract { font-style: italic; }
+  .static { text-decoration: underline; }
+  .edge { fill: none; stroke: var(--line); stroke-width: 1.3; }
+  .edge.typecheck { stroke-dasharray: 6 4; stroke: var(--accent); }
+  .tri { fill: var(--box); stroke: var(--line); stroke-width: 1.3; }
+  .tri.typecheck { stroke: var(--accent); }
+  .note { fill: var(--accent); font-size: 11px; font-family: -apple-system, "Hiragino Sans", sans-serif; }
+  .title { font-size: 18px; font-weight: 700; font-family: -apple-system, "Hiragino Sans", sans-serif; }
+  .legend { font-size: 11.5px; fill: var(--muted); font-family: -apple-system, "Hiragino Sans", sans-serif; }
+</style>
+<rect class="bg" x="0" y="0" width="2080" height="1114"/>
+<text class="title" x="40" y="42">tinydb クラス図（継承のみ）</text>
+<text class="legend" x="40" y="66">+ public（テストから呼ばれる） ~ internal（パッケージ内の別クラスから） - class-local ／ フィールドは名前の _ で判定 ／ /名前 = property ／ 下線 = クラス変数 ／ 斜体 = 抽象</text>
+<text class="legend" x="40" y="84">関数だけのモジュール（operations.py など）とパッケージ外の親クラス（dict, ABC など）は箱にしていない</text>
+<path class="edge typecheck" d="M236.2,708.0 V680.0 H236.2 V664.0"/>
+<path class="tri typecheck" d="M236.2,652.0 l-7,12 h14 z"/>
+<text class="note" x="248.2" y="676.0">型チェック時だけの継承</text>
+<text class="note" x="248.2" y="692.0">実行時は object、__getattr__ で委譲</text>
+<path class="edge" d="M650.0,404.0 V376.0 H650.0 V360.0"/>
+<path class="tri" d="M650.0,348.0 l-7,12 h14 z"/>
+<path class="edge" d="M1041.8,308.0 V280.0 H1234.1 V264.0"/>
+<path class="tri" d="M1234.1,252.0 l-7,12 h14 z"/>
+<path class="edge" d="M1426.3,308.0 V280.0 H1234.1 V264.0"/>
+<path class="tri" d="M1234.1,252.0 l-7,12 h14 z"/>
+<path class="edge" d="M1234.1,736.0 V708.0 H1234.1 V692.0"/>
+<path class="tri" d="M1234.1,680.0 l-7,12 h14 z"/>
+<rect class="box" x="40.0" y="110.0" width="392.3" height="542.0"/>
+<rect class="head" x="40.0" y="110.0" width="392.3" height="42.0"/>
+<text class="muted" x="236.2" y="126.0" text-anchor="middle">tinydb.table · 820行</text>
+<text class="name" x="236.2" y="142.0" text-anchor="middle">Table</text>
+<text class="static" x="50.0" y="168.0">+ document_class = Document</text>
+<text class="static" x="50.0" y="184.0">+ document_id_class = int</text>
+<text class="static" x="50.0" y="200.0">+ query_cache_class = LRUCache</text>
+<text class="static" x="50.0" y="216.0">+ default_query_cache_capacity = 10</text>
+<text class="" x="50.0" y="232.0">- _storage: Storage</text>
+<text class="" x="50.0" y="248.0">- _name</text>
+<text class="" x="50.0" y="264.0">- _query_cache: LRUCache[QueryLike, list[Document]]</text>
+<text class="" x="50.0" y="280.0">- _next_id: Optional[int]</text>
+<text class="" x="50.0" y="296.0">+ /name: str</text>
+<text class="" x="50.0" y="312.0">- /storage: Storage</text>
+<line class="sep" x1="40.0" y1="322.0" x2="432.3" y2="322.0"/>
+<text class="" x="50.0" y="338.0">~ __init__()</text>
+<text class="" x="50.0" y="354.0">+ __repr__()</text>
+<text class="" x="50.0" y="370.0">+ insert(): int</text>
+<text class="" x="50.0" y="386.0">+ insert_multiple(): list[int]</text>
+<text class="" x="50.0" y="402.0">+ all(): list[Document]</text>
+<text class="" x="50.0" y="418.0">+ search(): list[Document]</text>
+<text class="" x="50.0" y="434.0">+ get()</text>
+<text class="" x="50.0" y="450.0">+ contains(): bool</text>
+<text class="" x="50.0" y="466.0">+ update(): list[int]</text>
+<text class="" x="50.0" y="482.0">+ update_multiple(): list[int]</text>
+<text class="" x="50.0" y="498.0">+ upsert(): list[int]</text>
+<text class="" x="50.0" y="514.0">+ remove(): list[int]</text>
+<text class="" x="50.0" y="530.0">+ truncate(): None</text>
+<text class="" x="50.0" y="546.0">+ count(): int</text>
+<text class="" x="50.0" y="562.0">+ clear_cache(): None</text>
+<text class="" x="50.0" y="578.0">+ __len__()</text>
+<text class="" x="50.0" y="594.0">+ __iter__(): Iterator[Document]</text>
+<text class="" x="50.0" y="610.0">+ _get_next_id()</text>
+<text class="" x="50.0" y="626.0">- _read_table(): dict[str, Mapping]</text>
+<text class="" x="50.0" y="642.0">- _update_table()</text>
+<rect class="box" x="91.1" y="708.0" width="290.1" height="366.0"/>
+<rect class="head" x="91.1" y="708.0" width="290.1" height="42.0"/>
+<text class="muted" x="236.2" y="724.0" text-anchor="middle">tinydb.database · 258行</text>
+<text class="name" x="236.2" y="740.0" text-anchor="middle">TinyDB</text>
+<text class="static" x="101.1" y="766.0">+ table_class = Table</text>
+<text class="static" x="101.1" y="782.0">+ default_table_name = &#x27;_default&#x27;</text>
+<text class="static" x="101.1" y="798.0">+ default_storage_class = JSONStorage</text>
+<text class="" x="101.1" y="814.0">- _storage: Storage</text>
+<text class="" x="101.1" y="830.0">- _opened</text>
+<text class="" x="101.1" y="846.0">- _tables: dict[str, Table]</text>
+<text class="" x="101.1" y="862.0">+ /storage: Storage</text>
+<line class="sep" x1="91.1" y1="872.0" x2="381.2" y2="872.0"/>
+<text class="" x="101.1" y="888.0">+ __init__(): None</text>
+<text class="" x="101.1" y="904.0">+ __repr__()</text>
+<text class="" x="101.1" y="920.0">+ table(): Table</text>
+<text class="" x="101.1" y="936.0">+ tables(): set[str]</text>
+<text class="" x="101.1" y="952.0">+ drop_tables(): None</text>
+<text class="" x="101.1" y="968.0">+ drop_table(): None</text>
+<text class="" x="101.1" y="984.0">+ close(): None</text>
+<text class="" x="101.1" y="1000.0">+ __enter__()</text>
+<text class="" x="101.1" y="1016.0">+ __exit__()</text>
+<text class="" x="101.1" y="1032.0">+ __getattr__()</text>
+<text class="" x="101.1" y="1048.0">+ __len__()</text>
+<text class="" x="101.1" y="1064.0">+ __iter__(): Iterator[Document]</text>
+<rect class="box" x="526.8" y="110.0" width="246.3" height="238.0"/>
+<rect class="head" x="526.8" y="110.0" width="246.3" height="42.0"/>
+<text class="muted" x="650.0" y="126.0" text-anchor="middle">tinydb.queries · 80行</text>
+<text class="name" x="650.0" y="142.0" text-anchor="middle">QueryInstance</text>
+<text class="" x="536.8" y="168.0">- _test</text>
+<text class="" x="536.8" y="184.0">- _hash</text>
+<line class="sep" x1="526.8" y1="194.0" x2="773.1" y2="194.0"/>
+<text class="" x="536.8" y="210.0">~ __init__()</text>
+<text class="" x="536.8" y="226.0">+ is_cacheable(): bool</text>
+<text class="" x="536.8" y="242.0">+ __call__(): bool</text>
+<text class="" x="536.8" y="258.0">+ __hash__(): int</text>
+<text class="" x="536.8" y="274.0">+ __repr__()</text>
+<text class="" x="536.8" y="290.0">- __eq__()</text>
+<text class="" x="536.8" y="306.0">+ __and__(): &#x27;QueryInstance&#x27;</text>
+<text class="" x="536.8" y="322.0">+ __or__(): &#x27;QueryInstance&#x27;</text>
+<text class="" x="536.8" y="338.0">+ __invert__(): &#x27;QueryInstance&#x27;</text>
+<rect class="box" x="490.3" y="404.0" width="319.3" height="430.0"/>
+<rect class="head" x="490.3" y="404.0" width="319.3" height="42.0"/>
+<text class="muted" x="650.0" y="420.0" text-anchor="middle">tinydb.queries · 389行</text>
+<text class="name" x="650.0" y="436.0" text-anchor="middle">Query</text>
+<text class="" x="500.3" y="462.0">- _path: tuple[Union[str, Callable], ...]</text>
+<line class="sep" x1="490.3" y1="472.0" x2="809.6" y2="472.0"/>
+<text class="" x="500.3" y="488.0">+ __init__(): None</text>
+<text class="" x="500.3" y="504.0">+ __repr__()</text>
+<text class="" x="500.3" y="520.0">+ __hash__()</text>
+<text class="" x="500.3" y="536.0">+ __getattr__()</text>
+<text class="" x="500.3" y="552.0">+ __getitem__()</text>
+<text class="" x="500.3" y="568.0">- _generate_test(): QueryInstance</text>
+<text class="" x="500.3" y="584.0">+ __eq__()</text>
+<text class="" x="500.3" y="600.0">+ __ne__()</text>
+<text class="" x="500.3" y="616.0">+ __lt__(): QueryInstance</text>
+<text class="" x="500.3" y="632.0">+ __le__(): QueryInstance</text>
+<text class="" x="500.3" y="648.0">+ __gt__(): QueryInstance</text>
+<text class="" x="500.3" y="664.0">+ __ge__(): QueryInstance</text>
+<text class="" x="500.3" y="680.0">+ exists(): QueryInstance</text>
+<text class="" x="500.3" y="696.0">+ matches(): QueryInstance</text>
+<text class="" x="500.3" y="712.0">+ search(): QueryInstance</text>
+<text class="" x="500.3" y="728.0">+ test(): QueryInstance</text>
+<text class="" x="500.3" y="744.0">+ any(): QueryInstance</text>
+<text class="" x="500.3" y="760.0">+ all(): QueryInstance</text>
+<text class="" x="500.3" y="776.0">+ one_of(): QueryInstance</text>
+<text class="" x="500.3" y="792.0">+ fragment(): QueryInstance</text>
+<text class="" x="500.3" y="808.0">+ noop(): QueryInstance</text>
+<text class="" x="500.3" y="824.0">+ map(): &#x27;Query&#x27;</text>
+<rect class="box" x="559.6" y="890.0" width="180.6" height="126.0"/>
+<rect class="head" x="559.6" y="890.0" width="180.6" height="58.0"/>
+<text class="muted" x="649.9" y="906.0" text-anchor="middle">tinydb.queries · 22行</text>
+<text class="muted" x="649.9" y="922.0" text-anchor="middle">«protocol»</text>
+<text class="name" x="649.9" y="938.0" text-anchor="middle">QueryLike</text>
+<line class="sep" x1="559.6" y1="974.0" x2="740.2" y2="974.0"/>
+<text class="" x="569.6" y="990.0">~ __call__(): bool</text>
+<text class="" x="569.6" y="1006.0">- __hash__(): int</text>
+<rect class="box" x="1059.8" y="110.0" width="348.5" height="142.0"/>
+<rect class="head" x="1059.8" y="110.0" width="348.5" height="58.0"/>
+<text class="muted" x="1234.1" y="126.0" text-anchor="middle">tinydb.storages · 41行</text>
+<text class="muted" x="1234.1" y="142.0" text-anchor="middle">«abstract»</text>
+<text class="name abstract" x="1234.1" y="158.0" text-anchor="middle">Storage</text>
+<line class="sep" x1="1059.8" y1="194.0" x2="1408.3" y2="194.0"/>
+<text class="abstract" x="1069.8" y="210.0">+ read(): Optional[dict[str, dict[str, Any]]]</text>
+<text class="abstract" x="1069.8" y="226.0">+ write(): None</text>
+<text class="" x="1069.8" y="242.0">+ close(): None</text>
+<rect class="box" x="867.6" y="308.0" width="348.5" height="174.0"/>
+<rect class="head" x="867.6" y="308.0" width="348.5" height="42.0"/>
+<text class="muted" x="1041.8" y="324.0" text-anchor="middle">tinydb.storages · 83行</text>
+<text class="name" x="1041.8" y="340.0" text-anchor="middle">JSONStorage</text>
+<text class="" x="877.6" y="366.0">- _mode</text>
+<text class="" x="877.6" y="382.0">+ kwargs</text>
+<text class="" x="877.6" y="398.0">- _handle</text>
+<line class="sep" x1="867.6" y1="408.0" x2="1216.1" y2="408.0"/>
+<text class="" x="877.6" y="424.0">+ __init__()</text>
+<text class="" x="877.6" y="440.0">+ close(): None</text>
+<text class="" x="877.6" y="456.0">+ read(): Optional[dict[str, dict[str, Any]]]</text>
+<text class="" x="877.6" y="472.0">+ write()</text>
+<rect class="box" x="1252.1" y="308.0" width="348.5" height="126.0"/>
+<rect class="head" x="1252.1" y="308.0" width="348.5" height="42.0"/>
+<text class="muted" x="1426.3" y="324.0" text-anchor="middle">tinydb.storages · 18行</text>
+<text class="name" x="1426.3" y="340.0" text-anchor="middle">MemoryStorage</text>
+<text class="" x="1262.1" y="366.0">+ memory</text>
+<line class="sep" x1="1252.1" y1="376.0" x2="1600.6" y2="376.0"/>
+<text class="" x="1262.1" y="392.0">+ __init__()</text>
+<text class="" x="1262.1" y="408.0">+ read(): Optional[dict[str, dict[str, Any]]]</text>
+<text class="" x="1262.1" y="424.0">+ write()</text>
+<rect class="box" x="1129.2" y="538.0" width="209.8" height="142.0"/>
+<rect class="head" x="1129.2" y="538.0" width="209.8" height="42.0"/>
+<text class="muted" x="1234.1" y="554.0" text-anchor="middle">tinydb.middlewares · 64行</text>
+<text class="name" x="1234.1" y="570.0" text-anchor="middle">Middleware</text>
+<text class="" x="1139.2" y="596.0">- _storage_cls</text>
+<text class="" x="1139.2" y="612.0">+ storage: Storage</text>
+<line class="sep" x1="1129.2" y1="622.0" x2="1339.0" y2="622.0"/>
+<text class="" x="1139.2" y="638.0">~ __init__(): None</text>
+<text class="" x="1139.2" y="654.0">+ __call__()</text>
+<text class="" x="1139.2" y="670.0">+ __getattr__()</text>
+<rect class="box" x="1129.2" y="736.0" width="209.8" height="206.0"/>
+<rect class="head" x="1129.2" y="736.0" width="209.8" height="42.0"/>
+<text class="muted" x="1234.1" y="752.0" text-anchor="middle">tinydb.middlewares · 67行</text>
+<text class="name" x="1234.1" y="768.0" text-anchor="middle">CachingMiddleware</text>
+<text class="static" x="1139.2" y="794.0">+ WRITE_CACHE_SIZE = 1000</text>
+<text class="" x="1139.2" y="810.0">+ cache</text>
+<text class="" x="1139.2" y="826.0">- _cache_modified_count</text>
+<text class="" x="1139.2" y="842.0">- _closed</text>
+<line class="sep" x1="1129.2" y1="852.0" x2="1339.0" y2="852.0"/>
+<text class="" x="1139.2" y="868.0">+ __init__()</text>
+<text class="" x="1139.2" y="884.0">+ read()</text>
+<text class="" x="1139.2" y="900.0">+ write()</text>
+<text class="" x="1139.2" y="916.0">- flush()</text>
+<text class="" x="1139.2" y="932.0">- close()</text>
+<rect class="box" x="1757.1" y="110.0" width="166.0" height="110.0"/>
+<rect class="head" x="1757.1" y="110.0" width="166.0" height="58.0"/>
+<text class="muted" x="1840.1" y="126.0" text-anchor="middle">tinydb.table · 11行</text>
+<text class="name" x="1840.1" y="142.0" text-anchor="middle">Document</text>
+<text class="muted" x="1840.1" y="158.0" text-anchor="middle">extends dict</text>
+<text class="" x="1767.1" y="184.0">+ doc_id</text>
+<line class="sep" x1="1757.1" y1="194.0" x2="1923.1" y2="194.0"/>
+<text class="" x="1767.1" y="210.0">+ __init__()</text>
+<rect class="box" x="1680.5" y="276.0" width="319.3" height="302.0"/>
+<rect class="head" x="1680.5" y="276.0" width="319.3" height="58.0"/>
+<text class="muted" x="1840.2" y="292.0" text-anchor="middle">tinydb.utils · 75行</text>
+<text class="name" x="1840.2" y="308.0" text-anchor="middle">LRUCache</text>
+<text class="muted" x="1840.2" y="324.0" text-anchor="middle">extends abc.MutableMapping, Generic[K, V]</text>
+<text class="" x="1690.5" y="350.0">+ capacity</text>
+<text class="" x="1690.5" y="366.0">+ cache: OrderedDict[K, V]</text>
+<text class="" x="1690.5" y="382.0">+ /lru: list[K]</text>
+<text class="" x="1690.5" y="398.0">- /length: int</text>
+<line class="sep" x1="1680.5" y1="408.0" x2="1999.8" y2="408.0"/>
+<text class="" x="1690.5" y="424.0">+ __init__(): None</text>
+<text class="" x="1690.5" y="440.0">+ clear(): None</text>
+<text class="" x="1690.5" y="456.0">+ __len__(): int</text>
+<text class="" x="1690.5" y="472.0">+ __contains__(): bool</text>
+<text class="" x="1690.5" y="488.0">+ __setitem__(): None</text>
+<text class="" x="1690.5" y="504.0">+ __delitem__(): None</text>
+<text class="" x="1690.5" y="520.0">+ __getitem__(): V</text>
+<text class="" x="1690.5" y="536.0">+ __iter__(): Iterator[K]</text>
+<text class="" x="1690.5" y="552.0">+ get(): Optional[Union[V, D]]</text>
+<text class="" x="1690.5" y="568.0">+ set()</text>
+<rect class="box" x="1727.9" y="634.0" width="224.4" height="238.0"/>
+<rect class="head" x="1727.9" y="634.0" width="224.4" height="58.0"/>
+<text class="muted" x="1840.1" y="650.0" text-anchor="middle">tinydb.utils · 28行</text>
+<text class="name" x="1840.1" y="666.0" text-anchor="middle">FrozenDict</text>
+<text class="muted" x="1840.1" y="682.0" text-anchor="middle">extends dict</text>
+<line class="sep" x1="1727.9" y1="718.0" x2="1952.3" y2="718.0"/>
+<text class="" x="1737.9" y="734.0">- __hash__()</text>
+<text class="" x="1737.9" y="750.0">- _immutable()</text>
+<text class="" x="1737.9" y="766.0">- update()</text>
+<text class="" x="1737.9" y="782.0">- pop()</text>
+<text class="" x="1737.9" y="798.0">- __setitem__() = _immutable</text>
+<text class="" x="1737.9" y="814.0">- __delitem__() = _immutable</text>
+<text class="" x="1737.9" y="830.0">- clear() = _immutable</text>
+<text class="" x="1737.9" y="846.0">- setdefault() = _immutable</text>
+<text class="" x="1737.9" y="862.0">- popitem() = _immutable</text>
+<rect class="box" x="1658.6" y="928.0" width="363.1" height="126.0"/>
+<rect class="head" x="1658.6" y="928.0" width="363.1" height="58.0"/>
+<text class="muted" x="1840.1" y="944.0" text-anchor="middle">tinydb.mypy_plugin · 23行</text>
+<text class="name" x="1840.1" y="960.0" text-anchor="middle">TinyDBPlugin</text>
+<text class="muted" x="1840.1" y="976.0" text-anchor="middle">extends Plugin</text>
+<text class="" x="1668.6" y="1002.0">+ named_placeholders: dict[str, str]</text>
+<line class="sep" x1="1658.6" y1="1012.0" x2="2021.7" y2="1012.0"/>
+<text class="" x="1668.6" y="1028.0">- __init__()</text>
+<text class="" x="1668.6" y="1044.0">- get_dynamic_class_hook(): CB[DynamicClassDef]</text>
+
+</svg>

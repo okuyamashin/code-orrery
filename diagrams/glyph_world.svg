@@ -1,0 +1,1688 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3405 3726" width="3405" height="3726">
+<style>
+  .bg { fill: #030814; }
+  .grid { stroke: #0d2a52; stroke-width: 0.6; fill: none; }
+  .star { fill: #9fd8ff; }
+  .ring { fill: none; stroke: #1b5fa8; stroke-width: 1; }
+  .ring.faint { stroke: #12355f; stroke-dasharray: 2 6; }
+  .core-disc { fill: url(#coreGrad); stroke: #5fd4ff; stroke-width: 2; }
+  .core-ring { fill: none; stroke: #5fd4ff; stroke-width: 1; opacity: .6; }
+  .ticks { fill: none; stroke: #5fd4ff; opacity: .5; }
+  .cname { fill: #e8f7ff; font: 700 26px Menlo, monospace; letter-spacing: 1px; }
+  .csub { fill: #7fc8ff; font: 12px Menlo, monospace; }
+  .val { stroke: #5fd4ff; stroke-width: 1.2; fill: #072040; }
+  .val.mut { stroke: #ffb347; fill: #3a2300; }
+  .vlabel { fill: #b7e6ff; font: 11px Menlo, monospace; }
+  .vlabel.mut { fill: #ffd08a; }
+  .gate-body { fill: #04142b; }
+  .gate { fill: none; }
+  .gdot.public { fill: #6fe8ff; } .gdot.internal { fill: #2fb5a8; } .gdot.private { fill: #2f5f9e; }
+  .public { stroke: #6fe8ff; }
+  .internal { stroke: #2fb5a8; }
+  .private { stroke: #2f5f9e; }
+  .glabel { font: 12px Menlo, monospace; }
+  .glabel.public { fill: #c9f5ff; } .glabel.internal { fill: #8fe0d6; } .glabel.private { fill: #6f96c8; }
+  .gsize { font: 10px Menlo, monospace; fill: #5f8fc0; }
+  .wire { fill: none; stroke: #7ab8ff; stroke-width: 1.3; opacity: .75; }
+  .spoke { fill: none; stroke-width: 1; opacity: .35; }
+  .spoke.read { stroke: #5fd4ff; } .spoke.write { stroke: #ffb347; opacity: .6; }
+  .title { fill: #d8f2ff; font: 700 18px -apple-system, "Hiragino Sans", sans-serif; }
+  .legend { fill: #7fa9d6; font: 12px -apple-system, "Hiragino Sans", sans-serif; }
+  .ghost { opacity: .38; }
+  .ghost .gate { stroke-dasharray: 3 3; }
+  .glabel.ghost { fill: #6f96c8; font-style: italic; opacity: .8; }
+  .abstract-ring { fill: none; stroke-dasharray: 5 4; }
+  .conduit-outer { fill: none; stroke: #04203f; stroke-linecap: round; }
+  .conduit-glow { fill: none; stroke: #1a74d6; stroke-linecap: round; opacity: .45; }
+  .conduit-core { fill: none; stroke: #a8ecff; stroke-width: 2.2; stroke-linecap: round; }
+  .conduit-flow { fill: none; stroke: #e6fbff; stroke-width: 3.5; stroke-dasharray: 2 14; stroke-linecap: round; }
+  .override { fill: none; stroke: #c99bff; stroke-width: 1.6; opacity: .85; stroke-dasharray: 8 4; }
+  .super { fill: none; stroke: #7ab8ff; stroke-width: 1.3; opacity: .75; }
+  .olabel { fill: #d9bfff; font: 11px Menlo, monospace; }
+  .conduit-tc { fill: none; stroke: #ffb347; stroke-width: 3; opacity: .7; }
+  .module { fill: #3d6fa8; font: 600 13px Menlo, monospace; letter-spacing: 3px; }
+</style>
+<defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><filter id="bigglow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="7"/></filter><radialGradient id="coreGrad"><stop offset="0" stop-color="#0d4f8f"/><stop offset=".7" stop-color="#062a55"/><stop offset="1" stop-color="#03152e"/></radialGradient><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7ab8ff"/></marker><marker id="arrO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c99bff"/></marker></defs>
+<rect class="bg" width="3405" height="3726"/>
+<circle class="star" cx="1746" cy="228" r="0.6" opacity="0.2"/>
+<circle class="star" cx="3228" cy="2441" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1228" cy="526" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1686" cy="475" r="0.6" opacity="0.5"/>
+<circle class="star" cx="2370" cy="166" r="1.0" opacity="0.6"/>
+<circle class="star" cx="241" cy="1434" r="1.4" opacity="0.2"/>
+<circle class="star" cx="2412" cy="1780" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1092" cy="815" r="1.0" opacity="0.4"/>
+<circle class="star" cx="3156" cy="922" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1302" cy="1387" r="0.6" opacity="0.6"/>
+<circle class="star" cx="1755" cy="3437" r="1.0" opacity="0.2"/>
+<circle class="star" cx="212" cy="57" r="1.4" opacity="0.3"/>
+<circle class="star" cx="760" cy="226" r="0.6" opacity="0.4"/>
+<circle class="star" cx="845" cy="2446" r="1.0" opacity="0.5"/>
+<circle class="star" cx="2711" cy="3249" r="1.4" opacity="0.6"/>
+<circle class="star" cx="847" cy="2490" r="0.6" opacity="0.2"/>
+<circle class="star" cx="765" cy="1029" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1590" cy="711" r="1.4" opacity="0.4"/>
+<circle class="star" cx="2956" cy="3442" r="0.6" opacity="0.5"/>
+<circle class="star" cx="3302" cy="1997" r="1.0" opacity="0.6"/>
+<circle class="star" cx="2027" cy="1131" r="1.4" opacity="0.2"/>
+<circle class="star" cx="691" cy="1468" r="0.6" opacity="0.3"/>
+<circle class="star" cx="2849" cy="885" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1427" cy="750" r="1.4" opacity="0.5"/>
+<circle class="star" cx="485" cy="1117" r="0.6" opacity="0.6"/>
+<circle class="star" cx="2078" cy="2025" r="1.0" opacity="0.2"/>
+<circle class="star" cx="1841" cy="1635" r="1.4" opacity="0.3"/>
+<circle class="star" cx="1297" cy="1470" r="0.6" opacity="0.4"/>
+<circle class="star" cx="1540" cy="2820" r="1.0" opacity="0.5"/>
+<circle class="star" cx="99" cy="210" r="1.4" opacity="0.6"/>
+<circle class="star" cx="2621" cy="669" r="0.6" opacity="0.2"/>
+<circle class="star" cx="2324" cy="2563" r="1.0" opacity="0.3"/>
+<circle class="star" cx="721" cy="1987" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1488" cy="735" r="0.6" opacity="0.5"/>
+<circle class="star" cx="2448" cy="1012" r="1.0" opacity="0.6"/>
+<circle class="star" cx="1514" cy="1205" r="1.4" opacity="0.2"/>
+<circle class="star" cx="128" cy="806" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1079" cy="2716" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1576" cy="2916" r="1.4" opacity="0.5"/>
+<circle class="star" cx="2801" cy="1850" r="0.6" opacity="0.6"/>
+<circle class="star" cx="204" cy="2238" r="1.0" opacity="0.2"/>
+<circle class="star" cx="1863" cy="914" r="1.4" opacity="0.3"/>
+<circle class="star" cx="2634" cy="1032" r="0.6" opacity="0.4"/>
+<circle class="star" cx="3210" cy="2205" r="1.0" opacity="0.5"/>
+<circle class="star" cx="2027" cy="131" r="1.4" opacity="0.6"/>
+<circle class="star" cx="659" cy="872" r="0.6" opacity="0.2"/>
+<circle class="star" cx="2238" cy="946" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1156" cy="2599" r="1.4" opacity="0.4"/>
+<circle class="star" cx="2716" cy="576" r="0.6" opacity="0.5"/>
+<circle class="star" cx="2061" cy="3506" r="1.0" opacity="0.6"/>
+<circle class="star" cx="1329" cy="1393" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1605" cy="90" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1589" cy="567" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1834" cy="1809" r="1.4" opacity="0.5"/>
+<circle class="star" cx="2881" cy="909" r="0.6" opacity="0.6"/>
+<circle class="star" cx="2545" cy="1598" r="1.0" opacity="0.2"/>
+<circle class="star" cx="2377" cy="1641" r="1.4" opacity="0.3"/>
+<circle class="star" cx="3116" cy="3611" r="0.6" opacity="0.4"/>
+<circle class="star" cx="667" cy="639" r="1.0" opacity="0.5"/>
+<circle class="star" cx="2285" cy="1460" r="1.4" opacity="0.6"/>
+<circle class="star" cx="1892" cy="3198" r="0.6" opacity="0.2"/>
+<circle class="star" cx="150" cy="2047" r="1.0" opacity="0.3"/>
+<circle class="star" cx="2998" cy="646" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1287" cy="188" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1528" cy="998" r="1.0" opacity="0.6"/>
+<circle class="star" cx="1534" cy="1609" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1173" cy="3717" r="0.6" opacity="0.3"/>
+<circle class="star" cx="2679" cy="2418" r="1.0" opacity="0.4"/>
+<circle class="star" cx="820" cy="390" r="1.4" opacity="0.5"/>
+<circle class="star" cx="306" cy="2539" r="0.6" opacity="0.6"/>
+<circle class="star" cx="1993" cy="129" r="1.0" opacity="0.2"/>
+<circle class="star" cx="3332" cy="3451" r="1.4" opacity="0.3"/>
+<circle class="star" cx="976" cy="2192" r="0.6" opacity="0.4"/>
+<circle class="star" cx="1266" cy="1007" r="1.0" opacity="0.5"/>
+<circle class="star" cx="2737" cy="775" r="1.4" opacity="0.6"/>
+<circle class="star" cx="677" cy="2764" r="0.6" opacity="0.2"/>
+<circle class="star" cx="483" cy="2561" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1845" cy="3240" r="1.4" opacity="0.4"/>
+<circle class="star" cx="88" cy="1500" r="0.6" opacity="0.5"/>
+<circle class="star" cx="3309" cy="2208" r="1.0" opacity="0.6"/>
+<circle class="star" cx="3100" cy="564" r="1.4" opacity="0.2"/>
+<circle class="star" cx="2970" cy="1977" r="0.6" opacity="0.3"/>
+<circle class="star" cx="3008" cy="1364" r="1.0" opacity="0.4"/>
+<circle class="star" cx="2190" cy="1961" r="1.4" opacity="0.5"/>
+<circle class="star" cx="2619" cy="135" r="0.6" opacity="0.6"/>
+<circle class="star" cx="1674" cy="841" r="1.0" opacity="0.2"/>
+<circle class="star" cx="1181" cy="3187" r="1.4" opacity="0.3"/>
+<circle class="star" cx="681" cy="1350" r="0.6" opacity="0.4"/>
+<circle class="star" cx="3121" cy="1861" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1902" cy="523" r="1.4" opacity="0.6"/>
+<circle class="star" cx="1144" cy="3100" r="0.6" opacity="0.2"/>
+<circle class="star" cx="2594" cy="1971" r="1.0" opacity="0.3"/>
+<circle class="star" cx="527" cy="2811" r="1.4" opacity="0.4"/>
+<circle class="star" cx="2433" cy="782" r="0.6" opacity="0.5"/>
+<circle class="star" cx="463" cy="2733" r="1.0" opacity="0.6"/>
+<circle class="star" cx="2445" cy="1128" r="1.4" opacity="0.2"/>
+<circle class="star" cx="2489" cy="2135" r="0.6" opacity="0.3"/>
+<circle class="star" cx="2038" cy="2197" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1067" cy="859" r="1.4" opacity="0.5"/>
+<circle class="star" cx="207" cy="1288" r="0.6" opacity="0.6"/>
+<circle class="star" cx="2039" cy="569" r="1.0" opacity="0.2"/>
+<circle class="star" cx="2253" cy="1368" r="1.4" opacity="0.3"/>
+<circle class="star" cx="2449" cy="2137" r="0.6" opacity="0.4"/>
+<circle class="star" cx="2329" cy="2472" r="1.0" opacity="0.5"/>
+<circle class="star" cx="914" cy="1208" r="1.4" opacity="0.6"/>
+<circle class="star" cx="2162" cy="1939" r="0.6" opacity="0.2"/>
+<circle class="star" cx="2187" cy="2189" r="1.0" opacity="0.3"/>
+<circle class="star" cx="3288" cy="1817" r="1.4" opacity="0.4"/>
+<circle class="star" cx="2312" cy="22" r="0.6" opacity="0.5"/>
+<circle class="star" cx="2135" cy="1150" r="1.0" opacity="0.6"/>
+<circle class="star" cx="2977" cy="1335" r="1.4" opacity="0.2"/>
+<circle class="star" cx="2070" cy="3231" r="0.6" opacity="0.3"/>
+<circle class="star" cx="1355" cy="503" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1493" cy="1846" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1500" cy="1792" r="0.6" opacity="0.6"/>
+<circle class="star" cx="802" cy="2971" r="1.0" opacity="0.2"/>
+<circle class="star" cx="1710" cy="652" r="1.4" opacity="0.3"/>
+<circle class="star" cx="2848" cy="729" r="0.6" opacity="0.4"/>
+<circle class="star" cx="64" cy="108" r="1.0" opacity="0.5"/>
+<circle class="star" cx="892" cy="3301" r="1.4" opacity="0.6"/>
+<circle class="star" cx="630" cy="1178" r="0.6" opacity="0.2"/>
+<circle class="star" cx="418" cy="15" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1139" cy="1221" r="1.4" opacity="0.4"/>
+<circle class="star" cx="2312" cy="3635" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1538" cy="3142" r="1.0" opacity="0.6"/>
+<circle class="star" cx="1200" cy="757" r="1.4" opacity="0.2"/>
+<circle class="star" cx="3211" cy="2545" r="0.6" opacity="0.3"/>
+<circle class="star" cx="256" cy="203" r="1.0" opacity="0.4"/>
+<circle class="star" cx="1976" cy="536" r="1.4" opacity="0.5"/>
+<circle class="star" cx="2085" cy="1904" r="0.6" opacity="0.6"/>
+<circle class="star" cx="2505" cy="815" r="1.0" opacity="0.2"/>
+<circle class="star" cx="1736" cy="555" r="1.4" opacity="0.3"/>
+<circle class="star" cx="3047" cy="573" r="0.6" opacity="0.4"/>
+<circle class="star" cx="1317" cy="2318" r="1.0" opacity="0.5"/>
+<circle class="star" cx="755" cy="2641" r="1.4" opacity="0.6"/>
+<circle class="star" cx="3188" cy="1951" r="0.6" opacity="0.2"/>
+<circle class="star" cx="402" cy="1390" r="1.0" opacity="0.3"/>
+<circle class="star" cx="1500" cy="1299" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1487" cy="1573" r="0.6" opacity="0.5"/>
+<circle class="star" cx="1503" cy="2288" r="1.0" opacity="0.6"/>
+<circle class="star" cx="524" cy="242" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1029" cy="266" r="0.6" opacity="0.3"/>
+<circle class="star" cx="3290" cy="3466" r="1.0" opacity="0.4"/>
+<circle class="star" cx="3029" cy="1834" r="1.4" opacity="0.5"/>
+<circle class="star" cx="1861" cy="1583" r="0.6" opacity="0.6"/>
+<circle class="star" cx="1765" cy="678" r="1.0" opacity="0.2"/>
+<circle class="star" cx="3089" cy="621" r="1.4" opacity="0.3"/>
+<circle class="star" cx="2393" cy="322" r="0.6" opacity="0.4"/>
+<circle class="star" cx="2711" cy="3247" r="1.0" opacity="0.5"/>
+<circle class="star" cx="1728" cy="1809" r="1.4" opacity="0.6"/>
+<circle class="star" cx="2093" cy="3569" r="0.6" opacity="0.2"/>
+<circle class="star" cx="2467" cy="798" r="1.0" opacity="0.3"/>
+<circle class="star" cx="3346" cy="3406" r="1.4" opacity="0.4"/>
+<circle class="star" cx="1059" cy="434" r="0.6" opacity="0.5"/>
+<circle class="star" cx="2568" cy="1858" r="1.0" opacity="0.6"/>
+<circle class="star" cx="2701" cy="484" r="1.4" opacity="0.2"/>
+<circle class="star" cx="1431" cy="1273" r="0.6" opacity="0.3"/>
+<circle class="star" cx="3117" cy="1266" r="1.0" opacity="0.4"/>
+<circle class="star" cx="214" cy="2050" r="1.4" opacity="0.5"/>
+<circle class="star" cx="3145" cy="2140" r="0.6" opacity="0.6"/>
+<circle class="grid" cx="669.3" cy="699.3" r="138"/>
+<circle class="grid" cx="669.3" cy="699.3" r="208"/>
+<circle class="grid" cx="669.3" cy="699.3" r="278"/>
+<circle class="grid" cx="669.3" cy="699.3" r="348"/>
+<circle class="grid" cx="669.3" cy="699.3" r="418"/>
+<circle class="grid" cx="669.3" cy="699.3" r="488"/>
+<circle class="grid" cx="669.3" cy="699.3" r="558"/>
+<circle class="ring" cx="669.3" cy="699.3" r="376.2"/>
+<circle class="ring faint" cx="669.3" cy="699.3" r="441.6"/>
+<circle class="grid" cx="669.3" cy="1467.9" r="112"/>
+<circle class="grid" cx="669.3" cy="1467.9" r="182"/>
+<circle class="grid" cx="669.3" cy="1467.9" r="252"/>
+<circle class="grid" cx="669.3" cy="1467.9" r="322"/>
+<circle class="ring" cx="669.3" cy="1467.9" r="205.6"/>
+<circle class="ring faint" cx="669.3" cy="1467.9" r="258.2"/>
+<circle class="grid" cx="1963.4" cy="439.1" r="100"/>
+<circle class="grid" cx="1963.4" cy="439.1" r="170"/>
+<circle class="grid" cx="1963.4" cy="439.1" r="240"/>
+<circle class="ring" cx="1963.4" cy="439.1" r="171.8"/>
+<circle class="ring faint" cx="1963.4" cy="439.1" r="219.0"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="122"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="192"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="262"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="332"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="402"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="472"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="542"/>
+<circle class="grid" cx="1963.4" cy="1315.7" r="612"/>
+<circle class="ring" cx="1963.4" cy="1315.7" r="461.2"/>
+<circle class="ring faint" cx="1963.4" cy="1315.7" r="515.6"/>
+<circle class="grid" cx="696.4" cy="2443.7" r="96"/>
+<circle class="grid" cx="696.4" cy="2443.7" r="166"/>
+<circle class="grid" cx="696.4" cy="2443.7" r="236"/>
+<circle class="ring" cx="696.4" cy="2443.7" r="167.4"/>
+<circle class="ring faint" cx="696.4" cy="2443.7" r="214.6"/>
+<circle class="grid" cx="430.7" cy="3001.9" r="103"/>
+<circle class="grid" cx="430.7" cy="3001.9" r="173"/>
+<circle class="grid" cx="430.7" cy="3001.9" r="243"/>
+<circle class="grid" cx="430.7" cy="3001.9" r="313"/>
+<circle class="ring" cx="430.7" cy="3001.9" r="182.1"/>
+<circle class="ring faint" cx="430.7" cy="3001.9" r="237.0"/>
+<circle class="grid" cx="994.1" cy="3001.9" r="92"/>
+<circle class="grid" cx="994.1" cy="3001.9" r="162"/>
+<circle class="grid" cx="994.1" cy="3001.9" r="232"/>
+<circle class="ring" cx="994.1" cy="3001.9" r="162.5"/>
+<circle class="ring faint" cx="994.1" cy="3001.9" r="208.4"/>
+<circle class="grid" cx="3016.7" cy="458.6" r="100"/>
+<circle class="grid" cx="3016.7" cy="458.6" r="170"/>
+<circle class="grid" cx="3016.7" cy="458.6" r="240"/>
+<circle class="grid" cx="3016.7" cy="458.6" r="310"/>
+<circle class="ring" cx="3016.7" cy="458.6" r="179.9"/>
+<circle class="ring faint" cx="3016.7" cy="458.6" r="235.6"/>
+<circle class="grid" cx="3016.7" cy="1033.5" r="100"/>
+<circle class="grid" cx="3016.7" cy="1033.5" r="170"/>
+<circle class="grid" cx="3016.7" cy="1033.5" r="240"/>
+<circle class="grid" cx="3016.7" cy="1033.5" r="310"/>
+<circle class="ring" cx="3016.7" cy="1033.5" r="179.9"/>
+<circle class="ring faint" cx="3016.7" cy="1033.5" r="235.6"/>
+<circle class="grid" cx="2998.2" cy="1852.1" r="99"/>
+<circle class="grid" cx="2998.2" cy="1852.1" r="169"/>
+<circle class="grid" cx="2998.2" cy="1852.1" r="239"/>
+<circle class="grid" cx="2998.2" cy="1852.1" r="309"/>
+<circle class="ring" cx="2998.2" cy="1852.1" r="171.9"/>
+<circle class="ring faint" cx="2998.2" cy="1852.1" r="219.9"/>
+<circle class="grid" cx="1677.1" cy="2448.2" r="95"/>
+<circle class="grid" cx="1677.1" cy="2448.2" r="165"/>
+<circle class="grid" cx="1677.1" cy="2448.2" r="235"/>
+<circle class="grid" cx="1677.1" cy="2448.2" r="305"/>
+<circle class="ring" cx="1677.1" cy="2448.2" r="168.9"/>
+<circle class="ring faint" cx="1677.1" cy="2448.2" r="218.6"/>
+<circle class="grid" cx="2353.6" cy="2631.0" r="92"/>
+<circle class="grid" cx="2353.6" cy="2631.0" r="162"/>
+<circle class="grid" cx="2353.6" cy="2631.0" r="232"/>
+<circle class="ring" cx="2353.6" cy="2631.0" r="159.5"/>
+<circle class="ring faint" cx="2353.6" cy="2631.0" r="203.0"/>
+<circle class="grid" cx="3007.8" cy="2627.5" r="89"/>
+<circle class="grid" cx="3007.8" cy="2627.5" r="159"/>
+<circle class="grid" cx="3007.8" cy="2627.5" r="229"/>
+<circle class="ring" cx="3007.8" cy="2627.5" r="157.0"/>
+<circle class="ring faint" cx="3007.8" cy="2627.5" r="200.5"/>
+<circle class="grid" cx="1649.4" cy="3216.0" r="88"/>
+<circle class="grid" cx="1649.4" cy="3216.0" r="158"/>
+<circle class="grid" cx="1649.4" cy="3216.0" r="228"/>
+<circle class="ring" cx="1649.4" cy="3216.0" r="154.4"/>
+<circle class="ring faint" cx="1649.4" cy="3216.0" r="196.0"/>
+<path class="conduit-outer" stroke-width="22" stroke-dasharray="26 18" stroke-linecap="butt" d="M669.3,1467.9 L669.3,699.3"/>
+<path class="conduit-tc" stroke-dasharray="26 18" d="M669.3,1467.9 L669.3,699.3"/>
+<path class="conduit-outer" stroke-width="38" d="M1963.4,1315.7 L1963.4,439.1"/>
+<path class="conduit-glow" stroke-width="26" filter="url(#bigglow)" d="M1963.4,1315.7 L1963.4,439.1"/>
+<path class="conduit-glow" stroke-width="14" d="M1963.4,1315.7 L1963.4,439.1"/>
+<path class="conduit-core" d="M1963.4,1315.7 L1963.4,439.1"/>
+<path class="conduit-flow" d="M1963.4,1315.7 L1963.4,439.1"/>
+<path class="conduit-outer" stroke-width="38" d="M430.7,3001.9 L696.4,2443.7"/>
+<path class="conduit-glow" stroke-width="26" filter="url(#bigglow)" d="M430.7,3001.9 L696.4,2443.7"/>
+<path class="conduit-glow" stroke-width="14" d="M430.7,3001.9 L696.4,2443.7"/>
+<path class="conduit-core" d="M430.7,3001.9 L696.4,2443.7"/>
+<path class="conduit-flow" d="M430.7,3001.9 L696.4,2443.7"/>
+<path class="conduit-outer" stroke-width="38" d="M994.1,3001.9 L696.4,2443.7"/>
+<path class="conduit-glow" stroke-width="26" filter="url(#bigglow)" d="M994.1,3001.9 L696.4,2443.7"/>
+<path class="conduit-glow" stroke-width="14" d="M994.1,3001.9 L696.4,2443.7"/>
+<path class="conduit-core" d="M994.1,3001.9 L696.4,2443.7"/>
+<path class="conduit-flow" d="M994.1,3001.9 L696.4,2443.7"/>
+<path class="conduit-outer" stroke-width="38" d="M3016.7,1033.5 L3016.7,458.6"/>
+<path class="conduit-glow" stroke-width="26" filter="url(#bigglow)" d="M3016.7,1033.5 L3016.7,458.6"/>
+<path class="conduit-glow" stroke-width="14" d="M3016.7,1033.5 L3016.7,458.6"/>
+<path class="conduit-core" d="M3016.7,1033.5 L3016.7,458.6"/>
+<path class="conduit-flow" d="M3016.7,1033.5 L3016.7,458.6"/>
+<path class="spoke write" d="M719.1,347.5 Q669.3,699.3 714.8,574.4"/>
+<path class="spoke write" d="M719.1,347.5 Q669.3,699.3 784.4,632.8"/>
+<path class="spoke write" d="M719.1,347.5 Q669.3,699.3 800.2,722.4"/>
+<path class="spoke write" d="M719.1,347.5 Q669.3,699.3 754.7,801.1"/>
+<path class="spoke read" d="M719.1,347.5 Q669.3,699.3 669.3,832.2"/>
+<path class="spoke read" d="M812.7,369.3 Q669.3,699.3 754.7,801.1"/>
+<path class="spoke read" d="M812.7,369.3 Q669.3,699.3 554.2,632.8"/>
+<path class="spoke write" d="M892.8,428.7 Q669.3,699.3 784.4,632.8"/>
+<path class="spoke read" d="M892.8,428.7 Q669.3,699.3 583.9,801.1"/>
+<path class="spoke write" d="M962.6,512.2 Q669.3,699.3 784.4,632.8"/>
+<path class="spoke read" d="M962.6,512.2 Q669.3,699.3 583.9,801.1"/>
+<path class="spoke read" d="M962.6,512.2 Q669.3,699.3 538.4,722.4"/>
+<path class="spoke read" d="M1018.3,705.4 Q669.3,699.3 800.2,722.4"/>
+<path class="spoke read" d="M1018.3,705.4 Q669.3,699.3 583.9,801.1"/>
+<path class="spoke read" d="M1018.3,705.4 Q669.3,699.3 538.4,722.4"/>
+<path class="spoke read" d="M995.8,814.6 Q669.3,699.3 583.9,801.1"/>
+<path class="spoke read" d="M995.8,814.6 Q669.3,699.3 538.4,722.4"/>
+<path class="spoke read" d="M448.9,971.9 Q669.3,699.3 583.9,801.1"/>
+<path class="spoke write" d="M323.5,795.6 Q669.3,699.3 784.4,632.8"/>
+<path class="spoke read" d="M319.0,612.7 Q669.3,699.3 800.2,722.4"/>
+<path class="spoke read" d="M407.4,454.4 Q669.3,699.3 583.9,801.1"/>
+<path class="spoke read" d="M407.4,454.4 Q669.3,699.3 538.4,722.4"/>
+<path class="spoke write" d="M489.0,396.9 Q669.3,699.3 784.4,632.8"/>
+<path class="spoke read" d="M489.0,396.9 Q669.3,699.3 538.4,722.4"/>
+<path class="spoke read" d="M583.1,355.5 Q669.3,699.3 754.7,801.1"/>
+<path class="spoke read" d="M583.1,355.5 Q669.3,699.3 554.2,632.8"/>
+<path class="spoke read" d="M688.7,351.2 Q669.3,699.3 754.7,801.1"/>
+<path class="spoke read" d="M688.7,351.2 Q669.3,699.3 538.4,722.4"/>
+<path class="spoke read" d="M688.7,351.2 Q669.3,699.3 554.2,632.8"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="669.3" cy="699.3" r="98.9"/>
+<circle class="core-ring" cx="669.3" cy="699.3" r="88.9"/>
+<circle class="ticks" cx="669.3" cy="699.3" r="110.9" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:26px" x="669.3" y="705.3" text-anchor="middle">Table</text>
+<text class="csub" x="669.3" y="725.3" text-anchor="middle">700 lines · 20 gates · 9 values</text>
+<g filter="url(#glow)"><circle class="val" cx="714.8" cy="574.4" r="6"/></g>
+<text class="vlabel" x="720.2" y="563.4" text-anchor="start">_name</text>
+<g filter="url(#glow)"><circle class="val mut" cx="784.4" cy="632.8" r="6"/></g>
+<text class="vlabel mut" x="798.3" y="628.8" text-anchor="start">_next_id</text>
+<g filter="url(#glow)"><circle class="val" cx="800.2" cy="722.4" r="6"/></g>
+<text class="vlabel" x="816.0" y="729.2" text-anchor="start">_query_cache</text>
+<g filter="url(#glow)"><circle class="val" cx="754.7" cy="801.1" r="6"/></g>
+<text class="vlabel" x="765.0" y="817.4" text-anchor="start">_storage</text>
+<g filter="url(#glow)"><rect class="val" x="663.8" y="826.7" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="669.3" y="862.2" text-anchor="middle">query_cache_class</text>
+<g filter="url(#glow)"><rect class="val" x="578.4" y="795.6" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="573.6" y="817.4" text-anchor="end">document_class</text>
+<g filter="url(#glow)"><rect class="val" x="532.9" y="716.9" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="522.7" y="729.2" text-anchor="end">document_id_class</text>
+<g filter="url(#glow)"><path class="val" d="M554.2,625.8 L561.2,632.8 L554.2,639.8 L547.2,632.8 z"/></g>
+<text class="vlabel" x="540.3" y="628.8" text-anchor="end">name</text>
+<g filter="url(#glow)"><path class="val" d="M623.8,567.4 L630.8,574.4 L623.8,581.4 L616.8,574.4 z"/></g>
+<text class="vlabel" x="618.4" y="563.4" text-anchor="end">storage</text>
+<path class="wire" marker-end="url(#arr)" d="M739.4,304.4 Q723.3,150.8 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M739.4,304.4 Q638.6,114.9 556.9,309.2"/>
+<path class="wire" marker-end="url(#arr)" d="M840.0,341.3 Q437.2,29.0 311.1,522.2"/>
+<path class="wire" marker-end="url(#arr)" d="M938.3,396.0 Q892.8,128.3 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M938.3,396.0 Q721.2,21.1 448.0,356.1"/>
+<path class="wire" marker-end="url(#arr)" d="M1021.1,491.8 Q996.7,139.5 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M1021.1,491.8 Q834.2,3.1 448.0,356.1"/>
+<path class="wire" marker-end="url(#arr)" d="M1056.6,605.1 Q854.1,-58.9 366.4,435.3"/>
+<path class="wire" marker-end="url(#arr)" d="M1076.1,720.7 Q1135.0,113.2 556.9,309.2"/>
+<path class="wire" marker-end="url(#arr)" d="M1051.0,849.4 Q1249.8,171.0 556.9,309.2"/>
+<path class="wire" marker-end="url(#arr)" d="M981.3,952.3 Q1176.9,972.0 1064.4,823.5"/>
+<path class="wire" marker-end="url(#arr)" d="M892.9,1049.6 Q1460.5,477.2 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M509.3,1074.4 Q-172.3,518.2 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M403.3,1005.8 Q643.0,1385.2 919.2,1036.3"/>
+<path class="wire" marker-end="url(#arr)" d="M403.3,1005.8 Q1362.2,1265.7 918.9,374.7"/>
+<path class="wire" marker-end="url(#arr)" d="M315.5,909.0 Q-12.6,301.4 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M283.0,792.4 Q80.4,225.6 677.8,287.6"/>
+<path class="wire" marker-end="url(#arr)" d="M272.9,690.3 Q666.9,1592.1 1080.6,692.1"/>
+<path class="wire" marker-end="url(#arr)" d="M327.8,499.6 Q279.2,197.8 556.9,309.2"/>
+<path class="wire" marker-end="url(#arr)" d="M388.4,417.6 Q361.7,176.9 556.9,309.2"/>
+<path class="wire" marker-end="url(#arr)" d="M474.5,345.0 Q450.0,168.2 556.9,309.2"/>
+<path class="wire" marker-end="url(#arr)" d="M706.2,293.2 Q254.6,138.1 278.3,617.1"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="722.0" cy="326.8" r="20.9"/>
+<circle class="gate internal" stroke-width="1.6" cx="722.0" cy="326.8" r="20.9"/>
+<circle class="gate internal" stroke-width="1" cx="722.0" cy="326.8" r="25.9" opacity=".7"/>
+<line class="gate internal" stroke-width="1.4" x1="722.3" y1="338.3" x2="722.4" y2="343.1"/>
+<line class="gate internal" stroke-width="1.4" x1="718.6" y1="337.8" x2="717.2" y2="342.4"/>
+<circle class="gdot internal" cx="722.0" cy="326.8" r="3.8"/>
+</g>
+<text class="glabel internal" x="726.9" y="278.3" text-anchor="middle">__init__</text>
+<text class="gsize" x="726.9" y="290.3" text-anchor="middle">21</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="819.2" cy="354.3" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M832.6,344.9 A16.4,16.4 0 1 1 816.9,338.1"/>
+<circle class="gate public" stroke-width="1" cx="819.2" cy="354.3" r="21.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="815.6" y1="362.5" x2="814.1" y2="366.0"/>
+<circle class="gdot public" cx="819.2" cy="354.3" r="2.9"/>
+</g>
+<text class="glabel public" x="831.3" y="330.4" text-anchor="start">__repr__</text>
+<text class="gsize" x="831.3" y="342.4" text-anchor="start">8</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="908.9" cy="409.3" r="25.2"/>
+<path class="gate public" stroke-width="2.2" d="M932.8,401.1 A25.2,25.2 0 1 1 912.5,384.3"/>
+<line class="gate public" stroke-width="1.4" x1="906.0" y1="422.9" x2="904.8" y2="428.5"/>
+<line class="gate public" stroke-width="1.4" x1="901.9" y1="421.3" x2="899.0" y2="426.3"/>
+<line class="gate public" stroke-width="1.4" x1="898.5" y1="418.4" x2="894.1" y2="422.3"/>
+<line class="gate public" stroke-width="1.4" x1="896.1" y1="414.7" x2="890.8" y2="417.0"/>
+<circle class="gdot public" cx="908.9" cy="409.3" r="4.5"/>
+</g>
+<text class="glabel public" x="933.9" y="383.0" text-anchor="start">insert</text>
+<text class="gsize" x="933.9" y="395.0" text-anchor="start">39</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="986.5" cy="497.0" r="28.3"/>
+<path class="gate public" stroke-width="2.2" d="M1014.7,496.5 A28.3,28.3 0 1 1 998.8,471.5"/>
+<line class="gate public" stroke-width="1.4" x1="983.3" y1="512.2" x2="982.0" y2="518.6"/>
+<line class="gate public" stroke-width="1.4" x1="978.7" y1="510.4" x2="975.4" y2="516.1"/>
+<line class="gate public" stroke-width="1.4" x1="974.8" y1="507.3" x2="970.0" y2="511.6"/>
+<line class="gate public" stroke-width="1.4" x1="972.2" y1="503.1" x2="966.2" y2="505.7"/>
+<line class="gate public" stroke-width="1.4" x1="971.0" y1="498.3" x2="964.5" y2="498.9"/>
+<line class="gate public" stroke-width="1.4" x1="971.3" y1="493.4" x2="965.0" y2="491.9"/>
+<circle class="gdot public" cx="986.5" cy="497.0" r="5.1"/>
+</g>
+<text class="glabel public" x="1022.1" y="478.2" text-anchor="start">insert_multiple</text>
+<text class="gsize" x="1022.1" y="490.2" text-anchor="start">55</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1031.5" cy="597.6" r="18.4"/>
+<path class="gate public" stroke-width="2.2" d="M1049.2,602.6 A18.4,18.4 0 1 1 1044.0,584.1"/>
+<line class="gate public" stroke-width="1.4" x1="1021.8" y1="600.3" x2="1017.7" y2="601.5"/>
+<circle class="gdot public" cx="1031.5" cy="597.6" r="3.3"/>
+</g>
+<text class="glabel public" x="1062.7" y="592.9" text-anchor="start">all</text>
+<text class="gsize" x="1062.7" y="604.9" text-anchor="start">13</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1045.4" cy="705.9" r="27.2"/>
+<path class="gate public" stroke-width="2.2" d="M1068.4,720.5 A27.2,27.2 0 1 1 1068.9,692.1"/>
+<line class="gate public" stroke-width="1.4" x1="1033.3" y1="714.6" x2="1028.2" y2="718.3"/>
+<line class="gate public" stroke-width="1.4" x1="1031.2" y1="710.4" x2="1025.2" y2="712.2"/>
+<line class="gate public" stroke-width="1.4" x1="1030.5" y1="705.6" x2="1024.2" y2="705.5"/>
+<line class="gate public" stroke-width="1.4" x1="1031.3" y1="700.9" x2="1025.4" y2="698.9"/>
+<line class="gate public" stroke-width="1.4" x1="1033.6" y1="696.8" x2="1028.7" y2="692.9"/>
+<circle class="gdot public" cx="1045.4" cy="705.9" r="4.9"/>
+</g>
+<text class="glabel public" x="1086.6" y="710.6" text-anchor="start">search</text>
+<text class="gsize" x="1086.6" y="722.6" text-anchor="start">49</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1024.0" cy="824.6" r="30.0"/>
+<path class="gate public" stroke-width="2.2" d="M1042.9,847.9 A30.0,30.0 0 1 1 1053.3,818.4"/>
+<line class="gate public" stroke-width="1.4" x1="1009.3" y1="831.9" x2="1003.1" y2="835.0"/>
+<line class="gate public" stroke-width="1.4" x1="1007.7" y1="826.9" x2="1000.9" y2="827.9"/>
+<line class="gate public" stroke-width="1.4" x1="1007.8" y1="821.7" x2="1001.0" y2="820.4"/>
+<line class="gate public" stroke-width="1.4" x1="1009.6" y1="816.7" x2="1003.5" y2="813.4"/>
+<line class="gate public" stroke-width="1.4" x1="1012.8" y1="812.6" x2="1008.1" y2="807.5"/>
+<line class="gate public" stroke-width="1.4" x1="1017.1" y1="809.6" x2="1014.3" y2="803.4"/>
+<circle class="gdot public" cx="1024.0" cy="824.6" r="5.4"/>
+</g>
+<text class="glabel public" x="1065.5" y="843.3" text-anchor="start">get</text>
+<text class="gsize" x="1065.5" y="855.3" text-anchor="start">65</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="969.6" cy="925.9" r="21.5"/>
+<path class="gate public" stroke-width="2.2" d="M977.5,945.9 A21.5,21.5 0 1 1 991.0,928.0"/>
+<line class="gate public" stroke-width="1.4" x1="959.2" y1="920.4" x2="954.8" y2="918.1"/>
+<line class="gate public" stroke-width="1.4" x1="961.4" y1="917.4" x2="958.0" y2="913.8"/>
+<circle class="gdot public" cx="969.6" cy="925.9" r="3.9"/>
+</g>
+<text class="glabel public" x="997.9" y="951.3" text-anchor="start">contains</text>
+<text class="gsize" x="997.9" y="963.3" text-anchor="start">23</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="882.7" cy="1009.1" r="35.4"/>
+<path class="gate public" stroke-width="2.2" d="M884.6,1044.5 A35.4,35.4 0 1 1 915.0,1023.5"/>
+<line class="gate public" stroke-width="1.4" x1="865.4" y1="1018.0" x2="858.1" y2="1021.7"/>
+<line class="gate public" stroke-width="1.4" x1="863.4" y1="1012.1" x2="855.4" y2="1013.3"/>
+<line class="gate public" stroke-width="1.4" x1="863.5" y1="1005.9" x2="855.5" y2="1004.5"/>
+<line class="gate public" stroke-width="1.4" x1="865.5" y1="1000.0" x2="858.3" y2="996.2"/>
+<line class="gate public" stroke-width="1.4" x1="869.2" y1="995.1" x2="863.6" y2="989.2"/>
+<line class="gate public" stroke-width="1.4" x1="874.3" y1="991.6" x2="870.9" y2="984.2"/>
+<line class="gate public" stroke-width="1.4" x1="880.3" y1="989.8" x2="879.3" y2="981.7"/>
+<line class="gate public" stroke-width="1.4" x1="886.5" y1="990.0" x2="888.1" y2="982.1"/>
+<line class="gate public" stroke-width="1.4" x1="892.3" y1="992.2" x2="896.3" y2="985.1"/>
+<line class="gate public" stroke-width="1.4" x1="897.1" y1="996.1" x2="903.2" y2="990.6"/>
+<circle class="gdot public" cx="882.7" cy="1009.1" r="6.4"/>
+</g>
+<text class="glabel public" x="910.7" y="1053.8" text-anchor="start">update</text>
+<text class="gsize" x="910.7" y="1065.8" text-anchor="start">103</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="533.8" cy="1050.3" r="27.6"/>
+<path class="gate public" stroke-width="2.2" d="M511.9,1067.0 A27.6,27.6 0 1 1 538.8,1077.4"/>
+<line class="gate public" stroke-width="1.4" x1="529.8" y1="1035.7" x2="528.1" y2="1029.6"/>
+<line class="gate public" stroke-width="1.4" x1="534.6" y1="1035.1" x2="534.9" y2="1028.8"/>
+<line class="gate public" stroke-width="1.4" x1="539.3" y1="1036.1" x2="541.6" y2="1030.2"/>
+<line class="gate public" stroke-width="1.4" x1="543.5" y1="1038.6" x2="547.5" y2="1033.7"/>
+<line class="gate public" stroke-width="1.4" x1="546.7" y1="1042.2" x2="552.0" y2="1038.8"/>
+<circle class="gdot public" cx="533.8" cy="1050.3" r="5.0"/>
+</g>
+<text class="glabel public" x="518.9" y="1093.1" text-anchor="end">update_multiple</text>
+<text class="gsize" x="518.9" y="1105.1" text-anchor="end">51</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="432.8" cy="991.8" r="25.6"/>
+<path class="gate public" stroke-width="2.2" d="M408.6,1000.4 A25.6,25.6 0 1 1 429.5,1017.3"/>
+<line class="gate public" stroke-width="1.4" x1="435.6" y1="978.0" x2="436.8" y2="972.2"/>
+<line class="gate public" stroke-width="1.4" x1="439.8" y1="979.6" x2="442.7" y2="974.5"/>
+<line class="gate public" stroke-width="1.4" x1="443.3" y1="982.4" x2="447.7" y2="978.5"/>
+<line class="gate public" stroke-width="1.4" x1="445.7" y1="986.2" x2="451.1" y2="983.9"/>
+<circle class="gdot public" cx="432.8" cy="991.8" r="4.6"/>
+</g>
+<text class="glabel public" x="407.9" y="1026.7" text-anchor="end">upsert</text>
+<text class="gsize" x="407.9" y="1038.7" text-anchor="end">41</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="352.6" cy="902.3" r="31.1"/>
+<path class="gate public" stroke-width="2.2" d="M321.5,902.9 A31.1,31.1 0 1 1 339.1,930.3"/>
+<line class="gate public" stroke-width="1.4" x1="353.3" y1="885.2" x2="353.6" y2="878.1"/>
+<line class="gate public" stroke-width="1.4" x1="358.6" y1="886.3" x2="361.1" y2="879.6"/>
+<line class="gate public" stroke-width="1.4" x1="363.3" y1="889.0" x2="367.8" y2="883.5"/>
+<line class="gate public" stroke-width="1.4" x1="367.0" y1="893.1" x2="373.0" y2="889.2"/>
+<line class="gate public" stroke-width="1.4" x1="369.1" y1="898.1" x2="376.1" y2="896.3"/>
+<line class="gate public" stroke-width="1.4" x1="369.6" y1="903.5" x2="376.8" y2="904.0"/>
+<line class="gate public" stroke-width="1.4" x1="368.4" y1="908.8" x2="375.0" y2="911.5"/>
+<circle class="gdot public" cx="352.6" cy="902.3" r="5.6"/>
+</g>
+<text class="glabel public" x="314.6" y="930.6" text-anchor="end">remove</text>
+<text class="gsize" x="314.6" y="942.6" text-anchor="end">72</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="306.9" cy="800.2" r="17.2"/>
+<path class="gate public" stroke-width="2.2" d="M290.3,795.5 A17.2,17.2 0 1 1 295.2,812.8"/>
+<line class="gate public" stroke-width="1.4" x1="316.0" y1="797.7" x2="319.8" y2="796.6"/>
+<circle class="gdot public" cx="306.9" cy="800.2" r="3.1"/>
+</g>
+<text class="glabel public" x="276.8" y="812.6" text-anchor="end">truncate</text>
+<text class="gsize" x="276.8" y="824.6" text-anchor="end">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="293.1" cy="703.9" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M279.1,695.5 A16.4,16.4 0 1 1 279.3,712.6"/>
+<line class="gate public" stroke-width="1.4" x1="302.1" y1="703.8" x2="305.9" y2="703.7"/>
+<circle class="gdot public" cx="293.1" cy="703.9" r="2.9"/>
+</g>
+<text class="glabel public" x="262.8" y="708.3" text-anchor="end">count</text>
+<text class="gsize" x="262.8" y="720.3" text-anchor="end">8</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="304.1" cy="609.0" r="15.4"/>
+<path class="gate public" stroke-width="2.2" d="M293.3,598.1 A15.4,15.4 0 1 1 289.4,613.7"/>
+<line class="gate public" stroke-width="1.4" x1="312.3" y1="611.1" x2="315.7" y2="611.9"/>
+<circle class="gdot public" cx="304.1" cy="609.0" r="2.8"/>
+</g>
+<text class="glabel public" x="275.6" y="606.0" text-anchor="end">clear_cache</text>
+<text class="gsize" x="275.6" y="618.0" text-anchor="end">6</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="338.1" cy="520.9" r="15.4"/>
+<path class="gate public" stroke-width="2.2" d="M330.4,507.6 A15.4,15.4 0 1 1 322.8,521.8"/>
+<circle class="gate public" stroke-width="1" cx="338.1" cy="520.9" r="20.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="345.5" y1="524.9" x2="348.7" y2="526.6"/>
+<circle class="gdot public" cx="338.1" cy="520.9" r="2.8"/>
+</g>
+<text class="glabel public" x="312.2" y="511.0" text-anchor="end">__len__</text>
+<text class="gsize" x="312.2" y="523.0" text-anchor="end">6</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="394.5" cy="442.3" r="17.6"/>
+<path class="gate public" stroke-width="2.2" d="M389.9,425.4 A17.6,17.6 0 1 1 377.3,438.8"/>
+<circle class="gate public" stroke-width="1" cx="394.5" cy="442.3" r="22.6" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="401.6" y1="449.0" x2="404.6" y2="451.7"/>
+<circle class="gdot public" cx="394.5" cy="442.3" r="3.2"/>
+</g>
+<text class="glabel public" x="371.4" y="424.7" text-anchor="end">__iter__</text>
+<text class="gsize" x="371.4" y="436.7" text-anchor="end">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="476.6" cy="376.2" r="24.2"/>
+<path class="gate public" stroke-width="2.2" d="M476.9,352.0 A24.2,24.2 0 1 1 455.2,365.0"/>
+<line class="gate public" stroke-width="1.4" x1="486.7" y1="384.9" x2="490.9" y2="388.5"/>
+<line class="gate public" stroke-width="1.4" x1="483.4" y1="387.6" x2="486.3" y2="392.4"/>
+<line class="gate public" stroke-width="1.4" x1="479.5" y1="389.2" x2="480.7" y2="394.6"/>
+<circle class="gdot public" cx="476.6" cy="376.2" r="4.3"/>
+</g>
+<text class="glabel public" x="457.1" y="347.4" text-anchor="end">_get_next_id</text>
+<text class="gsize" x="457.1" y="359.4" text-anchor="end">34</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="577.9" cy="334.4" r="21.7"/>
+<circle class="gate private" stroke-width="1.6" cx="577.9" cy="334.4" r="21.7"/>
+<line class="gate private" stroke-width="1.4" x1="582.6" y1="345.4" x2="584.5" y2="350.0"/>
+<line class="gate private" stroke-width="1.4" x1="578.9" y1="346.3" x2="579.3" y2="351.3"/>
+<circle class="gdot private" cx="577.9" cy="334.4" r="3.9"/>
+</g>
+<text class="glabel private" x="569.2" y="285.7" text-anchor="middle">_read_table</text>
+<text class="gsize" x="569.2" y="297.7" text-anchor="middle">24</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="690.2" cy="323.7" r="27.6"/>
+<circle class="gate private" stroke-width="1.6" cx="690.2" cy="323.7" r="27.6"/>
+<line class="gate private" stroke-width="1.4" x1="698.6" y1="336.3" x2="702.1" y2="341.6"/>
+<line class="gate private" stroke-width="1.4" x1="694.2" y1="338.3" x2="695.8" y2="344.4"/>
+<line class="gate private" stroke-width="1.4" x1="689.4" y1="338.8" x2="689.0" y2="345.2"/>
+<line class="gate private" stroke-width="1.4" x1="684.7" y1="337.8" x2="682.3" y2="343.7"/>
+<line class="gate private" stroke-width="1.4" x1="680.5" y1="335.3" x2="676.4" y2="340.2"/>
+<circle class="gdot private" cx="690.2" cy="323.7" r="5.0"/>
+</g>
+<text class="glabel private" x="692.5" y="268.2" text-anchor="middle">_update_table</text>
+<text class="gsize" x="692.5" y="280.2" text-anchor="middle">51</text>
+<text class="module" x="669.3" y="578.4" text-anchor="middle">table.py</text>
+<path class="spoke write" d="M751.5,1299.2 Q669.3,1467.9 715.4,1372.1"/>
+<path class="spoke write" d="M751.5,1299.2 Q669.3,1467.9 772.9,1444.2"/>
+<path class="spoke write" d="M751.5,1299.2 Q669.3,1467.9 752.4,1534.1"/>
+<path class="spoke read" d="M751.5,1299.2 Q669.3,1467.9 669.3,1574.1"/>
+<path class="spoke read" d="M851.8,1442.9 Q669.3,1467.9 752.4,1534.1"/>
+<path class="spoke read" d="M851.8,1442.9 Q669.3,1467.9 623.2,1372.1"/>
+<path class="spoke read" d="M851.8,1442.9 Q669.3,1467.9 586.3,1534.1"/>
+<path class="spoke read" d="M838.7,1537.4 Q669.3,1467.9 623.2,1372.1"/>
+<path class="spoke read" d="M786.3,1614.6 Q669.3,1467.9 752.4,1534.1"/>
+<path class="spoke read" d="M786.3,1614.6 Q669.3,1467.9 623.2,1372.1"/>
+<path class="spoke read" d="M699.4,1648.5 Q669.3,1467.9 752.4,1534.1"/>
+<path class="spoke read" d="M699.4,1648.5 Q669.3,1467.9 623.2,1372.1"/>
+<path class="spoke write" d="M605.3,1642.4 Q669.3,1467.9 715.4,1372.1"/>
+<path class="spoke read" d="M605.3,1642.4 Q669.3,1467.9 623.2,1372.1"/>
+<path class="spoke read" d="M485.2,1515.8 Q669.3,1467.9 715.4,1372.1"/>
+<path class="spoke read" d="M482.4,1429.3 Q669.3,1467.9 565.7,1444.2"/>
+<path class="spoke read" d="M521.1,1350.9 Q669.3,1467.9 565.7,1444.2"/>
+<path class="spoke read" d="M588.4,1295.0 Q669.3,1467.9 565.7,1444.2"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="669.3" cy="1467.9" r="72.2"/>
+<circle class="core-ring" cx="669.3" cy="1467.9" r="62.2"/>
+<circle class="ticks" cx="669.3" cy="1467.9" r="84.2" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:26px" x="669.3" y="1473.9" text-anchor="middle">TinyDB</text>
+<text class="csub" x="669.3" y="1493.9" text-anchor="middle">172 lines · 12 gates · 7 values</text>
+<g filter="url(#glow)"><circle class="val mut" cx="715.4" cy="1372.1" r="6"/></g>
+<text class="vlabel mut" x="722.3" y="1361.7" text-anchor="start">_opened</text>
+<g filter="url(#glow)"><circle class="val" cx="772.9" cy="1444.2" r="6"/></g>
+<text class="vlabel" x="788.5" y="1444.7" text-anchor="start">_storage</text>
+<g filter="url(#glow)"><circle class="val" cx="752.4" cy="1534.1" r="6"/></g>
+<text class="vlabel" x="764.9" y="1548.1" text-anchor="start">_tables</text>
+<g filter="url(#glow)"><rect class="val" x="663.8" y="1568.6" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="669.3" y="1604.1" text-anchor="middle">default_storage_class</text>
+<g filter="url(#glow)"><rect class="val" x="580.8" y="1528.6" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="573.7" y="1548.1" text-anchor="end">table_class</text>
+<g filter="url(#glow)"><rect class="val" x="560.2" y="1438.7" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="550.1" y="1444.7" text-anchor="end">default_table_name</text>
+<g filter="url(#glow)"><path class="val" d="M623.2,1365.1 L630.2,1372.1 L623.2,1379.1 L616.2,1372.1 z"/></g>
+<text class="vlabel" x="616.3" y="1361.7" text-anchor="end">storage</text>
+<path class="wire" marker-end="url(#arr)" d="M856.5,1339.7 Q676.2,1054.4 483.5,1331.5"/>
+<path class="wire" marker-end="url(#arr)" d="M856.5,1339.7 Q1029.9,1423.3 890.8,1549.8"/>
+<path class="wire" marker-end="url(#arr)" d="M856.5,1339.7 Q976.0,1343.4 901.0,1427.9"/>
+<path class="wire" marker-end="url(#arr)" d="M449.7,1516.9 Q403.0,1709.5 596.7,1689.6"/>
+<path class="wire" marker-end="url(#arr)" d="M451.2,1414.9 Q685.3,995.1 901.0,1427.9"/>
+<path class="wire" marker-end="url(#arr)" d="M496.6,1321.4 Q786.2,1039.2 901.0,1427.9"/>
+<path class="wire" marker-end="url(#arr)" d="M581.4,1261.4 Q868.1,1102.8 901.0,1427.9"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="759.3" cy="1283.0" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M774.5,1273.3 A18.0,18.0 0 1 1 757.6,1265.0"/>
+<circle class="gate public" stroke-width="1" cx="759.3" cy="1283.0" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="755.0" y1="1291.9" x2="753.2" y2="1295.6"/>
+<circle class="gdot public" cx="759.3" cy="1283.0" r="3.2"/>
+</g>
+<text class="glabel public" x="773.4" y="1258.2" text-anchor="start">__init__</text>
+<text class="gsize" x="773.4" y="1270.2" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="834.9" cy="1345.9" r="17.2"/>
+<path class="gate public" stroke-width="2.2" d="M852.0,1344.4 A17.2,17.2 0 1 1 841.3,1329.9"/>
+<circle class="gate public" stroke-width="1" cx="834.9" cy="1345.9" r="22.2" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="827.2" y1="1351.5" x2="824.0" y2="1353.8"/>
+<circle class="gdot public" cx="834.9" cy="1345.9" r="3.1"/>
+</g>
+<text class="glabel public" x="860.0" y="1331.3" text-anchor="start">__repr__</text>
+<text class="gsize" x="860.0" y="1343.3" text-anchor="start">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="873.1" cy="1440.0" r="21.5"/>
+<path class="gate public" stroke-width="2.2" d="M892.7,1448.7 A21.5,21.5 0 1 1 889.7,1426.4"/>
+<line class="gate public" stroke-width="1.4" x1="861.8" y1="1443.5" x2="857.0" y2="1444.9"/>
+<line class="gate public" stroke-width="1.4" x1="861.3" y1="1439.7" x2="856.3" y2="1439.6"/>
+<circle class="gdot public" cx="873.1" cy="1440.0" r="3.9"/>
+</g>
+<text class="glabel public" x="908.2" y="1439.2" text-anchor="start">table</text>
+<text class="gsize" x="908.2" y="1451.2" text-anchor="start">23</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="859.6" cy="1545.9" r="22.5"/>
+<path class="gate public" stroke-width="2.2" d="M872.8,1564.1 A22.5,22.5 0 1 1 881.8,1542.3"/>
+<line class="gate public" stroke-width="1.4" x1="847.2" y1="1545.1" x2="842.0" y2="1544.7"/>
+<line class="gate public" stroke-width="1.4" x1="848.1" y1="1541.2" x2="843.3" y2="1539.3"/>
+<line class="gate public" stroke-width="1.4" x1="850.2" y1="1537.9" x2="846.2" y2="1534.5"/>
+<circle class="gdot public" cx="859.6" cy="1545.9" r="4.1"/>
+</g>
+<text class="glabel public" x="893.3" y="1563.8" text-anchor="start">tables</text>
+<text class="gsize" x="893.3" y="1575.8" text-anchor="start">27</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="797.5" cy="1628.6" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M799.7,1646.5 A18.0,18.0 0 1 1 814.5,1634.8"/>
+<line class="gate public" stroke-width="1.4" x1="791.4" y1="1620.9" x2="788.8" y2="1617.7"/>
+<circle class="gdot public" cx="797.5" cy="1628.6" r="3.2"/>
+</g>
+<text class="glabel public" x="817.5" y="1657.7" text-anchor="start">drop_tables</text>
+<text class="gsize" x="817.5" y="1669.7" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="703.1" cy="1670.7" r="22.5"/>
+<path class="gate public" stroke-width="2.2" d="M694.6,1691.6 A22.5,22.5 0 1 1 717.8,1687.7"/>
+<line class="gate public" stroke-width="1.4" x1="697.3" y1="1659.8" x2="694.9" y2="1655.2"/>
+<line class="gate public" stroke-width="1.4" x1="701.0" y1="1658.5" x2="700.2" y2="1653.4"/>
+<line class="gate public" stroke-width="1.4" x1="705.0" y1="1658.5" x2="705.8" y2="1653.4"/>
+<circle class="gdot public" cx="703.1" cy="1670.7" r="4.1"/>
+</g>
+<text class="glabel public" x="709.1" y="1720.7" text-anchor="middle">drop_table</text>
+<text class="gsize" x="709.1" y="1732.7" text-anchor="middle">27</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="598.5" cy="1660.9" r="19.7"/>
+<path class="gate public" stroke-width="2.2" d="M583.0,1673.2 A19.7,19.7 0 1 1 602.4,1680.3"/>
+<line class="gate public" stroke-width="1.4" x1="600.5" y1="1650.3" x2="601.4" y2="1645.8"/>
+<line class="gate public" stroke-width="1.4" x1="603.8" y1="1651.5" x2="606.0" y2="1647.5"/>
+<circle class="gdot public" cx="598.5" cy="1660.9" r="3.5"/>
+</g>
+<text class="glabel public" x="586.9" y="1696.6" text-anchor="end">close</text>
+<text class="gsize" x="586.9" y="1708.6" text-anchor="end">17</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="515.6" cy="1604.4" r="17.6"/>
+<path class="gate public" stroke-width="2.2" d="M498.2,1607.5 A17.6,17.6 0 1 1 510.5,1621.3"/>
+<circle class="gate public" stroke-width="1" cx="515.6" cy="1604.4" r="22.6" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="522.8" y1="1598.0" x2="525.8" y2="1595.3"/>
+<circle class="gdot public" cx="515.6" cy="1604.4" r="3.2"/>
+</g>
+<text class="glabel public" x="491.9" y="1629.4" text-anchor="end">__enter__</text>
+<text class="gsize" x="491.9" y="1641.4" text-anchor="end">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="470.3" cy="1519.7" r="15.4"/>
+<path class="gate public" stroke-width="2.2" d="M455.6,1515.2 A15.4,15.4 0 1 1 459.6,1530.8"/>
+<circle class="gate public" stroke-width="1" cx="470.3" cy="1519.7" r="20.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="478.5" y1="1517.5" x2="481.9" y2="1516.7"/>
+<circle class="gdot public" cx="470.3" cy="1519.7" r="2.8"/>
+</g>
+<text class="glabel public" x="441.9" y="1531.1" text-anchor="end">__exit__</text>
+<text class="gsize" x="441.9" y="1543.1" text-anchor="end">6</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="467.9" cy="1426.3" r="14.8"/>
+<path class="gate public" stroke-width="2.2" d="M457.1,1416.2 A14.8,14.8 0 1 1 454.0,1431.4"/>
+<circle class="gate public" stroke-width="1" cx="467.9" cy="1426.3" r="19.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="475.9" y1="1428.0" x2="479.2" y2="1428.7"/>
+<circle class="gdot public" cx="467.9" cy="1426.3" r="2.7"/>
+</g>
+<text class="glabel public" x="439.7" y="1424.5" text-anchor="end">__getattr__</text>
+<text class="gsize" x="439.7" y="1436.5" text-anchor="end">5</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="507.9" cy="1340.4" r="16.8"/>
+<path class="gate public" stroke-width="2.2" d="M502.1,1324.7 A16.8,16.8 0 1 1 491.2,1338.5"/>
+<circle class="gate public" stroke-width="1" cx="507.9" cy="1340.4" r="21.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="515.1" y1="1346.2" x2="518.2" y2="1348.6"/>
+<circle class="gdot public" cx="507.9" cy="1340.4" r="3.0"/>
+</g>
+<text class="glabel public" x="483.7" y="1325.4" text-anchor="end">__len__</text>
+<text class="gsize" x="483.7" y="1337.4" text-anchor="end">9</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="582.2" cy="1281.6" r="14.8"/>
+<path class="gate public" stroke-width="2.2" d="M583.8,1266.9 A14.8,14.8 0 1 1 569.8,1273.4"/>
+<circle class="gate public" stroke-width="1" cx="582.2" cy="1281.6" r="19.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="585.6" y1="1289.0" x2="587.0" y2="1292.1"/>
+<circle class="gdot public" cx="582.2" cy="1281.6" r="2.7"/>
+</g>
+<text class="glabel public" x="569.9" y="1259.5" text-anchor="end">__iter__</text>
+<text class="gsize" x="569.9" y="1271.5" text-anchor="end">5</text>
+<text class="module" x="669.3" y="1373.6" text-anchor="middle">database.py</text>
+<path class="spoke write" d="M2015.0,293.4 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke write" d="M2015.0,293.4 Q1963.4,439.1 1868.8,439.1"/>
+<path class="spoke read" d="M2096.4,351.9 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke read" d="M2118.5,449.0 Q1963.4,439.1 1868.8,439.1"/>
+<path class="spoke read" d="M2081.2,542.8 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke read" d="M1884.4,577.3 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke read" d="M1820.0,502.9 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke read" d="M1812.9,401.8 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke read" d="M1869.3,316.0 Q1963.4,439.1 2057.9,439.1"/>
+<path class="spoke read" d="M1963.4,280.8 Q1963.4,439.1 2057.9,439.1"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="1963.4" cy="439.1" r="60.6"/>
+<circle class="core-ring" cx="1963.4" cy="439.1" r="50.6"/>
+<circle class="ticks" cx="1963.4" cy="439.1" r="72.6" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="1963.4" y="445.1" text-anchor="middle">QueryInstance</text>
+<text class="csub" x="1963.4" y="465.1" text-anchor="middle">53 lines · 9 gates · 2 values</text>
+<g filter="url(#glow)"><circle class="val" cx="2057.9" cy="439.1" r="6"/></g>
+<text class="vlabel" x="2073.9" y="443.1" text-anchor="start">_hash</text>
+<g filter="url(#glow)"><circle class="val" cx="1868.8" cy="439.1" r="6"/></g>
+<text class="vlabel" x="1852.8" y="443.1" text-anchor="end">_test</text>
+<path class="wire" marker-end="url(#arr)" d="M1778.2,386.3 Q1901.5,75.8 2120.5,328.0"/>
+<path class="wire" marker-end="url(#arr)" d="M1778.2,386.3 Q1901.5,75.8 2120.5,328.0"/>
+<path class="wire" marker-end="url(#arr)" d="M1778.2,386.3 Q2024.7,42.1 2159.4,444.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1851.9,282.1 Q2019.5,110.1 2120.5,328.0"/>
+<path class="wire" marker-end="url(#arr)" d="M1851.9,282.1 Q2019.5,110.1 2120.5,328.0"/>
+<path class="wire" marker-end="url(#arr)" d="M1851.9,282.1 Q2136.4,115.5 2159.4,444.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1970.0,250.0 Q2106.0,175.0 2120.5,328.0"/>
+<path class="wire" marker-end="url(#arr)" d="M1970.0,250.0 Q2206.4,211.0 2159.4,444.7"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2020.8" cy="277.2" r="17.2"/>
+<circle class="gate internal" stroke-width="1.6" cx="2020.8" cy="277.2" r="17.2"/>
+<circle class="gate internal" stroke-width="1" cx="2020.8" cy="277.2" r="22.2" opacity=".7"/>
+<line class="gate internal" stroke-width="1.4" x1="2017.6" y1="286.1" x2="2016.3" y2="289.9"/>
+<circle class="gdot internal" cx="2020.8" cy="277.2" r="3.1"/>
+</g>
+<text class="glabel internal" x="2031.2" y="251.8" text-anchor="start">__init__</text>
+<text class="gsize" x="2031.2" y="263.8" text-anchor="start">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2107.0" cy="344.9" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M2119.7,344.5 A12.7,12.7 0 1 1 2112.4,333.5"/>
+<line class="gate public" stroke-width="1.4" x1="2101.2" y1="348.7" x2="2098.8" y2="350.3"/>
+<circle class="gdot public" cx="2107.0" cy="344.9" r="2.5"/>
+</g>
+<text class="glabel public" x="2129.3" y="334.3" text-anchor="start">is_cacheable</text>
+<text class="gsize" x="2129.3" y="346.3" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2134.8" cy="450.0" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M2148.2,459.4 A16.4,16.4 0 1 1 2149.3,442.3"/>
+<circle class="gate public" stroke-width="1" cx="2134.8" cy="450.0" r="21.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2125.8" y1="449.4" x2="2122.1" y2="449.2"/>
+<circle class="gdot public" cx="2134.8" cy="450.0" r="2.9"/>
+</g>
+<text class="glabel public" x="2165.1" y="455.9" text-anchor="start">__call__</text>
+<text class="gsize" x="2165.1" y="467.9" text-anchor="start">8</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2092.3" cy="552.6" r="14.8"/>
+<path class="gate public" stroke-width="2.2" d="M2096.7,566.8 A14.8,14.8 0 1 1 2106.9,555.2"/>
+<circle class="gate public" stroke-width="1" cx="2092.3" cy="552.6" r="19.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2086.2" y1="547.3" x2="2083.6" y2="545.0"/>
+<circle class="gdot public" cx="2092.3" cy="552.6" r="2.7"/>
+</g>
+<text class="glabel public" x="2113.9" y="575.7" text-anchor="start">__hash__</text>
+<text class="gsize" x="2113.9" y="587.7" text-anchor="start">5</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1878.1" cy="588.3" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M1867.0,594.4 A12.7,12.7 0 1 1 1878.5,600.9"/>
+<circle class="gate public" stroke-width="1" cx="1878.1" cy="588.3" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1881.6" y1="582.2" x2="1883.0" y2="579.7"/>
+<circle class="gdot public" cx="1878.1" cy="588.3" r="2.5"/>
+</g>
+<text class="glabel public" x="1864.9" y="615.4" text-anchor="end">__repr__</text>
+<text class="gsize" x="1864.9" y="627.4" text-anchor="end">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1806.4" cy="508.9" r="14.8"/>
+<circle class="gate private" stroke-width="1.6" cx="1806.4" cy="508.9" r="14.8"/>
+<circle class="gate private" stroke-width="1" cx="1806.4" cy="508.9" r="19.8" opacity=".7"/>
+<line class="gate private" stroke-width="1.4" x1="1813.9" y1="505.6" x2="1817.0" y2="504.3"/>
+<circle class="gdot private" cx="1806.4" cy="508.9" r="2.7"/>
+</g>
+<text class="glabel private" x="1780.1" y="524.7" text-anchor="end">__eq__</text>
+<text class="gsize" x="1780.1" y="536.7" text-anchor="end">5</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1796.6" cy="397.8" r="16.8"/>
+<path class="gate public" stroke-width="2.2" d="M1784.9,385.8 A16.8,16.8 0 1 1 1780.6,402.9"/>
+<circle class="gate public" stroke-width="1" cx="1796.6" cy="397.8" r="21.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1805.6" y1="400.0" x2="1809.4" y2="400.9"/>
+<circle class="gdot public" cx="1796.6" cy="397.8" r="3.0"/>
+</g>
+<text class="glabel public" x="1766.7" y="394.4" text-anchor="end">__and__</text>
+<text class="gsize" x="1766.7" y="406.4" text-anchor="end">9</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1859.1" cy="302.6" r="16.8"/>
+<path class="gate public" stroke-width="2.2" d="M1857.4,285.9 A16.8,16.8 0 1 1 1843.4,296.6"/>
+<circle class="gate public" stroke-width="1" cx="1859.1" cy="302.6" r="21.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1864.7" y1="310.0" x2="1867.0" y2="313.0"/>
+<circle class="gdot public" cx="1859.1" cy="302.6" r="3.0"/>
+</g>
+<text class="glabel public" x="1840.4" y="282.1" text-anchor="end">__or__</text>
+<text class="gsize" x="1840.4" y="294.1" text-anchor="end">9</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1963.4" cy="267.3" r="13.5"/>
+<path class="gate public" stroke-width="2.2" d="M1970.5,255.8 A13.5,13.5 0 1 1 1956.3,255.8"/>
+<circle class="gate public" stroke-width="1" cx="1963.4" cy="267.3" r="18.5" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1963.4" y1="274.8" x2="1963.4" y2="277.9"/>
+<circle class="gdot public" cx="1963.4" cy="267.3" r="2.5"/>
+</g>
+<text class="glabel public" x="1963.4" y="225.8" text-anchor="middle">__invert__</text>
+<text class="gsize" x="1963.4" y="237.8" text-anchor="middle">3</text>
+<text class="module" x="1963.4" y="356.6" text-anchor="middle">queries.py</text>
+<path class="spoke write" d="M2102.1,894.8 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2316.6,1048.7 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2391.3,1228.0 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2406.4,1328.3 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2393.3,1423.3 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2360.1,1513.3 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2308.3,1594.0 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2240.3,1661.7 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2159.4,1713.2 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M2070.2,1746.7 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1973.7,1756.8 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1874.4,1747.2 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1778.6,1714.5 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1691.2,1657.7 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1616.7,1582.6 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1559.9,1499.2 Q1963.4,1315.7 1963.4,1432.3"/>
+<path class="spoke read" d="M1532.5,1216.6 Q1963.4,1315.7 1963.4,1432.3"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="1963.4" cy="1315.7" r="82.6"/>
+<circle class="core-ring" cx="1963.4" cy="1315.7" r="72.6"/>
+<circle class="ticks" cx="1963.4" cy="1315.7" r="94.6" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:26px" x="1963.4" y="1321.7" text-anchor="middle">Query</text>
+<text class="csub" x="1963.4" y="1341.7" text-anchor="middle">335 lines · 22 gates · 1 values</text>
+<g filter="url(#glow)"><circle class="val" cx="1963.4" cy="1432.3" r="6"/></g>
+<text class="vlabel" x="1963.4" y="1462.3" text-anchor="middle">_path</text>
+<path class="wire" marker-end="url(#arr)" d="M2359.1,1037.8 Q1867.4,420.2 1519.3,1128.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2408.4,1129.5 Q2517.2,984.3 2341.8,1008.3"/>
+<path class="wire" marker-end="url(#arr)" d="M2446.1,1234.2 Q2074.4,359.9 1519.3,1128.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2445.6,1346.3 Q2608.4,1259.5 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2427.7,1449.4 Q2640.7,1330.3 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2388.1,1546.1 Q2664.9,1407.4 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2328.6,1632.1 Q2680.1,1489.8 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2252.0,1703.3 Q2685.2,1576.5 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2161.8,1756.3 Q2679.7,1666.3 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M2063.0,1787.8 Q2663.1,1757.1 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1957.8,1800.9 Q2634.3,1850.0 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1848.6,1787.8 Q2591.7,1944.7 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1743.3,1750.1 Q2535.0,2037.9 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1645.4,1687.7 Q2462.3,2128.8 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1645.4,1687.7 Q1142.7,1424.3 1562.7,1041.4"/>
+<path class="wire" marker-end="url(#arr)" d="M1565.7,1600.2 Q2374.2,2213.7 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1565.7,1600.2 Q1169.2,1323.9 1562.7,1041.4"/>
+<path class="wire" marker-end="url(#arr)" d="M1516.8,1500.2 Q2278.7,2285.0 2443.1,1199.7"/>
+<path class="wire" marker-end="url(#arr)" d="M1487.1,1399.5 Q2177.7,2342.9 2443.1,1199.7"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2107.8" cy="877.7" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2121.5,866.1 A18.0,18.0 0 1 1 2103.6,860.2"/>
+<circle class="gate public" stroke-width="1" cx="2107.8" cy="877.7" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2104.7" y1="887.1" x2="2103.4" y2="891.1"/>
+<circle class="gdot public" cx="2107.8" cy="877.7" r="3.2"/>
+</g>
+<text class="glabel public" x="2117.8" y="851.3" text-anchor="start">__init__</text>
+<text class="gsize" x="2117.8" y="863.3" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2194.0" cy="916.3" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M2205.2,910.3 A12.7,12.7 0 1 1 2193.7,903.7"/>
+<circle class="gate public" stroke-width="1" cx="2194.0" cy="916.3" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2190.5" y1="922.4" x2="2189.1" y2="924.9"/>
+<circle class="gdot public" cx="2194.0" cy="916.3" r="2.5"/>
+</g>
+<text class="glabel public" x="2207.4" y="897.2" text-anchor="start">__repr__</text>
+<text class="gsize" x="2207.4" y="909.2" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2266.6" cy="968.2" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M2278.7,964.4 A12.7,12.7 0 1 1 2268.7,955.7"/>
+<circle class="gate public" stroke-width="1" cx="2266.6" cy="968.2" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2262.0" y1="973.5" x2="2260.1" y2="975.7"/>
+<circle class="gdot public" cx="2266.6" cy="968.2" r="2.5"/>
+</g>
+<text class="glabel public" x="2284.1" y="952.1" text-anchor="start">__hash__</text>
+<text class="gsize" x="2284.1" y="964.1" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2331.3" cy="1037.6" r="18.4"/>
+<path class="gate public" stroke-width="2.2" d="M2349.6,1035.8 A18.4,18.4 0 1 1 2338.0,1020.5"/>
+<circle class="gate public" stroke-width="1" cx="2331.3" cy="1037.6" r="23.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2323.2" y1="1043.7" x2="2319.9" y2="1046.3"/>
+<circle class="gdot public" cx="2331.3" cy="1037.6" r="3.3"/>
+</g>
+<text class="glabel public" x="2357.1" y="1022.1" text-anchor="start">__getattr__</text>
+<text class="gsize" x="2357.1" y="1034.1" text-anchor="start">13</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2382.3" cy="1122.9" r="17.2"/>
+<path class="gate public" stroke-width="2.2" d="M2399.4,1125.0 A17.2,17.2 0 1 1 2391.9,1108.6"/>
+<circle class="gate public" stroke-width="1" cx="2382.3" cy="1122.9" r="22.2" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2373.7" y1="1126.9" x2="2370.1" y2="1128.5"/>
+<circle class="gdot public" cx="2382.3" cy="1122.9" r="3.1"/>
+</g>
+<text class="glabel public" x="2410.7" y="1113.9" text-anchor="start">__getitem__</text>
+<text class="gsize" x="2410.7" y="1125.9" text-anchor="start">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2415.2" cy="1223.1" r="24.4"/>
+<circle class="gate private" stroke-width="1.6" cx="2415.2" cy="1223.1" r="24.4"/>
+<line class="gate private" stroke-width="1.4" x1="2404.8" y1="1231.5" x2="2400.4" y2="1235.0"/>
+<line class="gate private" stroke-width="1.4" x1="2402.6" y1="1227.8" x2="2397.4" y2="1229.8"/>
+<line class="gate private" stroke-width="1.4" x1="2401.8" y1="1223.6" x2="2396.2" y2="1223.9"/>
+<line class="gate private" stroke-width="1.4" x1="2402.3" y1="1219.4" x2="2396.9" y2="1217.8"/>
+<circle class="gdot private" cx="2415.2" cy="1223.1" r="4.4"/>
+</g>
+<text class="glabel private" x="2452.8" y="1219.3" text-anchor="start">_generate_test</text>
+<text class="gsize" x="2452.8" y="1231.3" text-anchor="start">35</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2424.4" cy="1328.8" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2439.5,1338.6 A18.0,18.0 0 1 1 2440.0,1319.8"/>
+<circle class="gate public" stroke-width="1" cx="2424.4" cy="1328.8" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2414.5" y1="1328.5" x2="2410.4" y2="1328.4"/>
+<circle class="gdot public" cx="2424.4" cy="1328.8" r="3.2"/>
+</g>
+<text class="glabel public" x="2456.4" y="1333.7" text-anchor="start">__eq__</text>
+<text class="gsize" x="2456.4" y="1345.7" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2410.8" cy="1427.7" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2423.4,1440.5 A18.0,18.0 0 1 1 2428.0,1422.3"/>
+<circle class="gate public" stroke-width="1" cx="2410.8" cy="1427.7" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2401.2" y1="1425.3" x2="2397.2" y2="1424.3"/>
+<circle class="gdot public" cx="2410.8" cy="1427.7" r="3.2"/>
+</g>
+<text class="glabel public" x="2441.8" y="1439.5" text-anchor="start">__ne__</text>
+<text class="gsize" x="2441.8" y="1451.5" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2376.2" cy="1521.3" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2385.8,1536.6 A18.0,18.0 0 1 1 2394.2,1519.8"/>
+<circle class="gate public" stroke-width="1" cx="2376.2" cy="1521.3" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2367.4" y1="1516.9" x2="2363.6" y2="1515.1"/>
+<circle class="gdot public" cx="2376.2" cy="1521.3" r="3.2"/>
+</g>
+<text class="glabel public" x="2404.9" y="1539.6" text-anchor="start">__lt__</text>
+<text class="gsize" x="2404.9" y="1551.6" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2322.3" cy="1605.3" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2328.4,1622.3 A18.0,18.0 0 1 1 2340.2,1607.7"/>
+<circle class="gate public" stroke-width="1" cx="2322.3" cy="1605.3" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2314.6" y1="1599.1" x2="2311.4" y2="1596.5"/>
+<circle class="gdot public" cx="2322.3" cy="1605.3" r="3.2"/>
+</g>
+<text class="glabel public" x="2347.2" y="1629.4" text-anchor="start">__le__</text>
+<text class="gsize" x="2347.2" y="1641.4" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2251.6" cy="1675.8" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2253.8,1693.7 A18.0,18.0 0 1 1 2268.5,1681.9"/>
+<circle class="gate public" stroke-width="1" cx="2251.6" cy="1675.8" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2245.4" y1="1668.1" x2="2242.8" y2="1664.8"/>
+<circle class="gdot public" cx="2251.6" cy="1675.8" r="3.2"/>
+</g>
+<text class="glabel public" x="2271.6" y="1704.8" text-anchor="start">__gt__</text>
+<text class="gsize" x="2271.6" y="1716.8" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2167.4" cy="1729.4" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2165.7,1747.3 A18.0,18.0 0 1 1 2182.6,1739.0"/>
+<circle class="gate public" stroke-width="1" cx="2167.4" cy="1729.4" r="23.0" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2163.0" y1="1720.5" x2="2161.2" y2="1716.8"/>
+<circle class="gdot public" cx="2167.4" cy="1729.4" r="3.2"/>
+</g>
+<text class="glabel public" x="2181.5" y="1762.1" text-anchor="start">__ge__</text>
+<text class="gsize" x="2181.5" y="1774.1" text-anchor="start">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2074.4" cy="1763.4" r="17.2"/>
+<path class="gate public" stroke-width="2.2" d="M2069.2,1779.8 A17.2,17.2 0 1 1 2086.6,1775.5"/>
+<line class="gate public" stroke-width="1.4" x1="2072.1" y1="1754.2" x2="2071.1" y2="1750.3"/>
+<circle class="gdot public" cx="2074.4" cy="1763.4" r="3.1"/>
+</g>
+<text class="glabel public" x="2081.9" y="1807.7" text-anchor="middle">exists</text>
+<text class="gsize" x="2081.9" y="1819.7" text-anchor="middle">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1974.2" cy="1776.8" r="20.0"/>
+<path class="gate public" stroke-width="2.2" d="M1964.1,1794.1 A20.0,20.0 0 1 1 1985.1,1793.6"/>
+<line class="gate public" stroke-width="1.4" x1="1972.2" y1="1766.0" x2="1971.4" y2="1761.5"/>
+<line class="gate public" stroke-width="1.4" x1="1975.7" y1="1765.9" x2="1976.3" y2="1761.3"/>
+<circle class="gdot public" cx="1974.2" cy="1776.8" r="3.6"/>
+</g>
+<text class="glabel public" x="1975.0" y="1824.8" text-anchor="middle">matches</text>
+<text class="gsize" x="1975.0" y="1836.8" text-anchor="middle">18</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1870.2" cy="1767.4" r="20.6"/>
+<path class="gate public" stroke-width="2.2" d="M1856.1,1782.5 A20.6,20.6 0 1 1 1877.2,1786.8"/>
+<line class="gate public" stroke-width="1.4" x1="1870.7" y1="1756.1" x2="1870.9" y2="1751.4"/>
+<line class="gate public" stroke-width="1.4" x1="1874.2" y1="1756.8" x2="1875.9" y2="1752.4"/>
+<circle class="gdot public" cx="1870.2" cy="1767.4" r="3.7"/>
+</g>
+<text class="glabel public" x="1863.2" y="1815.3" text-anchor="middle">search</text>
+<text class="gsize" x="1863.2" y="1827.3" text-anchor="middle">20</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1769.4" cy="1734.2" r="21.7"/>
+<path class="gate public" stroke-width="2.2" d="M1751.3,1746.2 A21.7,21.7 0 1 1 1771.9,1755.8"/>
+<line class="gate public" stroke-width="1.4" x1="1772.7" y1="1722.7" x2="1774.0" y2="1717.9"/>
+<line class="gate public" stroke-width="1.4" x1="1776.1" y1="1724.3" x2="1778.9" y2="1720.1"/>
+<circle class="gdot public" cx="1769.4" cy="1734.2" r="3.9"/>
+</g>
+<text class="glabel public" x="1754.4" y="1770.6" text-anchor="end">test</text>
+<text class="gsize" x="1754.4" y="1782.6" text-anchor="end">24</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1676.1" cy="1676.6" r="24.2"/>
+<path class="gate public" stroke-width="2.2" d="M1653.4,1684.8 A24.2,24.2 0 1 1 1673.2,1700.6"/>
+<line class="gate public" stroke-width="1.4" x1="1680.7" y1="1664.1" x2="1682.6" y2="1658.9"/>
+<line class="gate public" stroke-width="1.4" x1="1684.4" y1="1666.2" x2="1687.9" y2="1661.8"/>
+<line class="gate public" stroke-width="1.4" x1="1687.3" y1="1669.3" x2="1691.9" y2="1666.3"/>
+<circle class="gdot public" cx="1676.1" cy="1676.6" r="4.3"/>
+</g>
+<text class="glabel public" x="1652.4" y="1710.4" text-anchor="end">any</text>
+<text class="gsize" x="1652.4" y="1722.4" text-anchor="end">34</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1597.9" cy="1597.0" r="23.7"/>
+<path class="gate public" stroke-width="2.2" d="M1574.3,1599.5 A23.7,23.7 0 1 1 1589.4,1619.2"/>
+<line class="gate public" stroke-width="1.4" x1="1605.2" y1="1586.2" x2="1608.2" y2="1581.7"/>
+<line class="gate public" stroke-width="1.4" x1="1608.2" y1="1589.1" x2="1612.5" y2="1585.7"/>
+<line class="gate public" stroke-width="1.4" x1="1610.2" y1="1592.7" x2="1615.3" y2="1590.9"/>
+<circle class="gdot public" cx="1597.9" cy="1597.0" r="4.3"/>
+</g>
+<text class="glabel public" x="1568.0" y="1624.0" text-anchor="end">all</text>
+<text class="gsize" x="1568.0" y="1636.0" text-anchor="end">32</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1543.5" cy="1506.6" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M1525.6,1504.4 A18.0,18.0 0 1 1 1533.4,1521.5"/>
+<line class="gate public" stroke-width="1.4" x1="1552.5" y1="1502.5" x2="1556.3" y2="1500.8"/>
+<circle class="gdot public" cx="1543.5" cy="1506.6" r="3.2"/>
+</g>
+<text class="glabel public" x="1514.4" y="1523.9" text-anchor="end">one_of</text>
+<text class="gsize" x="1514.4" y="1535.9" text-anchor="end">12</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1512.2" cy="1411.5" r="18.4"/>
+<path class="gate public" stroke-width="2.2" d="M1494.9,1405.3 A18.4,18.4 0 1 1 1498.9,1424.1"/>
+<line class="gate public" stroke-width="1.4" x1="1522.1" y1="1409.4" x2="1526.2" y2="1408.5"/>
+<circle class="gdot public" cx="1512.2" cy="1411.5" r="3.3"/>
+</g>
+<text class="glabel public" x="1480.5" y="1422.2" text-anchor="end">fragment</text>
+<text class="gsize" x="1480.5" y="1434.2" text-anchor="end">13</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1502.2" cy="1312.2" r="17.6"/>
+<path class="gate public" stroke-width="2.2" d="M1487.2,1302.8 A17.6,17.6 0 1 1 1487.1,1321.2"/>
+<line class="gate public" stroke-width="1.4" x1="1511.9" y1="1312.2" x2="1515.9" y2="1312.3"/>
+<circle class="gdot public" cx="1502.2" cy="1312.2" r="3.2"/>
+</g>
+<text class="glabel public" x="1470.6" y="1315.9" text-anchor="end">noop</text>
+<text class="gsize" x="1470.6" y="1327.9" text-anchor="end">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1513.9" cy="1212.3" r="19.1"/>
+<path class="gate public" stroke-width="2.2" d="M1500.3,1199.0 A19.1,19.1 0 1 1 1495.8,1218.4"/>
+<line class="gate public" stroke-width="1.4" x1="1524.4" y1="1213.0" x2="1528.7" y2="1213.3"/>
+<line class="gate public" stroke-width="1.4" x1="1523.6" y1="1216.3" x2="1527.7" y2="1217.9"/>
+<circle class="gdot public" cx="1513.9" cy="1212.3" r="3.4"/>
+</g>
+<text class="glabel public" x="1481.7" y="1208.9" text-anchor="end">map</text>
+<text class="gsize" x="1481.7" y="1220.9" text-anchor="end">15</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="1544.9" cy="1121.9" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M1537.8,1111.4 A12.7,12.7 0 1 1 1532.3,1123.4"/>
+<line class="gate public" stroke-width="1.4" x1="1551.2" y1="1124.9" x2="1553.8" y2="1126.1"/>
+<circle class="gdot public" cx="1544.9" cy="1121.9" r="2.5"/>
+</g></g>
+<text class="glabel ghost" x="1520.7" y="1114.7" text-anchor="end">is_cacheable</text>
+<text class="gsize" x="1520.7" y="1126.7" text-anchor="end" opacity=".6">from QueryInstance</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="1592.2" cy="1042.0" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M1586.0,1026.9 A16.4,16.4 0 1 1 1575.9,1040.6"/>
+<circle class="gate public" stroke-width="1" cx="1592.2" cy="1042.0" r="21.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1599.4" y1="1047.3" x2="1602.4" y2="1049.6"/>
+<circle class="gdot public" cx="1592.2" cy="1042.0" r="2.9"/>
+</g></g>
+<text class="glabel ghost" x="1567.7" y="1028.0" text-anchor="end">__call__</text>
+<text class="gsize" x="1567.7" y="1040.0" text-anchor="end" opacity=".6">from QueryInstance</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="1657.6" cy="970.4" r="16.8"/>
+<path class="gate public" stroke-width="2.2" d="M1654.7,953.9 A16.8,16.8 0 1 1 1641.5,965.5"/>
+<circle class="gate public" stroke-width="1" cx="1657.6" cy="970.4" r="21.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1663.7" y1="977.4" x2="1666.3" y2="980.3"/>
+<circle class="gdot public" cx="1657.6" cy="970.4" r="3.0"/>
+</g></g>
+<text class="glabel ghost" x="1637.2" y="951.4" text-anchor="end">__and__</text>
+<text class="gsize" x="1637.2" y="963.4" text-anchor="end" opacity=".6">from QueryInstance</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="1737.0" cy="913.9" r="16.8"/>
+<path class="gate public" stroke-width="2.2" d="M1737.6,897.1 A16.8,16.8 0 1 1 1722.3,905.8"/>
+<circle class="gate public" stroke-width="1" cx="1737.0" cy="913.9" r="21.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1741.5" y1="922.0" x2="1743.4" y2="925.3"/>
+<circle class="gdot public" cx="1737.0" cy="913.9" r="3.0"/>
+</g></g>
+<text class="glabel ghost" x="1721.8" y="891.1" text-anchor="end">__or__</text>
+<text class="gsize" x="1721.8" y="903.1" text-anchor="end" opacity=".6">from QueryInstance</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="2103.5" cy="876.3" r="13.5"/>
+<path class="gate public" stroke-width="2.2" d="M2113.7,867.5 A13.5,13.5 0 1 1 2100.3,863.2"/>
+<circle class="gate public" stroke-width="1" cx="2103.5" cy="876.3" r="18.5" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2101.2" y1="883.4" x2="2100.3" y2="886.4"/>
+<circle class="gdot public" cx="2103.5" cy="876.3" r="2.5"/>
+</g></g>
+<text class="glabel ghost" x="2111.8" y="854.1" text-anchor="start">__invert__</text>
+<text class="gsize" x="2111.8" y="866.1" text-anchor="start" opacity=".6">from QueryInstance</text>
+<text class="module" x="1963.4" y="1211.1" text-anchor="middle">queries.py</text>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="696.4" cy="2443.7" r="56.2"/>
+<circle class="core-ring" cx="696.4" cy="2443.7" r="46.2"/>
+<circle class="ticks" cx="696.4" cy="2443.7" r="68.2" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="696.4" y="2449.7" text-anchor="middle">Storage</text>
+<text class="csub" x="696.4" y="2469.7" text-anchor="middle">26 lines · 3 gates · 0 values</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="829.5" cy="2342.1" r="17.2"/>
+<circle class="gate abstract-ring public" stroke-width="2.2" cx="829.5" cy="2342.1" r="17.2"/>
+<circle class="gate public" stroke-width="1" cx="829.5" cy="2342.1" r="7.7" opacity=".6"/>
+</g>
+<text class="glabel public" x="854.3" y="2327.2" text-anchor="start">read</text>
+<text class="gsize" x="854.3" y="2339.2" text-anchor="start">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="529.0" cy="2443.3" r="17.2"/>
+<circle class="gate abstract-ring public" stroke-width="2.2" cx="529.0" cy="2443.3" r="17.2"/>
+<circle class="gate public" stroke-width="1" cx="529.0" cy="2443.3" r="7.7" opacity=".6"/>
+</g>
+<text class="glabel public" x="497.8" y="2447.3" text-anchor="end">write</text>
+<text class="gsize" x="497.8" y="2459.3" text-anchor="end">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="735.3" cy="2280.9" r="15.4"/>
+<path class="gate public" stroke-width="2.2" d="M746.2,2270.0 A15.4,15.4 0 1 1 730.6,2266.3"/>
+<line class="gate public" stroke-width="1.4" x1="733.4" y1="2289.1" x2="732.5" y2="2292.5"/>
+<circle class="gdot public" cx="735.3" cy="2280.9" r="2.8"/>
+</g>
+<text class="glabel public" x="742.1" y="2238.3" text-anchor="middle">close</text>
+<text class="gsize" x="742.1" y="2250.3" text-anchor="middle">6</text>
+<text class="module" x="696.4" y="2365.5" text-anchor="middle">storages.py</text>
+<path class="spoke write" d="M587.1,2985.2 Q430.7,3001.9 515.0,2953.2"/>
+<path class="spoke write" d="M587.1,2985.2 Q430.7,3001.9 430.7,3099.2"/>
+<path class="spoke write" d="M587.1,2985.2 Q430.7,3001.9 346.4,2953.2"/>
+<path class="spoke read" d="M469.2,3166.9 Q430.7,3001.9 515.0,2953.2"/>
+<path class="spoke read" d="M282.7,3069.6 Q430.7,3001.9 515.0,2953.2"/>
+<path class="spoke read" d="M351.0,2861.4 Q430.7,3001.9 515.0,2953.2"/>
+<path class="spoke read" d="M351.0,2861.4 Q430.7,3001.9 430.7,3099.2"/>
+<path class="spoke read" d="M351.0,2861.4 Q430.7,3001.9 346.4,2953.2"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="430.7" cy="3001.9" r="63.3"/>
+<circle class="core-ring" cx="430.7" cy="3001.9" r="53.3"/>
+<circle class="ticks" cx="430.7" cy="3001.9" r="75.3" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="430.7" y="3007.9" text-anchor="middle">JSONStorage</text>
+<text class="csub" x="430.7" y="3027.9" text-anchor="middle">75 lines · 4 gates · 3 values</text>
+<g filter="url(#glow)"><circle class="val" cx="515.0" cy="2953.2" r="6"/></g>
+<text class="vlabel" x="528.8" y="2949.2" text-anchor="start">_handle</text>
+<g filter="url(#glow)"><circle class="val" cx="430.7" cy="3099.2" r="6"/></g>
+<text class="vlabel" x="430.7" y="3129.2" text-anchor="middle">_mode</text>
+<g filter="url(#glow)"><circle class="val" cx="346.4" cy="2953.2" r="6"/></g>
+<text class="vlabel" x="332.6" y="2949.2" text-anchor="end">kwargs</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="611.8" cy="2982.6" r="24.8"/>
+<path class="gate public" stroke-width="2.2" d="M634.2,2993.3 A24.8,24.8 0 1 1 631.5,2967.5"/>
+<circle class="gate public" stroke-width="1" cx="611.8" cy="2982.6" r="29.8" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="600.4" y1="2990.1" x2="595.7" y2="2993.3"/>
+<line class="gate public" stroke-width="1.4" x1="598.6" y1="2986.2" x2="593.1" y2="2987.7"/>
+<line class="gate public" stroke-width="1.4" x1="598.2" y1="2981.9" x2="592.5" y2="2981.5"/>
+<line class="gate public" stroke-width="1.4" x1="599.1" y1="2977.6" x2="593.8" y2="2975.5"/>
+<circle class="gdot public" cx="611.8" cy="2982.6" r="4.5"/>
+</g>
+<text class="glabel public" x="650.4" y="2982.5" text-anchor="start">__init__</text>
+<text class="gsize" x="650.4" y="2994.5" text-anchor="start">37</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="472.1" cy="3179.2" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M468.1,3191.3 A12.7,12.7 0 1 1 481.0,3188.3"/>
+<line class="gate public" stroke-width="1.4" x1="470.5" y1="3172.4" x2="469.8" y2="3169.6"/>
+<circle class="gdot public" cx="472.1" cy="3179.2" r="2.5"/>
+</g>
+<text class="glabel public" x="478.1" y="3219.2" text-anchor="middle">close</text>
+<text class="gsize" x="478.1" y="3231.2" text-anchor="middle">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="265.1" cy="3077.7" r="19.4"/>
+<path class="gate public" stroke-width="2.2" d="M245.8,3075.4 A19.4,19.4 0 1 1 254.3,3093.8"/>
+<line class="gate public" stroke-width="1.4" x1="274.0" y1="3071.8" x2="277.7" y2="3069.3"/>
+<line class="gate public" stroke-width="1.4" x1="275.4" y1="3074.8" x2="279.7" y2="3073.7"/>
+<circle class="gdot public" cx="265.1" cy="3077.7" r="3.5"/>
+</g>
+<text class="glabel public" x="234.7" y="3095.6" text-anchor="end">read</text>
+<text class="gsize" x="234.7" y="3107.6" text-anchor="end">16</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="340.8" cy="2843.5" r="20.6"/>
+<path class="gate public" stroke-width="2.2" d="M341.5,2822.9 A20.6,20.6 0 1 1 322.7,2833.5"/>
+<line class="gate public" stroke-width="1.4" x1="347.9" y1="2852.3" x2="350.9" y2="2856.0"/>
+<line class="gate public" stroke-width="1.4" x1="344.7" y1="2854.1" x2="346.4" y2="2858.5"/>
+<circle class="gdot public" cx="340.8" cy="2843.5" r="3.7"/>
+</g>
+<text class="glabel public" x="323.7" y="2817.4" text-anchor="end">write</text>
+<text class="gsize" x="323.7" y="2829.4" text-anchor="end">20</text>
+<text class="module" x="430.7" y="2916.5" text-anchor="middle">storages.py</text>
+<path class="spoke write" d="M1095.1,2895.6 Q994.1,3001.9 994.1,3088.5"/>
+<path class="spoke read" d="M1112.5,3093.7 Q994.1,3001.9 994.1,3088.5"/>
+<path class="spoke write" d="M921.2,3132.8 Q994.1,3001.9 994.1,3088.5"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="994.1" cy="3001.9" r="52.6"/>
+<circle class="core-ring" cx="994.1" cy="3001.9" r="42.6"/>
+<circle class="ticks" cx="994.1" cy="3001.9" r="64.6" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="994.1" y="3007.9" text-anchor="middle">MemoryStorage</text>
+<text class="csub" x="994.1" y="3027.9" text-anchor="middle">11 lines · 3 gates · 1 values</text>
+<g filter="url(#glow)"><circle class="val mut" cx="994.1" cy="3088.5" r="6"/></g>
+<text class="vlabel mut" x="994.1" y="3118.5" text-anchor="middle">memory</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1106.1" cy="2884.1" r="15.9"/>
+<path class="gate public" stroke-width="2.2" d="M1121.4,2880.0 A15.9,15.9 0 1 1 1109.4,2868.6"/>
+<circle class="gate public" stroke-width="1" cx="1106.1" cy="2884.1" r="20.9" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="1100.1" y1="2890.4" x2="1097.5" y2="2893.1"/>
+<circle class="gdot public" cx="1106.1" cy="2884.1" r="2.9"/>
+</g>
+<text class="glabel public" x="1126.7" y="2866.5" text-anchor="start">__init__</text>
+<text class="gsize" x="1126.7" y="2878.5" text-anchor="start">7</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1122.5" cy="3101.4" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M1127.0,3113.3 A12.7,12.7 0 1 1 1135.1,3102.8"/>
+<line class="gate public" stroke-width="1.4" x1="1117.0" y1="3097.2" x2="1114.7" y2="3095.4"/>
+<circle class="gdot public" cx="1122.5" cy="3101.4" r="2.5"/>
+</g>
+<text class="glabel public" x="1143.6" y="3121.8" text-anchor="start">read</text>
+<text class="gsize" x="1143.6" y="3133.8" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="915.1" cy="3143.9" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M904.0,3150.1 A12.7,12.7 0 1 1 915.6,3156.5"/>
+<line class="gate public" stroke-width="1.4" x1="918.5" y1="3137.8" x2="919.9" y2="3135.2"/>
+<circle class="gdot public" cx="915.1" cy="3143.9" r="2.5"/>
+</g>
+<text class="glabel public" x="902.1" y="3171.2" text-anchor="end">write</text>
+<text class="gsize" x="902.1" y="3183.2" text-anchor="end">2</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="1068.0" cy="2857.1" r="15.4"/>
+<path class="gate public" stroke-width="2.2" d="M1081.1,2849.1 A15.4,15.4 0 1 1 1066.8,2841.8"/>
+<line class="gate public" stroke-width="1.4" x1="1064.2" y1="2864.7" x2="1062.6" y2="2867.8"/>
+<circle class="gdot public" cx="1068.0" cy="2857.1" r="2.8"/>
+</g></g>
+<text class="glabel ghost" x="1081.4" y="2835.0" text-anchor="start">close</text>
+<text class="gsize" x="1081.4" y="2847.0" text-anchor="start" opacity=".6">from Storage</text>
+<text class="module" x="994.1" y="2927.2" text-anchor="middle">storages.py</text>
+<path class="spoke write" d="M3145.3,352.9 Q3016.7,458.6 3111.0,458.6"/>
+<path class="spoke write" d="M3145.3,352.9 Q3016.7,458.6 2922.4,458.6"/>
+<path class="spoke read" d="M2866.9,495.5 Q3016.7,458.6 3111.0,458.6"/>
+<path class="spoke write" d="M2866.9,495.5 Q3016.7,458.6 2922.4,458.6"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="3016.7" cy="458.6" r="60.3"/>
+<circle class="core-ring" cx="3016.7" cy="458.6" r="50.3"/>
+<circle class="ticks" cx="3016.7" cy="458.6" r="72.3" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="3016.7" y="464.6" text-anchor="middle">Middleware</text>
+<text class="csub" x="3016.7" y="484.6" text-anchor="middle">51 lines · 3 gates · 2 values</text>
+<g filter="url(#glow)"><circle class="val" cx="3111.0" cy="458.6" r="6"/></g>
+<text class="vlabel" x="3127.0" y="462.6" text-anchor="start">_storage_cls</text>
+<g filter="url(#glow)"><circle class="val mut" cx="2922.4" cy="458.6" r="6"/></g>
+<text class="vlabel mut" x="2906.4" y="462.6" text-anchor="end">storage</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3155.7" cy="344.4" r="13.5"/>
+<circle class="gate internal" stroke-width="1.6" cx="3155.7" cy="344.4" r="13.5"/>
+<circle class="gate internal" stroke-width="1" cx="3155.7" cy="344.4" r="18.5" opacity=".7"/>
+<line class="gate internal" stroke-width="1.4" x1="3150.0" y1="349.1" x2="3147.6" y2="351.0"/>
+<circle class="gdot internal" cx="3155.7" cy="344.4" r="2.5"/>
+</g>
+<text class="glabel internal" x="3177.0" y="330.9" text-anchor="start">__init__</text>
+<text class="gsize" x="3177.0" y="342.9" text-anchor="start">3</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2842.0" cy="501.6" r="25.6"/>
+<path class="gate public" stroke-width="2.2" d="M2817.6,493.9 A25.6,25.6 0 1 1 2824.0,519.9"/>
+<circle class="gate public" stroke-width="1" cx="2842.0" cy="501.6" r="30.6" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2852.6" y1="492.3" x2="2857.0" y2="488.4"/>
+<line class="gate public" stroke-width="1.4" x1="2855.0" y1="496.1" x2="2860.4" y2="493.8"/>
+<line class="gate public" stroke-width="1.4" x1="2856.1" y1="500.5" x2="2861.9" y2="500.0"/>
+<line class="gate public" stroke-width="1.4" x1="2855.7" y1="505.0" x2="2861.4" y2="506.4"/>
+<circle class="gdot public" cx="2842.0" cy="501.6" r="4.6"/>
+</g>
+<text class="glabel public" x="2803.5" y="515.1" text-anchor="end">__call__</text>
+<text class="gsize" x="2803.5" y="527.1" text-anchor="end">41</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3058.7" cy="283.6" r="15.9"/>
+<path class="gate public" stroke-width="2.2" d="M3069.9,272.4 A15.9,15.9 0 1 1 3053.8,268.5"/>
+<circle class="gate public" stroke-width="1" cx="3058.7" cy="283.6" r="20.9" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3056.7" y1="292.1" x2="3055.8" y2="295.6"/>
+<circle class="gdot public" cx="3058.7" cy="283.6" r="2.9"/>
+</g>
+<text class="glabel public" x="3065.7" y="240.5" text-anchor="middle">__getattr__</text>
+<text class="gsize" x="3065.7" y="252.5" text-anchor="middle">7</text>
+<text class="module" x="3016.7" y="376.3" text-anchor="middle">middlewares.py</text>
+<path class="spoke write" d="M3110.8,899.7 Q3016.7,1033.5 3072.1,957.2"/>
+<path class="spoke write" d="M3110.8,899.7 Q3016.7,1033.5 3106.4,1062.7"/>
+<path class="spoke write" d="M3110.8,899.7 Q3016.7,1033.5 3016.7,1127.8"/>
+<path class="spoke read" d="M3177.7,1010.0 Q3016.7,1033.5 3106.4,1062.7"/>
+<path class="spoke write" d="M3177.7,1010.0 Q3016.7,1033.5 3016.7,1127.8"/>
+<path class="spoke read" d="M3177.7,1010.0 Q3016.7,1033.5 2927.0,1062.7"/>
+<path class="spoke read" d="M3143.1,1135.3 Q3016.7,1033.5 2961.3,957.2"/>
+<path class="spoke write" d="M3143.1,1135.3 Q3016.7,1033.5 3072.1,957.2"/>
+<path class="spoke read" d="M3143.1,1135.3 Q3016.7,1033.5 3106.4,1062.7"/>
+<path class="spoke write" d="M3143.1,1135.3 Q3016.7,1033.5 3016.7,1127.8"/>
+<path class="spoke write" d="M3027.4,1195.5 Q3016.7,1033.5 3072.1,957.2"/>
+<path class="spoke read" d="M3027.4,1195.5 Q3016.7,1033.5 3106.4,1062.7"/>
+<path class="spoke read" d="M3027.4,1195.5 Q3016.7,1033.5 3016.7,1127.8"/>
+<path class="spoke read" d="M3027.4,1195.5 Q3016.7,1033.5 2927.0,1062.7"/>
+<path class="spoke write" d="M2904.8,1151.1 Q3016.7,1033.5 3106.4,1062.7"/>
+<path class="spoke write" d="M2904.8,1151.1 Q3016.7,1033.5 3016.7,1127.8"/>
+<path class="spoke read" d="M2904.8,1151.1 Q3016.7,1033.5 2927.0,1062.7"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="3016.7" cy="1033.5" r="60.3"/>
+<circle class="core-ring" cx="3016.7" cy="1033.5" r="50.3"/>
+<circle class="ticks" cx="3016.7" cy="1033.5" r="72.3" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="3016.7" y="1039.5" text-anchor="middle">CachingMiddleware</text>
+<text class="csub" x="3016.7" y="1059.5" text-anchor="middle">51 lines · 5 gates · 5 values</text>
+<g filter="url(#glow)"><circle class="val mut" cx="3072.1" cy="957.2" r="6"/></g>
+<text class="vlabel mut" x="3081.5" y="948.3" text-anchor="start">_cache_modified_count</text>
+<g filter="url(#glow)"><circle class="val mut" cx="3106.4" cy="1062.7" r="6"/></g>
+<text class="vlabel mut" x="3121.6" y="1071.6" text-anchor="start">_closed</text>
+<g filter="url(#glow)"><circle class="val mut" cx="3016.7" cy="1127.8" r="6"/></g>
+<text class="vlabel mut" x="3016.7" y="1157.8" text-anchor="middle">cache</text>
+<g filter="url(#glow)" class="ghost"><circle class="val" cx="2927.0" cy="1062.7" r="6"/></g>
+<text class="vlabel" x="2911.8" y="1071.6" text-anchor="end" opacity=".55">storage</text>
+<g filter="url(#glow)"><rect class="val" x="2955.8" y="951.7" width="11.0" height="11.0"/></g>
+<text class="vlabel" x="2951.9" y="948.3" text-anchor="end">WRITE_CACHE_SIZE</text>
+<path class="wire" marker-end="url(#arr)" d="M3169.2,1165.4 Q3161.2,1311.4 3037.5,1238.0"/>
+<path class="wire" marker-end="url(#arr)" d="M2872.7,1174.6 Q2910.2,1328.0 3037.5,1238.0"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3120.2" cy="886.3" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M3135.2,879.8 A16.4,16.4 0 1 1 3121.2,870.0"/>
+<circle class="gate public" stroke-width="1" cx="3120.2" cy="886.3" r="21.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3115.0" y1="893.7" x2="3112.8" y2="896.8"/>
+<circle class="gdot public" cx="3120.2" cy="886.3" r="2.9"/>
+</g>
+<text class="glabel public" x="3137.6" y="865.5" text-anchor="start">__init__</text>
+<text class="gsize" x="3137.6" y="877.5" text-anchor="start">8</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3194.7" cy="1007.5" r="17.2"/>
+<path class="gate public" stroke-width="2.2" d="M3210.6,1014.2 A17.2,17.2 0 1 1 3207.9,996.4"/>
+<line class="gate public" stroke-width="1.4" x1="3185.3" y1="1008.8" x2="3181.4" y2="1009.4"/>
+<circle class="gdot public" cx="3194.7" cy="1007.5" r="3.1"/>
+</g>
+<text class="glabel public" x="3225.6" y="1006.9" text-anchor="start">read</text>
+<text class="gsize" x="3225.6" y="1018.9" text-anchor="start">10</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3156.8" cy="1146.4" r="17.6"/>
+<path class="gate public" stroke-width="2.2" d="M3162.8,1163.0 A17.6,17.6 0 1 1 3174.3,1148.6"/>
+<line class="gate public" stroke-width="1.4" x1="3149.3" y1="1140.3" x2="3146.1" y2="1137.8"/>
+<circle class="gdot public" cx="3156.8" cy="1146.4" r="3.2"/>
+</g>
+<text class="glabel public" x="3181.5" y="1170.2" text-anchor="start">write</text>
+<text class="gsize" x="3181.5" y="1182.2" text-anchor="start">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3028.6" cy="1213.1" r="17.6"/>
+<circle class="gate private" stroke-width="1.6" cx="3028.6" cy="1213.1" r="17.6"/>
+<line class="gate private" stroke-width="1.4" x1="3028.0" y1="1203.4" x2="3027.7" y2="1199.3"/>
+<circle class="gdot private" cx="3028.6" cy="1213.1" r="3.2"/>
+</g>
+<text class="glabel private" x="3030.7" y="1258.6" text-anchor="middle">flush</text>
+<text class="gsize" x="3030.7" y="1270.6" text-anchor="middle">11</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2892.7" cy="1163.9" r="17.6"/>
+<circle class="gate private" stroke-width="1.6" cx="2892.7" cy="1163.9" r="17.6"/>
+<line class="gate private" stroke-width="1.4" x1="2899.4" y1="1156.9" x2="2902.2" y2="1153.9"/>
+<circle class="gdot private" cx="2892.7" cy="1163.9" r="3.2"/>
+</g>
+<text class="glabel private" x="2870.9" y="1190.8" text-anchor="end">close</text>
+<text class="gsize" x="2870.9" y="1202.8" text-anchor="end">11</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="2837.4" cy="1018.6" r="25.6"/>
+<path class="gate public" stroke-width="2.2" d="M2816.7,1003.4 A25.6,25.6 0 1 1 2814.5,1030.1"/>
+<circle class="gate public" stroke-width="1" cx="2837.4" cy="1018.6" r="30.6" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2850.4" y1="1013.1" x2="2855.8" y2="1010.9"/>
+<line class="gate public" stroke-width="1.4" x1="2851.4" y1="1017.5" x2="2857.3" y2="1017.1"/>
+<line class="gate public" stroke-width="1.4" x1="2851.1" y1="1022.0" x2="2856.8" y2="1023.4"/>
+<line class="gate public" stroke-width="1.4" x1="2849.3" y1="1026.1" x2="2854.3" y2="1029.3"/>
+<circle class="gdot public" cx="2837.4" cy="1018.6" r="4.6"/>
+</g></g>
+<text class="glabel ghost" x="2797.9" y="1019.3" text-anchor="end">__call__</text>
+<text class="gsize" x="2797.9" y="1031.3" text-anchor="end" opacity=".6">from Middleware</text>
+<g class="ghost"><g filter="url(#glow)">
+<circle class="gate-body" cx="2913.8" cy="885.9" r="15.9"/>
+<path class="gate public" stroke-width="2.2" d="M2912.9,870.1 A15.9,15.9 0 1 1 2899.2,879.6"/>
+<circle class="gate public" stroke-width="1" cx="2913.8" cy="885.9" r="20.9" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2918.8" y1="893.1" x2="2920.9" y2="896.1"/>
+<circle class="gdot public" cx="2913.8" cy="885.9" r="2.9"/>
+</g></g>
+<text class="glabel ghost" x="2896.7" y="865.4" text-anchor="end">__getattr__</text>
+<text class="gsize" x="2896.7" y="877.4" text-anchor="end" opacity=".6">from Middleware</text>
+<text class="module" x="3016.7" y="951.2" text-anchor="middle">middlewares.py</text>
+<path class="spoke write" d="M3046.5,1701.3 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke write" d="M3046.5,1701.3 Q2998.2,1852.1 3064.5,1918.5"/>
+<path class="spoke read" d="M3125.3,1756.3 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M3157.2,1846.3 Q2998.2,1852.1 2931.8,1785.7"/>
+<path class="spoke read" d="M3131.9,1938.4 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M2963.3,2007.4 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M2880.8,1954.1 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M2839.5,1865.0 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M2866.5,1770.3 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M2946.7,1707.1 Q2998.2,1852.1 3064.5,1785.7"/>
+<path class="spoke read" d="M2946.7,1707.1 Q2998.2,1852.1 3064.5,1918.5"/>
+<path class="spoke read" d="M2946.7,1707.1 Q2998.2,1852.1 2931.8,1785.7"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="2998.2" cy="1852.1" r="59.9"/>
+<circle class="core-ring" cx="2998.2" cy="1852.1" r="49.9"/>
+<circle class="ticks" cx="2998.2" cy="1852.1" r="71.9" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="2998.2" y="1858.1" text-anchor="middle">LRUCache</text>
+<text class="csub" x="2998.2" y="1878.1" text-anchor="middle">48 lines · 10 gates · 4 values</text>
+<g filter="url(#glow)"><circle class="val" cx="3064.5" cy="1785.7" r="6"/></g>
+<text class="vlabel" x="3075.8" y="1778.4" text-anchor="start">cache</text>
+<g filter="url(#glow)"><circle class="val" cx="3064.5" cy="1918.5" r="6"/></g>
+<text class="vlabel" x="3075.8" y="1933.8" text-anchor="start">capacity</text>
+<g filter="url(#glow)"><path class="val" d="M2931.8,1911.5 L2938.8,1918.5 L2931.8,1925.5 L2924.8,1918.5 z"/></g>
+<text class="vlabel" x="2920.5" y="1933.8" text-anchor="end">lru</text>
+<g filter="url(#glow)"><path class="val" d="M2931.8,1778.7 L2938.8,1785.7 L2931.8,1792.7 L2924.8,1785.7 z"/></g>
+<text class="vlabel" x="2920.5" y="1778.4" text-anchor="end">length</text>
+<path class="wire" marker-end="url(#arr)" d="M3063.4,2029.0 Q3380.8,1706.0 2925.5,1668.1"/>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3050.6" cy="1688.4" r="13.5"/>
+<path class="gate public" stroke-width="2.2" d="M3060.9,1679.6 A13.5,13.5 0 1 1 3047.4,1675.3"/>
+<circle class="gate public" stroke-width="1" cx="3050.6" cy="1688.4" r="18.5" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3048.4" y1="1695.5" x2="3047.4" y2="1698.5"/>
+<circle class="gdot public" cx="3050.6" cy="1688.4" r="2.5"/>
+</g>
+<text class="glabel public" x="3059.0" y="1666.3" text-anchor="start">__init__</text>
+<text class="gsize" x="3059.0" y="1678.3" text-anchor="start">3</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3135.4" cy="1748.7" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M3148.0,1747.5 A12.7,12.7 0 1 1 3140.1,1736.9"/>
+<line class="gate public" stroke-width="1.4" x1="3129.9" y1="1752.9" x2="3127.5" y2="1754.6"/>
+<circle class="gdot public" cx="3135.4" cy="1748.7" r="2.5"/>
+</g>
+<text class="glabel public" x="3156.7" y="1736.6" text-anchor="start">clear</text>
+<text class="gsize" x="3156.7" y="1748.6" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3169.9" cy="1845.9" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M3180.9,1852.1 A12.7,12.7 0 1 1 3180.5,1838.8"/>
+<circle class="gate public" stroke-width="1" cx="3169.9" cy="1845.9" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3162.9" y1="1846.1" x2="3160.0" y2="1846.2"/>
+<circle class="gdot public" cx="3169.9" cy="1845.9" r="2.5"/>
+</g>
+<text class="glabel public" x="3196.6" y="1848.9" text-anchor="start">__len__</text>
+<text class="gsize" x="3196.6" y="1860.9" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3142.6" cy="1945.3" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M3148.1,1956.7 A12.7,12.7 0 1 1 3155.2,1945.6"/>
+<circle class="gate public" stroke-width="1" cx="3142.6" cy="1945.3" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3136.7" y1="1941.5" x2="3134.3" y2="1939.9"/>
+<circle class="gdot public" cx="3142.6" cy="1945.3" r="2.5"/>
+</g>
+<text class="glabel public" x="3165.0" y="1963.7" text-anchor="start">__contains__</text>
+<text class="gsize" x="3165.0" y="1975.7" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3063.3" cy="2011.2" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M3061.2,2023.7 A12.7,12.7 0 1 1 3073.5,2018.6"/>
+<circle class="gate public" stroke-width="1" cx="3063.3" cy="2011.2" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3060.6" y1="2004.7" x2="3059.5" y2="2002.0"/>
+<circle class="gdot public" cx="3063.3" cy="2011.2" r="2.5"/>
+</g>
+<text class="glabel public" x="3073.4" y="2039.8" text-anchor="start">__setitem__</text>
+<text class="gsize" x="3073.4" y="2051.8" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2960.5" cy="2019.8" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M2951.7,2028.9 A12.7,12.7 0 1 1 2964.6,2031.8"/>
+<circle class="gate public" stroke-width="1" cx="2960.5" cy="2019.8" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2962.0" y1="2013.0" x2="2962.7" y2="2010.1"/>
+<circle class="gdot public" cx="2960.5" cy="2019.8" r="2.5"/>
+</g>
+<text class="glabel public" x="2954.7" y="2059.8" text-anchor="middle">__delitem__</text>
+<text class="gsize" x="2954.7" y="2071.8" text-anchor="middle">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2868.5" cy="1964.9" r="16.4"/>
+<path class="gate public" stroke-width="2.2" d="M2852.3,1967.6 A16.4,16.4 0 1 1 2863.5,1980.5"/>
+<circle class="gate public" stroke-width="1" cx="2868.5" cy="1964.9" r="21.4" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2875.2" y1="1959.0" x2="2878.1" y2="1956.5"/>
+<circle class="gdot public" cx="2868.5" cy="1964.9" r="2.9"/>
+</g>
+<text class="glabel public" x="2845.6" y="1988.8" text-anchor="end">__getitem__</text>
+<text class="gsize" x="2845.6" y="2000.8" text-anchor="end">8</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2826.9" cy="1866.1" r="12.7"/>
+<path class="gate public" stroke-width="2.2" d="M2815.5,1860.3 A12.7,12.7 0 1 1 2816.6,1873.5"/>
+<circle class="gate public" stroke-width="1" cx="2826.9" cy="1866.1" r="17.7" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="2833.8" y1="1865.5" x2="2836.7" y2="1865.3"/>
+<circle class="gdot public" cx="2826.9" cy="1866.1" r="2.5"/>
+</g>
+<text class="glabel public" x="2800.3" y="1872.2" text-anchor="end">__iter__</text>
+<text class="gsize" x="2800.3" y="1884.2" text-anchor="end">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2852.2" cy="1761.4" r="16.8"/>
+<path class="gate public" stroke-width="2.2" d="M2844.7,1746.4 A16.8,16.8 0 1 1 2835.4,1761.3"/>
+<line class="gate public" stroke-width="1.4" x1="2860.0" y1="1766.3" x2="2863.3" y2="1768.3"/>
+<circle class="gdot public" cx="2852.2" cy="1761.4" r="3.0"/>
+</g>
+<text class="glabel public" x="2826.0" y="1749.1" text-anchor="end">get</text>
+<text class="gsize" x="2826.0" y="1761.1" text-anchor="end">9</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2940.7" cy="1690.1" r="18.0"/>
+<path class="gate public" stroke-width="2.2" d="M2944.4,1672.5 A18.0,18.0 0 1 1 2926.7,1678.8"/>
+<line class="gate public" stroke-width="1.4" x1="2944.0" y1="1699.5" x2="2945.4" y2="1703.4"/>
+<circle class="gdot public" cx="2940.7" cy="1690.1" r="3.2"/>
+</g>
+<text class="glabel public" x="2930.0" y="1664.0" text-anchor="end">set</text>
+<text class="gsize" x="2930.0" y="1676.0" text-anchor="end">12</text>
+<text class="module" x="2998.2" y="1770.2" text-anchor="middle">utils.py</text>
+<path class="spoke write" d="M1831.1,2434.5 Q1677.1,2448.2 1677.1,2537.4"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="1677.1" cy="2448.2" r="55.2"/>
+<circle class="core-ring" cx="1677.1" cy="2448.2" r="45.2"/>
+<circle class="ticks" cx="1677.1" cy="2448.2" r="67.2" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="1677.1" y="2454.2" text-anchor="middle">TinyDBPlugin</text>
+<text class="csub" x="1677.1" y="2474.2" text-anchor="middle">21 lines · 2 gates · 1 values</text>
+<g filter="url(#glow)"><circle class="val" cx="1677.1" cy="2537.4" r="6"/></g>
+<text class="vlabel" x="1677.1" y="2567.4" text-anchor="middle">named_placeholders</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1845.3" cy="2433.3" r="14.2"/>
+<circle class="gate private" stroke-width="1.6" cx="1845.3" cy="2433.3" r="14.2"/>
+<circle class="gate private" stroke-width="1" cx="1845.3" cy="2433.3" r="19.2" opacity=".7"/>
+<line class="gate private" stroke-width="1.4" x1="1837.5" y1="2434.0" x2="1834.2" y2="2434.3"/>
+<circle class="gdot private" cx="1845.3" cy="2433.3" r="2.6"/>
+</g>
+<text class="glabel private" x="1873.4" y="2434.8" text-anchor="start">__init__</text>
+<text class="gsize" x="1873.4" y="2446.8" text-anchor="start">4</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1508.8" cy="2463.1" r="19.7"/>
+<circle class="gate private" stroke-width="1.6" cx="1508.8" cy="2463.1" r="19.7"/>
+<line class="gate private" stroke-width="1.4" x1="1519.3" y1="2460.5" x2="1523.7" y2="2459.4"/>
+<line class="gate private" stroke-width="1.4" x1="1519.7" y1="2463.9" x2="1524.2" y2="2464.2"/>
+<circle class="gdot private" cx="1508.8" cy="2463.1" r="3.5"/>
+</g>
+<text class="glabel private" x="1475.2" y="2470.1" text-anchor="end">get_dynamic_class_hook</text>
+<text class="gsize" x="1475.2" y="2482.1" text-anchor="end">17</text>
+<text class="module" x="1677.1" y="2371.0" text-anchor="middle">mypy_plugin.py</text>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="2353.6" cy="2631.0" r="52.0"/>
+<circle class="core-ring" cx="2353.6" cy="2631.0" r="42.0"/>
+<circle class="ticks" cx="2353.6" cy="2631.0" r="64.0" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="2353.6" y="2637.0" text-anchor="middle">FrozenDict</text>
+<text class="csub" x="2353.6" y="2657.0" text-anchor="middle">9 lines · 4 gates · 0 values</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2467.6" cy="2519.4" r="13.5"/>
+<circle class="gate private" stroke-width="1.6" cx="2467.6" cy="2519.4" r="13.5"/>
+<circle class="gate private" stroke-width="1" cx="2467.6" cy="2519.4" r="18.5" opacity=".7"/>
+<line class="gate private" stroke-width="1.4" x1="2462.3" y1="2524.6" x2="2460.1" y2="2526.8"/>
+<circle class="gdot private" cx="2467.6" cy="2519.4" r="2.5"/>
+</g>
+<text class="glabel private" x="2487.3" y="2504.2" text-anchor="start">__hash__</text>
+<text class="gsize" x="2487.3" y="2516.2" text-anchor="start">3</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2464.3" cy="2745.8" r="12.7"/>
+<circle class="gate private" stroke-width="1.6" cx="2464.3" cy="2745.8" r="12.7"/>
+<line class="gate private" stroke-width="1.4" x1="2459.5" y1="2740.7" x2="2457.5" y2="2738.6"/>
+<circle class="gdot private" cx="2464.3" cy="2745.8" r="2.5"/>
+</g>
+<text class="glabel private" x="2482.9" y="2769.0" text-anchor="start">_immutable</text>
+<text class="gsize" x="2482.9" y="2781.0" text-anchor="start">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2239.6" cy="2742.5" r="12.7"/>
+<circle class="gate private" stroke-width="1.6" cx="2239.6" cy="2742.5" r="12.7"/>
+<line class="gate private" stroke-width="1.4" x1="2244.6" y1="2737.6" x2="2246.7" y2="2735.6"/>
+<circle class="gdot private" cx="2239.6" cy="2742.5" r="2.5"/>
+</g>
+<text class="glabel private" x="2220.5" y="2765.2" text-anchor="end">update</text>
+<text class="gsize" x="2220.5" y="2777.2" text-anchor="end">2</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="2241.2" cy="2517.8" r="12.7"/>
+<circle class="gate private" stroke-width="1.6" cx="2241.2" cy="2517.8" r="12.7"/>
+<line class="gate private" stroke-width="1.4" x1="2246.1" y1="2522.7" x2="2248.2" y2="2524.8"/>
+<circle class="gdot private" cx="2241.2" cy="2517.8" r="2.5"/>
+</g>
+<text class="glabel private" x="2222.4" y="2502.8" text-anchor="end">pop</text>
+<text class="gsize" x="2222.4" y="2514.8" text-anchor="end">2</text>
+<text class="module" x="2353.6" y="2557.0" text-anchor="middle">utils.py</text>
+<path class="spoke write" d="M3007.8,2771.0 Q3007.8,2627.5 3007.8,2711.0"/>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="3007.8" cy="2627.5" r="49.5"/>
+<circle class="core-ring" cx="3007.8" cy="2627.5" r="39.5"/>
+<circle class="ticks" cx="3007.8" cy="2627.5" r="61.5" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="3007.8" y="2633.5" text-anchor="middle">Document</text>
+<text class="csub" x="3007.8" y="2653.5" text-anchor="middle">3 lines · 1 gates · 1 values</text>
+<g filter="url(#glow)"><circle class="val" cx="3007.8" cy="2711.0" r="6"/></g>
+<text class="vlabel" x="3007.8" y="2741.0" text-anchor="middle">doc_id</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="3007.8" cy="2784.5" r="13.5"/>
+<path class="gate public" stroke-width="2.2" d="M3000.8,2796.0 A13.5,13.5 0 1 1 3014.9,2796.0"/>
+<circle class="gate public" stroke-width="1" cx="3007.8" cy="2784.5" r="18.5" opacity=".7"/>
+<line class="gate public" stroke-width="1.4" x1="3007.8" y1="2777.1" x2="3007.8" y2="2774.0"/>
+<circle class="gdot public" cx="3007.8" cy="2784.5" r="2.5"/>
+</g>
+<text class="glabel public" x="3007.8" y="2826.0" text-anchor="middle">__init__</text>
+<text class="gsize" x="3007.8" y="2838.0" text-anchor="middle">3</text>
+<text class="module" x="3007.8" y="2556.1" text-anchor="middle">table.py</text>
+<g filter="url(#glow)">
+<circle class="core-disc" cx="1649.4" cy="3216.0" r="48.8"/>
+<circle class="core-ring" cx="1649.4" cy="3216.0" r="38.8"/>
+<circle class="ticks" cx="1649.4" cy="3216.0" r="60.8" stroke-width="5" stroke-dasharray="1.5 6"/>
+</g>
+<text class="cname" style="font-size:18px" x="1649.4" y="3222.0" text-anchor="middle">QueryLike</text>
+<text class="csub" x="1649.4" y="3242.0" text-anchor="middle">2 lines · 2 gates · 0 values</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1803.8" cy="3216.0" r="11.6"/>
+<circle class="gate internal" stroke-width="1.6" cx="1803.8" cy="3216.0" r="11.6"/>
+<circle class="gate internal" stroke-width="1" cx="1803.8" cy="3216.0" r="16.6" opacity=".7"/>
+<line class="gate internal" stroke-width="1.4" x1="1797.5" y1="3216.0" x2="1794.8" y2="3216.0"/>
+<circle class="gdot internal" cx="1803.8" cy="3216.0" r="2.5"/>
+</g>
+<text class="glabel internal" x="1829.4" y="3220.0" text-anchor="start">__call__</text>
+<text class="gsize" x="1829.4" y="3232.0" text-anchor="start">1</text>
+<g filter="url(#glow)">
+<circle class="gate-body" cx="1495.0" cy="3216.0" r="11.6"/>
+<circle class="gate private" stroke-width="1.6" cx="1495.0" cy="3216.0" r="11.6"/>
+<circle class="gate private" stroke-width="1" cx="1495.0" cy="3216.0" r="16.6" opacity=".7"/>
+<line class="gate private" stroke-width="1.4" x1="1501.4" y1="3216.0" x2="1504.0" y2="3216.0"/>
+<circle class="gdot private" cx="1495.0" cy="3216.0" r="2.5"/>
+</g>
+<text class="glabel private" x="1469.4" y="3220.0" text-anchor="end">__hash__</text>
+<text class="gsize" x="1469.4" y="3232.0" text-anchor="end">1</text>
+<text class="module" x="1649.4" y="3145.2" text-anchor="middle">queries.py</text>
+<path class="override" marker-end="url(#arrO)" d="M2109.5,856.8 Q2133.5,567.4 2029.2,298.9"/>
+<path class="override" marker-end="url(#arrO)" d="M2186.9,902.4 Q2086.5,703.8 1894.5,597.3"/>
+<path class="override" marker-end="url(#arrO)" d="M2265.1,952.6 Q2244.0,733.4 2105.7,568.6"/>
+<path class="override" marker-end="url(#arrO)" d="M2414.1,1310.5 Q2171.3,876.7 1821.1,523.7"/>
+<path class="super" marker-end="url(#arr)" d="M2112.6,857.3 Q2183.0,560.3 2032.3,297.4"/>
+<path class="super" marker-end="url(#arr)" d="M2268.0,952.6 Q2290.1,714.0 2108.4,565.8"/>
+<path class="override" marker-end="url(#arrO)" d="M478.6,3165.0 Q670.9,2749.7 732.4,2302.1"/>
+<path class="override" marker-end="url(#arrO)" d="M275.9,3058.1 Q491.8,2667.3 812.8,2358.2"/>
+<path class="override" marker-end="url(#arrO)" d="M343.9,2820.0 Q371.6,2613.6 513.3,2460.4"/>
+<path class="override" marker-end="url(#arrO)" d="M1119.4,3086.1 Q1041.3,2696.6 841.4,2362.1"/>
+<path class="override" marker-end="url(#arrO)" d="M905.3,3131.7 Q660.7,2827.4 536.6,2465.3"/>
+<path class="override" marker-end="url(#arrO)" d="M3126.2,867.9 Q3207.8,619.9 3159.4,363.5"/>
+<path class="super" marker-end="url(#arr)" d="M3129.1,869.2 Q3257.7,623.2 3162.4,362.7"/>
+<text class="title" x="32" y="44">tinydb — the whole package</text>
+<text class="legend" x="32" y="3636">コア = クラス（行数で大きさ）／ 丸 = フィールド、ひし形 = property、四角 = クラス変数、琥珀色 = __init__ 以外でも書き換わる</text>
+<text class="legend" x="32" y="3656">ゲート = メソッド（行数で大きさ、10 行ごとに目盛り 1 本）／ 切れ目のある明るいリング = public、青緑 = internal、暗い青 = class-local、二重リング = 特殊メソッド</text>
+<text class="legend" x="32" y="3676">外側の弧 = 同じクラス内の呼び出し ／ 内向きの線 = 値の参照（水色 = 読み、琥珀色 = 書き）</text>
+<text class="legend" x="32" y="3696">太い管 = 継承（琥珀色の途切れた管 = 型チェック時だけの継承 TinyDB ⇠ Table）／ 半透明の破線ゲート = 継承したメソッド ／ 破線のソケット = 抽象メソッド ／ 紫の破線 = 上書き ／ 青い線 = super()</text>
+</svg>

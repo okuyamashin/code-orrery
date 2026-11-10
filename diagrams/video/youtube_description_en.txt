@@ -1,0 +1,42 @@
+A narrated 3D tour of tinydb, a tiny document-oriented database written in Python — visualized as a planetary system built from its own source code.
+
+Every class is a planet. Its methods are gates on the planet's surface, its fields orbit the core, and calls inside a class arc over the surface. Lines of light between planets are calls and references that cross class boundaries; thick glowing conduits are inheritance.
+
+Nothing here is drawn by hand. The structure comes from static analysis of tinydb's source, the descriptions are read from its own docstrings, and the narration is synthesized speech.
+
+How to read it
+• Planet = class (size grows with lines of code)
+• Gate = method (bright ring with an opening = public, dark ring = private, double ring = special method)
+• Small shapes around the core = fields (sphere), properties (octahedron), class variables (cube); amber = changes after construction
+• Arcs outside a planet = calls within the class
+• Lines between planets = method calls (pale cyan), object creation (green), implicit calls and delegation (pink), overrides (purple), super() (blue), references (dashed)
+• Thick conduit = inheritance (broken amber conduit = inheritance only for the type checker)
+
+Chapters
+0:00 Overview
+0:21 TinyDB
+0:37 Table
+0:52 Document
+1:03 LRUCache
+1:15 Query
+1:28 QueryInstance
+1:38 QueryLike
+1:49 Storage
+2:02 JSONStorage
+2:15 MemoryStorage
+2:28 Middleware
+2:38 CachingMiddleware
+2:50 FrozenDict
+3:01 TinyDBPlugin
+3:14 Wrap-up
+
+Notes
+• The call graph comes from static analysis, so some dynamic calls (functions passed as values, __getattr__ delegation) are inferred or missing.
+• Line counts are per method and include docstrings.
+• Analyzed version: tinydb 4.9.0
+
+Source code of this visualizer (open source): https://github.com/okuyamashin/code-orrery
+Live 3D demo: https://okuyamashin.github.io/code-orrery/
+tinydb by Markus Siemens (MIT License): https://github.com/msiemens/tinydb
+
+#python #codevisualization #softwarearchitecture #threejs #opensource

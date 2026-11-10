@@ -1,0 +1,172 @@
+1
+00:00:01,000 --> 00:00:06,313
+TinyDB is a tiny, document oriented database optimized for your happiness.
+
+2
+00:00:06,313 --> 00:00:10,550
+It has 14 classes in 7 modules, with 1557 lines of methods.
+
+3
+00:00:10,550 --> 00:00:13,924
+The largest planet is Table, followed by Query.
+
+4
+00:00:13,924 --> 00:00:20,458
+The 51 lines of light between planets are calls and references that cross class boundaries.
+
+5
+00:00:23,058 --> 00:00:25,881
+TinyDB. The main class of TinyDB.
+
+6
+00:00:25,881 --> 00:00:29,217
+172 lines, 12 gates, 12 of them public.
+
+7
+00:00:29,217 --> 00:00:32,981
+For the type checker only, it extends Table.
+
+8
+00:00:32,981 --> 00:00:36,317
+It uses Table, Storage and JSONStorage.
+
+9
+00:00:38,917 --> 00:00:42,372
+Table. Represents a single TinyDB table.
+
+10
+00:00:42,372 --> 00:00:45,741
+700 lines, 20 gates, 17 of them public.
+
+11
+00:00:45,741 --> 00:00:51,874
+It uses LRUCache, Document, QueryLike and 1 more. It is used by TinyDB.
+
+12
+00:00:54,474 --> 00:00:57,518
+Document. A document stored in the database.
+
+13
+00:00:57,518 --> 00:01:01,324
+3 lines, 1 gate, 1 of them public. It is used by Table.
+
+14
+00:01:04,974 --> 00:01:10,345
+LRUCache. A least-recently used (LRU) cache with a fixed cache size.
+
+15
+00:01:10,345 --> 00:01:15,005
+48 lines, 10 gates, 10 of them public. It is used by Table.
+
+16
+00:01:17,605 --> 00:01:23,154
+Query. TinyDB Queries. 335 lines, 22 gates, 21 of them public.
+
+17
+00:01:23,154 --> 00:01:27,450
+It extends QueryInstance. It uses QueryInstance.
+
+18
+00:01:30,050 --> 00:01:32,538
+QueryInstance. A query instance.
+
+19
+00:01:32,538 --> 00:01:36,970
+53 lines, 9 gates, 7 of them public. It is used by Query.
+
+20
+00:01:40,550 --> 00:01:44,284
+QueryLike. A typing protocol that acts like a query.
+
+21
+00:01:44,284 --> 00:01:48,306
+2 lines, 2 gates, 0 of them public. It is used by Table.
+
+22
+00:01:51,050 --> 00:01:54,872
+Storage. The abstract base class for all Storages.
+
+23
+00:01:54,872 --> 00:01:57,623
+26 lines, 3 gates, 3 of them public.
+
+24
+00:01:57,623 --> 00:02:02,056
+It is used by TinyDB, CachingMiddleware, Table and 1 more.
+
+25
+00:02:04,656 --> 00:02:08,334
+JSONStorage. Store the data in a JSON file.
+
+26
+00:02:08,334 --> 00:02:11,413
+75 lines, 4 gates, 4 of them public.
+
+27
+00:02:11,413 --> 00:02:14,920
+It extends Storage. It is used by TinyDB.
+
+28
+00:02:17,520 --> 00:02:20,927
+MemoryStorage. Store the data as JSON in memory.
+
+29
+00:02:20,927 --> 00:02:23,482
+11 lines, 3 gates, 3 of them public.
+
+30
+00:02:23,482 --> 00:02:27,528
+It extends Storage. No lines connect it to other classes.
+
+31
+00:02:30,128 --> 00:02:33,533
+Middleware. The base class for all Middlewares.
+
+32
+00:02:33,533 --> 00:02:37,372
+51 lines, 3 gates, 2 of them public. It uses Storage.
+
+33
+00:02:40,628 --> 00:02:44,141
+CachingMiddleware. Add some caching to TinyDB.
+
+34
+00:02:44,141 --> 00:02:46,890
+51 lines, 5 gates, 3 of them public.
+
+35
+00:02:46,890 --> 00:02:49,869
+It extends Middleware. It uses Storage.
+
+36
+00:02:52,469 --> 00:02:55,101
+FrozenDict. An immutable dictionary.
+
+37
+00:02:55,101 --> 00:02:57,659
+9 lines, 4 gates, 0 of them public.
+
+38
+00:02:57,659 --> 00:03:00,364
+No lines connect it to other classes.
+
+39
+00:03:02,969 --> 00:03:06,549
+TinyDBPlugin. A plugin for the mypy type checker.
+
+40
+00:03:06,549 --> 00:03:08,595
+This class has no docstring.
+
+41
+00:03:08,595 --> 00:03:11,226
+21 lines, 2 gates, 0 of them public.
+
+42
+00:03:11,226 --> 00:03:13,929
+No lines connect it to other classes.
+
+43
+00:03:16,529 --> 00:03:21,080
+That is the whole of tinydb: fourteen classes, held together by lines of light.
+

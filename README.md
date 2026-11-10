@@ -66,3 +66,7 @@ This writes a 1920×1080, 30 fps mp4 plus YouTube chapters, subtitles and a thum
 - Shapes around the core = fields (sphere), properties (octahedron), class variables (cube); amber = changes after construction
 - Lines between planets = calls (pale cyan), object creation (green), implicit calls and delegation (pink), overrides (purple), `super()` (blue), references (dashed)
 - Thick conduit = inheritance (broken amber = inheritance only for the type checker)
+
+## License
+
+[MIT](LICENSE). tinydb itself is a separate project with its own license; it is not included in this repository.

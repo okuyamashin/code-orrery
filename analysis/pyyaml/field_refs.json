@@ -1,0 +1,8024 @@
+{
+  "__init__.YAMLLoadWarning": {},
+  "__init__.YAMLObjectMetaclass": {
+    "__init__": {}
+  },
+  "__init__.YAMLObject": {
+    "from_yaml": {},
+    "to_yaml": {}
+  },
+  "composer.ComposerError": {},
+  "composer.Composer": {
+    "__init__": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "check_node": {
+      "check_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "get_node": {
+      "check_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_document": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "get_single_node": {
+      "check_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_document": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "compose_document": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "compose_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "compose_node": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "ascend_resolver": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_mapping_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_scalar_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_sequence_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "descend_resolver": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "compose_scalar_node": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "resolve": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "compose_sequence_node": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "resolve": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "compose_mapping_node": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "compose_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_event": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "resolve": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "constructor.ConstructorError": {},
+  "constructor.BaseConstructor": {
+    "__init__": {
+      "constructed_objects": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "deep_construct": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "recursive_objects": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "state_generators": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "check_data": {
+      "check_node": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_state_key": {
+      "get_state_keys_blacklist_regexp": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "get_data": {
+      "check_node": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "construct_document": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_node": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "get_single_data": {
+      "construct_document": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_single_node": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_document": {
+      "construct_object": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "constructed_objects": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "deep_construct": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "recursive_objects": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "state_generators": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "construct_object": {
+      "__class__": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "constructed_objects": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "deep_construct": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "recursive_objects": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state_generators": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_constructors": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_multi_constructors": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "construct_scalar": {},
+    "construct_sequence": {
+      "construct_object": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_mapping": {
+      "construct_object": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_pairs": {
+      "construct_object": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "add_constructor": {},
+    "add_multi_constructor": {}
+  },
+  "constructor.SafeConstructor": {
+    "construct_scalar": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "flatten_mapping": {
+      "flatten_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_mapping": {
+      "flatten_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_null": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_bool": {
+      "bool_values": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_int": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_float": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "inf_value": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "nan_value": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "construct_yaml_binary": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_timestamp": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "timestamp_regexp": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "construct_yaml_omap": {
+      "construct_object": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_pairs": {
+      "construct_object": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_set": {
+      "construct_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_str": {
+      "construct_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_seq": {
+      "construct_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_map": {
+      "construct_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_yaml_object": {
+      "construct_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_undefined": {}
+  },
+  "constructor.FullConstructor": {
+    "get_state_keys_blacklist": {},
+    "get_state_keys_blacklist_regexp": {
+      "get_state_keys_blacklist": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state_keys_blacklist_regexp": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "construct_python_str": {
+      "construct_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_unicode": {
+      "construct_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_bytes": {
+      "construct_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_long": {
+      "construct_yaml_int": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_complex": {
+      "construct_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_tuple": {
+      "construct_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "find_python_module": {},
+    "find_python_name": {},
+    "construct_python_name": {
+      "construct_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "find_python_name": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_module": {
+      "construct_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "find_python_module": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "make_python_instance": {
+      "find_python_name": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "set_python_instance_state": {
+      "check_state_key": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_object": {
+      "construct_mapping": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "make_python_instance": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "set_python_instance_state": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_object_apply": {
+      "construct_mapping": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "construct_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "make_python_instance": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "set_python_instance_state": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "construct_python_object_new": {
+      "construct_python_object_apply": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "constructor.UnsafeConstructor": {
+    "find_python_module": {},
+    "find_python_name": {},
+    "make_python_instance": {},
+    "set_python_instance_state": {}
+  },
+  "constructor.Constructor": {},
+  "cyaml.CBaseLoader": {
+    "__init__": {}
+  },
+  "cyaml.CSafeLoader": {
+    "__init__": {}
+  },
+  "cyaml.CFullLoader": {
+    "__init__": {}
+  },
+  "cyaml.CUnsafeLoader": {
+    "__init__": {}
+  },
+  "cyaml.CLoader": {
+    "__init__": {}
+  },
+  "cyaml.CBaseDumper": {
+    "__init__": {}
+  },
+  "cyaml.CSafeDumper": {
+    "__init__": {}
+  },
+  "cyaml.CDumper": {
+    "__init__": {}
+  },
+  "dumper.BaseDumper": {
+    "__init__": {}
+  },
+  "dumper.SafeDumper": {
+    "__init__": {}
+  },
+  "dumper.Dumper": {
+    "__init__": {}
+  },
+  "emitter.EmitterError": {},
+  "emitter.ScalarAnalysis": {
+    "__init__": {
+      "allow_block": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "allow_block_plain": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "allow_double_quoted": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "allow_flow_plain": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "allow_single_quoted": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "empty": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "multiline": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "scalar": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "emitter.Emitter": {
+    "__init__": {
+      "allow_unicode": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "analysis": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "best_indent": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "best_line_break": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "events": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "expect_stream_start": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "mapping_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "open_ended": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "prepared_anchor": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "prepared_tag": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "root_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "sequence_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "simple_key_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag_prefixes": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "whitespace": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "dispose": {
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "emit": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "events": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "need_more_events": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "need_more_events": {
+      "events": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "need_events": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "need_events": {
+      "events": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "increase_indent": {
+      "best_indent": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "expect_stream_start": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_first_document_start": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_stream_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_nothing": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "expect_first_document_start": {
+      "expect_document_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_document_start": {
+      "DEFAULT_TAG_PREFIXES": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_empty_document": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_document_root": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_nothing": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "open_ended": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "prepare_tag_handle": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "prepare_tag_prefix": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "prepare_version": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag_prefixes": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_stream_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_tag_directive": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_version_directive": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_document_end": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_document_start": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "flush_stream": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_document_root": {
+      "expect_document_end": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "expect_node": {
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_empty_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_empty_sequence": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_alias": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "expect_block_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "expect_block_sequence": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "expect_flow_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "expect_flow_sequence": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "expect_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "mapping_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "process_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_tag": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "root_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "sequence_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "simple_key_context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "expect_alias": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "process_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "expect_scalar": {
+      "increase_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "process_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "expect_flow_sequence": {
+      "expect_first_flow_sequence_item": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "increase_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_first_flow_sequence_item": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_sequence_item": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_flow_sequence_item": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_sequence_item": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_flow_mapping": {
+      "expect_first_flow_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "increase_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_first_flow_mapping_key": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_mapping_simple_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_mapping_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_flow_mapping_key": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_mapping_simple_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_mapping_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_flow_mapping_simple_value": {
+      "expect_flow_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_flow_mapping_value": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_flow_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_block_sequence": {
+      "expect_first_block_sequence_item": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "increase_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "mapping_context": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "expect_first_block_sequence_item": {
+      "expect_block_sequence_item": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_block_sequence_item": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_block_sequence_item": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_block_mapping": {
+      "expect_first_block_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "increase_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "expect_first_block_mapping_key": {
+      "expect_block_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_block_mapping_key": {
+      "check_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_block_mapping_simple_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_block_mapping_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_block_mapping_simple_value": {
+      "expect_block_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "expect_block_mapping_value": {
+      "expect_block_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "expect_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_empty_sequence": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "events": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "check_empty_mapping": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "events": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "check_empty_document": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "events": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "check_simple_key": {
+      "analysis": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "analyze_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_empty_mapping": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_empty_sequence": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "prepare_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "prepare_tag": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "prepared_anchor": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "prepared_tag": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "process_anchor": {
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "prepare_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "prepared_anchor": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "process_tag": {
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "choose_scalar_style": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "prepare_tag": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "prepared_tag": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "style": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "choose_scalar_style": {
+      "analysis": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "analyze_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "canonical": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "simple_key_context": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "process_scalar": {
+      "analysis": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "analyze_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "choose_scalar_style": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "event": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "simple_key_context": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "style": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "write_double_quoted": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_folded": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_literal": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_plain": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_single_quoted": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "prepare_version": {},
+    "prepare_tag_handle": {},
+    "prepare_tag_prefix": {},
+    "prepare_tag": {
+      "tag_prefixes": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "prepare_anchor": {},
+    "analyze_scalar": {
+      "allow_unicode": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "flush_stream": {
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "write_stream_start": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "write_stream_end": {
+      "flush_stream": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_indicator": {
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "open_ended": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "whitespace": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "write_indent": {
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "whitespace": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_line_break": {
+      "best_line_break": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "whitespace": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "write_version_directive": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_tag_directive": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_single_quoted": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_double_quoted": {
+      "ESCAPE_REPLACEMENTS": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "allow_unicode": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "whitespace": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "determine_block_hints": {
+      "best_indent": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "write_folded": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "determine_block_hints": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "open_ended": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_literal": {
+      "determine_block_hints": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "open_ended": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "write_plain": {
+      "best_width": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "indention": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "open_ended": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "root_context": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "whitespace": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "write_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "write_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "error.Mark": {
+    "__init__": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "index": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "get_snippet": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "__str__": {
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_snippet": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "error.YAMLError": {},
+  "error.MarkedYAMLError": {
+    "__init__": {
+      "context": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "context_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "note": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "problem": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "problem_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__str__": {
+      "context": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "context_mark": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "note": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "problem": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "problem_mark": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "events.Event": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__repr__": {
+      "__class__": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "events.NodeEvent": {
+    "__init__": {
+      "anchor": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "events.CollectionStartEvent": {
+    "__init__": {
+      "anchor": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flow_style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "implicit": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "events.CollectionEndEvent": {},
+  "events.StreamStartEvent": {
+    "__init__": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "events.StreamEndEvent": {},
+  "events.DocumentStartEvent": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "explicit": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tags": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "version": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "events.DocumentEndEvent": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "explicit": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "events.AliasEvent": {},
+  "events.ScalarEvent": {
+    "__init__": {
+      "anchor": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "implicit": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "events.SequenceStartEvent": {},
+  "events.SequenceEndEvent": {},
+  "events.MappingStartEvent": {},
+  "events.MappingEndEvent": {},
+  "loader.BaseLoader": {
+    "__init__": {}
+  },
+  "loader.FullLoader": {
+    "__init__": {}
+  },
+  "loader.SafeLoader": {
+    "__init__": {}
+  },
+  "loader.Loader": {
+    "__init__": {}
+  },
+  "loader.UnsafeLoader": {
+    "__init__": {}
+  },
+  "nodes.Node": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__repr__": {
+      "__class__": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "tag": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "nodes.ScalarNode": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "nodes.CollectionNode": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flow_style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "nodes.SequenceNode": {},
+  "nodes.MappingNode": {},
+  "parser.ParserError": {},
+  "parser.Parser": {
+    "__init__": {
+      "current_event": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "parse_stream_start": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tag_handles": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "yaml_version": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "dispose": {
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "check_event": {
+      "current_event": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "call",
+          "read"
+        ]
+      }
+    },
+    "peek_event": {
+      "current_event": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "call",
+          "read"
+        ]
+      }
+    },
+    "get_event": {
+      "current_event": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "call",
+          "read"
+        ]
+      }
+    },
+    "parse_stream_start": {
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_implicit_document_start": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "parse_implicit_document_start": {
+      "DEFAULT_TAGS": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_block_node": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_document_end": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_document_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tag_handles": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "parse_document_start": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_document_content": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_document_end": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_directives": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_document_end": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_document_start": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "parse_document_content": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_block_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "process_directives": {
+      "DEFAULT_TAGS": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "tag_handles": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "yaml_version": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "parse_block_node": {
+      "parse_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_flow_node": {
+      "parse_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_block_node_or_indentless_sequence": {
+      "parse_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_node": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_block_mapping_first_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_sequence_first_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_mapping_first_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_sequence_first_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_indentless_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tag_handles": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_block_sequence_first_entry": {
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_block_sequence_entry": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_block_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_indentless_sequence_entry": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_block_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_indentless_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_block_mapping_first_key": {
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_block_mapping_key": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_mapping_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_node_or_indentless_sequence": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_block_mapping_value": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_block_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_block_node_or_indentless_sequence": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_flow_sequence_first_entry": {
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_flow_sequence_entry": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_flow_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_sequence_entry_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_flow_sequence_entry_mapping_key": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_flow_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_flow_sequence_entry_mapping_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_flow_sequence_entry_mapping_value": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_flow_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_flow_sequence_entry_mapping_end": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_flow_sequence_entry_mapping_end": {
+      "parse_flow_sequence_entry": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "parse_flow_mapping_first_key": {
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "parse_flow_mapping_key": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "marks": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_mapping_empty_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_mapping_value": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_flow_mapping_value": {
+      "check_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "parse_flow_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "parse_flow_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "states": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "parse_flow_mapping_empty_value": {
+      "parse_flow_mapping_key": {
+        "kind": "method",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek_token": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "process_empty_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "state": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "process_empty_scalar": {}
+  },
+  "reader.ReaderError": {
+    "__init__": {
+      "character": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "position": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "reason": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__str__": {
+      "character": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "position": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "reason": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "reader.Reader": {
+    "__init__": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "check_printable": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "determine_encoding": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "eof": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "index": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "raw_buffer": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "raw_decode": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "stream_pointer": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "peek": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "update": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "prefix": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "update": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "forward": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "index": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "update": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "get_mark": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "index": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "determine_encoding": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "eof": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "raw_buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "raw_decode": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "update": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "update_raw": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_printable": {
+      "NON_PRINTABLE": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "index": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "update": {
+      "buffer": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "check_printable": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "eof": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "pointer": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "raw_buffer": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "raw_decode": {
+        "kind": "field",
+        "ops": [
+          "call",
+          "read"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream_pointer": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "update_raw": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "update_raw": {
+      "eof": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "raw_buffer": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "stream": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "stream_pointer": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    }
+  },
+  "representer.RepresenterError": {},
+  "representer.BaseRepresenter": {
+    "__init__": {
+      "alias_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "default_flow_style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "default_style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "object_keeper": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "represented_objects": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "sort_keys": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "represent": {
+      "alias_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "object_keeper": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "represent_data": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "represented_objects": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "serialize": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_data": {
+      "alias_key": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "ignore_aliases": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "object_keeper": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "represented_objects": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_multi_representers": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_representers": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "add_representer": {},
+    "add_multi_representer": {},
+    "represent_scalar": {
+      "alias_key": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "default_style": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "represented_objects": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "represent_sequence": {
+      "alias_key": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "default_flow_style": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "represent_data": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "represented_objects": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "represent_mapping": {
+      "alias_key": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "default_flow_style": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "represent_data": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "represented_objects": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "sort_keys": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "ignore_aliases": {}
+  },
+  "representer.SafeRepresenter": {
+    "ignore_aliases": {},
+    "represent_none": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_str": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_binary": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_bool": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_int": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_float": {
+      "inf_value": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_list": {
+      "represent_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_dict": {
+      "represent_mapping": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_set": {
+      "represent_mapping": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_date": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_datetime": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_yaml_object": {
+      "represent_mapping": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_undefined": {}
+  },
+  "representer.Representer": {
+    "represent_complex": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_tuple": {
+      "represent_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_name": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_module": {
+      "represent_scalar": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_object": {
+      "represent_mapping": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "represent_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "represent_ordered_dict": {
+      "represent_sequence": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "resolver.ResolverError": {},
+  "resolver.BaseResolver": {
+    "__init__": {
+      "resolver_exact_paths": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "resolver_prefix_paths": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "add_implicit_resolver": {},
+    "add_path_resolver": {},
+    "descend_resolver": {
+      "check_resolver_prefix": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "resolver_exact_paths": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "resolver_prefix_paths": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_path_resolvers": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "ascend_resolver": {
+      "resolver_exact_paths": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "resolver_prefix_paths": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_path_resolvers": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "check_resolver_prefix": {},
+    "resolve": {
+      "DEFAULT_MAPPING_TAG": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "DEFAULT_SCALAR_TAG": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "DEFAULT_SEQUENCE_TAG": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "resolver_exact_paths": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_implicit_resolvers": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "yaml_path_resolvers": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "resolver.Resolver": {},
+  "scanner.ScannerError": {},
+  "scanner.SimpleKey": {
+    "__init__": {
+      "column": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "index": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "line": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "required": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "token_number": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "scanner.Scanner": {
+    "__init__": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "done": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "fetch_stream_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "tokens_taken": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "check_token": {
+      "fetch_more_tokens": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "need_more_tokens": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "peek_token": {
+      "fetch_more_tokens": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "need_more_tokens": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "get_token": {
+      "fetch_more_tokens": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "need_more_tokens": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tokens_taken": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "need_more_tokens": {
+      "done": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "next_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "stale_possible_simple_keys": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tokens_taken": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_more_tokens": {
+      "check_block_entry": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_directive": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_document_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_document_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_plain": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "check_value": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "fetch_alias": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_block_entry": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_directive": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_document_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_document_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_double": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_flow_entry": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_flow_mapping_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_flow_mapping_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_flow_sequence_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_flow_sequence_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_folded": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_literal": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_plain": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_single": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_stream_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_tag": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "fetch_value": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_to_next_token": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "stale_possible_simple_keys": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "unwind_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "next_possible_simple_key": {
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "stale_possible_simple_keys": {
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "index": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "line": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "save_possible_simple_key": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "index": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "line": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tokens_taken": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "remove_possible_simple_key": {
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "unwind_indent": {
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "add_indent": {
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "indents": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_stream_start": {
+      "encoding": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_stream_end": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "done": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "unwind_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_directive": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_directive": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "unwind_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_document_start": {
+      "fetch_document_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_document_end": {
+      "fetch_document_indicator": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_document_indicator": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "unwind_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_flow_sequence_start": {
+      "fetch_flow_collection_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_flow_mapping_start": {
+      "fetch_flow_collection_start": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_flow_collection_start": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "save_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_flow_sequence_end": {
+      "fetch_flow_collection_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_flow_mapping_end": {
+      "fetch_flow_collection_end": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_flow_collection_end": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_flow_entry": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_block_entry": {
+      "add_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_key": {
+      "add_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_value": {
+      "add_indent": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "possible_simple_keys": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "tokens_taken": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_alias": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "save_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_anchor": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "save_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_tag": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "save_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_literal": {
+      "fetch_block_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_folded": {
+      "fetch_block_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_block_scalar": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "remove_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_block_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_single": {
+      "fetch_flow_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_double": {
+      "fetch_flow_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "fetch_flow_scalar": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "save_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_flow_scalar": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "fetch_plain": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "save_possible_simple_key": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_plain": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "tokens": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "check_directive": {
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "check_document_start": {
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_document_end": {
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_block_entry": {
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_key": {
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_value": {
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "check_plain": {
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_to_next_token": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "index": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_directive": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_directive_ignored_line": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_directive_name": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_directive_value": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_yaml_directive_value": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_directive_name": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_yaml_directive_value": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_yaml_directive_number": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_yaml_directive_number": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_tag_directive_value": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_directive_handle": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_directive_prefix": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_tag_directive_handle": {
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_handle": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_tag_directive_prefix": {
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_uri": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_directive_ignored_line": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_anchor": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_tag": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_handle": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_tag_uri": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_block_scalar": {
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_block_scalar_breaks": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_block_scalar_ignored_line": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_block_scalar_indentation": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_block_scalar_indicators": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_block_scalar_indicators": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_block_scalar_ignored_line": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_block_scalar_indentation": {
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_block_scalar_breaks": {
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_flow_scalar": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_flow_scalar_non_spaces": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_flow_scalar_spaces": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_flow_scalar_non_spaces": {
+      "ESCAPE_CODES": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "ESCAPE_REPLACEMENTS": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_flow_scalar_breaks": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_flow_scalar_spaces": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_flow_scalar_breaks": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_flow_scalar_breaks": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_plain": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "column": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "flow_level": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "indent": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_plain_spaces": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_plain_spaces": {
+      "allow_simple_key": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_line_break": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_tag_handle": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_tag_uri": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "scan_uri_escapes": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_uri_escapes": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "get_mark": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "scan_line_break": {
+      "forward": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "peek": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "prefix": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    }
+  },
+  "serializer.SerializerError": {},
+  "serializer.Serializer": {
+    "__init__": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "closed": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "last_anchor_id": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "serialized_nodes": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "use_encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "use_explicit_end": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "use_explicit_start": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "use_tags": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "use_version": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "open": {
+      "closed": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "emit": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "use_encoding": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "close": {
+      "closed": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      },
+      "emit": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "serialize": {
+      "anchor_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "closed": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "emit": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "last_anchor_id": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "serialize_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "serialized_nodes": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "use_explicit_end": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "use_explicit_start": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "use_tags": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "use_version": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    },
+    "anchor_node": {
+      "anchor_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "generate_anchor": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      }
+    },
+    "generate_anchor": {
+      "ANCHOR_TEMPLATE": {
+        "kind": "classvar",
+        "ops": [
+          "read"
+        ]
+      },
+      "last_anchor_id": {
+        "kind": "field",
+        "ops": [
+          "read",
+          "write"
+        ]
+      }
+    },
+    "serialize_node": {
+      "anchors": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      },
+      "ascend_resolver": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "descend_resolver": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "emit": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "resolve": {
+        "kind": "inherited",
+        "ops": [
+          "call"
+        ]
+      },
+      "serialize_node": {
+        "kind": "method",
+        "ops": [
+          "call"
+        ]
+      },
+      "serialized_nodes": {
+        "kind": "field",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "tokens.Token": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    },
+    "__repr__": {
+      "__class__": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      },
+      "__dict__": {
+        "kind": "inherited",
+        "ops": [
+          "read"
+        ]
+      }
+    }
+  },
+  "tokens.DirectiveToken": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "name": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "tokens.DocumentStartToken": {},
+  "tokens.DocumentEndToken": {},
+  "tokens.StreamStartToken": {
+    "__init__": {
+      "encoding": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "tokens.StreamEndToken": {},
+  "tokens.BlockSequenceStartToken": {},
+  "tokens.BlockMappingStartToken": {},
+  "tokens.BlockEndToken": {},
+  "tokens.FlowSequenceStartToken": {},
+  "tokens.FlowMappingStartToken": {},
+  "tokens.FlowSequenceEndToken": {},
+  "tokens.FlowMappingEndToken": {},
+  "tokens.KeyToken": {},
+  "tokens.ValueToken": {},
+  "tokens.BlockEntryToken": {},
+  "tokens.FlowEntryToken": {},
+  "tokens.AliasToken": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "tokens.AnchorToken": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "tokens.TagToken": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  },
+  "tokens.ScalarToken": {
+    "__init__": {
+      "end_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "plain": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "start_mark": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "style": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      },
+      "value": {
+        "kind": "field",
+        "ops": [
+          "write"
+        ]
+      }
+    }
+  }
+}

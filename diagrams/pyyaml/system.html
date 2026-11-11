@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PyYAML 5.3.1 Planetary System</title>
+<!-- X（Twitter）などで共有したときのカード。画像の URL は絶対パスでないと読まれない -->
+<meta name="description" content="PyYAML 5.3.1's Python source code as a planetary system in a 3D net space. Press PLAY for a narrated tour.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="code-orrery">
+<meta property="og:title" content="PyYAML 5.3.1 as a Planetary System — code-orrery">
+<meta property="og:description" content="PyYAML 5.3.1's Python source code as a planetary system in a 3D net space. Press PLAY for a narrated tour.">
+<meta property="og:url" content="https://okuyamashin.github.io/code-orrery/pyyaml/system.html">
+<meta property="og:image" content="https://okuyamashin.github.io/code-orrery/pyyaml/preview.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="Glowing planets connected by lines of light: the classes of PyYAML 5.3.1">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PyYAML 5.3.1 as a Planetary System — code-orrery">
+<meta name="twitter:description" content="PyYAML 5.3.1's Python source code as a planetary system in a 3D net space. Press PLAY for a narrated tour.">
+<meta name="twitter:image" content="https://okuyamashin.github.io/code-orrery/pyyaml/preview.jpg">
+<meta name="twitter:image:alt" content="Glowing planets connected by lines of light: the classes of PyYAML 5.3.1">
+<script src="theme.js?v=2"></script>
+<style>
+  /* 色と書体は theme.js が CSS 変数として当てる */
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); overflow: hidden;
+    font-family: var(--font-ui); }
+  #app { position: fixed; inset: 0; }
+  .hud { position: fixed; z-index: 10; pointer-events: none; }
+  .hud * { pointer-events: auto; }
+  #top { top: 16px; left: 20px; }
+  #top h1 { margin: 0 0 4px; font: 700 18px var(--font-display); letter-spacing: 2px; color: var(--title); }
+  #top .sub { font: 12px var(--font-mono); color: var(--muted); }
+  #nav { top: 76px; left: 20px; display: flex; flex-direction: column; gap: 3px; }
+  #nav button { text-align: left; }
+  #controls { top: 16px; right: 20px; display: flex; gap: 8px; }
+  button, a.btn, select { background: var(--btn); color: var(--fg); border: 1px solid var(--line); border-radius: 4px;
+    padding: 4px 8px; font: 12px var(--font-mono); cursor: pointer; text-decoration: none; }
+  button.on, #nav button.cur { border-color: var(--accent); color: var(--hi); }
+  #nav button small { color: var(--muted); margin-left: 6px; }
+  #info { right: 20px; bottom: 16px; width: 300px; max-height: 46vh; overflow: auto; font: 12px var(--font-mono);
+    color: var(--fg); background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+    padding: 10px 12px; display: none; }
+  #info h2 { margin: 0 0 6px; font-size: 14px; color: var(--hi); }
+  #info .k { color: var(--muted); }
+  /* 脆弱性アラート */
+  @keyframes alertBlinkUi { 0%, 100% { opacity: 1; } 50% { opacity: .4; } }
+  #alertBanner { margin-top: 8px; max-width: 520px; font: 12px var(--font-mono); color: #ffb3bc; cursor: pointer; }
+  #alertBanner b { color: #ff4d64; animation: alertBlinkUi .9s infinite; margin-right: 6px; }
+  #alertBanner span { color: #c98a92; }
+  body.has-alert #nav { top: 118px; max-height: calc(100vh - 200px); overflow: auto; }
+  #nav button.alert-problem { border-color: #ff3550; color: #ff8a98; animation: alertBlinkUi .9s infinite; }
+  #nav button.alert-path { border-color: #a8681c; color: #ffc070; }
+  #nav button.alert-fix { border-color: #1f8a5c; color: #7dffc0; }
+  #info .alert { border-left: 3px solid #ff3550; padding: 4px 8px; margin: 6px 0 8px; background: rgba(255, 53, 80, .08); }
+  #info .alert.fix { border-color: #45f0a0; background: rgba(69, 240, 160, .07); }
+  #info .alert.path { border-color: #ffa53a; background: rgba(255, 165, 58, .07); }
+  #info .alert .id { font-weight: 700; }
+  #info .alert li { margin: 3px 0; }
+  #info .r-problem { color: #ff6b7d; } #info .r-path { color: #ffc070; } #info .r-fix { color: #7dffc0; }
+  #info ul { margin: 4px 0 8px; padding-left: 16px; }
+  .core-lbl.small .n { font-size: 15px; }
+  .core-lbl.small .s { display: none; }
+  .mod-lbl { font: 600 14px var(--font-mono); letter-spacing: 4px; color: var(--mod); text-shadow: 0 0 8px var(--shadow); }
+  @media (max-width: 700px) { #nav { display: none; } }
+  /* ツアー: 再生ボタンは見る邪魔にならないよう左下に置く */
+  #play { left: 20px; bottom: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+  #play button { font: 700 15px var(--font-display); letter-spacing: 3px; padding: 11px 26px; border-radius: 40px;
+    border: 1px solid var(--accent); color: var(--hi); background: var(--play-bg);
+    box-shadow: 0 0 24px var(--glow), inset 0 0 18px var(--glow-in); }
+  #play button:hover { background: var(--play-hover); }
+  #play .hint { font-size: 12px; color: var(--muted); text-shadow: 0 0 6px var(--shadow); }
+  #caption { left: 50%; bottom: 74px; transform: translateX(-50%); width: min(760px, calc(100vw - 32px));
+    background: var(--cap-bg); border: 1px solid var(--cap-line); border-radius: 8px; padding: 14px 18px 12px;
+    box-shadow: 0 0 30px var(--cap-glow); display: none; }
+  #caption .ttl { font: 700 20px var(--font-display); color: var(--cap-title); letter-spacing: 2px; }
+  #caption .ttl small { font: 12px var(--font-mono); color: var(--muted); margin-left: 10px; letter-spacing: 0; }
+  #caption .en { font: italic 11px var(--font-mono); color: var(--cap-src); margin: 4px 0 8px; }
+  #caption .ja { font: 14.5px/1.7 var(--font-mono); color: var(--cap-text); min-height: 3.4em; }
+  #caption .ja::after { content: "▍"; color: var(--accent); animation: blink 1s steps(1) infinite; }
+  #caption .bar { display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-top: 8px; }
+  #caption .step { font: 11px var(--font-mono); color: var(--muted); }
+  @keyframes blink { 50% { opacity: 0; } }
+  body.touring #info { display: none !important; }
+  /* 動画書き出し用の描画モード */
+  body.render #nav, body.render #controls, body.render #play, body.render #caption .bar { display: none !important; }
+  body.render #caption { bottom: 6vh; }
+</style>
+<style id="labelcss"></style>
+</head>
+<body>
+<div id="app"></div>
+<div id="top" class="hud"><h1>PyYAML 5.3.1</h1><div class="sub" id="subtitle"></div><div id="alertBanner"></div></div>
+<div id="nav" class="hud"></div>
+<div id="controls" class="hud">
+  <button id="btnAll">overview</button>
+  <button id="btnLabels" class="on">labels</button>
+  <button id="btnRotate" class="on">rotate</button>
+  <a class="btn" id="lnkSingle" href="class_sphere.html">single</a>
+</div>
+<div id="info" class="hud"></div>
+<div id="play" class="hud">
+  <button id="btnPlay">▶ PLAY</button>
+  <div class="hint">Narrated tour of PyYAML 5.3.1 (sound on)</div>
+</div>
+<div id="caption" class="hud">
+  <div class="ttl" id="capTitle"></div>
+  <div class="en" id="capEn"></div>
+  <div class="ja" id="capJa"></div>
+  <div class="bar"><span class="step" id="capStep"></span>
+    <span><button id="btnNext">next ›</button> <button id="btnStop">■ stop</button></span></div>
+</div>
+
+<script src="data.js"></script>
+<script src="alerts.js"></script>
+<script src="narration.js?v=4"></script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { CSS2DRenderer, CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=6";
+
+const T = window.THEME, S = T.scene;
+const LO = o => Math.min(1, o * (S.lineOpacity ?? 1));
+document.getElementById("labelcss").textContent = LABEL_CSS;
+T.mountPicker(document.getElementById("controls"));
+T.carry(document.getElementById("lnkSingle"));
+const DATA = window.TINYDB;
+// ?render=1 のときは、外から時刻を指定して 1 コマずつ描く（動画書き出し用）
+const RENDER = new URLSearchParams(location.search).has("render");
+let virtualTime = 0;
+const now = () => RENDER ? virtualTime : clock.getElapsedTime();
+if (RENDER) document.body.classList.add("render", "touring");
+
+const LINK = {
+  call:     { color: T.link.call,     r: 1.6, label: "メソッド呼び出し" },
+  ctor:     { color: T.link.ctor,     r: 2.2, label: "生成（クラスの呼び出し）" },
+  impl:     { color: T.link.impl,     r: 1.6, label: "暗黙の呼び出し・委譲" },
+  super:    { color: T.link.super,    r: 1.2, label: "super()" },
+  override: { color: T.link.override, r: 1.0, label: "上書き" },
+  read:     { color: T.link.read,     r: 1.0, label: "フィールド読み", dashed: true },
+  write:    { color: T.link.write,    r: 1.0, label: "フィールド書き", dashed: true },
+  hold:     { color: T.link.hold,     r: 0.9, label: "値が持つクラス", dashed: true },
+};
+
+// ---------- シーン ----------
+const app = document.getElementById("app");
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.toneMapping = S.toneMapping === "none" ? THREE.NoToneMapping : THREE.ACESFilmicToneMapping;
+app.appendChild(renderer.domElement);
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(innerWidth, innerHeight);
+Object.assign(labelRenderer.domElement.style, { position: "fixed", inset: "0", pointerEvents: "none" });
+app.appendChild(labelRenderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(S.bg);
+scene.fog = new THREE.FogExp2(S.bg, 0.00008);
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 80000);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.25;
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+if (S.bloom) composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), ...S.bloom));
+composer.addPass(new OutputPass());
+
+// 決まった乱数（毎回同じ配置にする）
+let seed = 42;
+const rand = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648);
+
+{ // 星
+  const n = 5000, pos = new Float32Array(n * 3);
+  for (let i = 0; i < n; i++) {
+    const v = new THREE.Vector3(rand() * 2 - 1, rand() * 2 - 1, rand() * 2 - 1).normalize()
+      .multiplyScalar(9000 + rand() * 14000);
+    pos.set([v.x, v.y, v.z], i * 3);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: S.stars, size: 6, transparent: true, opacity: .6 * S.starOpacity, fog: false })));
+}
+
+// 遠くからでも惑星が見えるように、加算合成の光暈（ハロー）を重ねる
+const haloTex = (() => {
+  const c = document.createElement("canvas");
+  c.width = c.height = 256;
+  const g = c.getContext("2d");
+  const grd = g.createRadialGradient(128, 128, 0, 128, 128, 128);
+  for (const [at, c] of S.halo) grd.addColorStop(at, c);
+  g.fillStyle = grd;
+  g.fillRect(0, 0, 256, 256);
+  return new THREE.CanvasTexture(c);
+})();
+
+// ---------- 惑星 ----------
+const names = Object.keys(DATA.classes);
+const planets = {};
+for (const n of names) {
+  const p = buildPlanet(DATA.classes[n]);
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTex, blending: S.haloAdditive ? THREE.AdditiveBlending : THREE.NormalBlending,
+    depthWrite: false, transparent: true, opacity: S.haloOpacity }));
+  halo.scale.setScalar(p.R * 2.2);
+  p.group.add(halo);
+  p.setDetail(false);
+  p.coreLabel.element.classList.add("small");
+  planets[n] = p;
+  scene.add(p.group);
+}
+
+// ---------- 配置: 力学モデル ----------
+// 継承は強いばね、クラスをまたぐ線とモジュールは弱いばね、惑星どうしは重ならないよう反発
+(function layout() {
+  const size = n => planets[n].R * 1.3;
+  const pos = {};
+  names.forEach(n => pos[n] = new THREE.Vector3(rand() - .5, rand() - .5, rand() - .5).multiplyScalar(3000));
+  const springs = [];
+  for (const h of DATA.inherits) springs.push([h.child, h.parent, 1.0, 0.06]);
+  const pairCount = {};
+  for (const l of DATA.links) {
+    const k = [l.from.cls, l.to.cls].sort().join("|");
+    pairCount[k] = (pairCount[k] || 0) + 1;
+  }
+  for (const [k, c] of Object.entries(pairCount)) {
+    const [a, b] = k.split("|");
+    springs.push([a, b, 1.25, 0.012 * Math.min(c, 5)]);
+  }
+  for (const a of names) for (const b of names) {
+    if (a < b && DATA.classes[a].module === DATA.classes[b].module) springs.push([a, b, 1.35, 0.01]);
+  }
+  for (let it = 0; it < 2000; it++) {
+    const cool = 1 - it / 2000;
+    const force = {};
+    names.forEach(n => force[n] = new THREE.Vector3());
+    for (let i = 0; i < names.length; i++) for (let j = i + 1; j < names.length; j++) {
+      const a = names[i], b = names[j];
+      const d = pos[b].clone().sub(pos[a]);
+      const dist = Math.max(d.length(), 1);
+      const min = size(a) + size(b) + 160;
+      let f = 1.2e6 / (dist * dist);
+      if (dist < min) f += (min - dist) * 0.5;
+      d.normalize().multiplyScalar(f);
+      force[a].sub(d); force[b].add(d);
+    }
+    for (const [a, b, mult, k] of springs) {
+      const d = pos[b].clone().sub(pos[a]);
+      const dist = Math.max(d.length(), 1);
+      const rest = (size(a) + size(b) + 160) * mult;
+      d.normalize().multiplyScalar((dist - rest) * k);
+      force[a].add(d); force[b].sub(d);
+    }
+    for (const n of names) {
+      force[n].add(pos[n].clone().multiplyScalar(-0.006)); // 中心へ少し引く
+      const step = force[n].clampLength(0, 120 * cool + 5);
+      pos[n].add(step);
+    }
+  }
+  // 仕上げ: 惑星どうしが重ならないよう、押し離すだけの処理を繰り返す
+  for (let it = 0; it < 400; it++) {
+    let moved = false;
+    for (let i = 0; i < names.length; i++) for (let j = i + 1; j < names.length; j++) {
+      const a = names[i], b = names[j];
+      const d = pos[b].clone().sub(pos[a]);
+      const dist = Math.max(d.length(), 1);
+      const min = (planets[a].R + planets[b].R) * 1.2 + 80;
+      if (dist < min) {
+        d.normalize().multiplyScalar((min - dist) / 2);
+        pos[a].sub(d); pos[b].add(d);
+        moved = true;
+      }
+    }
+    if (!moved) break;
+  }
+  const c = new THREE.Vector3();
+  names.forEach(n => c.add(pos[n]));
+  c.divideScalar(names.length);
+  names.forEach(n => planets[n].group.position.copy(pos[n].sub(c)));
+  names.forEach(n => planets[n].group.updateMatrixWorld(true));
+})();
+
+const sysRadius = Math.max(...names.map(n => planets[n].group.position.length() + planets[n].R * 1.1));
+
+// 背景の大きな格子球
+const grid = new THREE.Mesh(new THREE.SphereGeometry(sysRadius * 2.2, 36, 24), basic(S.grid, Math.min(1, .06 * S.gridOpacity), { wireframe: true, fog: false }));
+scene.add(grid);
+
+// モジュール名
+const modules = Object.create(null);  // モジュール名 "constructor" などが Object の既定プロパティとぶつからないように
+for (const n of names) (modules[DATA.classes[n].module] ||= []).push(n);
+for (const [m, members] of Object.entries(modules)) {
+  const c = new THREE.Vector3();
+  members.forEach(n => c.add(planets[n].group.position));
+  c.divideScalar(members.length);
+  const top = Math.max(...members.map(n => planets[n].group.position.y + planets[n].R));
+  const d = document.createElement("div");
+  d.className = "mod-lbl";
+  d.textContent = `${m}.py`;
+  const o = new CSS2DObject(d);
+  o.position.set(c.x, top + 120, c.z);
+  scene.add(o);
+}
+
+// ---------- 継承の管 ----------
+const conduits = [];
+for (const h of DATA.inherits) {
+  const a = planets[h.child].group.position, b = planets[h.parent].group.position;
+  const len = a.distanceTo(b);
+  const mid = a.clone().add(b).multiplyScalar(.5);
+  const quat = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize());
+  const g = new THREE.Group();
+  g.position.copy(mid);
+  g.quaternion.copy(quat);
+  if (h.typecheck) {
+    // 途切れた細い管（型チェック時だけの継承）
+    const seg = 60, gap = 40;
+    for (let y = -len / 2; y < len / 2 - seg; y += seg + gap) {
+      const m = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, seg, 10, 1, true), basic(T.conduit.typecheck, .55));
+      m.position.y = y + seg / 2;
+      g.add(m);
+    }
+  } else {
+    g.add(new THREE.Mesh(new THREE.CylinderGeometry(22, 22, len, 24, 1, true), basic(T.conduit.outer, .35)));
+    g.add(new THREE.Mesh(new THREE.CylinderGeometry(9, 9, len, 16, 1, true), basic(T.conduit.mid, .45)));
+    g.add(new THREE.Mesh(new THREE.CylinderGeometry(2.4, 2.4, len, 8, 1, true), basic(T.conduit.inner)));
+    // 流れる光
+    const flow = [];
+    for (let i = 0; i < 6; i++) {
+      const p = new THREE.Mesh(new THREE.SphereGeometry(4, 10, 8), basic(T.conduit.flow));
+      g.add(p);
+      flow.push(p);
+    }
+    conduits.push({ flow, len });
+  }
+  scene.add(g);
+}
+
+// ---------- クラスをまたぐ線 ----------
+function endpoint(e, other) {
+  const p = planets[e.cls];
+  if (e.at === "gate") return { pos: p.gateWorld(e.name), r: p.gates[e.name].r + 4 };
+  if (e.at === "value") return { pos: p.valueWorld(e.name), r: 9 };
+  const c = p.group.position.clone();
+  return { pos: c, r: p.coreR + 18, toward: other };
+}
+
+const links = [];
+for (const l of DATA.links) {
+  const st = LINK[l.kind];
+  const A = endpoint(l.from), B = endpoint(l.to);
+  // 系の中心から外側へ膨らませて、惑星の中を通りにくくする
+  const mid = A.pos.clone().add(B.pos).multiplyScalar(.5);
+  const L = A.pos.distanceTo(B.pos);
+  const out = mid.lengthSq() > 1 ? mid.clone().normalize() : new THREE.Vector3(0, 1, 0);
+  const ctrl = mid.clone().add(out.multiplyScalar(L * 0.28)).add(new THREE.Vector3(0, L * 0.12, 0));
+  // 端を円（ゲート・コア）の縁まで下げる
+  const s = A.pos.clone().add(ctrl.clone().sub(A.pos).normalize().multiplyScalar(A.r));
+  const e = B.pos.clone().add(ctrl.clone().sub(B.pos).normalize().multiplyScalar(B.r));
+  const curve = new THREE.QuadraticBezierCurve3(s, ctrl, e);
+  let line;
+  if (st.dashed) {
+    line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(80)),
+      new THREE.LineDashedMaterial({ color: st.color, dashSize: 14, gapSize: 10, transparent: true, opacity: LO(.8) }));
+    line.computeLineDistances();
+  } else {
+    line = new THREE.Mesh(new THREE.TubeGeometry(curve, 80, st.r, 6), basic(st.color, LO(.7)));
+  }
+  line.userData.base = LO(st.dashed ? .8 : .7);
+  scene.add(line);
+  const cone = new THREE.Mesh(new THREE.ConeGeometry(st.r * 3 + 3, st.r * 7 + 8, 10), basic(st.color, .9));
+  cone.position.copy(curve.getPointAt(.985));
+  cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), curve.getTangentAt(.985));
+  cone.userData.base = .9;
+  scene.add(cone);
+  const pulse = new THREE.Mesh(new THREE.SphereGeometry(st.r * 1.8 + 1.5, 10, 8), basic(S.linkPulse, .95));
+  pulse.userData.base = .95;
+  scene.add(pulse);
+  links.push({ ...l, curve, parts: [line, cone, pulse], pulse, phase: rand(), speed: 0.08 + 120 / curve.getLength() });
+}
+
+// ---------- ナビゲーション ----------
+const nav = document.getElementById("nav");
+const order = names.slice().sort((a, b) => DATA.classes[b].lines - DATA.classes[a].lines);
+const navButtons = {};
+for (const n of order) {
+  const b = document.createElement("button");
+  b.innerHTML = `${n}<small>${DATA.classes[n].lines}</small>`;
+  b.onclick = () => focus(n);
+  const A = window.ALERTS?.classes?.[n];
+  if (A) b.classList.add(`alert-${A.role}`);
+  nav.appendChild(b);
+  navButtons[n] = b;
+}
+// 脆弱性アラートの見出し（クリックで問題の惑星へ）
+const AL = window.ALERTS;
+if (AL) {
+  const ban = document.getElementById("alertBanner");
+  ban.innerHTML = `<b>⚠ ${AL.id}</b>${AL.title}<br><span>${AL.date} · fixed in ${AL.fixedIn} — this model is the fixed version</span>`;
+  ban.onclick = () => focus(AL.focus);
+  document.body.classList.add("has-alert");
+}
+function alertHtml(name) {
+  const A = AL?.classes?.[name];
+  if (!A) return "";
+  const mark = { problem: "⚠", path: "⚠", fix: "✓" };
+  const gates = Object.entries(A.gates || {}).map(([g, x]) =>
+    `<li><span class="r-${x.role}">${mark[x.role]} ${g}()</span><br>${x.note}</li>`).join("");
+  return `<div class="alert ${A.role}"><div class="id r-${A.role}">${mark[A.role]} ${AL.id} · ${A.role}</div>${A.note}` +
+    (gates ? `<ul>${gates}</ul>` : "") + `</div>`;
+}
+const totalLines = names.reduce((s, n) => s + DATA.classes[n].lines, 0);
+document.getElementById("subtitle").textContent =
+  `${names.length} classes · ${Object.keys(modules).length} modules · ${totalLines} lines in methods · ${DATA.links.length} cross-class links`;
+
+let focused = null;
+let fly = null; // { from, to, fromT, toT, t0, dur }
+
+function fitDistance(radius) {
+  const vf = THREE.MathUtils.degToRad(camera.fov) / 2;
+  const hf = Math.atan(Math.tan(vf) * camera.aspect);
+  return radius / Math.sin(Math.min(vf, hf));
+}
+
+function flyTo(target, dist, dir) {
+  const d = dir || camera.position.clone().sub(controls.target).normalize();
+  fly = { from: camera.position.clone(), fromT: controls.target.clone(),
+          to: target.clone().add(d.multiplyScalar(dist)), toT: target.clone(), t0: now(), dur: 2.0 };
+}
+
+function emphasize(name) {
+  for (const l of links) {
+    const on = !name || l.from.cls === name || l.to.cls === name;
+    for (const o of l.parts) { o.material.transparent = true; o.material.opacity = on ? o.userData.base : 0.05; }
+  }
+}
+
+const info = document.getElementById("info");
+function showPlanetInfo(name) {
+  const outL = links.filter(l => l.from.cls === name), inL = links.filter(l => l.to.cls === name);
+  const fmt = e => e.at === "core" ? `${e.cls}` : `${e.cls}.${e.name}`;
+  const li = (arr, side) => arr.map(l => `<li><span style="color:${T.hex(LINK[l.kind].color)}">●</span> ${fmt(side === "out" ? l.from : l.to)} → ${fmt(side === "out" ? l.to : l.from)}</li>`).join("");
+  const C = DATA.classes[name];
+  info.style.display = "block";
+  info.innerHTML = `<h2>${name}</h2><div class="k">yaml.${C.module} · ${C.lines} lines · ${C.gates.length} gates · ${C.values.length} values</div>${alertHtml(name)}
+    <div class="k" style="margin-top:6px">outgoing</div><ul>${li(outL, "out") || "<li>—</li>"}</ul>
+    <div class="k">incoming</div><ul>${inL.map(l => `<li><span style="color:${T.hex(LINK[l.kind].color)}">●</span> ${fmt(l.from)} → ${fmt(l.to)}</li>`).join("") || "<li>—</li>"}</ul>`;
+}
+
+function focus(name) {
+  if (focused) planets[focused].setDetail(false), planets[focused].setHover(null);
+  focused = name;
+  for (const [n, b] of Object.entries(navButtons)) b.classList.toggle("cur", n === name);
+  if (!name) {
+    info.style.display = "none";
+    emphasize(null);
+    flyTo(new THREE.Vector3(), fitDistance(sysRadius), new THREE.Vector3(0.35, 0.45, 1).normalize());
+    return;
+  }
+  const p = planets[name];
+  p.setDetail(true);
+  emphasize(name);
+  showPlanetInfo(name);
+  // 系の中心から惑星の外側へ回り込んで見る（ほかの惑星が手前に来にくい）
+  const out = p.group.position.clone();
+  const dir = out.lengthSq() > 1 ? out.normalize().add(new THREE.Vector3(0, 0.35, 0)).normalize() : null;
+  flyTo(p.group.position, fitDistance(p.R * 1.8), dir);
+}
+document.getElementById("btnAll").onclick = () => focus(null);
+const btnLabels = document.getElementById("btnLabels");
+btnLabels.onclick = () => { btnLabels.classList.toggle("on"); document.body.classList.toggle("hide-labels", !btnLabels.classList.contains("on")); };
+const btnRotate = document.getElementById("btnRotate");
+btnRotate.onclick = () => { controls.autoRotate = !controls.autoRotate; btnRotate.classList.toggle("on", controls.autoRotate); };
+
+// ---------- ツアー（字幕＋読み上げ、英語） ----------
+const N = window.NARRATION;
+const cap = { box: document.getElementById("caption"), title: document.getElementById("capTitle"),
+  en: document.getElementById("capEn"), ja: document.getElementById("capJa"), step: document.getElementById("capStep") };
+const playBox = document.getElementById("play");
+let tour = null; // 実行中のツアー { skip }
+
+let voice = null;
+function pickVoice() {
+  const vs = speechSynthesis.getVoices();
+  // 女声を優先順に探す（macOS / Chrome / Windows の英語の女声）
+  const FEMALE = ["Samantha", "Ava", "Allison", "Susan", "Karen", "Moira", "Tessa", "Fiona", "Victoria",
+                  "Google US English", "Google UK English Female", "Microsoft Aria", "Microsoft Jenny", "Microsoft Zira"];
+  const en = vs.filter(v => v.lang.startsWith("en"));
+  voice = null;
+  for (const name of FEMALE) {
+    voice = en.find(v => v.name === name || v.name.startsWith(name + " ")) || null;
+    if (voice) break;
+  }
+  voice ||= en.find(v => /female/i.test(v.name)) || en.find(v => v.lang === "en-US") || en[0] || null;
+}
+if ("speechSynthesis" in window) { pickVoice(); speechSynthesis.onvoiceschanged = pickVoice; }
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+// 読み上げ。終わる（または飛ばされる）まで待つ。読み上げが使えない環境では文字数から時間を見積もる
+function speak(text, run) {
+  return new Promise(resolve => {
+    let done = false;
+    const finish = () => { if (!done) { done = true; clearInterval(poll); resolve(); } };
+    const poll = setInterval(() => { if (run.skip || tour !== run) { speechSynthesis?.cancel(); finish(); } }, 100);
+    setTimeout(finish, 3000 + text.length * 110); // 念のための上限
+    if (!("speechSynthesis" in window)) { setTimeout(finish, 1200 + text.length * 60); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = "en-US"; if (voice) u.voice = voice;
+    u.rate = 0.98; u.pitch = 1.0;
+    u.onend = finish; u.onerror = finish;
+    speechSynthesis.speak(u);
+  });
+}
+
+// 字幕を機械的に 1 文字ずつ打ち出す
+function typeText(text, run) {
+  cap.ja.textContent = "";
+  let i = 0;
+  const timer = setInterval(() => {
+    if (tour !== run) return clearInterval(timer);
+    cap.ja.textContent = text.slice(0, ++i);
+    if (i >= text.length) clearInterval(timer);
+  }, 22);
+}
+
+// 読み上げ用に docstring の記法（``code`` や :class:`~a.b.C`）を素の文字にする
+const plain = s => (s || "").replace(/:\w+:`~?(?:[\w.]*\.)?([\w]+)`/g, "$1").replace(/``?([^`]+)``?/g, "$1");
+
+function list(names, max = 3) {
+  const u = [...new Set(names)];
+  const shown = u.slice(0, max);
+  const tail = u.length > max ? ` and ${u.length - max} more` : "";
+  if (shown.length <= 1) return shown.join("") + tail;
+  return tail ? shown.join(", ") + tail : shown.slice(0, -1).join(", ") + " and " + shown.at(-1);
+}
+const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+
+function classStats(name) {
+  const C = DATA.classes[name];
+  const pub = C.gates.filter(g => g.vis === "public").length;
+  const rel = l => l.kind !== "override" && l.kind !== "super";
+  const outs = DATA.links.filter(l => l.from.cls === name && rel(l)).map(l => l.to.cls);
+  const ins = DATA.links.filter(l => l.to.cls === name && rel(l)).map(l => l.from.cls);
+  const parent = DATA.inherits.find(h => h.child === name);
+  let s = `${plural(C.lines, "line")}, ${plural(C.gates.length, "gate")}, ${pub} of them public.`;
+  if (parent) s += parent.typecheck ? ` For the type checker only, it extends ${parent.parent}.` : ` It extends ${parent.parent}.`;
+  if (outs.length) s += ` It uses ${list(outs)}.`;
+  if (ins.length) s += ` It is used by ${list(ins)}.`;
+  if (!outs.length && !ins.length) s += " No lines connect it to other classes.";
+  return s;
+}
+
+function scenes() {
+  const total = names.reduce((s, n) => s + DATA.classes[n].lines, 0);
+  const [a, b] = order;
+  const nm = Object.keys(modules).length;
+  const intro = `${plain(DATA.package.doc || N.packageDoc || "").replace(/\s*:\)\s*$/, ".")} ` +
+    `It has ${names.length} classes in ${nm} modules, with ${total} lines of methods. ` +
+    `The largest planet is ${a}, followed by ${b}. ` +
+    `The ${DATA.links.length} lines of light between planets are calls and references that cross class boundaries.`;
+  return [
+    { kind: "overview", title: DATA.package.name, sub: `${names.length} classes · ${nm} modules`,
+      src: DATA.package.doc ? "docstring of yaml + analysis" : "narration + analysis", text: intro },
+    // 脆弱性アラートの場面: 問題の惑星に寄って、何が起きたかを語る
+    ...(AL && N.alert ? [{ kind: "planet", name: AL.focus, title: `⚠ ${AL.id}`, sub: `${AL.date} · fixed in ${AL.fixedIn}`,
+      src: "alerts.js", text: N.alert }] : []),
+    ...N.order.filter(n => DATA.classes[n]).map(n => {
+      const C = DATA.classes[n];
+      const doc = N.fallback[n] || (C.doc ? plain(C.doc) : "");
+      return { kind: "planet", name: n, title: n, sub: `yaml.${C.module}`,
+               src: N.fallback[n] ? "narration + analysis" : C.doc ? `docstring of yaml.${C.module}.${n} + analysis` : "analysis",
+               text: `${n}. ${doc} ${classStats(n)}` };
+    }),
+    { kind: "overview", title: DATA.package.name, sub: "overview", src: "", text: (RENDER && N.outroVideo) || N.outro },
+  ];
+}
+
+async function runTour(start = 0) {
+  const run = { skip: false };
+  tour = run;
+  document.body.classList.add("touring");
+  playBox.style.display = "none";
+  cap.box.style.display = "block";
+  const all = scenes();
+  for (let i = start; i < all.length; i++) {
+    if (tour !== run) return;
+    run.skip = false;
+    const sc = all[i];
+    cap.title.innerHTML = `${sc.title}<small>${sc.sub}</small>`;
+    cap.en.textContent = sc.src ? `— ${sc.src}` : "";
+    cap.step.textContent = `${i + 1} / ${all.length}`;
+    if (sc.kind === "overview") {
+      focus(null);
+      // 全景はゆっくり寄っていく
+      flyTo(new THREE.Vector3(), fitDistance(sysRadius) * 0.92, new THREE.Vector3(0.35, 0.45, 1).normalize());
+      fly.dur = 2.4;
+    } else {
+      focus(sc.name);
+    }
+    cap.ja.textContent = "";
+    await sleep(i === start ? 600 : 1500);
+    if (tour !== run) return;
+    typeText(sc.text, run);
+    await speak(sc.text, run);
+    if (tour !== run) return;
+    if (!run.skip) await sleep(900);
+  }
+  stopTour();
+}
+
+function stopTour() {
+  tour = null;
+  if ("speechSynthesis" in window) speechSynthesis.cancel();
+  cap.box.style.display = "none";
+  playBox.style.display = "flex";
+  document.body.classList.remove("touring");
+}
+
+document.getElementById("btnPlay").onclick = () => {
+  if ("speechSynthesis" in window) { speechSynthesis.cancel(); pickVoice(); }
+  runTour(0);
+};
+document.getElementById("btnStop").onclick = stopTour;
+document.getElementById("btnNext").onclick = () => { if (tour) { tour.skip = true; speechSynthesis?.cancel(); } };
+
+// ---------- ポインタ ----------
+const ray = new THREE.Raycaster(), mouse = new THREE.Vector2();
+const cores = names.map(n => planets[n].core);
+let downAt = null;
+renderer.domElement.addEventListener("pointerdown", e => downAt = [e.clientX, e.clientY]);
+renderer.domElement.addEventListener("pointerup", e => {
+  if (!downAt || Math.hypot(e.clientX - downAt[0], e.clientY - downAt[1]) > 5) return;
+  mouse.set(e.clientX / innerWidth * 2 - 1, -e.clientY / innerHeight * 2 + 1);
+  ray.setFromCamera(mouse, camera);
+  const hit = ray.intersectObjects(cores, false)[0];
+  if (hit) focus(names.find(n => planets[n].core === hit.object));
+});
+renderer.domElement.addEventListener("pointermove", e => {
+  if (!focused) return;
+  const p = planets[focused];
+  mouse.set(e.clientX / innerWidth * 2 - 1, -e.clientY / innerHeight * 2 + 1);
+  ray.setFromCamera(mouse, camera);
+  const pk = gatePicker(p);
+  const hit = ray.intersectObjects(pk.discs, false)[0];
+  const G = hit ? pk.find(hit.object) : null;
+  if (G === p.hovered) return;
+  p.setHover(G);
+  // ゲートに関係するクラス間の線だけを光らせる
+  if (G) {
+    for (const l of links) {
+      const on = (l.from.cls === focused && l.from.name === G.data.name) || (l.to.cls === focused && l.to.name === G.data.name);
+      for (const o of l.parts) o.material.opacity = on ? 1 : 0.04;
+    }
+  } else emphasize(focused);
+});
+
+addEventListener("resize", () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+  labelRenderer.setSize(innerWidth, innerHeight);
+  composer.setSize(innerWidth, innerHeight);
+});
+
+// ---------- ループ ----------
+const clock = new THREE.Clock();
+const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+camera.position.set(0, sysRadius * 0.6, fitDistance(sysRadius));
+focus(null);
+fly.dur = 0.01;
+
+function drawFrame(t, dt) {
+  if (fly) {
+    const u = Math.min(1, (t - fly.t0) / fly.dur), k = ease(u);
+    camera.position.lerpVectors(fly.from, fly.to, k);
+    controls.target.lerpVectors(fly.fromT, fly.toT, k);
+    if (u >= 1) fly = null;
+  }
+  controls.update(dt);
+  for (const n of names) planets[n].update(t, camera);
+  for (const l of links) l.pulse.position.copy(l.curve.getPointAt((l.phase + t * l.speed) % 1));
+  for (const c of conduits) c.flow.forEach((p, i) => { p.position.y = (((t * 0.25 + i / c.flow.length) % 1) - .5) * c.len; });
+  grid.rotation.y = t * 0.004;
+  composer.render();
+  labelRenderer.render(scene, camera);
+}
+
+function tick() {
+  drawFrame(clock.getElapsedTime(), null);
+  requestAnimationFrame(tick);
+}
+
+if (!RENDER) tick();
+else {
+  // 動画書き出し用の API。timeline は render_video.py が音声の長さから作る
+  //   [{ index, start, speechStart, speechDur, end }]（秒）
+  let timeline = [], all = [], current = -1, lastT = 0;
+  playBox.style.display = "none";
+  window.__render = {
+    scenes: () => scenes().map(s => ({ title: s.title, sub: s.sub, src: s.src, text: s.text, kind: s.kind, name: s.name || null })),
+    setup(tl) { timeline = tl; all = scenes(); current = -1; lastT = 0; cap.box.style.display = "block"; },
+    frame(t) {
+      virtualTime = t;
+      const i = timeline.findIndex(s => t >= s.start && t < s.end);
+      const k = i < 0 ? timeline.length - 1 : i;
+      const tl = timeline[k], sc = all[tl.index];
+      if (k !== current) {
+        current = k;
+        cap.title.innerHTML = `${sc.title}<small>${sc.sub}</small>`;
+        cap.en.textContent = sc.src ? `— ${sc.src}` : "";
+        if (sc.kind === "overview") {
+          focus(null);
+          flyTo(new THREE.Vector3(), fitDistance(sysRadius) * 0.92, new THREE.Vector3(0.35, 0.45, 1).normalize());
+          fly.dur = k === 0 ? 0.01 : 2.4;
+        } else focus(sc.name);
+      }
+      // 字幕は読み上げの長さに合わせて打ち出す
+      const u = Math.max(0, Math.min(1, (t - tl.speechStart) / tl.speechDur));
+      cap.ja.textContent = sc.text.slice(0, Math.round(u * sc.text.length));
+      drawFrame(t, Math.max(0, t - lastT));
+      lastT = t;
+      return k;
+    },
+  };
+  drawFrame(0, 0);
+  window.__renderReady = true;
+}
+</script>
+</body>
+</html>

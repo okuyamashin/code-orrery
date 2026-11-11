@@ -1,5 +1,8 @@
 # Target project (clone it yourself, see README)
 /tinydb/
+/pyyaml/
+/pyyaml-5.3/
+/pyyaml-5.3.1/
 
 # Rendered videos and large binaries
 *.mp4

@@ -1,0 +1,6762 @@
+{
+  "nodes": [
+    {
+      "id": "__init__.YAMLObjectMetaclass.__init__",
+      "module": "__init__",
+      "class": "YAMLObjectMetaclass",
+      "name": "__init__",
+      "lines": [
+        388,
+        397
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.YAMLObject.from_yaml",
+      "module": "__init__",
+      "class": "YAMLObject",
+      "name": "from_yaml",
+      "lines": [
+        414,
+        418
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.YAMLObject.to_yaml",
+      "module": "__init__",
+      "class": "YAMLObject",
+      "name": "to_yaml",
+      "lines": [
+        421,
+        426
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.__init__",
+      "module": "composer",
+      "class": "Composer",
+      "name": "__init__",
+      "lines": [
+        13,
+        14
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.check_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "check_node",
+      "lines": [
+        16,
+        22
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.get_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "get_node",
+      "lines": [
+        24,
+        27
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.get_single_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "get_single_node",
+      "lines": [
+        29,
+        48
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.compose_document",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_document",
+      "lines": [
+        50,
+        61
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.compose_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_node",
+      "lines": [
+        63,
+        86
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.compose_scalar_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_scalar_node",
+      "lines": [
+        88,
+        97
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.compose_sequence_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_sequence_node",
+      "lines": [
+        99,
+        115
+      ],
+      "property": false
+    },
+    {
+      "id": "composer.Composer.compose_mapping_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_mapping_node",
+      "lines": [
+        117,
+        138
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.__init__",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "__init__",
+      "lines": [
+        24,
+        28
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.check_data",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "check_data",
+      "lines": [
+        30,
+        32
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.check_state_key",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "check_state_key",
+      "lines": [
+        34,
+        40
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.get_data",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "get_data",
+      "lines": [
+        42,
+        45
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.get_single_data",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "get_single_data",
+      "lines": [
+        47,
+        52
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_document",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_document",
+      "lines": [
+        54,
+        65
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_object",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_object",
+      "lines": [
+        67,
+        115
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_scalar",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_scalar",
+      "lines": [
+        117,
+        122
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_sequence",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_sequence",
+      "lines": [
+        124,
+        130
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_mapping",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_mapping",
+      "lines": [
+        132,
+        145
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_pairs",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_pairs",
+      "lines": [
+        147,
+        157
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.add_constructor",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "add_constructor",
+      "lines": [
+        160,
+        163
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.BaseConstructor.add_multi_constructor",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "add_multi_constructor",
+      "lines": [
+        166,
+        169
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_scalar",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_scalar",
+      "lines": [
+        173,
+        178
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.flatten_mapping",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "flatten_mapping",
+      "lines": [
+        180,
+        213
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_mapping",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_mapping",
+      "lines": [
+        215,
+        218
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_null",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_null",
+      "lines": [
+        220,
+        222
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_bool",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_bool",
+      "lines": [
+        233,
+        235
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_int",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_int",
+      "lines": [
+        237,
+        263
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_float",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_float",
+      "lines": [
+        270,
+        292
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_binary",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_binary",
+      "lines": [
+        294,
+        308
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_timestamp",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_timestamp",
+      "lines": [
+        322,
+        351
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_omap",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_omap",
+      "lines": [
+        353,
+        373
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_pairs",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_pairs",
+      "lines": [
+        375,
+        394
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_set",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_set",
+      "lines": [
+        396,
+        400
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_str",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_str",
+      "lines": [
+        402,
+        403
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_seq",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_seq",
+      "lines": [
+        405,
+        408
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_map",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_map",
+      "lines": [
+        410,
+        414
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_object",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_object",
+      "lines": [
+        416,
+        424
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_undefined",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_undefined",
+      "lines": [
+        426,
+        429
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.get_state_keys_blacklist",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "get_state_keys_blacklist",
+      "lines": [
+        486,
+        487
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.get_state_keys_blacklist_regexp",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "get_state_keys_blacklist_regexp",
+      "lines": [
+        489,
+        492
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_str",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_str",
+      "lines": [
+        494,
+        495
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_unicode",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_unicode",
+      "lines": [
+        497,
+        498
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_bytes",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_bytes",
+      "lines": [
+        500,
+        514
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_long",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_long",
+      "lines": [
+        516,
+        517
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_complex",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_complex",
+      "lines": [
+        519,
+        520
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_tuple",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_tuple",
+      "lines": [
+        522,
+        523
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.find_python_module",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "find_python_module",
+      "lines": [
+        525,
+        538
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.find_python_name",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "find_python_name",
+      "lines": [
+        540,
+        563
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_name",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_name",
+      "lines": [
+        565,
+        570
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_module",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_module",
+      "lines": [
+        572,
+        577
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.make_python_instance",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "make_python_instance",
+      "lines": [
+        579,
+        593
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.set_python_instance_state",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "set_python_instance_state",
+      "lines": [
+        595,
+        612
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_object",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_object",
+      "lines": [
+        614,
+        621
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_object_apply",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_object_apply",
+      "lines": [
+        623,
+        656
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_object_new",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_object_new",
+      "lines": [
+        658,
+        659
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.UnsafeConstructor.find_python_module",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "find_python_module",
+      "lines": [
+        727,
+        728
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.UnsafeConstructor.find_python_name",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "find_python_name",
+      "lines": [
+        730,
+        731
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.UnsafeConstructor.make_python_instance",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "make_python_instance",
+      "lines": [
+        733,
+        735
+      ],
+      "property": false
+    },
+    {
+      "id": "constructor.UnsafeConstructor.set_python_instance_state",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "set_python_instance_state",
+      "lines": [
+        737,
+        739
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CBaseLoader.__init__",
+      "module": "cyaml",
+      "class": "CBaseLoader",
+      "name": "__init__",
+      "lines": [
+        18,
+        21
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CSafeLoader.__init__",
+      "module": "cyaml",
+      "class": "CSafeLoader",
+      "name": "__init__",
+      "lines": [
+        25,
+        28
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CFullLoader.__init__",
+      "module": "cyaml",
+      "class": "CFullLoader",
+      "name": "__init__",
+      "lines": [
+        32,
+        35
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CUnsafeLoader.__init__",
+      "module": "cyaml",
+      "class": "CUnsafeLoader",
+      "name": "__init__",
+      "lines": [
+        39,
+        42
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CLoader.__init__",
+      "module": "cyaml",
+      "class": "CLoader",
+      "name": "__init__",
+      "lines": [
+        46,
+        49
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CBaseDumper.__init__",
+      "module": "cyaml",
+      "class": "CBaseDumper",
+      "name": "__init__",
+      "lines": [
+        53,
+        66
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CSafeDumper.__init__",
+      "module": "cyaml",
+      "class": "CSafeDumper",
+      "name": "__init__",
+      "lines": [
+        70,
+        83
+      ],
+      "property": false
+    },
+    {
+      "id": "cyaml.CDumper.__init__",
+      "module": "cyaml",
+      "class": "CDumper",
+      "name": "__init__",
+      "lines": [
+        87,
+        100
+      ],
+      "property": false
+    },
+    {
+      "id": "dumper.BaseDumper.__init__",
+      "module": "dumper",
+      "class": "BaseDumper",
+      "name": "__init__",
+      "lines": [
+        11,
+        25
+      ],
+      "property": false
+    },
+    {
+      "id": "dumper.SafeDumper.__init__",
+      "module": "dumper",
+      "class": "SafeDumper",
+      "name": "__init__",
+      "lines": [
+        29,
+        43
+      ],
+      "property": false
+    },
+    {
+      "id": "dumper.Dumper.__init__",
+      "module": "dumper",
+      "class": "Dumper",
+      "name": "__init__",
+      "lines": [
+        47,
+        61
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.ScalarAnalysis.__init__",
+      "module": "emitter",
+      "class": "ScalarAnalysis",
+      "name": "__init__",
+      "lines": [
+        18,
+        29
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.__init__",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "__init__",
+      "lines": [
+        38,
+        104
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.dispose",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "dispose",
+      "lines": [
+        106,
+        109
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.emit",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "emit",
+      "lines": [
+        111,
+        116
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.need_more_events",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "need_more_events",
+      "lines": [
+        120,
+        131
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.need_events",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "need_events",
+      "lines": [
+        133,
+        144
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.increase_indent",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "increase_indent",
+      "lines": [
+        146,
+        154
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_stream_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_stream_start",
+      "lines": [
+        160,
+        168
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_nothing",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_nothing",
+      "lines": [
+        170,
+        171
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_first_document_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_document_start",
+      "lines": [
+        175,
+        176
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_document_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_document_start",
+      "lines": [
+        178,
+        212
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_document_end",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_document_end",
+      "lines": [
+        214,
+        224
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_document_root",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_document_root",
+      "lines": [
+        226,
+        228
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_node",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_node",
+      "lines": [
+        232,
+        258
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_alias",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_alias",
+      "lines": [
+        260,
+        264
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_scalar",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_scalar",
+      "lines": [
+        266,
+        270
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_sequence",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_sequence",
+      "lines": [
+        274,
+        278
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_first_flow_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_flow_sequence_item",
+      "lines": [
+        280,
+        290
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_sequence_item",
+      "lines": [
+        292,
+        306
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping",
+      "lines": [
+        310,
+        314
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_first_flow_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_flow_mapping_key",
+      "lines": [
+        316,
+        331
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping_key",
+      "lines": [
+        333,
+        352
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping_simple_value",
+      "lines": [
+        354,
+        357
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping_value",
+      "lines": [
+        359,
+        364
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_block_sequence",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_sequence",
+      "lines": [
+        368,
+        371
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_first_block_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_block_sequence_item",
+      "lines": [
+        373,
+        374
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_block_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_sequence_item",
+      "lines": [
+        376,
+        384
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping",
+      "lines": [
+        388,
+        390
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_first_block_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_block_mapping_key",
+      "lines": [
+        392,
+        393
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping_key",
+      "lines": [
+        395,
+        407
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping_simple_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping_simple_value",
+      "lines": [
+        409,
+        412
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping_value",
+      "lines": [
+        414,
+        418
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.check_empty_sequence",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_empty_sequence",
+      "lines": [
+        422,
+        424
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.check_empty_mapping",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_empty_mapping",
+      "lines": [
+        426,
+        428
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.check_empty_document",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_empty_document",
+      "lines": [
+        430,
+        435
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.check_simple_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_simple_key",
+      "lines": [
+        437,
+        455
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.process_anchor",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "process_anchor",
+      "lines": [
+        459,
+        467
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.process_tag",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "process_tag",
+      "lines": [
+        469,
+        492
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.choose_scalar_style",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "choose_scalar_style",
+      "lines": [
+        494,
+        513
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.process_scalar",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "process_scalar",
+      "lines": [
+        515,
+        535
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.prepare_version",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_version",
+      "lines": [
+        539,
+        543
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.prepare_tag_handle",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_tag_handle",
+      "lines": [
+        545,
+        555
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.prepare_tag_prefix",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_tag_prefix",
+      "lines": [
+        557,
+        578
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.prepare_tag",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_tag",
+      "lines": [
+        580,
+        614
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.prepare_anchor",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_anchor",
+      "lines": [
+        616,
+        624
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.analyze_scalar",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "analyze_scalar",
+      "lines": [
+        626,
+        784
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.flush_stream",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "flush_stream",
+      "lines": [
+        788,
+        790
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_stream_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_stream_start",
+      "lines": [
+        792,
+        795
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_stream_end",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_stream_end",
+      "lines": [
+        797,
+        798
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_indicator",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_indicator",
+      "lines": [
+        800,
+        812
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_indent",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_indent",
+      "lines": [
+        814,
+        825
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_line_break",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_line_break",
+      "lines": [
+        827,
+        836
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_version_directive",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_version_directive",
+      "lines": [
+        838,
+        843
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_tag_directive",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_tag_directive",
+      "lines": [
+        845,
+        850
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_single_quoted",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_single_quoted",
+      "lines": [
+        854,
+        906
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_double_quoted",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_double_quoted",
+      "lines": [
+        926,
+        978
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.determine_block_hints",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "determine_block_hints",
+      "lines": [
+        980,
+        989
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_folded",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_folded",
+      "lines": [
+        991,
+        1043
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_literal",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_literal",
+      "lines": [
+        1045,
+        1078
+      ],
+      "property": false
+    },
+    {
+      "id": "emitter.Emitter.write_plain",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_plain",
+      "lines": [
+        1080,
+        1137
+      ],
+      "property": false
+    },
+    {
+      "id": "error.Mark.__init__",
+      "module": "error",
+      "class": "Mark",
+      "name": "__init__",
+      "lines": [
+        6,
+        12
+      ],
+      "property": false
+    },
+    {
+      "id": "error.Mark.get_snippet",
+      "module": "error",
+      "class": "Mark",
+      "name": "get_snippet",
+      "lines": [
+        14,
+        35
+      ],
+      "property": false
+    },
+    {
+      "id": "error.Mark.__str__",
+      "module": "error",
+      "class": "Mark",
+      "name": "__str__",
+      "lines": [
+        37,
+        43
+      ],
+      "property": false
+    },
+    {
+      "id": "error.MarkedYAMLError.__init__",
+      "module": "error",
+      "class": "MarkedYAMLError",
+      "name": "__init__",
+      "lines": [
+        50,
+        56
+      ],
+      "property": false
+    },
+    {
+      "id": "error.MarkedYAMLError.__str__",
+      "module": "error",
+      "class": "MarkedYAMLError",
+      "name": "__str__",
+      "lines": [
+        58,
+        74
+      ],
+      "property": false
+    },
+    {
+      "id": "events.Event.__init__",
+      "module": "events",
+      "class": "Event",
+      "name": "__init__",
+      "lines": [
+        5,
+        7
+      ],
+      "property": false
+    },
+    {
+      "id": "events.Event.__repr__",
+      "module": "events",
+      "class": "Event",
+      "name": "__repr__",
+      "lines": [
+        8,
+        13
+      ],
+      "property": false
+    },
+    {
+      "id": "events.NodeEvent.__init__",
+      "module": "events",
+      "class": "NodeEvent",
+      "name": "__init__",
+      "lines": [
+        16,
+        19
+      ],
+      "property": false
+    },
+    {
+      "id": "events.CollectionStartEvent.__init__",
+      "module": "events",
+      "class": "CollectionStartEvent",
+      "name": "__init__",
+      "lines": [
+        22,
+        29
+      ],
+      "property": false
+    },
+    {
+      "id": "events.StreamStartEvent.__init__",
+      "module": "events",
+      "class": "StreamStartEvent",
+      "name": "__init__",
+      "lines": [
+        37,
+        40
+      ],
+      "property": false
+    },
+    {
+      "id": "events.DocumentStartEvent.__init__",
+      "module": "events",
+      "class": "DocumentStartEvent",
+      "name": "__init__",
+      "lines": [
+        46,
+        52
+      ],
+      "property": false
+    },
+    {
+      "id": "events.DocumentEndEvent.__init__",
+      "module": "events",
+      "class": "DocumentEndEvent",
+      "name": "__init__",
+      "lines": [
+        55,
+        59
+      ],
+      "property": false
+    },
+    {
+      "id": "events.ScalarEvent.__init__",
+      "module": "events",
+      "class": "ScalarEvent",
+      "name": "__init__",
+      "lines": [
+        65,
+        73
+      ],
+      "property": false
+    },
+    {
+      "id": "loader.BaseLoader.__init__",
+      "module": "loader",
+      "class": "BaseLoader",
+      "name": "__init__",
+      "lines": [
+        13,
+        19
+      ],
+      "property": false
+    },
+    {
+      "id": "loader.FullLoader.__init__",
+      "module": "loader",
+      "class": "FullLoader",
+      "name": "__init__",
+      "lines": [
+        23,
+        29
+      ],
+      "property": false
+    },
+    {
+      "id": "loader.SafeLoader.__init__",
+      "module": "loader",
+      "class": "SafeLoader",
+      "name": "__init__",
+      "lines": [
+        33,
+        39
+      ],
+      "property": false
+    },
+    {
+      "id": "loader.Loader.__init__",
+      "module": "loader",
+      "class": "Loader",
+      "name": "__init__",
+      "lines": [
+        43,
+        49
+      ],
+      "property": false
+    },
+    {
+      "id": "loader.UnsafeLoader.__init__",
+      "module": "loader",
+      "class": "UnsafeLoader",
+      "name": "__init__",
+      "lines": [
+        57,
+        63
+      ],
+      "property": false
+    },
+    {
+      "id": "nodes.Node.__init__",
+      "module": "nodes",
+      "class": "Node",
+      "name": "__init__",
+      "lines": [
+        3,
+        7
+      ],
+      "property": false
+    },
+    {
+      "id": "nodes.Node.__repr__",
+      "module": "nodes",
+      "class": "Node",
+      "name": "__repr__",
+      "lines": [
+        8,
+        23
+      ],
+      "property": false
+    },
+    {
+      "id": "nodes.ScalarNode.__init__",
+      "module": "nodes",
+      "class": "ScalarNode",
+      "name": "__init__",
+      "lines": [
+        27,
+        33
+      ],
+      "property": false
+    },
+    {
+      "id": "nodes.CollectionNode.__init__",
+      "module": "nodes",
+      "class": "CollectionNode",
+      "name": "__init__",
+      "lines": [
+        36,
+        42
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.__init__",
+      "module": "parser",
+      "class": "Parser",
+      "name": "__init__",
+      "lines": [
+        81,
+        87
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.dispose",
+      "module": "parser",
+      "class": "Parser",
+      "name": "dispose",
+      "lines": [
+        89,
+        92
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.check_event",
+      "module": "parser",
+      "class": "Parser",
+      "name": "check_event",
+      "lines": [
+        94,
+        105
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.peek_event",
+      "module": "parser",
+      "class": "Parser",
+      "name": "peek_event",
+      "lines": [
+        107,
+        112
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.get_event",
+      "module": "parser",
+      "class": "Parser",
+      "name": "get_event",
+      "lines": [
+        114,
+        121
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_stream_start",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_stream_start",
+      "lines": [
+        127,
+        137
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_implicit_document_start",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_implicit_document_start",
+      "lines": [
+        139,
+        157
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_document_start",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_document_start",
+      "lines": [
+        159,
+        188
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_document_end",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_document_end",
+      "lines": [
+        190,
+        206
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_document_content",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_document_content",
+      "lines": [
+        208,
+        215
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.process_directives",
+      "module": "parser",
+      "class": "Parser",
+      "name": "process_directives",
+      "lines": [
+        217,
+        246
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_node",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_node",
+      "lines": [
+        264,
+        265
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_node",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_node",
+      "lines": [
+        267,
+        268
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_node_or_indentless_sequence",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_node_or_indentless_sequence",
+      "lines": [
+        270,
+        271
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_node",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_node",
+      "lines": [
+        273,
+        372
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_sequence_first_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_sequence_first_entry",
+      "lines": [
+        376,
+        379
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_sequence_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_sequence_entry",
+      "lines": [
+        381,
+        398
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_indentless_sequence_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_indentless_sequence_entry",
+      "lines": [
+        402,
+        415
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_mapping_first_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_mapping_first_key",
+      "lines": [
+        422,
+        425
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_mapping_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_mapping_key",
+      "lines": [
+        427,
+        444
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_block_mapping_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_mapping_value",
+      "lines": [
+        446,
+        458
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_first_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_first_entry",
+      "lines": [
+        471,
+        474
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry",
+      "lines": [
+        476,
+        500
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry_mapping_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry_mapping_key",
+      "lines": [
+        502,
+        510
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry_mapping_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry_mapping_value",
+      "lines": [
+        512,
+        524
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry_mapping_end",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry_mapping_end",
+      "lines": [
+        526,
+        529
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_first_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_first_key",
+      "lines": [
+        537,
+        540
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_key",
+      "lines": [
+        542,
+        567
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_value",
+      "lines": [
+        569,
+        581
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_empty_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_empty_value",
+      "lines": [
+        583,
+        585
+      ],
+      "property": false
+    },
+    {
+      "id": "parser.Parser.process_empty_scalar",
+      "module": "parser",
+      "class": "Parser",
+      "name": "process_empty_scalar",
+      "lines": [
+        587,
+        588
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.ReaderError.__init__",
+      "module": "reader",
+      "class": "ReaderError",
+      "name": "__init__",
+      "lines": [
+        26,
+        31
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.ReaderError.__str__",
+      "module": "reader",
+      "class": "ReaderError",
+      "name": "__str__",
+      "lines": [
+        33,
+        43
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.__init__",
+      "module": "reader",
+      "class": "Reader",
+      "name": "__init__",
+      "lines": [
+        59,
+        85
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.peek",
+      "module": "reader",
+      "class": "Reader",
+      "name": "peek",
+      "lines": [
+        87,
+        92
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.prefix",
+      "module": "reader",
+      "class": "Reader",
+      "name": "prefix",
+      "lines": [
+        94,
+        97
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.forward",
+      "module": "reader",
+      "class": "Reader",
+      "name": "forward",
+      "lines": [
+        99,
+        112
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.get_mark",
+      "module": "reader",
+      "class": "Reader",
+      "name": "get_mark",
+      "lines": [
+        114,
+        120
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.determine_encoding",
+      "module": "reader",
+      "class": "Reader",
+      "name": "determine_encoding",
+      "lines": [
+        122,
+        135
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.check_printable",
+      "module": "reader",
+      "class": "Reader",
+      "name": "check_printable",
+      "lines": [
+        138,
+        144
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.update",
+      "module": "reader",
+      "class": "Reader",
+      "name": "update",
+      "lines": [
+        146,
+        175
+      ],
+      "property": false
+    },
+    {
+      "id": "reader.Reader.update_raw",
+      "module": "reader",
+      "class": "Reader",
+      "name": "update_raw",
+      "lines": [
+        177,
+        185
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.__init__",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "__init__",
+      "lines": [
+        18,
+        24
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.represent",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent",
+      "lines": [
+        26,
+        31
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_data",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_data",
+      "lines": [
+        33,
+        63
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.add_representer",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "add_representer",
+      "lines": [
+        66,
+        69
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.add_multi_representer",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "add_multi_representer",
+      "lines": [
+        72,
+        75
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_scalar",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_scalar",
+      "lines": [
+        77,
+        83
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_sequence",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_sequence",
+      "lines": [
+        85,
+        101
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_mapping",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_mapping",
+      "lines": [
+        103,
+        129
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.BaseRepresenter.ignore_aliases",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "ignore_aliases",
+      "lines": [
+        131,
+        132
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.ignore_aliases",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "ignore_aliases",
+      "lines": [
+        136,
+        142
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_none",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_none",
+      "lines": [
+        144,
+        145
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_str",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_str",
+      "lines": [
+        147,
+        148
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_binary",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_binary",
+      "lines": [
+        150,
+        155
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_bool",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_bool",
+      "lines": [
+        157,
+        162
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_int",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_int",
+      "lines": [
+        164,
+        165
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_float",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_float",
+      "lines": [
+        171,
+        189
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_list",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_list",
+      "lines": [
+        191,
+        199
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_dict",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_dict",
+      "lines": [
+        206,
+        207
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_set",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_set",
+      "lines": [
+        209,
+        213
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_date",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_date",
+      "lines": [
+        215,
+        217
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_datetime",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_datetime",
+      "lines": [
+        219,
+        221
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_yaml_object",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_yaml_object",
+      "lines": [
+        223,
+        228
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_undefined",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_undefined",
+      "lines": [
+        230,
+        231
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.Representer.represent_complex",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_complex",
+      "lines": [
+        274,
+        283
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.Representer.represent_tuple",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_tuple",
+      "lines": [
+        285,
+        286
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.Representer.represent_name",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_name",
+      "lines": [
+        288,
+        290
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.Representer.represent_module",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_module",
+      "lines": [
+        292,
+        294
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.Representer.represent_object",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_object",
+      "lines": [
+        296,
+        356
+      ],
+      "property": false
+    },
+    {
+      "id": "representer.Representer.represent_ordered_dict",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_ordered_dict",
+      "lines": [
+        358,
+        364
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.__init__",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "__init__",
+      "lines": [
+        21,
+        23
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.add_implicit_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "add_implicit_resolver",
+      "lines": [
+        26,
+        35
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.add_path_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "add_path_resolver",
+      "lines": [
+        38,
+        89
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.descend_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "descend_resolver",
+      "lines": [
+        91,
+        112
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.ascend_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "ascend_resolver",
+      "lines": [
+        114,
+        118
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.check_resolver_prefix",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "check_resolver_prefix",
+      "lines": [
+        120,
+        141
+      ],
+      "property": false
+    },
+    {
+      "id": "resolver.BaseResolver.resolve",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "resolve",
+      "lines": [
+        143,
+        165
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.SimpleKey.__init__",
+      "module": "scanner",
+      "class": "SimpleKey",
+      "name": "__init__",
+      "lines": [
+        38,
+        44
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.__init__",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "__init__",
+      "lines": [
+        48,
+        109
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_token",
+      "lines": [
+        113,
+        123
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.peek_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "peek_token",
+      "lines": [
+        125,
+        133
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.get_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "get_token",
+      "lines": [
+        135,
+        141
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.need_more_tokens",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "need_more_tokens",
+      "lines": [
+        145,
+        154
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_more_tokens",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_more_tokens",
+      "lines": [
+        156,
+        260
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.next_possible_simple_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "next_possible_simple_key",
+      "lines": [
+        264,
+        277
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.stale_possible_simple_keys",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "stale_possible_simple_keys",
+      "lines": [
+        279,
+        293
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.save_possible_simple_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "save_possible_simple_key",
+      "lines": [
+        295,
+        310
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.remove_possible_simple_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "remove_possible_simple_key",
+      "lines": [
+        312,
+        321
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.unwind_indent",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "unwind_indent",
+      "lines": [
+        325,
+        347
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.add_indent",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "add_indent",
+      "lines": [
+        349,
+        355
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_stream_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_stream_start",
+      "lines": [
+        359,
+        368
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_stream_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_stream_end",
+      "lines": [
+        371,
+        388
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_directive",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_directive",
+      "lines": [
+        390,
+        400
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_document_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_document_start",
+      "lines": [
+        402,
+        403
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_document_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_document_end",
+      "lines": [
+        405,
+        406
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_document_indicator",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_document_indicator",
+      "lines": [
+        408,
+        422
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_sequence_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_sequence_start",
+      "lines": [
+        424,
+        425
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_mapping_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_mapping_start",
+      "lines": [
+        427,
+        428
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_collection_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_collection_start",
+      "lines": [
+        430,
+        445
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_sequence_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_sequence_end",
+      "lines": [
+        447,
+        448
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_mapping_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_mapping_end",
+      "lines": [
+        450,
+        451
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_collection_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_collection_end",
+      "lines": [
+        453,
+        468
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_entry",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_entry",
+      "lines": [
+        470,
+        482
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_block_entry",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_block_entry",
+      "lines": [
+        484,
+        515
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_key",
+      "lines": [
+        517,
+        543
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_value",
+      "lines": [
+        545,
+        599
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_alias",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_alias",
+      "lines": [
+        601,
+        610
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_anchor",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_anchor",
+      "lines": [
+        612,
+        621
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_tag",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_tag",
+      "lines": [
+        623,
+        632
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_literal",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_literal",
+      "lines": [
+        634,
+        635
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_folded",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_folded",
+      "lines": [
+        637,
+        638
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_block_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_block_scalar",
+      "lines": [
+        640,
+        649
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_single",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_single",
+      "lines": [
+        651,
+        652
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_double",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_double",
+      "lines": [
+        654,
+        655
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_scalar",
+      "lines": [
+        657,
+        666
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.fetch_plain",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_plain",
+      "lines": [
+        668,
+        679
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_directive",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_directive",
+      "lines": [
+        683,
+        688
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_document_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_document_start",
+      "lines": [
+        690,
+        696
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_document_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_document_end",
+      "lines": [
+        698,
+        704
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_block_entry",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_block_entry",
+      "lines": [
+        706,
+        709
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_key",
+      "lines": [
+        711,
+        719
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_value",
+      "lines": [
+        721,
+        729
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.check_plain",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_plain",
+      "lines": [
+        731,
+        748
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_to_next_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_to_next_token",
+      "lines": [
+        752,
+        785
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_directive",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_directive",
+      "lines": [
+        787,
+        804
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_directive_name",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_directive_name",
+      "lines": [
+        806,
+        825
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_yaml_directive_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_yaml_directive_value",
+      "lines": [
+        827,
+        842
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_yaml_directive_number",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_yaml_directive_number",
+      "lines": [
+        844,
+        855
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_directive_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_directive_value",
+      "lines": [
+        857,
+        865
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_directive_handle",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_directive_handle",
+      "lines": [
+        867,
+        874
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_directive_prefix",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_directive_prefix",
+      "lines": [
+        876,
+        883
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_directive_ignored_line",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_directive_ignored_line",
+      "lines": [
+        885,
+        897
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_anchor",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_anchor",
+      "lines": [
+        899,
+        933
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_tag",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag",
+      "lines": [
+        935,
+        974
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar",
+      "lines": [
+        976,
+        1050
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_indicators",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_indicators",
+      "lines": [
+        1052,
+        1090
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_ignored_line",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_ignored_line",
+      "lines": [
+        1092,
+        1104
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_indentation",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_indentation",
+      "lines": [
+        1106,
+        1119
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_breaks",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_breaks",
+      "lines": [
+        1121,
+        1132
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar",
+      "lines": [
+        1134,
+        1156
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar_non_spaces",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar_non_spaces",
+      "lines": [
+        1185,
+        1226
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar_spaces",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar_spaces",
+      "lines": [
+        1228,
+        1250
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar_breaks",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar_breaks",
+      "lines": [
+        1252,
+        1268
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_plain",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_plain",
+      "lines": [
+        1270,
+        1309
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_plain_spaces",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_plain_spaces",
+      "lines": [
+        1311,
+        1346
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_handle",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_handle",
+      "lines": [
+        1348,
+        1370
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_uri",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_uri",
+      "lines": [
+        1372,
+        1395
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_uri_escapes",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_uri_escapes",
+      "lines": [
+        1397,
+        1414
+      ],
+      "property": false
+    },
+    {
+      "id": "scanner.Scanner.scan_line_break",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_line_break",
+      "lines": [
+        1416,
+        1435
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.__init__",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "__init__",
+      "lines": [
+        15,
+        25
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.open",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "open",
+      "lines": [
+        27,
+        34
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.close",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "close",
+      "lines": [
+        36,
+        41
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.serialize",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "serialize",
+      "lines": [
+        46,
+        58
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.anchor_node",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "anchor_node",
+      "lines": [
+        60,
+        72
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.generate_anchor",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "generate_anchor",
+      "lines": [
+        74,
+        76
+      ],
+      "property": false
+    },
+    {
+      "id": "serializer.Serializer.serialize_node",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "serialize_node",
+      "lines": [
+        78,
+        110
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.Token.__init__",
+      "module": "tokens",
+      "class": "Token",
+      "name": "__init__",
+      "lines": [
+        3,
+        5
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.Token.__repr__",
+      "module": "tokens",
+      "class": "Token",
+      "name": "__repr__",
+      "lines": [
+        6,
+        12
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.DirectiveToken.__init__",
+      "module": "tokens",
+      "class": "DirectiveToken",
+      "name": "__init__",
+      "lines": [
+        19,
+        23
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.StreamStartToken.__init__",
+      "module": "tokens",
+      "class": "StreamStartToken",
+      "name": "__init__",
+      "lines": [
+        33,
+        37
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.AliasToken.__init__",
+      "module": "tokens",
+      "class": "AliasToken",
+      "name": "__init__",
+      "lines": [
+        77,
+        80
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.AnchorToken.__init__",
+      "module": "tokens",
+      "class": "AnchorToken",
+      "name": "__init__",
+      "lines": [
+        84,
+        87
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.TagToken.__init__",
+      "module": "tokens",
+      "class": "TagToken",
+      "name": "__init__",
+      "lines": [
+        91,
+        94
+      ],
+      "property": false
+    },
+    {
+      "id": "tokens.ScalarToken.__init__",
+      "module": "tokens",
+      "class": "ScalarToken",
+      "name": "__init__",
+      "lines": [
+        98,
+        103
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.warnings",
+      "module": "__init__",
+      "class": null,
+      "name": "warnings",
+      "lines": [
+        30,
+        37
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.load_warning",
+      "module": "__init__",
+      "class": null,
+      "name": "load_warning",
+      "lines": [
+        43,
+        55
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.scan",
+      "module": "__init__",
+      "class": null,
+      "name": "scan",
+      "lines": [
+        58,
+        67
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.parse",
+      "module": "__init__",
+      "class": null,
+      "name": "parse",
+      "lines": [
+        69,
+        78
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.compose",
+      "module": "__init__",
+      "class": null,
+      "name": "compose",
+      "lines": [
+        80,
+        89
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.compose_all",
+      "module": "__init__",
+      "class": null,
+      "name": "compose_all",
+      "lines": [
+        91,
+        101
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.load",
+      "module": "__init__",
+      "class": null,
+      "name": "load",
+      "lines": [
+        103,
+        116
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "load_all",
+      "lines": [
+        118,
+        132
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.full_load",
+      "module": "__init__",
+      "class": null,
+      "name": "full_load",
+      "lines": [
+        134,
+        142
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.full_load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "full_load_all",
+      "lines": [
+        144,
+        152
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.safe_load",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_load",
+      "lines": [
+        154,
+        162
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.safe_load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_load_all",
+      "lines": [
+        164,
+        172
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.unsafe_load",
+      "module": "__init__",
+      "class": null,
+      "name": "unsafe_load",
+      "lines": [
+        174,
+        182
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.unsafe_load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "unsafe_load_all",
+      "lines": [
+        184,
+        192
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.emit",
+      "module": "__init__",
+      "class": null,
+      "name": "emit",
+      "lines": [
+        194,
+        213
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.serialize_all",
+      "module": "__init__",
+      "class": null,
+      "name": "serialize_all",
+      "lines": [
+        215,
+        243
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.serialize",
+      "module": "__init__",
+      "class": null,
+      "name": "serialize",
+      "lines": [
+        245,
+        250
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.dump_all",
+      "module": "__init__",
+      "class": null,
+      "name": "dump_all",
+      "lines": [
+        252,
+        283
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.dump",
+      "module": "__init__",
+      "class": null,
+      "name": "dump",
+      "lines": [
+        285,
+        290
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.safe_dump_all",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_dump_all",
+      "lines": [
+        292,
+        298
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.safe_dump",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_dump",
+      "lines": [
+        300,
+        306
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.add_implicit_resolver",
+      "module": "__init__",
+      "class": null,
+      "name": "add_implicit_resolver",
+      "lines": [
+        308,
+        322
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.add_path_resolver",
+      "module": "__init__",
+      "class": null,
+      "name": "add_path_resolver",
+      "lines": [
+        324,
+        337
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.add_constructor",
+      "module": "__init__",
+      "class": null,
+      "name": "add_constructor",
+      "lines": [
+        339,
+        350
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.add_multi_constructor",
+      "module": "__init__",
+      "class": null,
+      "name": "add_multi_constructor",
+      "lines": [
+        352,
+        364
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.add_representer",
+      "module": "__init__",
+      "class": null,
+      "name": "add_representer",
+      "lines": [
+        366,
+        373
+      ],
+      "property": false
+    },
+    {
+      "id": "__init__.add_multi_representer",
+      "module": "__init__",
+      "class": null,
+      "name": "add_multi_representer",
+      "lines": [
+        375,
+        382
+      ],
+      "property": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "composer.Composer.get_node",
+      "to": "composer.Composer.compose_document",
+      "kind": "self",
+      "line": 27
+    },
+    {
+      "from": "composer.Composer.get_single_node",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 41
+    },
+    {
+      "from": "composer.Composer.get_single_node",
+      "to": "composer.Composer.compose_document",
+      "kind": "self",
+      "line": 36
+    },
+    {
+      "from": "composer.Composer.compose_document",
+      "to": "composer.Composer.compose_node",
+      "kind": "self",
+      "line": 55
+    },
+    {
+      "from": "composer.Composer.compose_node",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 68
+    },
+    {
+      "from": "composer.Composer.compose_node",
+      "to": "composer.Composer.compose_scalar_node",
+      "kind": "self",
+      "line": 80
+    },
+    {
+      "from": "composer.Composer.compose_node",
+      "to": "composer.Composer.compose_sequence_node",
+      "kind": "self",
+      "line": 82
+    },
+    {
+      "from": "composer.Composer.compose_node",
+      "to": "composer.Composer.compose_mapping_node",
+      "kind": "self",
+      "line": 84
+    },
+    {
+      "from": "composer.Composer.compose_sequence_node",
+      "to": "composer.Composer.compose_node",
+      "kind": "self",
+      "line": 111
+    },
+    {
+      "from": "composer.Composer.compose_mapping_node",
+      "to": "composer.Composer.compose_node",
+      "kind": "self",
+      "line": 129
+    },
+    {
+      "from": "constructor.BaseConstructor.check_state_key",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 39
+    },
+    {
+      "from": "constructor.BaseConstructor.get_data",
+      "to": "constructor.BaseConstructor.construct_document",
+      "kind": "self",
+      "line": 45
+    },
+    {
+      "from": "constructor.BaseConstructor.get_single_data",
+      "to": "constructor.BaseConstructor.construct_document",
+      "kind": "self",
+      "line": 51
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_document",
+      "to": "constructor.BaseConstructor.construct_object",
+      "kind": "self",
+      "line": 55
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_object",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 74
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_scalar",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 119
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_sequence",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 126
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_sequence",
+      "to": "constructor.BaseConstructor.construct_object",
+      "kind": "self",
+      "line": 129
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_mapping",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 134
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_mapping",
+      "to": "constructor.BaseConstructor.construct_object",
+      "kind": "self",
+      "line": 139
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_pairs",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 149
+    },
+    {
+      "from": "constructor.BaseConstructor.construct_pairs",
+      "to": "constructor.BaseConstructor.construct_object",
+      "kind": "self",
+      "line": 154
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_scalar",
+      "to": "constructor.BaseConstructor.construct_scalar",
+      "kind": "super",
+      "line": 178
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_scalar",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 177
+    },
+    {
+      "from": "constructor.SafeConstructor.flatten_mapping",
+      "to": "constructor.SafeConstructor.flatten_mapping",
+      "kind": "self",
+      "line": 188
+    },
+    {
+      "from": "constructor.SafeConstructor.flatten_mapping",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 204
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_mapping",
+      "to": "constructor.BaseConstructor.construct_mapping",
+      "kind": "super",
+      "line": 218
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_mapping",
+      "to": "constructor.SafeConstructor.flatten_mapping",
+      "kind": "self",
+      "line": 217
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_null",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 221
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_bool",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 234
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_int",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 238
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_float",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 271
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_binary",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 298
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_binary",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 296
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_timestamp",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 323
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_omap",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 359
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_omap",
+      "to": "constructor.BaseConstructor.construct_object",
+      "kind": "self",
+      "line": 371
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_pairs",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 380
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_pairs",
+      "to": "constructor.BaseConstructor.construct_object",
+      "kind": "self",
+      "line": 392
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_set",
+      "to": "constructor.SafeConstructor.construct_mapping",
+      "kind": "self",
+      "line": 399
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_str",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 403
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_seq",
+      "to": "constructor.BaseConstructor.construct_sequence",
+      "kind": "self",
+      "line": 408
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_map",
+      "to": "constructor.SafeConstructor.construct_mapping",
+      "kind": "self",
+      "line": 413
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_yaml_object",
+      "to": "constructor.SafeConstructor.construct_mapping",
+      "kind": "self",
+      "line": 420
+    },
+    {
+      "from": "constructor.SafeConstructor.construct_undefined",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 427
+    },
+    {
+      "from": "constructor.FullConstructor.get_state_keys_blacklist_regexp",
+      "to": "constructor.FullConstructor.get_state_keys_blacklist",
+      "kind": "self",
+      "line": 491
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_str",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 495
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_unicode",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 498
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_bytes",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 504
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_bytes",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 502
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_long",
+      "to": "constructor.SafeConstructor.construct_yaml_int",
+      "kind": "self",
+      "line": 517
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_complex",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 520
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_tuple",
+      "to": "constructor.BaseConstructor.construct_sequence",
+      "kind": "self",
+      "line": 523
+    },
+    {
+      "from": "constructor.FullConstructor.find_python_module",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 527
+    },
+    {
+      "from": "constructor.FullConstructor.find_python_name",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 542
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_name",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 566
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_name",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 568
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_name",
+      "to": "constructor.FullConstructor.find_python_name",
+      "kind": "self",
+      "line": 570
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_module",
+      "to": "constructor.SafeConstructor.construct_scalar",
+      "kind": "self",
+      "line": 573
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_module",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 575
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_module",
+      "to": "constructor.FullConstructor.find_python_module",
+      "kind": "self",
+      "line": 577
+    },
+    {
+      "from": "constructor.FullConstructor.make_python_instance",
+      "to": "constructor.FullConstructor.find_python_name",
+      "kind": "self",
+      "line": 585
+    },
+    {
+      "from": "constructor.FullConstructor.make_python_instance",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 587
+    },
+    {
+      "from": "constructor.FullConstructor.set_python_instance_state",
+      "to": "constructor.BaseConstructor.check_state_key",
+      "kind": "self",
+      "line": 611
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object",
+      "to": "constructor.FullConstructor.make_python_instance",
+      "kind": "self",
+      "line": 617
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object",
+      "to": "constructor.SafeConstructor.construct_mapping",
+      "kind": "self",
+      "line": 620
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object",
+      "to": "constructor.FullConstructor.set_python_instance_state",
+      "kind": "self",
+      "line": 621
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object_apply",
+      "to": "constructor.FullConstructor.make_python_instance",
+      "kind": "self",
+      "line": 648
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object_apply",
+      "to": "constructor.BaseConstructor.construct_sequence",
+      "kind": "self",
+      "line": 636
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object_apply",
+      "to": "constructor.SafeConstructor.construct_mapping",
+      "kind": "self",
+      "line": 642
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object_apply",
+      "to": "constructor.FullConstructor.set_python_instance_state",
+      "kind": "self",
+      "line": 650
+    },
+    {
+      "from": "constructor.FullConstructor.construct_python_object_new",
+      "to": "constructor.FullConstructor.construct_python_object_apply",
+      "kind": "self",
+      "line": 659
+    },
+    {
+      "from": "constructor.UnsafeConstructor.find_python_module",
+      "to": "constructor.FullConstructor.find_python_module",
+      "kind": "super",
+      "line": 728
+    },
+    {
+      "from": "constructor.UnsafeConstructor.find_python_name",
+      "to": "constructor.FullConstructor.find_python_name",
+      "kind": "super",
+      "line": 731
+    },
+    {
+      "from": "constructor.UnsafeConstructor.make_python_instance",
+      "to": "constructor.FullConstructor.make_python_instance",
+      "kind": "super",
+      "line": 734
+    },
+    {
+      "from": "constructor.UnsafeConstructor.set_python_instance_state",
+      "to": "constructor.FullConstructor.set_python_instance_state",
+      "kind": "super",
+      "line": 738
+    },
+    {
+      "from": "emitter.Emitter.__init__",
+      "to": "emitter.Emitter.expect_stream_start",
+      "kind": "self",
+      "line": 50
+    },
+    {
+      "from": "emitter.Emitter.emit",
+      "to": "emitter.Emitter.need_more_events",
+      "kind": "self",
+      "line": 113
+    },
+    {
+      "from": "emitter.Emitter.need_more_events",
+      "to": "emitter.Emitter.need_events",
+      "kind": "self",
+      "line": 125
+    },
+    {
+      "from": "emitter.Emitter.expect_stream_start",
+      "to": "emitter.Emitter.expect_first_document_start",
+      "kind": "self",
+      "line": 165
+    },
+    {
+      "from": "emitter.Emitter.expect_stream_start",
+      "to": "emitter.Emitter.write_stream_start",
+      "kind": "self",
+      "line": 164
+    },
+    {
+      "from": "emitter.Emitter.expect_first_document_start",
+      "to": "emitter.Emitter.expect_document_start",
+      "kind": "self",
+      "line": 176
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.expect_document_root",
+      "kind": "self",
+      "line": 203
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.expect_nothing",
+      "kind": "self",
+      "line": 209
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 181
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 182
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.prepare_version",
+      "kind": "self",
+      "line": 184
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.write_version_directive",
+      "kind": "self",
+      "line": 185
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.write_stream_end",
+      "kind": "self",
+      "line": 208
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.prepare_tag_handle",
+      "kind": "self",
+      "line": 192
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.prepare_tag_prefix",
+      "kind": "self",
+      "line": 193
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.write_tag_directive",
+      "kind": "self",
+      "line": 194
+    },
+    {
+      "from": "emitter.Emitter.expect_document_start",
+      "to": "emitter.Emitter.check_empty_document",
+      "kind": "self",
+      "line": 197
+    },
+    {
+      "from": "emitter.Emitter.expect_document_end",
+      "to": "emitter.Emitter.expect_document_start",
+      "kind": "self",
+      "line": 221
+    },
+    {
+      "from": "emitter.Emitter.expect_document_end",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 216
+    },
+    {
+      "from": "emitter.Emitter.expect_document_end",
+      "to": "emitter.Emitter.flush_stream",
+      "kind": "self",
+      "line": 220
+    },
+    {
+      "from": "emitter.Emitter.expect_document_end",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 218
+    },
+    {
+      "from": "emitter.Emitter.expect_document_root",
+      "to": "emitter.Emitter.expect_document_end",
+      "kind": "self",
+      "line": 227
+    },
+    {
+      "from": "emitter.Emitter.expect_document_root",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 228
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.expect_alias",
+      "kind": "self",
+      "line": 239
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.process_anchor",
+      "kind": "self",
+      "line": 241
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.process_tag",
+      "kind": "self",
+      "line": 242
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.expect_scalar",
+      "kind": "self",
+      "line": 244
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.check_empty_sequence",
+      "kind": "self",
+      "line": 247
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.expect_flow_sequence",
+      "kind": "self",
+      "line": 248
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.expect_block_sequence",
+      "kind": "self",
+      "line": 250
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.check_empty_mapping",
+      "kind": "self",
+      "line": 253
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.expect_flow_mapping",
+      "kind": "self",
+      "line": 254
+    },
+    {
+      "from": "emitter.Emitter.expect_node",
+      "to": "emitter.Emitter.expect_block_mapping",
+      "kind": "self",
+      "line": 256
+    },
+    {
+      "from": "emitter.Emitter.expect_alias",
+      "to": "emitter.Emitter.process_anchor",
+      "kind": "self",
+      "line": 263
+    },
+    {
+      "from": "emitter.Emitter.expect_scalar",
+      "to": "emitter.Emitter.increase_indent",
+      "kind": "self",
+      "line": 267
+    },
+    {
+      "from": "emitter.Emitter.expect_scalar",
+      "to": "emitter.Emitter.process_scalar",
+      "kind": "self",
+      "line": 268
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence",
+      "to": "emitter.Emitter.expect_first_flow_sequence_item",
+      "kind": "self",
+      "line": 278
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 275
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence",
+      "to": "emitter.Emitter.increase_indent",
+      "kind": "self",
+      "line": 277
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_sequence_item",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 284
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_sequence_item",
+      "to": "emitter.Emitter.expect_flow_sequence_item",
+      "kind": "self",
+      "line": 289
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_sequence_item",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 290
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_sequence_item",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 288
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence_item",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 299
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence_item",
+      "to": "emitter.Emitter.expect_flow_sequence_item",
+      "kind": "self",
+      "line": 305
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence_item",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 306
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_sequence_item",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 298
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping",
+      "to": "emitter.Emitter.expect_first_flow_mapping_key",
+      "kind": "self",
+      "line": 314
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 311
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping",
+      "to": "emitter.Emitter.increase_indent",
+      "kind": "self",
+      "line": 313
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_mapping_key",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 320
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_mapping_key",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 324
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_mapping_key",
+      "to": "emitter.Emitter.check_simple_key",
+      "kind": "self",
+      "line": 325
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_mapping_key",
+      "to": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "kind": "self",
+      "line": 326
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_mapping_key",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 327
+    },
+    {
+      "from": "emitter.Emitter.expect_first_flow_mapping_key",
+      "to": "emitter.Emitter.expect_flow_mapping_value",
+      "kind": "self",
+      "line": 330
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_key",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 340
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_key",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 339
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_key",
+      "to": "emitter.Emitter.check_simple_key",
+      "kind": "self",
+      "line": 346
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_key",
+      "to": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "kind": "self",
+      "line": 347
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_key",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 348
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_key",
+      "to": "emitter.Emitter.expect_flow_mapping_value",
+      "kind": "self",
+      "line": 351
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 355
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "to": "emitter.Emitter.expect_flow_mapping_key",
+      "kind": "self",
+      "line": 356
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 357
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_value",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 362
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_value",
+      "to": "emitter.Emitter.expect_flow_mapping_key",
+      "kind": "self",
+      "line": 363
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_value",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 364
+    },
+    {
+      "from": "emitter.Emitter.expect_flow_mapping_value",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 361
+    },
+    {
+      "from": "emitter.Emitter.expect_block_sequence",
+      "to": "emitter.Emitter.expect_first_block_sequence_item",
+      "kind": "self",
+      "line": 371
+    },
+    {
+      "from": "emitter.Emitter.expect_block_sequence",
+      "to": "emitter.Emitter.increase_indent",
+      "kind": "self",
+      "line": 370
+    },
+    {
+      "from": "emitter.Emitter.expect_first_block_sequence_item",
+      "to": "emitter.Emitter.expect_block_sequence_item",
+      "kind": "self",
+      "line": 374
+    },
+    {
+      "from": "emitter.Emitter.expect_block_sequence_item",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 381
+    },
+    {
+      "from": "emitter.Emitter.expect_block_sequence_item",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 382
+    },
+    {
+      "from": "emitter.Emitter.expect_block_sequence_item",
+      "to": "emitter.Emitter.expect_block_sequence_item",
+      "kind": "self",
+      "line": 383
+    },
+    {
+      "from": "emitter.Emitter.expect_block_sequence_item",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 384
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping",
+      "to": "emitter.Emitter.expect_first_block_mapping_key",
+      "kind": "self",
+      "line": 390
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping",
+      "to": "emitter.Emitter.increase_indent",
+      "kind": "self",
+      "line": 389
+    },
+    {
+      "from": "emitter.Emitter.expect_first_block_mapping_key",
+      "to": "emitter.Emitter.expect_block_mapping_key",
+      "kind": "self",
+      "line": 393
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_key",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 400
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_key",
+      "to": "emitter.Emitter.check_simple_key",
+      "kind": "self",
+      "line": 401
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_key",
+      "to": "emitter.Emitter.expect_block_mapping_simple_value",
+      "kind": "self",
+      "line": 402
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_key",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 403
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_key",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 405
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_key",
+      "to": "emitter.Emitter.expect_block_mapping_value",
+      "kind": "self",
+      "line": 406
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_simple_value",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 410
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_simple_value",
+      "to": "emitter.Emitter.expect_block_mapping_key",
+      "kind": "self",
+      "line": 411
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_simple_value",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 412
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_value",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 415
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_value",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 416
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_value",
+      "to": "emitter.Emitter.expect_block_mapping_key",
+      "kind": "self",
+      "line": 417
+    },
+    {
+      "from": "emitter.Emitter.expect_block_mapping_value",
+      "to": "emitter.Emitter.expect_node",
+      "kind": "self",
+      "line": 418
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.ScalarAnalysis.scalar",
+      "kind": "field-read",
+      "line": 451
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.Emitter.prepare_anchor",
+      "kind": "self",
+      "line": 441
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.Emitter.prepare_tag",
+      "kind": "self",
+      "line": 446
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.Emitter.analyze_scalar",
+      "kind": "self",
+      "line": 450
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.Emitter.check_empty_sequence",
+      "kind": "self",
+      "line": 455
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.Emitter.check_empty_mapping",
+      "kind": "self",
+      "line": 455
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.ScalarAnalysis.empty",
+      "kind": "field-read",
+      "line": 454
+    },
+    {
+      "from": "emitter.Emitter.check_simple_key",
+      "to": "emitter.ScalarAnalysis.multiline",
+      "kind": "field-read",
+      "line": 454
+    },
+    {
+      "from": "emitter.Emitter.process_anchor",
+      "to": "emitter.Emitter.prepare_anchor",
+      "kind": "self",
+      "line": 464
+    },
+    {
+      "from": "emitter.Emitter.process_anchor",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 466
+    },
+    {
+      "from": "emitter.Emitter.process_tag",
+      "to": "emitter.Emitter.prepare_tag",
+      "kind": "self",
+      "line": 489
+    },
+    {
+      "from": "emitter.Emitter.process_tag",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 491
+    },
+    {
+      "from": "emitter.Emitter.process_tag",
+      "to": "emitter.Emitter.choose_scalar_style",
+      "kind": "self",
+      "line": 473
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.Emitter.analyze_scalar",
+      "kind": "self",
+      "line": 496
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.ScalarAnalysis.allow_block",
+      "kind": "field-read",
+      "line": 507
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.ScalarAnalysis.allow_single_quoted",
+      "kind": "field-read",
+      "line": 510
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.ScalarAnalysis.allow_flow_plain",
+      "kind": "field-read",
+      "line": 502
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.ScalarAnalysis.allow_block_plain",
+      "kind": "field-read",
+      "line": 503
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.ScalarAnalysis.multiline",
+      "kind": "field-read",
+      "line": 511
+    },
+    {
+      "from": "emitter.Emitter.choose_scalar_style",
+      "to": "emitter.ScalarAnalysis.empty",
+      "kind": "field-read",
+      "line": 501
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.analyze_scalar",
+      "kind": "self",
+      "line": 517
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.choose_scalar_style",
+      "kind": "self",
+      "line": 519
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.write_double_quoted",
+      "kind": "self",
+      "line": 525
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.ScalarAnalysis.scalar",
+      "kind": "field-read",
+      "line": 525
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.write_single_quoted",
+      "kind": "self",
+      "line": 527
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.write_folded",
+      "kind": "self",
+      "line": 529
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.write_literal",
+      "kind": "self",
+      "line": 531
+    },
+    {
+      "from": "emitter.Emitter.process_scalar",
+      "to": "emitter.Emitter.write_plain",
+      "kind": "self",
+      "line": 533
+    },
+    {
+      "from": "emitter.Emitter.analyze_scalar",
+      "to": "emitter.ScalarAnalysis.__init__",
+      "kind": "ctor",
+      "line": 778
+    },
+    {
+      "from": "emitter.Emitter.write_stream_end",
+      "to": "emitter.Emitter.flush_stream",
+      "kind": "self",
+      "line": 798
+    },
+    {
+      "from": "emitter.Emitter.write_indent",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 818
+    },
+    {
+      "from": "emitter.Emitter.write_version_directive",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 843
+    },
+    {
+      "from": "emitter.Emitter.write_tag_directive",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 850
+    },
+    {
+      "from": "emitter.Emitter.write_single_quoted",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 855
+    },
+    {
+      "from": "emitter.Emitter.write_single_quoted",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 867
+    },
+    {
+      "from": "emitter.Emitter.write_single_quoted",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 878
+    },
+    {
+      "from": "emitter.Emitter.write_double_quoted",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 927
+    },
+    {
+      "from": "emitter.Emitter.write_double_quoted",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 968
+    },
+    {
+      "from": "emitter.Emitter.write_folded",
+      "to": "emitter.Emitter.determine_block_hints",
+      "kind": "self",
+      "line": 992
+    },
+    {
+      "from": "emitter.Emitter.write_folded",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 993
+    },
+    {
+      "from": "emitter.Emitter.write_folded",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 996
+    },
+    {
+      "from": "emitter.Emitter.write_folded",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 1017
+    },
+    {
+      "from": "emitter.Emitter.write_literal",
+      "to": "emitter.Emitter.determine_block_hints",
+      "kind": "self",
+      "line": 1046
+    },
+    {
+      "from": "emitter.Emitter.write_literal",
+      "to": "emitter.Emitter.write_indicator",
+      "kind": "self",
+      "line": 1047
+    },
+    {
+      "from": "emitter.Emitter.write_literal",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 1050
+    },
+    {
+      "from": "emitter.Emitter.write_literal",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 1065
+    },
+    {
+      "from": "emitter.Emitter.write_plain",
+      "to": "emitter.Emitter.write_indent",
+      "kind": "self",
+      "line": 1103
+    },
+    {
+      "from": "emitter.Emitter.write_plain",
+      "to": "emitter.Emitter.write_line_break",
+      "kind": "self",
+      "line": 1116
+    },
+    {
+      "from": "error.Mark.__str__",
+      "to": "error.Mark.get_snippet",
+      "kind": "self",
+      "line": 38
+    },
+    {
+      "from": "parser.Parser.__init__",
+      "to": "parser.Parser.parse_stream_start",
+      "kind": "self",
+      "line": 87
+    },
+    {
+      "from": "parser.Parser.parse_stream_start",
+      "to": "parser.Parser.parse_implicit_document_start",
+      "kind": "self",
+      "line": 135
+    },
+    {
+      "from": "parser.Parser.parse_implicit_document_start",
+      "to": "parser.Parser.parse_block_node",
+      "kind": "self",
+      "line": 152
+    },
+    {
+      "from": "parser.Parser.parse_implicit_document_start",
+      "to": "parser.Parser.parse_document_end",
+      "kind": "self",
+      "line": 151
+    },
+    {
+      "from": "parser.Parser.parse_implicit_document_start",
+      "to": "parser.Parser.parse_document_start",
+      "kind": "self",
+      "line": 157
+    },
+    {
+      "from": "parser.Parser.parse_document_start",
+      "to": "parser.Parser.parse_document_content",
+      "kind": "self",
+      "line": 180
+    },
+    {
+      "from": "parser.Parser.parse_document_start",
+      "to": "parser.Parser.process_directives",
+      "kind": "self",
+      "line": 169
+    },
+    {
+      "from": "parser.Parser.parse_document_start",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 171
+    },
+    {
+      "from": "parser.Parser.parse_document_start",
+      "to": "parser.Parser.parse_document_end",
+      "kind": "self",
+      "line": 179
+    },
+    {
+      "from": "parser.Parser.parse_document_end",
+      "to": "parser.Parser.parse_document_start",
+      "kind": "self",
+      "line": 204
+    },
+    {
+      "from": "parser.Parser.parse_document_content",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 211
+    },
+    {
+      "from": "parser.Parser.parse_document_content",
+      "to": "parser.Parser.parse_block_node",
+      "kind": "self",
+      "line": 215
+    },
+    {
+      "from": "parser.Parser.process_directives",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 224
+    },
+    {
+      "from": "parser.Parser.parse_block_node",
+      "to": "parser.Parser.parse_node",
+      "kind": "self",
+      "line": 265
+    },
+    {
+      "from": "parser.Parser.parse_flow_node",
+      "to": "parser.Parser.parse_node",
+      "kind": "self",
+      "line": 268
+    },
+    {
+      "from": "parser.Parser.parse_block_node_or_indentless_sequence",
+      "to": "parser.Parser.parse_node",
+      "kind": "self",
+      "line": 271
+    },
+    {
+      "from": "parser.Parser.parse_node",
+      "to": "parser.Parser.parse_indentless_sequence_entry",
+      "kind": "self",
+      "line": 323
+    },
+    {
+      "from": "parser.Parser.parse_node",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 305
+    },
+    {
+      "from": "parser.Parser.parse_node",
+      "to": "parser.Parser.parse_flow_sequence_first_entry",
+      "kind": "self",
+      "line": 341
+    },
+    {
+      "from": "parser.Parser.parse_node",
+      "to": "parser.Parser.parse_flow_mapping_first_key",
+      "kind": "self",
+      "line": 346
+    },
+    {
+      "from": "parser.Parser.parse_node",
+      "to": "parser.Parser.parse_block_sequence_first_entry",
+      "kind": "self",
+      "line": 351
+    },
+    {
+      "from": "parser.Parser.parse_node",
+      "to": "parser.Parser.parse_block_mapping_first_key",
+      "kind": "self",
+      "line": 356
+    },
+    {
+      "from": "parser.Parser.parse_block_sequence_first_entry",
+      "to": "parser.Parser.parse_block_sequence_entry",
+      "kind": "self",
+      "line": 379
+    },
+    {
+      "from": "parser.Parser.parse_block_sequence_entry",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 392
+    },
+    {
+      "from": "parser.Parser.parse_block_sequence_entry",
+      "to": "parser.Parser.parse_block_sequence_entry",
+      "kind": "self",
+      "line": 388
+    },
+    {
+      "from": "parser.Parser.parse_block_sequence_entry",
+      "to": "parser.Parser.parse_block_node",
+      "kind": "self",
+      "line": 386
+    },
+    {
+      "from": "parser.Parser.parse_block_sequence_entry",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 389
+    },
+    {
+      "from": "parser.Parser.parse_indentless_sequence_entry",
+      "to": "parser.Parser.parse_indentless_sequence_entry",
+      "kind": "self",
+      "line": 410
+    },
+    {
+      "from": "parser.Parser.parse_indentless_sequence_entry",
+      "to": "parser.Parser.parse_block_node",
+      "kind": "self",
+      "line": 408
+    },
+    {
+      "from": "parser.Parser.parse_indentless_sequence_entry",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 411
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_first_key",
+      "to": "parser.Parser.parse_block_mapping_key",
+      "kind": "self",
+      "line": 425
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_key",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 438
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_key",
+      "to": "parser.Parser.parse_block_mapping_value",
+      "kind": "self",
+      "line": 434
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_key",
+      "to": "parser.Parser.parse_block_node_or_indentless_sequence",
+      "kind": "self",
+      "line": 432
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_key",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 435
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_value",
+      "to": "parser.Parser.parse_block_mapping_key",
+      "kind": "self",
+      "line": 456
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_value",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 458
+    },
+    {
+      "from": "parser.Parser.parse_block_mapping_value",
+      "to": "parser.Parser.parse_block_node_or_indentless_sequence",
+      "kind": "self",
+      "line": 451
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_first_entry",
+      "to": "parser.Parser.parse_flow_sequence_entry",
+      "kind": "self",
+      "line": 474
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry",
+      "to": "parser.Parser.parse_flow_sequence_entry_mapping_key",
+      "kind": "self",
+      "line": 491
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 483
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry",
+      "to": "parser.Parser.parse_flow_sequence_entry",
+      "kind": "self",
+      "line": 494
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry",
+      "to": "parser.Parser.parse_flow_node",
+      "kind": "self",
+      "line": 495
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_key",
+      "to": "parser.Parser.parse_flow_sequence_entry_mapping_value",
+      "kind": "self",
+      "line": 509
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_key",
+      "to": "parser.Parser.parse_flow_node",
+      "kind": "self",
+      "line": 507
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_key",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 510
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_value",
+      "to": "parser.Parser.parse_flow_sequence_entry_mapping_end",
+      "kind": "self",
+      "line": 522
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_value",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 524
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_value",
+      "to": "parser.Parser.parse_flow_node",
+      "kind": "self",
+      "line": 517
+    },
+    {
+      "from": "parser.Parser.parse_flow_sequence_entry_mapping_end",
+      "to": "parser.Parser.parse_flow_sequence_entry",
+      "kind": "self",
+      "line": 527
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_first_key",
+      "to": "parser.Parser.parse_flow_mapping_key",
+      "kind": "self",
+      "line": 540
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_key",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 549
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_key",
+      "to": "parser.Parser.parse_flow_mapping_value",
+      "kind": "self",
+      "line": 558
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_key",
+      "to": "parser.Parser.parse_flow_node",
+      "kind": "self",
+      "line": 556
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_key",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 559
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_key",
+      "to": "parser.Parser.parse_flow_mapping_empty_value",
+      "kind": "self",
+      "line": 561
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_value",
+      "to": "parser.Parser.parse_flow_mapping_key",
+      "kind": "self",
+      "line": 579
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_value",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 581
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_value",
+      "to": "parser.Parser.parse_flow_node",
+      "kind": "self",
+      "line": 574
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_empty_value",
+      "to": "parser.Parser.parse_flow_mapping_key",
+      "kind": "self",
+      "line": 584
+    },
+    {
+      "from": "parser.Parser.parse_flow_mapping_empty_value",
+      "to": "parser.Parser.process_empty_scalar",
+      "kind": "self",
+      "line": 585
+    },
+    {
+      "from": "reader.Reader.__init__",
+      "to": "reader.Reader.check_printable",
+      "kind": "self",
+      "line": 74
+    },
+    {
+      "from": "reader.Reader.__init__",
+      "to": "reader.Reader.determine_encoding",
+      "kind": "self",
+      "line": 79
+    },
+    {
+      "from": "reader.Reader.peek",
+      "to": "reader.Reader.update",
+      "kind": "self",
+      "line": 91
+    },
+    {
+      "from": "reader.Reader.prefix",
+      "to": "reader.Reader.update",
+      "kind": "self",
+      "line": 96
+    },
+    {
+      "from": "reader.Reader.forward",
+      "to": "reader.Reader.update",
+      "kind": "self",
+      "line": 101
+    },
+    {
+      "from": "reader.Reader.get_mark",
+      "to": "error.Mark.__init__",
+      "kind": "ctor",
+      "line": 116
+    },
+    {
+      "from": "reader.Reader.determine_encoding",
+      "to": "reader.Reader.update",
+      "kind": "self",
+      "line": 135
+    },
+    {
+      "from": "reader.Reader.determine_encoding",
+      "to": "reader.Reader.update_raw",
+      "kind": "self",
+      "line": 124
+    },
+    {
+      "from": "reader.Reader.check_printable",
+      "to": "reader.ReaderError.__init__",
+      "kind": "ctor",
+      "line": 143
+    },
+    {
+      "from": "reader.Reader.update",
+      "to": "reader.Reader.check_printable",
+      "kind": "self",
+      "line": 169
+    },
+    {
+      "from": "reader.Reader.update",
+      "to": "reader.Reader.update_raw",
+      "kind": "self",
+      "line": 153
+    },
+    {
+      "from": "reader.Reader.update",
+      "to": "reader.ReaderError.__init__",
+      "kind": "ctor",
+      "line": 164
+    },
+    {
+      "from": "representer.BaseRepresenter.represent",
+      "to": "representer.BaseRepresenter.represent_data",
+      "kind": "self",
+      "line": 27
+    },
+    {
+      "from": "representer.BaseRepresenter.represent_data",
+      "to": "representer.BaseRepresenter.ignore_aliases",
+      "kind": "self",
+      "line": 34
+    },
+    {
+      "from": "representer.BaseRepresenter.represent_sequence",
+      "to": "representer.BaseRepresenter.represent_data",
+      "kind": "self",
+      "line": 92
+    },
+    {
+      "from": "representer.BaseRepresenter.represent_mapping",
+      "to": "representer.BaseRepresenter.represent_data",
+      "kind": "self",
+      "line": 117
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_none",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 145
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_str",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 148
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_binary",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 155
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_bool",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 162
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_int",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 165
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_float",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 189
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_list",
+      "to": "representer.BaseRepresenter.represent_sequence",
+      "kind": "self",
+      "line": 199
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_dict",
+      "to": "representer.BaseRepresenter.represent_mapping",
+      "kind": "self",
+      "line": 207
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_set",
+      "to": "representer.BaseRepresenter.represent_mapping",
+      "kind": "self",
+      "line": 213
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_date",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 217
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_datetime",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 221
+    },
+    {
+      "from": "representer.SafeRepresenter.represent_yaml_object",
+      "to": "representer.BaseRepresenter.represent_mapping",
+      "kind": "self",
+      "line": 228
+    },
+    {
+      "from": "representer.Representer.represent_complex",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 283
+    },
+    {
+      "from": "representer.Representer.represent_tuple",
+      "to": "representer.BaseRepresenter.represent_sequence",
+      "kind": "self",
+      "line": 286
+    },
+    {
+      "from": "representer.Representer.represent_name",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 290
+    },
+    {
+      "from": "representer.Representer.represent_module",
+      "to": "representer.BaseRepresenter.represent_scalar",
+      "kind": "self",
+      "line": 293
+    },
+    {
+      "from": "representer.Representer.represent_object",
+      "to": "representer.BaseRepresenter.represent_mapping",
+      "kind": "self",
+      "line": 356
+    },
+    {
+      "from": "representer.Representer.represent_object",
+      "to": "representer.BaseRepresenter.represent_sequence",
+      "kind": "self",
+      "line": 346
+    },
+    {
+      "from": "representer.Representer.represent_ordered_dict",
+      "to": "representer.BaseRepresenter.represent_sequence",
+      "kind": "self",
+      "line": 364
+    },
+    {
+      "from": "resolver.BaseResolver.descend_resolver",
+      "to": "resolver.BaseResolver.check_resolver_prefix",
+      "kind": "self",
+      "line": 99
+    },
+    {
+      "from": "scanner.Scanner.__init__",
+      "to": "scanner.Scanner.fetch_stream_start",
+      "kind": "self",
+      "line": 70
+    },
+    {
+      "from": "scanner.Scanner.check_token",
+      "to": "scanner.Scanner.need_more_tokens",
+      "kind": "self",
+      "line": 115
+    },
+    {
+      "from": "scanner.Scanner.check_token",
+      "to": "scanner.Scanner.fetch_more_tokens",
+      "kind": "self",
+      "line": 116
+    },
+    {
+      "from": "scanner.Scanner.peek_token",
+      "to": "scanner.Scanner.need_more_tokens",
+      "kind": "self",
+      "line": 128
+    },
+    {
+      "from": "scanner.Scanner.peek_token",
+      "to": "scanner.Scanner.fetch_more_tokens",
+      "kind": "self",
+      "line": 129
+    },
+    {
+      "from": "scanner.Scanner.get_token",
+      "to": "scanner.Scanner.need_more_tokens",
+      "kind": "self",
+      "line": 137
+    },
+    {
+      "from": "scanner.Scanner.get_token",
+      "to": "scanner.Scanner.fetch_more_tokens",
+      "kind": "self",
+      "line": 138
+    },
+    {
+      "from": "scanner.Scanner.need_more_tokens",
+      "to": "scanner.Scanner.stale_possible_simple_keys",
+      "kind": "self",
+      "line": 152
+    },
+    {
+      "from": "scanner.Scanner.need_more_tokens",
+      "to": "scanner.Scanner.next_possible_simple_key",
+      "kind": "self",
+      "line": 153
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 258
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.scan_to_next_token",
+      "kind": "self",
+      "line": 159
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.stale_possible_simple_keys",
+      "kind": "self",
+      "line": 162
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.unwind_indent",
+      "kind": "self",
+      "line": 166
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_plain",
+      "kind": "self",
+      "line": 254
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_stream_end",
+      "kind": "self",
+      "line": 173
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_directive",
+      "kind": "self",
+      "line": 176
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_directive",
+      "kind": "self",
+      "line": 177
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_document_start",
+      "kind": "self",
+      "line": 180
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_document_start",
+      "kind": "self",
+      "line": 181
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_document_end",
+      "kind": "self",
+      "line": 184
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_document_end",
+      "kind": "self",
+      "line": 185
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_flow_sequence_start",
+      "kind": "self",
+      "line": 195
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_flow_mapping_start",
+      "kind": "self",
+      "line": 199
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_flow_sequence_end",
+      "kind": "self",
+      "line": 203
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_flow_mapping_end",
+      "kind": "self",
+      "line": 207
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_flow_entry",
+      "kind": "self",
+      "line": 211
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_block_entry",
+      "kind": "self",
+      "line": 214
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_block_entry",
+      "kind": "self",
+      "line": 215
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_key",
+      "kind": "self",
+      "line": 218
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_key",
+      "kind": "self",
+      "line": 219
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.check_value",
+      "kind": "self",
+      "line": 222
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_value",
+      "kind": "self",
+      "line": 223
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_alias",
+      "kind": "self",
+      "line": 227
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_anchor",
+      "kind": "self",
+      "line": 231
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_tag",
+      "kind": "self",
+      "line": 235
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_literal",
+      "kind": "self",
+      "line": 239
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_folded",
+      "kind": "self",
+      "line": 243
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_single",
+      "kind": "self",
+      "line": 247
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_double",
+      "kind": "self",
+      "line": 251
+    },
+    {
+      "from": "scanner.Scanner.fetch_more_tokens",
+      "to": "scanner.Scanner.fetch_plain",
+      "kind": "self",
+      "line": 255
+    },
+    {
+      "from": "scanner.Scanner.stale_possible_simple_keys",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 291
+    },
+    {
+      "from": "scanner.Scanner.save_possible_simple_key",
+      "to": "scanner.SimpleKey.__init__",
+      "kind": "ctor",
+      "line": 308
+    },
+    {
+      "from": "scanner.Scanner.save_possible_simple_key",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 306
+    },
+    {
+      "from": "scanner.Scanner.remove_possible_simple_key",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 318
+    },
+    {
+      "from": "scanner.Scanner.fetch_stream_end",
+      "to": "scanner.Scanner.unwind_indent",
+      "kind": "self",
+      "line": 374
+    },
+    {
+      "from": "scanner.Scanner.fetch_stream_end",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 377
+    },
+    {
+      "from": "scanner.Scanner.fetch_directive",
+      "to": "scanner.Scanner.unwind_indent",
+      "kind": "self",
+      "line": 393
+    },
+    {
+      "from": "scanner.Scanner.fetch_directive",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 396
+    },
+    {
+      "from": "scanner.Scanner.fetch_directive",
+      "to": "scanner.Scanner.scan_directive",
+      "kind": "self",
+      "line": 400
+    },
+    {
+      "from": "scanner.Scanner.fetch_document_start",
+      "to": "scanner.Scanner.fetch_document_indicator",
+      "kind": "self",
+      "line": 403
+    },
+    {
+      "from": "scanner.Scanner.fetch_document_end",
+      "to": "scanner.Scanner.fetch_document_indicator",
+      "kind": "self",
+      "line": 406
+    },
+    {
+      "from": "scanner.Scanner.fetch_document_indicator",
+      "to": "scanner.Scanner.unwind_indent",
+      "kind": "self",
+      "line": 411
+    },
+    {
+      "from": "scanner.Scanner.fetch_document_indicator",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 415
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_sequence_start",
+      "to": "scanner.Scanner.fetch_flow_collection_start",
+      "kind": "self",
+      "line": 425
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_mapping_start",
+      "to": "scanner.Scanner.fetch_flow_collection_start",
+      "kind": "self",
+      "line": 428
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_collection_start",
+      "to": "scanner.Scanner.save_possible_simple_key",
+      "kind": "self",
+      "line": 433
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_sequence_end",
+      "to": "scanner.Scanner.fetch_flow_collection_end",
+      "kind": "self",
+      "line": 448
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_mapping_end",
+      "to": "scanner.Scanner.fetch_flow_collection_end",
+      "kind": "self",
+      "line": 451
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_collection_end",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 456
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_entry",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 476
+    },
+    {
+      "from": "scanner.Scanner.fetch_block_entry",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 509
+    },
+    {
+      "from": "scanner.Scanner.fetch_block_entry",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 491
+    },
+    {
+      "from": "scanner.Scanner.fetch_block_entry",
+      "to": "scanner.Scanner.add_indent",
+      "kind": "self",
+      "line": 496
+    },
+    {
+      "from": "scanner.Scanner.fetch_key",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 537
+    },
+    {
+      "from": "scanner.Scanner.fetch_key",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 524
+    },
+    {
+      "from": "scanner.Scanner.fetch_key",
+      "to": "scanner.Scanner.add_indent",
+      "kind": "self",
+      "line": 529
+    },
+    {
+      "from": "scanner.Scanner.fetch_value",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 593
+    },
+    {
+      "from": "scanner.Scanner.fetch_value",
+      "to": "scanner.Scanner.add_indent",
+      "kind": "self",
+      "line": 559
+    },
+    {
+      "from": "scanner.Scanner.fetch_value",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 577
+    },
+    {
+      "from": "scanner.Scanner.fetch_alias",
+      "to": "scanner.Scanner.save_possible_simple_key",
+      "kind": "self",
+      "line": 604
+    },
+    {
+      "from": "scanner.Scanner.fetch_alias",
+      "to": "scanner.Scanner.scan_anchor",
+      "kind": "self",
+      "line": 610
+    },
+    {
+      "from": "scanner.Scanner.fetch_anchor",
+      "to": "scanner.Scanner.save_possible_simple_key",
+      "kind": "self",
+      "line": 615
+    },
+    {
+      "from": "scanner.Scanner.fetch_anchor",
+      "to": "scanner.Scanner.scan_anchor",
+      "kind": "self",
+      "line": 621
+    },
+    {
+      "from": "scanner.Scanner.fetch_tag",
+      "to": "scanner.Scanner.save_possible_simple_key",
+      "kind": "self",
+      "line": 626
+    },
+    {
+      "from": "scanner.Scanner.fetch_tag",
+      "to": "scanner.Scanner.scan_tag",
+      "kind": "self",
+      "line": 632
+    },
+    {
+      "from": "scanner.Scanner.fetch_literal",
+      "to": "scanner.Scanner.fetch_block_scalar",
+      "kind": "self",
+      "line": 635
+    },
+    {
+      "from": "scanner.Scanner.fetch_folded",
+      "to": "scanner.Scanner.fetch_block_scalar",
+      "kind": "self",
+      "line": 638
+    },
+    {
+      "from": "scanner.Scanner.fetch_block_scalar",
+      "to": "scanner.Scanner.remove_possible_simple_key",
+      "kind": "self",
+      "line": 646
+    },
+    {
+      "from": "scanner.Scanner.fetch_block_scalar",
+      "to": "scanner.Scanner.scan_block_scalar",
+      "kind": "self",
+      "line": 649
+    },
+    {
+      "from": "scanner.Scanner.fetch_single",
+      "to": "scanner.Scanner.fetch_flow_scalar",
+      "kind": "self",
+      "line": 652
+    },
+    {
+      "from": "scanner.Scanner.fetch_double",
+      "to": "scanner.Scanner.fetch_flow_scalar",
+      "kind": "self",
+      "line": 655
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_scalar",
+      "to": "scanner.Scanner.save_possible_simple_key",
+      "kind": "self",
+      "line": 660
+    },
+    {
+      "from": "scanner.Scanner.fetch_flow_scalar",
+      "to": "scanner.Scanner.scan_flow_scalar",
+      "kind": "self",
+      "line": 666
+    },
+    {
+      "from": "scanner.Scanner.fetch_plain",
+      "to": "scanner.Scanner.save_possible_simple_key",
+      "kind": "self",
+      "line": 671
+    },
+    {
+      "from": "scanner.Scanner.fetch_plain",
+      "to": "scanner.Scanner.scan_plain",
+      "kind": "self",
+      "line": 679
+    },
+    {
+      "from": "scanner.Scanner.scan_to_next_token",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 781
+    },
+    {
+      "from": "scanner.Scanner.scan_directive",
+      "to": "scanner.Scanner.scan_directive_name",
+      "kind": "self",
+      "line": 791
+    },
+    {
+      "from": "scanner.Scanner.scan_directive",
+      "to": "scanner.Scanner.scan_directive_ignored_line",
+      "kind": "self",
+      "line": 803
+    },
+    {
+      "from": "scanner.Scanner.scan_directive",
+      "to": "scanner.Scanner.scan_yaml_directive_value",
+      "kind": "self",
+      "line": 794
+    },
+    {
+      "from": "scanner.Scanner.scan_directive",
+      "to": "scanner.Scanner.scan_tag_directive_value",
+      "kind": "self",
+      "line": 797
+    },
+    {
+      "from": "scanner.Scanner.scan_directive_name",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 815
+    },
+    {
+      "from": "scanner.Scanner.scan_yaml_directive_value",
+      "to": "scanner.Scanner.scan_yaml_directive_number",
+      "kind": "self",
+      "line": 831
+    },
+    {
+      "from": "scanner.Scanner.scan_yaml_directive_value",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 833
+    },
+    {
+      "from": "scanner.Scanner.scan_yaml_directive_number",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 848
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_directive_value",
+      "to": "scanner.Scanner.scan_tag_directive_handle",
+      "kind": "self",
+      "line": 861
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_directive_value",
+      "to": "scanner.Scanner.scan_tag_directive_prefix",
+      "kind": "self",
+      "line": 864
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_directive_handle",
+      "to": "scanner.Scanner.scan_tag_handle",
+      "kind": "self",
+      "line": 869
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_directive_handle",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 872
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_directive_prefix",
+      "to": "scanner.Scanner.scan_tag_uri",
+      "kind": "self",
+      "line": 878
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_directive_prefix",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 881
+    },
+    {
+      "from": "scanner.Scanner.scan_directive_ignored_line",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 894
+    },
+    {
+      "from": "scanner.Scanner.scan_directive_ignored_line",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 897
+    },
+    {
+      "from": "scanner.Scanner.scan_anchor",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 922
+    },
+    {
+      "from": "scanner.Scanner.scan_tag",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 970
+    },
+    {
+      "from": "scanner.Scanner.scan_tag",
+      "to": "scanner.Scanner.scan_tag_uri",
+      "kind": "self",
+      "line": 942
+    },
+    {
+      "from": "scanner.Scanner.scan_tag",
+      "to": "scanner.Scanner.scan_tag_handle",
+      "kind": "self",
+      "line": 963
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar",
+      "to": "scanner.Scanner.scan_block_scalar_indicators",
+      "kind": "self",
+      "line": 989
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar",
+      "to": "scanner.Scanner.scan_block_scalar_ignored_line",
+      "kind": "self",
+      "line": 990
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar",
+      "to": "scanner.Scanner.scan_block_scalar_indentation",
+      "kind": "self",
+      "line": 997
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar",
+      "to": "scanner.Scanner.scan_block_scalar_breaks",
+      "kind": "self",
+      "line": 1001
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1013
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar_indicators",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1087
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar_ignored_line",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1101
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar_ignored_line",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1104
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar_indentation",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1113
+    },
+    {
+      "from": "scanner.Scanner.scan_block_scalar_breaks",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1128
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar",
+      "to": "scanner.Scanner.scan_flow_scalar_non_spaces",
+      "kind": "self",
+      "line": 1149
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar",
+      "to": "scanner.Scanner.scan_flow_scalar_spaces",
+      "kind": "self",
+      "line": 1151
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_non_spaces",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1223
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_non_spaces",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1220
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_non_spaces",
+      "to": "scanner.Scanner.scan_flow_scalar_breaks",
+      "kind": "self",
+      "line": 1221
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_spaces",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1238
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_spaces",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1241
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_spaces",
+      "to": "scanner.Scanner.scan_flow_scalar_breaks",
+      "kind": "self",
+      "line": 1242
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_breaks",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1261
+    },
+    {
+      "from": "scanner.Scanner.scan_flow_scalar_breaks",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1266
+    },
+    {
+      "from": "scanner.Scanner.scan_plain",
+      "to": "scanner.Scanner.scan_plain_spaces",
+      "kind": "self",
+      "line": 1305
+    },
+    {
+      "from": "scanner.Scanner.scan_plain_spaces",
+      "to": "scanner.Scanner.scan_line_break",
+      "kind": "self",
+      "line": 1323
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_handle",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1354
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_uri",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1393
+    },
+    {
+      "from": "scanner.Scanner.scan_tag_uri",
+      "to": "scanner.Scanner.scan_uri_escapes",
+      "kind": "self",
+      "line": 1384
+    },
+    {
+      "from": "scanner.Scanner.scan_uri_escapes",
+      "to": "error.MarkedYAMLError.__init__",
+      "kind": "ctor",
+      "line": 1413
+    },
+    {
+      "from": "serializer.Serializer.serialize",
+      "to": "serializer.Serializer.anchor_node",
+      "kind": "self",
+      "line": 53
+    },
+    {
+      "from": "serializer.Serializer.serialize",
+      "to": "serializer.Serializer.serialize_node",
+      "kind": "self",
+      "line": 54
+    },
+    {
+      "from": "serializer.Serializer.anchor_node",
+      "to": "serializer.Serializer.generate_anchor",
+      "kind": "self",
+      "line": 63
+    },
+    {
+      "from": "serializer.Serializer.anchor_node",
+      "to": "serializer.Serializer.anchor_node",
+      "kind": "self",
+      "line": 68
+    },
+    {
+      "from": "serializer.Serializer.serialize_node",
+      "to": "serializer.Serializer.serialize_node",
+      "kind": "self",
+      "line": 98
+    },
+    {
+      "from": "__init__.load",
+      "to": "__init__.load_warning",
+      "kind": "func",
+      "line": 109
+    },
+    {
+      "from": "__init__.load_all",
+      "to": "__init__.load_warning",
+      "kind": "func",
+      "line": 124
+    },
+    {
+      "from": "__init__.full_load",
+      "to": "__init__.load",
+      "kind": "func",
+      "line": 142
+    },
+    {
+      "from": "__init__.full_load_all",
+      "to": "__init__.load_all",
+      "kind": "func",
+      "line": 152
+    },
+    {
+      "from": "__init__.safe_load",
+      "to": "__init__.load",
+      "kind": "func",
+      "line": 162
+    },
+    {
+      "from": "__init__.safe_load_all",
+      "to": "__init__.load_all",
+      "kind": "func",
+      "line": 172
+    },
+    {
+      "from": "__init__.unsafe_load",
+      "to": "__init__.load",
+      "kind": "func",
+      "line": 182
+    },
+    {
+      "from": "__init__.unsafe_load_all",
+      "to": "__init__.load_all",
+      "kind": "func",
+      "line": 192
+    },
+    {
+      "from": "__init__.serialize",
+      "to": "__init__.serialize_all",
+      "kind": "func",
+      "line": 250
+    },
+    {
+      "from": "__init__.dump",
+      "to": "__init__.dump_all",
+      "kind": "func",
+      "line": 290
+    },
+    {
+      "from": "__init__.safe_dump_all",
+      "to": "__init__.dump_all",
+      "kind": "func",
+      "line": 298
+    },
+    {
+      "from": "__init__.safe_dump",
+      "to": "__init__.dump_all",
+      "kind": "func",
+      "line": 306
+    }
+  ],
+  "overrides": [
+    {
+      "method": "constructor.SafeConstructor.construct_scalar",
+      "overrides": "constructor.BaseConstructor.construct_scalar"
+    },
+    {
+      "method": "constructor.SafeConstructor.construct_mapping",
+      "overrides": "constructor.BaseConstructor.construct_mapping"
+    },
+    {
+      "method": "constructor.UnsafeConstructor.find_python_module",
+      "overrides": "constructor.FullConstructor.find_python_module"
+    },
+    {
+      "method": "constructor.UnsafeConstructor.find_python_name",
+      "overrides": "constructor.FullConstructor.find_python_name"
+    },
+    {
+      "method": "constructor.UnsafeConstructor.make_python_instance",
+      "overrides": "constructor.FullConstructor.make_python_instance"
+    },
+    {
+      "method": "constructor.UnsafeConstructor.set_python_instance_state",
+      "overrides": "constructor.FullConstructor.set_python_instance_state"
+    },
+    {
+      "method": "cyaml.CBaseLoader.__init__",
+      "overrides": "constructor.BaseConstructor.__init__"
+    },
+    {
+      "method": "cyaml.CSafeLoader.__init__",
+      "overrides": "constructor.BaseConstructor.__init__"
+    },
+    {
+      "method": "cyaml.CFullLoader.__init__",
+      "overrides": "resolver.BaseResolver.__init__"
+    },
+    {
+      "method": "cyaml.CUnsafeLoader.__init__",
+      "overrides": "resolver.BaseResolver.__init__"
+    },
+    {
+      "method": "cyaml.CLoader.__init__",
+      "overrides": "resolver.BaseResolver.__init__"
+    },
+    {
+      "method": "cyaml.CBaseDumper.__init__",
+      "overrides": "representer.BaseRepresenter.__init__"
+    },
+    {
+      "method": "cyaml.CSafeDumper.__init__",
+      "overrides": "representer.BaseRepresenter.__init__"
+    },
+    {
+      "method": "cyaml.CDumper.__init__",
+      "overrides": "serializer.Serializer.__init__"
+    },
+    {
+      "method": "dumper.BaseDumper.__init__",
+      "overrides": "emitter.Emitter.__init__"
+    },
+    {
+      "method": "dumper.SafeDumper.__init__",
+      "overrides": "emitter.Emitter.__init__"
+    },
+    {
+      "method": "dumper.Dumper.__init__",
+      "overrides": "emitter.Emitter.__init__"
+    },
+    {
+      "method": "events.NodeEvent.__init__",
+      "overrides": "events.Event.__init__"
+    },
+    {
+      "method": "events.CollectionStartEvent.__init__",
+      "overrides": "events.NodeEvent.__init__"
+    },
+    {
+      "method": "events.StreamStartEvent.__init__",
+      "overrides": "events.Event.__init__"
+    },
+    {
+      "method": "events.DocumentStartEvent.__init__",
+      "overrides": "events.Event.__init__"
+    },
+    {
+      "method": "events.DocumentEndEvent.__init__",
+      "overrides": "events.Event.__init__"
+    },
+    {
+      "method": "events.ScalarEvent.__init__",
+      "overrides": "events.NodeEvent.__init__"
+    },
+    {
+      "method": "loader.BaseLoader.__init__",
+      "overrides": "reader.Reader.__init__"
+    },
+    {
+      "method": "loader.FullLoader.__init__",
+      "overrides": "reader.Reader.__init__"
+    },
+    {
+      "method": "loader.SafeLoader.__init__",
+      "overrides": "reader.Reader.__init__"
+    },
+    {
+      "method": "loader.Loader.__init__",
+      "overrides": "reader.Reader.__init__"
+    },
+    {
+      "method": "loader.UnsafeLoader.__init__",
+      "overrides": "reader.Reader.__init__"
+    },
+    {
+      "method": "nodes.ScalarNode.__init__",
+      "overrides": "nodes.Node.__init__"
+    },
+    {
+      "method": "nodes.CollectionNode.__init__",
+      "overrides": "nodes.Node.__init__"
+    },
+    {
+      "method": "representer.SafeRepresenter.ignore_aliases",
+      "overrides": "representer.BaseRepresenter.ignore_aliases"
+    },
+    {
+      "method": "tokens.DirectiveToken.__init__",
+      "overrides": "tokens.Token.__init__"
+    },
+    {
+      "method": "tokens.StreamStartToken.__init__",
+      "overrides": "tokens.Token.__init__"
+    },
+    {
+      "method": "tokens.AliasToken.__init__",
+      "overrides": "tokens.Token.__init__"
+    },
+    {
+      "method": "tokens.AnchorToken.__init__",
+      "overrides": "tokens.Token.__init__"
+    },
+    {
+      "method": "tokens.TagToken.__init__",
+      "overrides": "tokens.Token.__init__"
+    },
+    {
+      "method": "tokens.ScalarToken.__init__",
+      "overrides": "tokens.Token.__init__"
+    }
+  ]
+}

@@ -77,13 +77,15 @@ VISMAP = {"public": "public", "internal": "internal", "class-local": "private"}
 class Data:
     """解析結果（JSON）と AST をまとめて持つ。"""
 
-    def __init__(self):
+    def __init__(self, pkg_root=None, data_dir=None):
+        """pkg_root: 解析対象のパッケージ（既定は tinydb/tinydb）、data_dir: 解析 JSON の置き場所（既定は analysis/）。"""
         sys.path.insert(0, str(HERE))
         from call_graph import Pkg
-        self.graph = load("call_graph.json")
-        self.api = load("public_api.json")
-        self.refs = load("field_refs.json")
-        self.pkg = Pkg(HERE.parent / "tinydb" / "tinydb")
+        d = pathlib.Path(data_dir) if data_dir else HERE
+        self.graph = json.load(open(d / "call_graph.json"))
+        self.api = json.load(open(d / "public_api.json"))
+        self.refs = json.load(open(d / "field_refs.json"))
+        self.pkg = Pkg(pathlib.Path(pkg_root) if pkg_root else HERE.parent / "tinydb" / "tinydb")
 
     def methods(self, cname):
         return [n for n in self.graph["nodes"] if n["class"] == cname]

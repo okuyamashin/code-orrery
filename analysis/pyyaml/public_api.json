@@ -1,0 +1,4529 @@
+{
+  "fixtures": {},
+  "nodes": [
+    {
+      "id": "__init__.YAMLObjectMetaclass.__init__",
+      "module": "__init__",
+      "class": "YAMLObjectMetaclass",
+      "name": "__init__",
+      "lines": [
+        388,
+        397
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.YAMLObject.from_yaml",
+      "module": "__init__",
+      "class": "YAMLObject",
+      "name": "from_yaml",
+      "lines": [
+        414,
+        418
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.YAMLObject.to_yaml",
+      "module": "__init__",
+      "class": "YAMLObject",
+      "name": "to_yaml",
+      "lines": [
+        421,
+        426
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.__init__",
+      "module": "composer",
+      "class": "Composer",
+      "name": "__init__",
+      "lines": [
+        13,
+        14
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.check_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "check_node",
+      "lines": [
+        16,
+        22
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.get_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "get_node",
+      "lines": [
+        24,
+        27
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.get_single_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "get_single_node",
+      "lines": [
+        29,
+        48
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.compose_document",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_document",
+      "lines": [
+        50,
+        61
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.compose_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_node",
+      "lines": [
+        63,
+        86
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.compose_scalar_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_scalar_node",
+      "lines": [
+        88,
+        97
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.compose_sequence_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_sequence_node",
+      "lines": [
+        99,
+        115
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "composer.Composer.compose_mapping_node",
+      "module": "composer",
+      "class": "Composer",
+      "name": "compose_mapping_node",
+      "lines": [
+        117,
+        138
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.__init__",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "__init__",
+      "lines": [
+        24,
+        28
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.check_data",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "check_data",
+      "lines": [
+        30,
+        32
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.check_state_key",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "check_state_key",
+      "lines": [
+        34,
+        40
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.get_data",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "get_data",
+      "lines": [
+        42,
+        45
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.get_single_data",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "get_single_data",
+      "lines": [
+        47,
+        52
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_document",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_document",
+      "lines": [
+        54,
+        65
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_object",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_object",
+      "lines": [
+        67,
+        115
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_scalar",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_scalar",
+      "lines": [
+        117,
+        122
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_sequence",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_sequence",
+      "lines": [
+        124,
+        130
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_mapping",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_mapping",
+      "lines": [
+        132,
+        145
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.construct_pairs",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "construct_pairs",
+      "lines": [
+        147,
+        157
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.add_constructor",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "add_constructor",
+      "lines": [
+        160,
+        163
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.BaseConstructor.add_multi_constructor",
+      "module": "constructor",
+      "class": "BaseConstructor",
+      "name": "add_multi_constructor",
+      "lines": [
+        166,
+        169
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_scalar",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_scalar",
+      "lines": [
+        173,
+        178
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.flatten_mapping",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "flatten_mapping",
+      "lines": [
+        180,
+        213
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_mapping",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_mapping",
+      "lines": [
+        215,
+        218
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_null",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_null",
+      "lines": [
+        220,
+        222
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_bool",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_bool",
+      "lines": [
+        233,
+        235
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_int",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_int",
+      "lines": [
+        237,
+        263
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_float",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_float",
+      "lines": [
+        270,
+        292
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_binary",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_binary",
+      "lines": [
+        294,
+        308
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_timestamp",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_timestamp",
+      "lines": [
+        322,
+        351
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_omap",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_omap",
+      "lines": [
+        353,
+        373
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_pairs",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_pairs",
+      "lines": [
+        375,
+        394
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_set",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_set",
+      "lines": [
+        396,
+        400
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_str",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_str",
+      "lines": [
+        402,
+        403
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_seq",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_seq",
+      "lines": [
+        405,
+        408
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_map",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_map",
+      "lines": [
+        410,
+        414
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_yaml_object",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_yaml_object",
+      "lines": [
+        416,
+        424
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.SafeConstructor.construct_undefined",
+      "module": "constructor",
+      "class": "SafeConstructor",
+      "name": "construct_undefined",
+      "lines": [
+        426,
+        429
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.get_state_keys_blacklist",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "get_state_keys_blacklist",
+      "lines": [
+        486,
+        487
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.get_state_keys_blacklist_regexp",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "get_state_keys_blacklist_regexp",
+      "lines": [
+        489,
+        492
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_str",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_str",
+      "lines": [
+        494,
+        495
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_unicode",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_unicode",
+      "lines": [
+        497,
+        498
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_bytes",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_bytes",
+      "lines": [
+        500,
+        514
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_long",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_long",
+      "lines": [
+        516,
+        517
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_complex",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_complex",
+      "lines": [
+        519,
+        520
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_tuple",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_tuple",
+      "lines": [
+        522,
+        523
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.find_python_module",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "find_python_module",
+      "lines": [
+        525,
+        538
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.find_python_name",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "find_python_name",
+      "lines": [
+        540,
+        563
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_name",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_name",
+      "lines": [
+        565,
+        570
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_module",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_module",
+      "lines": [
+        572,
+        577
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.make_python_instance",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "make_python_instance",
+      "lines": [
+        579,
+        593
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.set_python_instance_state",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "set_python_instance_state",
+      "lines": [
+        595,
+        612
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_object",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_object",
+      "lines": [
+        614,
+        621
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_object_apply",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_object_apply",
+      "lines": [
+        623,
+        656
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.FullConstructor.construct_python_object_new",
+      "module": "constructor",
+      "class": "FullConstructor",
+      "name": "construct_python_object_new",
+      "lines": [
+        658,
+        659
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.UnsafeConstructor.find_python_module",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "find_python_module",
+      "lines": [
+        727,
+        728
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.UnsafeConstructor.find_python_name",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "find_python_name",
+      "lines": [
+        730,
+        731
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.UnsafeConstructor.make_python_instance",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "make_python_instance",
+      "lines": [
+        733,
+        735
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "constructor.UnsafeConstructor.set_python_instance_state",
+      "module": "constructor",
+      "class": "UnsafeConstructor",
+      "name": "set_python_instance_state",
+      "lines": [
+        737,
+        739
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CBaseLoader.__init__",
+      "module": "cyaml",
+      "class": "CBaseLoader",
+      "name": "__init__",
+      "lines": [
+        18,
+        21
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CSafeLoader.__init__",
+      "module": "cyaml",
+      "class": "CSafeLoader",
+      "name": "__init__",
+      "lines": [
+        25,
+        28
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CFullLoader.__init__",
+      "module": "cyaml",
+      "class": "CFullLoader",
+      "name": "__init__",
+      "lines": [
+        32,
+        35
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CUnsafeLoader.__init__",
+      "module": "cyaml",
+      "class": "CUnsafeLoader",
+      "name": "__init__",
+      "lines": [
+        39,
+        42
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CLoader.__init__",
+      "module": "cyaml",
+      "class": "CLoader",
+      "name": "__init__",
+      "lines": [
+        46,
+        49
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CBaseDumper.__init__",
+      "module": "cyaml",
+      "class": "CBaseDumper",
+      "name": "__init__",
+      "lines": [
+        53,
+        66
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CSafeDumper.__init__",
+      "module": "cyaml",
+      "class": "CSafeDumper",
+      "name": "__init__",
+      "lines": [
+        70,
+        83
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "cyaml.CDumper.__init__",
+      "module": "cyaml",
+      "class": "CDumper",
+      "name": "__init__",
+      "lines": [
+        87,
+        100
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "dumper.BaseDumper.__init__",
+      "module": "dumper",
+      "class": "BaseDumper",
+      "name": "__init__",
+      "lines": [
+        11,
+        25
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "dumper.SafeDumper.__init__",
+      "module": "dumper",
+      "class": "SafeDumper",
+      "name": "__init__",
+      "lines": [
+        29,
+        43
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "dumper.Dumper.__init__",
+      "module": "dumper",
+      "class": "Dumper",
+      "name": "__init__",
+      "lines": [
+        47,
+        61
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.ScalarAnalysis.__init__",
+      "module": "emitter",
+      "class": "ScalarAnalysis",
+      "name": "__init__",
+      "lines": [
+        18,
+        29
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.__init__",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "__init__",
+      "lines": [
+        38,
+        104
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.dispose",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "dispose",
+      "lines": [
+        106,
+        109
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.emit",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "emit",
+      "lines": [
+        111,
+        116
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.need_more_events",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "need_more_events",
+      "lines": [
+        120,
+        131
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.need_events",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "need_events",
+      "lines": [
+        133,
+        144
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.increase_indent",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "increase_indent",
+      "lines": [
+        146,
+        154
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_stream_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_stream_start",
+      "lines": [
+        160,
+        168
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_nothing",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_nothing",
+      "lines": [
+        170,
+        171
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_first_document_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_document_start",
+      "lines": [
+        175,
+        176
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_document_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_document_start",
+      "lines": [
+        178,
+        212
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_document_end",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_document_end",
+      "lines": [
+        214,
+        224
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_document_root",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_document_root",
+      "lines": [
+        226,
+        228
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_node",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_node",
+      "lines": [
+        232,
+        258
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_alias",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_alias",
+      "lines": [
+        260,
+        264
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_scalar",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_scalar",
+      "lines": [
+        266,
+        270
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_sequence",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_sequence",
+      "lines": [
+        274,
+        278
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_first_flow_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_flow_sequence_item",
+      "lines": [
+        280,
+        290
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_sequence_item",
+      "lines": [
+        292,
+        306
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping",
+      "lines": [
+        310,
+        314
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_first_flow_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_flow_mapping_key",
+      "lines": [
+        316,
+        331
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping_key",
+      "lines": [
+        333,
+        352
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping_simple_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping_simple_value",
+      "lines": [
+        354,
+        357
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_flow_mapping_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_flow_mapping_value",
+      "lines": [
+        359,
+        364
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_block_sequence",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_sequence",
+      "lines": [
+        368,
+        371
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_first_block_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_block_sequence_item",
+      "lines": [
+        373,
+        374
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_block_sequence_item",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_sequence_item",
+      "lines": [
+        376,
+        384
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping",
+      "lines": [
+        388,
+        390
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_first_block_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_first_block_mapping_key",
+      "lines": [
+        392,
+        393
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping_key",
+      "lines": [
+        395,
+        407
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping_simple_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping_simple_value",
+      "lines": [
+        409,
+        412
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.expect_block_mapping_value",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "expect_block_mapping_value",
+      "lines": [
+        414,
+        418
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.check_empty_sequence",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_empty_sequence",
+      "lines": [
+        422,
+        424
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.check_empty_mapping",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_empty_mapping",
+      "lines": [
+        426,
+        428
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.check_empty_document",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_empty_document",
+      "lines": [
+        430,
+        435
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.check_simple_key",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "check_simple_key",
+      "lines": [
+        437,
+        455
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.process_anchor",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "process_anchor",
+      "lines": [
+        459,
+        467
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.process_tag",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "process_tag",
+      "lines": [
+        469,
+        492
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.choose_scalar_style",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "choose_scalar_style",
+      "lines": [
+        494,
+        513
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.process_scalar",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "process_scalar",
+      "lines": [
+        515,
+        535
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.prepare_version",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_version",
+      "lines": [
+        539,
+        543
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.prepare_tag_handle",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_tag_handle",
+      "lines": [
+        545,
+        555
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.prepare_tag_prefix",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_tag_prefix",
+      "lines": [
+        557,
+        578
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.prepare_tag",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_tag",
+      "lines": [
+        580,
+        614
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.prepare_anchor",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "prepare_anchor",
+      "lines": [
+        616,
+        624
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.analyze_scalar",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "analyze_scalar",
+      "lines": [
+        626,
+        784
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.flush_stream",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "flush_stream",
+      "lines": [
+        788,
+        790
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_stream_start",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_stream_start",
+      "lines": [
+        792,
+        795
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_stream_end",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_stream_end",
+      "lines": [
+        797,
+        798
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_indicator",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_indicator",
+      "lines": [
+        800,
+        812
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_indent",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_indent",
+      "lines": [
+        814,
+        825
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_line_break",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_line_break",
+      "lines": [
+        827,
+        836
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_version_directive",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_version_directive",
+      "lines": [
+        838,
+        843
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_tag_directive",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_tag_directive",
+      "lines": [
+        845,
+        850
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_single_quoted",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_single_quoted",
+      "lines": [
+        854,
+        906
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_double_quoted",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_double_quoted",
+      "lines": [
+        926,
+        978
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.determine_block_hints",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "determine_block_hints",
+      "lines": [
+        980,
+        989
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_folded",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_folded",
+      "lines": [
+        991,
+        1043
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_literal",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_literal",
+      "lines": [
+        1045,
+        1078
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "emitter.Emitter.write_plain",
+      "module": "emitter",
+      "class": "Emitter",
+      "name": "write_plain",
+      "lines": [
+        1080,
+        1137
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "error.Mark.__init__",
+      "module": "error",
+      "class": "Mark",
+      "name": "__init__",
+      "lines": [
+        6,
+        12
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "error.Mark.get_snippet",
+      "module": "error",
+      "class": "Mark",
+      "name": "get_snippet",
+      "lines": [
+        14,
+        35
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "error.Mark.__str__",
+      "module": "error",
+      "class": "Mark",
+      "name": "__str__",
+      "lines": [
+        37,
+        43
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "error.MarkedYAMLError.__init__",
+      "module": "error",
+      "class": "MarkedYAMLError",
+      "name": "__init__",
+      "lines": [
+        50,
+        56
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "error.MarkedYAMLError.__str__",
+      "module": "error",
+      "class": "MarkedYAMLError",
+      "name": "__str__",
+      "lines": [
+        58,
+        74
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.Event.__init__",
+      "module": "events",
+      "class": "Event",
+      "name": "__init__",
+      "lines": [
+        5,
+        7
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.Event.__repr__",
+      "module": "events",
+      "class": "Event",
+      "name": "__repr__",
+      "lines": [
+        8,
+        13
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.NodeEvent.__init__",
+      "module": "events",
+      "class": "NodeEvent",
+      "name": "__init__",
+      "lines": [
+        16,
+        19
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.CollectionStartEvent.__init__",
+      "module": "events",
+      "class": "CollectionStartEvent",
+      "name": "__init__",
+      "lines": [
+        22,
+        29
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.StreamStartEvent.__init__",
+      "module": "events",
+      "class": "StreamStartEvent",
+      "name": "__init__",
+      "lines": [
+        37,
+        40
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.DocumentStartEvent.__init__",
+      "module": "events",
+      "class": "DocumentStartEvent",
+      "name": "__init__",
+      "lines": [
+        46,
+        52
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.DocumentEndEvent.__init__",
+      "module": "events",
+      "class": "DocumentEndEvent",
+      "name": "__init__",
+      "lines": [
+        55,
+        59
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "events.ScalarEvent.__init__",
+      "module": "events",
+      "class": "ScalarEvent",
+      "name": "__init__",
+      "lines": [
+        65,
+        73
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "loader.BaseLoader.__init__",
+      "module": "loader",
+      "class": "BaseLoader",
+      "name": "__init__",
+      "lines": [
+        13,
+        19
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "loader.FullLoader.__init__",
+      "module": "loader",
+      "class": "FullLoader",
+      "name": "__init__",
+      "lines": [
+        23,
+        29
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "loader.SafeLoader.__init__",
+      "module": "loader",
+      "class": "SafeLoader",
+      "name": "__init__",
+      "lines": [
+        33,
+        39
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "loader.Loader.__init__",
+      "module": "loader",
+      "class": "Loader",
+      "name": "__init__",
+      "lines": [
+        43,
+        49
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "loader.UnsafeLoader.__init__",
+      "module": "loader",
+      "class": "UnsafeLoader",
+      "name": "__init__",
+      "lines": [
+        57,
+        63
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "nodes.Node.__init__",
+      "module": "nodes",
+      "class": "Node",
+      "name": "__init__",
+      "lines": [
+        3,
+        7
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "nodes.Node.__repr__",
+      "module": "nodes",
+      "class": "Node",
+      "name": "__repr__",
+      "lines": [
+        8,
+        23
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "nodes.ScalarNode.__init__",
+      "module": "nodes",
+      "class": "ScalarNode",
+      "name": "__init__",
+      "lines": [
+        27,
+        33
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "nodes.CollectionNode.__init__",
+      "module": "nodes",
+      "class": "CollectionNode",
+      "name": "__init__",
+      "lines": [
+        36,
+        42
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.__init__",
+      "module": "parser",
+      "class": "Parser",
+      "name": "__init__",
+      "lines": [
+        81,
+        87
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.dispose",
+      "module": "parser",
+      "class": "Parser",
+      "name": "dispose",
+      "lines": [
+        89,
+        92
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.check_event",
+      "module": "parser",
+      "class": "Parser",
+      "name": "check_event",
+      "lines": [
+        94,
+        105
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.peek_event",
+      "module": "parser",
+      "class": "Parser",
+      "name": "peek_event",
+      "lines": [
+        107,
+        112
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.get_event",
+      "module": "parser",
+      "class": "Parser",
+      "name": "get_event",
+      "lines": [
+        114,
+        121
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_stream_start",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_stream_start",
+      "lines": [
+        127,
+        137
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_implicit_document_start",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_implicit_document_start",
+      "lines": [
+        139,
+        157
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_document_start",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_document_start",
+      "lines": [
+        159,
+        188
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_document_end",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_document_end",
+      "lines": [
+        190,
+        206
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_document_content",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_document_content",
+      "lines": [
+        208,
+        215
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.process_directives",
+      "module": "parser",
+      "class": "Parser",
+      "name": "process_directives",
+      "lines": [
+        217,
+        246
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_node",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_node",
+      "lines": [
+        264,
+        265
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_node",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_node",
+      "lines": [
+        267,
+        268
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_node_or_indentless_sequence",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_node_or_indentless_sequence",
+      "lines": [
+        270,
+        271
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_node",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_node",
+      "lines": [
+        273,
+        372
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_sequence_first_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_sequence_first_entry",
+      "lines": [
+        376,
+        379
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_sequence_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_sequence_entry",
+      "lines": [
+        381,
+        398
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_indentless_sequence_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_indentless_sequence_entry",
+      "lines": [
+        402,
+        415
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_mapping_first_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_mapping_first_key",
+      "lines": [
+        422,
+        425
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_mapping_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_mapping_key",
+      "lines": [
+        427,
+        444
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_block_mapping_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_block_mapping_value",
+      "lines": [
+        446,
+        458
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_first_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_first_entry",
+      "lines": [
+        471,
+        474
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry",
+      "lines": [
+        476,
+        500
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry_mapping_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry_mapping_key",
+      "lines": [
+        502,
+        510
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry_mapping_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry_mapping_value",
+      "lines": [
+        512,
+        524
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_sequence_entry_mapping_end",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_sequence_entry_mapping_end",
+      "lines": [
+        526,
+        529
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_first_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_first_key",
+      "lines": [
+        537,
+        540
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_key",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_key",
+      "lines": [
+        542,
+        567
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_value",
+      "lines": [
+        569,
+        581
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.parse_flow_mapping_empty_value",
+      "module": "parser",
+      "class": "Parser",
+      "name": "parse_flow_mapping_empty_value",
+      "lines": [
+        583,
+        585
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "parser.Parser.process_empty_scalar",
+      "module": "parser",
+      "class": "Parser",
+      "name": "process_empty_scalar",
+      "lines": [
+        587,
+        588
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.ReaderError.__init__",
+      "module": "reader",
+      "class": "ReaderError",
+      "name": "__init__",
+      "lines": [
+        26,
+        31
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.ReaderError.__str__",
+      "module": "reader",
+      "class": "ReaderError",
+      "name": "__str__",
+      "lines": [
+        33,
+        43
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.__init__",
+      "module": "reader",
+      "class": "Reader",
+      "name": "__init__",
+      "lines": [
+        59,
+        85
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.peek",
+      "module": "reader",
+      "class": "Reader",
+      "name": "peek",
+      "lines": [
+        87,
+        92
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.prefix",
+      "module": "reader",
+      "class": "Reader",
+      "name": "prefix",
+      "lines": [
+        94,
+        97
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.forward",
+      "module": "reader",
+      "class": "Reader",
+      "name": "forward",
+      "lines": [
+        99,
+        112
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.get_mark",
+      "module": "reader",
+      "class": "Reader",
+      "name": "get_mark",
+      "lines": [
+        114,
+        120
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.determine_encoding",
+      "module": "reader",
+      "class": "Reader",
+      "name": "determine_encoding",
+      "lines": [
+        122,
+        135
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.check_printable",
+      "module": "reader",
+      "class": "Reader",
+      "name": "check_printable",
+      "lines": [
+        138,
+        144
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.update",
+      "module": "reader",
+      "class": "Reader",
+      "name": "update",
+      "lines": [
+        146,
+        175
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "reader.Reader.update_raw",
+      "module": "reader",
+      "class": "Reader",
+      "name": "update_raw",
+      "lines": [
+        177,
+        185
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.__init__",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "__init__",
+      "lines": [
+        18,
+        24
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.represent",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent",
+      "lines": [
+        26,
+        31
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_data",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_data",
+      "lines": [
+        33,
+        63
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.add_representer",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "add_representer",
+      "lines": [
+        66,
+        69
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.add_multi_representer",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "add_multi_representer",
+      "lines": [
+        72,
+        75
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_scalar",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_scalar",
+      "lines": [
+        77,
+        83
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_sequence",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_sequence",
+      "lines": [
+        85,
+        101
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.represent_mapping",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "represent_mapping",
+      "lines": [
+        103,
+        129
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.BaseRepresenter.ignore_aliases",
+      "module": "representer",
+      "class": "BaseRepresenter",
+      "name": "ignore_aliases",
+      "lines": [
+        131,
+        132
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.ignore_aliases",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "ignore_aliases",
+      "lines": [
+        136,
+        142
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_none",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_none",
+      "lines": [
+        144,
+        145
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_str",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_str",
+      "lines": [
+        147,
+        148
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_binary",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_binary",
+      "lines": [
+        150,
+        155
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_bool",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_bool",
+      "lines": [
+        157,
+        162
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_int",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_int",
+      "lines": [
+        164,
+        165
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_float",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_float",
+      "lines": [
+        171,
+        189
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_list",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_list",
+      "lines": [
+        191,
+        199
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_dict",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_dict",
+      "lines": [
+        206,
+        207
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_set",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_set",
+      "lines": [
+        209,
+        213
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_date",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_date",
+      "lines": [
+        215,
+        217
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_datetime",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_datetime",
+      "lines": [
+        219,
+        221
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_yaml_object",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_yaml_object",
+      "lines": [
+        223,
+        228
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.SafeRepresenter.represent_undefined",
+      "module": "representer",
+      "class": "SafeRepresenter",
+      "name": "represent_undefined",
+      "lines": [
+        230,
+        231
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.Representer.represent_complex",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_complex",
+      "lines": [
+        274,
+        283
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.Representer.represent_tuple",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_tuple",
+      "lines": [
+        285,
+        286
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.Representer.represent_name",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_name",
+      "lines": [
+        288,
+        290
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.Representer.represent_module",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_module",
+      "lines": [
+        292,
+        294
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.Representer.represent_object",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_object",
+      "lines": [
+        296,
+        356
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "representer.Representer.represent_ordered_dict",
+      "module": "representer",
+      "class": "Representer",
+      "name": "represent_ordered_dict",
+      "lines": [
+        358,
+        364
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.__init__",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "__init__",
+      "lines": [
+        21,
+        23
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.add_implicit_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "add_implicit_resolver",
+      "lines": [
+        26,
+        35
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.add_path_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "add_path_resolver",
+      "lines": [
+        38,
+        89
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.descend_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "descend_resolver",
+      "lines": [
+        91,
+        112
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.ascend_resolver",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "ascend_resolver",
+      "lines": [
+        114,
+        118
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.check_resolver_prefix",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "check_resolver_prefix",
+      "lines": [
+        120,
+        141
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "resolver.BaseResolver.resolve",
+      "module": "resolver",
+      "class": "BaseResolver",
+      "name": "resolve",
+      "lines": [
+        143,
+        165
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.SimpleKey.__init__",
+      "module": "scanner",
+      "class": "SimpleKey",
+      "name": "__init__",
+      "lines": [
+        38,
+        44
+      ],
+      "property": false,
+      "visibility": "internal",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.__init__",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "__init__",
+      "lines": [
+        48,
+        109
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_token",
+      "lines": [
+        113,
+        123
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.peek_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "peek_token",
+      "lines": [
+        125,
+        133
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.get_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "get_token",
+      "lines": [
+        135,
+        141
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.need_more_tokens",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "need_more_tokens",
+      "lines": [
+        145,
+        154
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_more_tokens",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_more_tokens",
+      "lines": [
+        156,
+        260
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.next_possible_simple_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "next_possible_simple_key",
+      "lines": [
+        264,
+        277
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.stale_possible_simple_keys",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "stale_possible_simple_keys",
+      "lines": [
+        279,
+        293
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.save_possible_simple_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "save_possible_simple_key",
+      "lines": [
+        295,
+        310
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.remove_possible_simple_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "remove_possible_simple_key",
+      "lines": [
+        312,
+        321
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.unwind_indent",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "unwind_indent",
+      "lines": [
+        325,
+        347
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.add_indent",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "add_indent",
+      "lines": [
+        349,
+        355
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_stream_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_stream_start",
+      "lines": [
+        359,
+        368
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_stream_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_stream_end",
+      "lines": [
+        371,
+        388
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_directive",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_directive",
+      "lines": [
+        390,
+        400
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_document_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_document_start",
+      "lines": [
+        402,
+        403
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_document_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_document_end",
+      "lines": [
+        405,
+        406
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_document_indicator",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_document_indicator",
+      "lines": [
+        408,
+        422
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_sequence_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_sequence_start",
+      "lines": [
+        424,
+        425
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_mapping_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_mapping_start",
+      "lines": [
+        427,
+        428
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_collection_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_collection_start",
+      "lines": [
+        430,
+        445
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_sequence_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_sequence_end",
+      "lines": [
+        447,
+        448
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_mapping_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_mapping_end",
+      "lines": [
+        450,
+        451
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_collection_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_collection_end",
+      "lines": [
+        453,
+        468
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_entry",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_entry",
+      "lines": [
+        470,
+        482
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_block_entry",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_block_entry",
+      "lines": [
+        484,
+        515
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_key",
+      "lines": [
+        517,
+        543
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_value",
+      "lines": [
+        545,
+        599
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_alias",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_alias",
+      "lines": [
+        601,
+        610
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_anchor",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_anchor",
+      "lines": [
+        612,
+        621
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_tag",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_tag",
+      "lines": [
+        623,
+        632
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_literal",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_literal",
+      "lines": [
+        634,
+        635
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_folded",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_folded",
+      "lines": [
+        637,
+        638
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_block_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_block_scalar",
+      "lines": [
+        640,
+        649
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_single",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_single",
+      "lines": [
+        651,
+        652
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_double",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_double",
+      "lines": [
+        654,
+        655
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_flow_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_flow_scalar",
+      "lines": [
+        657,
+        666
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.fetch_plain",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "fetch_plain",
+      "lines": [
+        668,
+        679
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_directive",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_directive",
+      "lines": [
+        683,
+        688
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_document_start",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_document_start",
+      "lines": [
+        690,
+        696
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_document_end",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_document_end",
+      "lines": [
+        698,
+        704
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_block_entry",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_block_entry",
+      "lines": [
+        706,
+        709
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_key",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_key",
+      "lines": [
+        711,
+        719
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_value",
+      "lines": [
+        721,
+        729
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.check_plain",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "check_plain",
+      "lines": [
+        731,
+        748
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_to_next_token",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_to_next_token",
+      "lines": [
+        752,
+        785
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_directive",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_directive",
+      "lines": [
+        787,
+        804
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_directive_name",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_directive_name",
+      "lines": [
+        806,
+        825
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_yaml_directive_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_yaml_directive_value",
+      "lines": [
+        827,
+        842
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_yaml_directive_number",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_yaml_directive_number",
+      "lines": [
+        844,
+        855
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_directive_value",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_directive_value",
+      "lines": [
+        857,
+        865
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_directive_handle",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_directive_handle",
+      "lines": [
+        867,
+        874
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_directive_prefix",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_directive_prefix",
+      "lines": [
+        876,
+        883
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_directive_ignored_line",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_directive_ignored_line",
+      "lines": [
+        885,
+        897
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_anchor",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_anchor",
+      "lines": [
+        899,
+        933
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_tag",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag",
+      "lines": [
+        935,
+        974
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar",
+      "lines": [
+        976,
+        1050
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_indicators",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_indicators",
+      "lines": [
+        1052,
+        1090
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_ignored_line",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_ignored_line",
+      "lines": [
+        1092,
+        1104
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_indentation",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_indentation",
+      "lines": [
+        1106,
+        1119
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_block_scalar_breaks",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_block_scalar_breaks",
+      "lines": [
+        1121,
+        1132
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar",
+      "lines": [
+        1134,
+        1156
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar_non_spaces",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar_non_spaces",
+      "lines": [
+        1185,
+        1226
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar_spaces",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar_spaces",
+      "lines": [
+        1228,
+        1250
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_flow_scalar_breaks",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_flow_scalar_breaks",
+      "lines": [
+        1252,
+        1268
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_plain",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_plain",
+      "lines": [
+        1270,
+        1309
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_plain_spaces",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_plain_spaces",
+      "lines": [
+        1311,
+        1346
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_handle",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_handle",
+      "lines": [
+        1348,
+        1370
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_tag_uri",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_tag_uri",
+      "lines": [
+        1372,
+        1395
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_uri_escapes",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_uri_escapes",
+      "lines": [
+        1397,
+        1414
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "scanner.Scanner.scan_line_break",
+      "module": "scanner",
+      "class": "Scanner",
+      "name": "scan_line_break",
+      "lines": [
+        1416,
+        1435
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.__init__",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "__init__",
+      "lines": [
+        15,
+        25
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.open",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "open",
+      "lines": [
+        27,
+        34
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.close",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "close",
+      "lines": [
+        36,
+        41
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.serialize",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "serialize",
+      "lines": [
+        46,
+        58
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.anchor_node",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "anchor_node",
+      "lines": [
+        60,
+        72
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.generate_anchor",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "generate_anchor",
+      "lines": [
+        74,
+        76
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "serializer.Serializer.serialize_node",
+      "module": "serializer",
+      "class": "Serializer",
+      "name": "serialize_node",
+      "lines": [
+        78,
+        110
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.Token.__init__",
+      "module": "tokens",
+      "class": "Token",
+      "name": "__init__",
+      "lines": [
+        3,
+        5
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.Token.__repr__",
+      "module": "tokens",
+      "class": "Token",
+      "name": "__repr__",
+      "lines": [
+        6,
+        12
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.DirectiveToken.__init__",
+      "module": "tokens",
+      "class": "DirectiveToken",
+      "name": "__init__",
+      "lines": [
+        19,
+        23
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.StreamStartToken.__init__",
+      "module": "tokens",
+      "class": "StreamStartToken",
+      "name": "__init__",
+      "lines": [
+        33,
+        37
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.AliasToken.__init__",
+      "module": "tokens",
+      "class": "AliasToken",
+      "name": "__init__",
+      "lines": [
+        77,
+        80
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.AnchorToken.__init__",
+      "module": "tokens",
+      "class": "AnchorToken",
+      "name": "__init__",
+      "lines": [
+        84,
+        87
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.TagToken.__init__",
+      "module": "tokens",
+      "class": "TagToken",
+      "name": "__init__",
+      "lines": [
+        91,
+        94
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "tokens.ScalarToken.__init__",
+      "module": "tokens",
+      "class": "ScalarToken",
+      "name": "__init__",
+      "lines": [
+        98,
+        103
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.warnings",
+      "module": "__init__",
+      "class": null,
+      "name": "warnings",
+      "lines": [
+        30,
+        37
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.load_warning",
+      "module": "__init__",
+      "class": null,
+      "name": "load_warning",
+      "lines": [
+        43,
+        55
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.scan",
+      "module": "__init__",
+      "class": null,
+      "name": "scan",
+      "lines": [
+        58,
+        67
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.parse",
+      "module": "__init__",
+      "class": null,
+      "name": "parse",
+      "lines": [
+        69,
+        78
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.compose",
+      "module": "__init__",
+      "class": null,
+      "name": "compose",
+      "lines": [
+        80,
+        89
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.compose_all",
+      "module": "__init__",
+      "class": null,
+      "name": "compose_all",
+      "lines": [
+        91,
+        101
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.load",
+      "module": "__init__",
+      "class": null,
+      "name": "load",
+      "lines": [
+        103,
+        116
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "load_all",
+      "lines": [
+        118,
+        132
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.full_load",
+      "module": "__init__",
+      "class": null,
+      "name": "full_load",
+      "lines": [
+        134,
+        142
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.full_load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "full_load_all",
+      "lines": [
+        144,
+        152
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.safe_load",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_load",
+      "lines": [
+        154,
+        162
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.safe_load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_load_all",
+      "lines": [
+        164,
+        172
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.unsafe_load",
+      "module": "__init__",
+      "class": null,
+      "name": "unsafe_load",
+      "lines": [
+        174,
+        182
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.unsafe_load_all",
+      "module": "__init__",
+      "class": null,
+      "name": "unsafe_load_all",
+      "lines": [
+        184,
+        192
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.emit",
+      "module": "__init__",
+      "class": null,
+      "name": "emit",
+      "lines": [
+        194,
+        213
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.serialize_all",
+      "module": "__init__",
+      "class": null,
+      "name": "serialize_all",
+      "lines": [
+        215,
+        243
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.serialize",
+      "module": "__init__",
+      "class": null,
+      "name": "serialize",
+      "lines": [
+        245,
+        250
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.dump_all",
+      "module": "__init__",
+      "class": null,
+      "name": "dump_all",
+      "lines": [
+        252,
+        283
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.dump",
+      "module": "__init__",
+      "class": null,
+      "name": "dump",
+      "lines": [
+        285,
+        290
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.safe_dump_all",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_dump_all",
+      "lines": [
+        292,
+        298
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.safe_dump",
+      "module": "__init__",
+      "class": null,
+      "name": "safe_dump",
+      "lines": [
+        300,
+        306
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.add_implicit_resolver",
+      "module": "__init__",
+      "class": null,
+      "name": "add_implicit_resolver",
+      "lines": [
+        308,
+        322
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.add_path_resolver",
+      "module": "__init__",
+      "class": null,
+      "name": "add_path_resolver",
+      "lines": [
+        324,
+        337
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.add_constructor",
+      "module": "__init__",
+      "class": null,
+      "name": "add_constructor",
+      "lines": [
+        339,
+        350
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.add_multi_constructor",
+      "module": "__init__",
+      "class": null,
+      "name": "add_multi_constructor",
+      "lines": [
+        352,
+        364
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.add_representer",
+      "module": "__init__",
+      "class": null,
+      "name": "add_representer",
+      "lines": [
+        366,
+        373
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    },
+    {
+      "id": "__init__.add_multi_representer",
+      "module": "__init__",
+      "class": null,
+      "name": "add_multi_representer",
+      "lines": [
+        375,
+        382
+      ],
+      "property": false,
+      "visibility": "class-local",
+      "test_callers": 0
+    }
+  ]
+}

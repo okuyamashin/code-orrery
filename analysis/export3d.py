@@ -1,6 +1,6 @@
 """3D 表示用に、各クラスの紋章データを JS ファイルへ書き出す。
 
-使い方: python3 analysis/export3d.py diagrams/3d/data.js
+使い方: python3 analysis/export3d.py diagrams/3d/data.js [--pkg pyyaml-5.3.1/lib3/yaml --data analysis/pyyaml]
   → window.TINYDB = {classes: {Table: {...}, ...}, inherits: [...], links: [...]} を定義する（file:// でも読み込めるように JS にしている）
 """
 import ast
@@ -63,7 +63,7 @@ def export_relations(D, classes):
     for c in D.pkg.classes:
         for p in D.parents(c):
             inherits.append({"child": c, "parent": p, "typecheck": False})
-        if c in D.TYPECHECK_PARENT:
+        if D.TYPECHECK_PARENT.get(c) in D.pkg.classes:
             inherits.append({"child": c, "parent": D.TYPECHECK_PARENT[c], "typecheck": True})
 
     gates = {c: {g["name"] for g in d["gates"]} for c, d in classes.items()}
@@ -114,7 +114,8 @@ def export_relations(D, classes):
 
 def main():
     out = pathlib.Path(sys.argv[1])
-    D = Data()
+    opt = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
+    D = Data(opt("--pkg"), opt("--data"))
     data = {"classes": {c: export_class(D, c) for c in D.pkg.classes}}
     data["inherits"], data["links"] = export_relations(D, data["classes"])
     data["package"] = {"name": D.pkg.root.name,
@@ -122,9 +123,9 @@ def main():
                        "modules": {m: first_paragraph(ast.get_docstring(t)) for m, t in D.pkg.mods.items()}}
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text("window.TINYDB = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
-    t = data["classes"]["Table"]
-    print("wrote", out, len(data["classes"]), "classes;", "Table:", len(t["gates"]), "gates",
-          len(t["values"]), "values", len(t["wires"]), "wires", len(t["spokes"]), "spokes;",
+    big = max(data["classes"].values(), key=lambda c: c["lines"])
+    print("wrote", out, len(data["classes"]), "classes;", f'{big["name"]}:', len(big["gates"]), "gates",
+          len(big["values"]), "values", len(big["wires"]), "wires", len(big["spokes"]), "spokes;",
           len(data["inherits"]), "inherits", len(data["links"]), "links")
 
 

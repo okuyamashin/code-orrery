@@ -115,7 +115,7 @@ import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js"
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
 import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=7";
 import { applyBackground } from "./textures.js?v=3";
-import { makeSnapshot, copyCanvas, toast } from "./snapshot.js?v=1";
+import { makeSnapshot, copyCanvas, toast } from "./snapshot.js?v=2";
 
 const T = window.THEME, S = T.scene;
 const LO = o => Math.min(1, o * (S.lineOpacity ?? 1));
@@ -635,7 +635,8 @@ renderer.domElement.addEventListener("pointermove", e => {
 
 // ---------- 画像としてコピー（HUD なしの 4:3） ----------
 const SNAP_W = 1600, SNAP_H = 1200;
-const snap = makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground });
+const snap = makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground,
+  title: DATA.package.name, logo: "code-orrery" });
 document.getElementById("btnSnap").onclick = async () => {
   try {
     await copyCanvas(snap(SNAP_W, SNAP_H));

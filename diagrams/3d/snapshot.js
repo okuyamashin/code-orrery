@@ -47,7 +47,29 @@ function drawLabels(ctx, root, scale, rootRect) {
   }
 }
 
-export function makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground, beforeRender }) {
+// 画像の隅に文字を書く。書体・色・字間はページの見出し（#top h1）と同じにする
+function drawCorner(ctx, text, corner, scale, W, H) {
+  const h1 = document.querySelector("#top h1");
+  const cs = getComputedStyle(h1);
+  ctx.save();
+  ctx.font = `${cs.fontStyle} ${cs.fontWeight} ${parseFloat(cs.fontSize) * scale}px ${cs.fontFamily}`;
+  if ("letterSpacing" in ctx) ctx.letterSpacing = `${(parseFloat(cs.letterSpacing) || 0) * scale}px`;
+  ctx.fillStyle = cs.color;
+  // 余白は画面の見出しと同じ（左 20px・上 16px）
+  const mx = 20 * scale, my = 16 * scale;
+  if (corner === "top-left") {
+    ctx.textBaseline = "top"; ctx.textAlign = "left";
+    ctx.fillText(text, mx, my);
+  } else {
+    ctx.textBaseline = "bottom"; ctx.textAlign = "right";
+    // 字間は最後の文字の後ろにも付くので、その分だけ右へずらす
+    ctx.fillText(text, W - mx + (parseFloat(cs.letterSpacing) || 0) * scale, H - my);
+  }
+  ctx.restore();
+}
+
+export function makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground, beforeRender,
+                               title = "", logo = "code-orrery" }) {
   return function snap(W = 1600, H = 1200) {
     const pr = renderer.getPixelRatio();
     const aspect = camera.aspect;
@@ -73,6 +95,8 @@ export function makeSnapshot({ renderer, composer, camera, scene, labelRenderer,
     labelRenderer.render(scene, camera);
     const root = labelRenderer.domElement;
     drawLabels(ctx, root, scale, root.getBoundingClientRect());
+    if (title) drawCorner(ctx, title, "top-left", scale, W, H);
+    if (logo) drawCorner(ctx, logo, "bottom-right", scale, W, H);
 
     // 元に戻す
     camera.aspect = aspect;

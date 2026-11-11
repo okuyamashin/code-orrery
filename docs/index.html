@@ -70,22 +70,21 @@
   <p class="tag">A Python codebase shown as a planetary system in a 3D net space.
     <span>Python のコードを、3D のネット空間に浮かぶ惑星系として見せます。</span></p>
 
-  <section class="card">
-    <a class="shot" href="tinydb/system.html" aria-label="Open the tinydb planetary system">
-      <img src="tinydb/preview.jpg" alt="tinydb shown as a planetary system: glowing planets connected by lines of light" width="1920" height="1080">
+  <section class="card incident">
+    <a class="shot" href="php/system.html?tour=incident" aria-label="Open the PHP2Shell incident tour">
+      <img src="php/preview.jpg" alt="A slice of php-src as a planetary system, with files on the request path blinking red and amber" width="800" height="600" loading="lazy">
     </a>
     <div class="body">
-      <h2>tinydb</h2>
-      <div class="meta">14 classes · 7 modules · 51 cross-class links · tinydb 4.9.0</div>
-      <p>This is <a href="https://github.com/msiemens/tinydb" style="color:#8fc4ee">tinydb</a>, a tiny document-oriented database written in Python.
-        Open the planetary system and press <b>PLAY</b> for a narrated tour (sound on), or click any planet to fly to it.</p>
-      <p style="color:#9dbcd8;font-size:13.5px">これは Python の小さな文書指向データベース tinydb です。惑星系を開いて PLAY を押すと、読み上げ付きのツアーが始まります（音が出ます）。惑星をクリックすると、その惑星へ飛べます。</p>
+      <h2>php-src <span class="cve">⚠ PHP2Shell</span></h2>
+      <div class="meta">a slice: 14 files · 6 on the path + periphery · out of 5926 functions · php-src 8.4.27 (fixed) · October 2026</div>
+      <p>An incident tour of C, not Python. php-src has almost 6000 functions, so this is a <b>slice</b>: only the files on one request path, plus their immediate neighbours. Here a file is a planet and a function is a gate.
+        In <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618" style="color:#8fc4ee">PHP2Shell</a> (CVE-2026-109618 / CVE-2026-109619), running out of memory jumped straight out of a half-finished request; a large upload with session upload-progress could reach that state. The model is the fixed release, 8.4.27: where the bug lived blinks red, the path to it pulses amber, and what the fix hardened glows green.</p>
+      <p style="color:#9dbcd8;font-size:13.5px">今度は Python ではなく C です。php-src は関数が約 6000 個あるので、これは<b>スライス</b>です。ある一つのリクエスト経路のファイルと、その周辺だけを取り出しています。ここではファイルが惑星、関数がゲートです。
+        PHP2Shell（CVE-2026-109618 / CVE-2026-109619）は、メモリ不足のときに未完成のリクエストから一気に脱出してしまう問題で、大きなアップロードと session upload-progress を組み合わせるとその状態に届きました。モデルは修正後の 8.4.27 で、バグの在った所が赤、到達経路が琥珀、修正で固めた所が緑に光ります。</p>
       <div class="links">
-        <a class="primary" href="tinydb/system.html">Planetary system · narrated tour</a>
-        <a href="tinydb/class_sphere.html">Single class view</a>
-        <a href="tinydb/class_sphere.html?c=Query">Query</a>
-        <a href="tinydb/class_sphere.html?c=Storage">Storage</a>
-        <a href="https://youtu.be/5UfSXObGKEc">▶ Watch the video (YouTube)</a>
+        <a class="primary alert" href="php/system.html?tour=incident">⚠ Incident tour · PHP2Shell</a>
+        <a href="php/system.html">Planetary system · slice tour</a>
+        <a href="https://github.com/php/php-src/commit/506e87f">The fix (php/php-src@506e87f)</a>
       </div>
     </div>
   </section>
@@ -113,21 +112,22 @@
     </div>
   </section>
 
-  <section class="card incident">
-    <a class="shot" href="php/system.html?tour=incident" aria-label="Open the PHP2Shell incident tour">
-      <img src="php/preview.jpg" alt="A slice of php-src as a planetary system, with files on the request path blinking red and amber" width="800" height="600" loading="lazy">
+  <section class="card">
+    <a class="shot" href="tinydb/system.html" aria-label="Open the tinydb planetary system">
+      <img src="tinydb/preview.jpg" alt="tinydb shown as a planetary system: glowing planets connected by lines of light" width="1920" height="1080">
     </a>
     <div class="body">
-      <h2>php-src <span class="cve">⚠ PHP2Shell</span></h2>
-      <div class="meta">a slice: 14 files · 6 on the path + periphery · out of 5926 functions · php-src 8.4.27 (fixed) · October 2026</div>
-      <p>An incident tour of C, not Python. php-src has almost 6000 functions, so this is a <b>slice</b>: only the files on one request path, plus their immediate neighbours. Here a file is a planet and a function is a gate.
-        In <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618" style="color:#8fc4ee">PHP2Shell</a> (CVE-2026-109618 / CVE-2026-109619), running out of memory jumped straight out of a half-finished request; a large upload with session upload-progress could reach that state. The model is the fixed release, 8.4.27: where the bug lived blinks red, the path to it pulses amber, and what the fix hardened glows green.</p>
-      <p style="color:#9dbcd8;font-size:13.5px">今度は Python ではなく C です。php-src は関数が約 6000 個あるので、これは<b>スライス</b>です。ある一つのリクエスト経路のファイルと、その周辺だけを取り出しています。ここではファイルが惑星、関数がゲートです。
-        PHP2Shell（CVE-2026-109618 / CVE-2026-109619）は、メモリ不足のときに未完成のリクエストから一気に脱出してしまう問題で、大きなアップロードと session upload-progress を組み合わせるとその状態に届きました。モデルは修正後の 8.4.27 で、バグの在った所が赤、到達経路が琥珀、修正で固めた所が緑に光ります。</p>
+      <h2>tinydb</h2>
+      <div class="meta">14 classes · 7 modules · 51 cross-class links · tinydb 4.9.0</div>
+      <p>This is <a href="https://github.com/msiemens/tinydb" style="color:#8fc4ee">tinydb</a>, a tiny document-oriented database written in Python.
+        Open the planetary system and press <b>PLAY</b> for a narrated tour (sound on), or click any planet to fly to it.</p>
+      <p style="color:#9dbcd8;font-size:13.5px">これは Python の小さな文書指向データベース tinydb です。惑星系を開いて PLAY を押すと、読み上げ付きのツアーが始まります（音が出ます）。惑星をクリックすると、その惑星へ飛べます。</p>
       <div class="links">
-        <a class="primary alert" href="php/system.html?tour=incident">⚠ Incident tour · PHP2Shell</a>
-        <a href="php/system.html">Planetary system · slice tour</a>
-        <a href="https://github.com/php/php-src/commit/506e87f">The fix (php/php-src@506e87f)</a>
+        <a class="primary" href="tinydb/system.html">Planetary system · narrated tour</a>
+        <a href="tinydb/class_sphere.html">Single class view</a>
+        <a href="tinydb/class_sphere.html?c=Query">Query</a>
+        <a href="tinydb/class_sphere.html?c=Storage">Storage</a>
+        <a href="https://youtu.be/5UfSXObGKEc">▶ Watch the video (YouTube)</a>
       </div>
     </div>
   </section>

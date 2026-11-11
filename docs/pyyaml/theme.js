@@ -171,6 +171,44 @@
     },
   };
 
+  // paper を土台に、球へ装甲板の模様を半透明で貼った機械的な製図
+  VARIANTS.mech = {
+    label: "mech (drafting + plating)",
+    fontsUrl: "https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;600&display=swap",
+    font: { ui: '"Chakra Petch", -apple-system, sans-serif', mono: '"IBM Plex Mono", Menlo, monospace', display: '"Chakra Petch", -apple-system, sans-serif' },
+    css: {
+      bg: "#e9e7df", fg: "#202833", muted: "#646c78", line: "#a2a9b3",
+      title: "#11161d", hi: "#11161d", accent: "#e0601c",
+      btn: "rgba(246, 245, 240, .92)", btnSolid: "#f6f5f0", panel: "rgba(246, 245, 240, .94)",
+      playBg: "rgba(246, 245, 240, .94)", playHover: "rgba(255, 236, 222, .96)",
+      glow: "rgba(224, 96, 28, .22)", glowIn: "rgba(224, 96, 28, .06)",
+      capBg: "rgba(246, 245, 240, .94)", capLine: "#8a929e", capGlow: "rgba(32, 40, 51, .14)",
+      capTitle: "#11161d", capSrc: "#646c78", capText: "#202833",
+      mod: "#7f8794", shadow: "#e9e7df",
+      lblPublic: "#11161d", lblInternal: "#2f4a5c", lblPrivate: "#6a7280",
+      vlbl: "#244a70", vlblMut: "#c2410c", coreN: "#11161d", coreS: "#3d4a5c",
+    },
+    scene: {
+      bg: 0xe9e7df, bgCss: "#e9e7df", bgPattern: "drafting",
+      patternInk: "#2a3442", patternAccent: "#e0601c",
+      shellPattern: "plating", shellPatternOpacity: .5,
+      corePattern: "gear", corePatternOpacity: .75,
+      stars: 0x6a7488, starOpacity: .5, lineOpacity: 2.2,
+      grid: 0x7a8494, gridOpacity: 1.3, shell: 0x4a5566, shellOpacity: .5,
+      coreInner: 0xeceae3, coreRim: 0x2b3442,
+      gateFill: 0xf4f2ec, valueFill: 0xe3e6ea, valueFillMut: 0xf6dccb,
+      wirePulse: 0xe0601c, linkPulse: 0x202833,
+      halo: [[0, "rgba(42,52,66,0.06)"], [0.4, "rgba(42,52,66,0.02)"], [1, "rgba(42,52,66,0)"]],
+      haloAdditive: false, haloOpacity: 1,
+      bloom: null, toneMapping: "none",
+    },
+    vis: { public: 0x1f2a38, internal: 0x3d5a6e, private: 0x7d8794 },
+    read: 0x2f5f8a, write: 0xd9531e, wire: 0x48586c,
+    link: { call: 0x1f2a38, ctor: 0x2f7a4a, impl: 0xb83a5a, super: 0x34609e,
+            override: 0x6a4c9a, read: 0x2f6f9a, write: 0xd9531e, hold: 0x2f7c7c },
+    conduit: { outer: 0xb9c0c9, mid: 0x5b6878, inner: 0x1f2a38, flow: 0xe0601c, typecheck: 0xd9531e },
+  };
+
   const merge = (a, b) => {
     const o = { ...a };
     for (const [k, v] of Object.entries(b || {})) {

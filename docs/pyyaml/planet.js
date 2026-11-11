@@ -2,6 +2,7 @@
 // class_sphere.html（1クラス）と system.html（惑星系）の両方から使う。
 import * as THREE from "three";
 import { CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+import { sphereTexture } from "./textures.js?v=2";
 
 // 色は theme.js（window.THEME）から取る。読み込まれていなければ元の配色
 const T = window.THEME || null;
@@ -122,6 +123,17 @@ export function buildPlanet(C) {
 
   const shell = new THREE.Mesh(new THREE.SphereGeometry(R, 48, 32), basic(S.shell, Math.min(1, .035 * S.shellOpacity), { wireframe: true }));
   group.add(shell);
+  // テーマによっては外殻に模様を貼る（半透明。ゲートは同じ半径の上に重なる）
+  const skin = (pattern, radius, opacity, segs) => {
+    const map = pattern && sphereTexture(pattern, S.patternInk, S.patternAccent);
+    if (!map) return null;
+    const m = new THREE.Mesh(new THREE.SphereGeometry(radius, segs, segs / 2),
+      new THREE.MeshBasicMaterial({ map, transparent: true, opacity, depthWrite: false, side: THREE.FrontSide }));
+    m.renderOrder = -1;
+    return m;
+  };
+  const shellSkin = skin(S.shellPattern, R * 0.995, S.shellPatternOpacity ?? .5, 64);
+  if (shellSkin) group.add(shellSkin);
 
   // コア
   const core = new THREE.Group();
@@ -132,6 +144,8 @@ export function buildPlanet(C) {
   const tick = new THREE.Mesh(new THREE.TorusGeometry(coreR + 14, 2, 6, 120), basic(S.coreRim, .22));
   tick.rotation.x = Math.PI / 2;
   core.add(tick);
+  const coreSkin = skin(S.corePattern, coreR * 1.02, S.corePatternOpacity ?? .6, 48);
+  if (coreSkin) core.add(coreSkin);
   group.add(core);
   const coreLabel = label("core-lbl",
     `<div class="n">${C.name}</div><div class="s">${C.lines} lines · ${C.gates.length} gates · ${C.values.length} values</div>`,

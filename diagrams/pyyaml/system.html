@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="PyYAML 5.3.1's Python source code as a planetary system in a 3D net space. Press PLAY for a narrated tour.">
 <meta name="twitter:image" content="https://okuyamashin.github.io/code-orrery/pyyaml/preview.jpg">
 <meta name="twitter:image:alt" content="Glowing planets connected by lines of light: the classes of PyYAML 5.3.1">
-<script src="theme.js?v=2"></script>
+<script src="theme.js?v=4"></script>
 <style>
   /* 色と書体は theme.js が CSS 変数として当てる */
   html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); overflow: hidden;
@@ -102,6 +102,7 @@
   <button id="btnLabels" class="on">labels</button>
   <button id="btnRotate" class="on">rotate</button>
   <a class="btn" id="lnkSingle" href="class_sphere.html">single</a>
+  <button id="btnSnap" title="Copy a 1600×1200 image without the HUD">⧉ snap</button>
 </div>
 <div id="info" class="hud"></div>
 <div id="play" class="hud">
@@ -133,7 +134,9 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
-import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=6";
+import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=7";
+import { applyBackground } from "./textures.js?v=3";
+import { makeSnapshot, copyCanvas, toast } from "./snapshot.js?v=3";
 
 const T = window.THEME, S = T.scene;
 const LO = o => Math.min(1, o * (S.lineOpacity ?? 1));
@@ -173,6 +176,7 @@ app.appendChild(labelRenderer.domElement);
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(S.bg);
 scene.fog = new THREE.FogExp2(S.bg, 0.00008);
+const redrawBackground = applyBackground(scene, S, renderer);
 const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 80000);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -721,6 +725,18 @@ renderer.domElement.addEventListener("pointermove", e => {
   if (G === p.hovered || tour) return;  // ツアー中はツアーが選んだゲートを光らせたままにする
   highlightGate(focused, G);
 });
+
+// ---------- 画像としてコピー（HUD なしの 4:3） ----------
+const SNAP_W = 1600, SNAP_H = 1200;
+const snap = makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground,
+  title: "PyYAML 5.3.1", logo: "code-orrery" });
+document.getElementById("btnSnap").onclick = async () => {
+  try {
+    await copyCanvas(snap(SNAP_W, SNAP_H));
+    toast(`Copied ${SNAP_W}×${SNAP_H} image to clipboard`);
+  } catch (e) { toast(`Copy failed: ${e.message}`, 4000); }
+};
+window.__snap = snap; // 確かめる用
 
 addEventListener("resize", () => {
   camera.aspect = innerWidth / innerHeight;

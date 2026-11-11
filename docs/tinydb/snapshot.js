@@ -31,6 +31,18 @@ function drawLabels(ctx, root, scale, rootRect) {
     range.selectNodeContents(node);
     const r = range.getBoundingClientRect();
     if (!r.width) continue;
+    // CSS の ::before で付けた文字（PyYAML の ⚠ や ✓ など）は文字のノードにないので、ここで前に足す
+    let pre = "", preW = 0;
+    if (el.firstChild === node) {
+      const c = getComputedStyle(el, "::before").content;
+      const m = /^"(.*)"$/.exec(c || "");
+      if (m) {
+        pre = m[1];
+        const probe = document.createElement("canvas").getContext("2d");
+        probe.font = `${cs.fontStyle} ${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+        preW = probe.measureText(pre).width;
+      }
+    }
     ctx.save();
     ctx.globalAlpha = alpha;
     ctx.font = `${cs.fontStyle} ${cs.fontWeight} ${parseFloat(cs.fontSize) * scale}px ${cs.fontFamily}`;
@@ -39,10 +51,11 @@ function drawLabels(ctx, root, scale, rootRect) {
     ctx.textBaseline = "middle";
     const sh = shadowOf(cs);
     if (sh) { ctx.shadowColor = sh.color; ctx.shadowBlur = sh.blur * scale; ctx.shadowOffsetX = sh.x * scale; ctx.shadowOffsetY = sh.y * scale; }
-    const x = (r.left - rootRect.left) * scale, y = (r.top + r.height / 2 - rootRect.top) * scale;
+    // ::before の文字は本文の左に並ぶので、その幅だけ左から書き始める
+    const x = (r.left - preW - rootRect.left) * scale, y = (r.top + r.height / 2 - rootRect.top) * scale;
     // 影を濃くするため 2 回描く（画面の text-shadow の重ねがけに近づける）
-    ctx.fillText(text, x, y);
-    if (sh) ctx.fillText(text, x, y);
+    ctx.fillText(pre + text, x, y);
+    if (sh) ctx.fillText(pre + text, x, y);
     ctx.restore();
   }
 }

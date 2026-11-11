@@ -112,6 +112,10 @@ def main():
     ap.add_argument("--wpm", type=int, default=170, help="読み上げの速さ（1 分あたりの語数）")
     ap.add_argument("--start", type=float, default=0, help="書き出す範囲の開始（秒、試し書き用）")
     ap.add_argument("--duration", type=float, default=None, help="書き出す長さ（秒、省略で最後まで）")
+    ap.add_argument("--page", default="3d/system.html",
+                    help="配信元 diagrams/ からの表示ページのパス（例: php/system.html）")
+    ap.add_argument("--tour", default="normal", choices=["normal", "incident"],
+                    help="normal = ライブラリ/PLAY のツアー / incident = インシデントツアー")
     ap.add_argument("--out", default=str(ROOT / "diagrams/video/tinydb_tour.mp4"))
     ap.add_argument("--headed", action="store_true", help="ブラウザのウィンドウを表示して描く（GPU が使える）")
     ap.add_argument("--plan-only", action="store_true", help="台本・字幕・チャプターだけ作り、映像は描かない")
@@ -123,7 +127,8 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     work = pathlib.Path(tempfile.mkdtemp(prefix="tour_"))
     httpd = serve(SITE)
-    url = f"http://127.0.0.1:{httpd.server_address[1]}/3d/system.html?render=1"
+    query = "render=1" + ("&tour=incident" if args.tour == "incident" else "")
+    url = f"http://127.0.0.1:{httpd.server_address[1]}/{args.page.lstrip('/')}?{query}"
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=not args.headed,

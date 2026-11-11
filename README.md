@@ -10,6 +10,14 @@ The first target is [tinydb](https://github.com/msiemens/tinydb).
 
 **Video:** [A 3D tour of tinydb on YouTube](https://youtu.be/5UfSXObGKEc) (3:28, English narration, English and Japanese subtitles)
 
+### Incident view: PyYAML CVE-2020-1747
+
+The second target is [PyYAML](https://github.com/yaml/pyyaml) and a real vulnerability: in PyYAML 5.3, loading an untrusted document with `full_load` could run arbitrary code ([CVE-2020-1747](https://nvd.nist.gov/vuln/detail/CVE-2020-1747), fixed in 5.3.1 in March 2020). The model is the fixed release. The method that was the problem blinks red, the attack path pulses amber, and the methods the fix added glow green. A separate **INCIDENT** tour explains the library, the incident, the problem and the fix.
+
+**Incident tour:** <https://okuyamashin.github.io/code-orrery/pyyaml/system.html?tour=incident> (press **⚠ INCIDENT**)
+
+**Video:** [How a YAML File Could Run Code: PyYAML CVE-2020-1747 Visualized in 3D](https://youtu.be/0nHSaGo6n2M)
+
 ## Quick start
 
 ```bash

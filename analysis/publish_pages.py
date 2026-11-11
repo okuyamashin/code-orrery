@@ -12,7 +12,7 @@ import subprocess
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / "diagrams" / "3d"
-FILES = ["system.html", "class_sphere.html", "planet.js", "data.js", "narration.js"]
+FILES = ["system.html", "class_sphere.html", "planet.js", "theme.js", "textures.js", "snapshot.js", "data.js", "narration.js"]
 
 
 def main():

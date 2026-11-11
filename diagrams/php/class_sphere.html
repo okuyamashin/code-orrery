@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Class Sphere</title>
+<!-- X（Twitter）などで共有したときのカード -->
+<meta name="description" content="One class of PyYAML 5.3.1 as a sphere of gates in a 3D net space.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="code-orrery">
+<meta property="og:title" content="PyYAML 5.3.1 — Class Sphere · code-orrery">
+<meta property="og:description" content="One class of PyYAML 5.3.1 as a sphere of gates in a 3D net space.">
+<meta property="og:url" content="https://okuyamashin.github.io/code-orrery/pyyaml/class_sphere.html">
+<meta property="og:image" content="https://okuyamashin.github.io/code-orrery/pyyaml/preview.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://okuyamashin.github.io/code-orrery/pyyaml/preview.jpg">
+<script src="theme.js?v=4"></script>
+<style>
+  /* 色と書体は theme.js が CSS 変数として当てる */
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); overflow: hidden;
+    font-family: var(--font-ui); }
+  #app { position: fixed; inset: 0; }
+  .hud { position: fixed; z-index: 10; pointer-events: none; }
+  .hud * { pointer-events: auto; }
+  #top { top: 16px; left: 20px; }
+  #top h1 { margin: 0 0 6px; font: 700 18px var(--font-display); letter-spacing: 2px; color: var(--title); }
+  #top .sub { font: 12px var(--font-mono); color: var(--muted); }
+  #controls { top: 16px; right: 20px; display: flex; gap: 8px; align-items: center; font-size: 12px; }
+  select, button, a.btn { background: var(--btn-solid); color: var(--fg); border: 1px solid var(--line); border-radius: 4px;
+    padding: 5px 8px; font: 12px var(--font-mono); text-decoration: none; }
+  button.on { border-color: var(--accent); color: var(--hi); }
+  #legend { left: 20px; bottom: 16px; font-size: 11.5px; color: var(--muted); line-height: 1.7; max-width: 720px; }
+  #legend b { font-weight: 600; }
+  #info { right: 20px; bottom: 16px; width: 280px; font: 12px var(--font-mono); color: var(--fg);
+    background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px;
+    display: none; }
+  #info h2 { margin: 0 0 6px; font-size: 14px; color: var(--hi); }
+  #info .k { color: var(--muted); }
+  @media (max-width: 640px) { #legend { display: none; } #controls { top: auto; bottom: 16px; right: 12px; } }
+</style>
+<style id="labelcss"></style>
+</head>
+<body>
+<div id="app"></div>
+<div id="top" class="hud"><h1 id="title">—</h1><div class="sub" id="subtitle"></div></div>
+<div id="controls" class="hud">
+  <a class="btn" id="lnkSystem" href="system.html">system</a>
+  <select id="cls" aria-label="クラス"></select>
+  <button id="btnLabels" class="on">labels</button>
+  <button id="btnRotate" class="on">rotate</button>
+  <button id="btnSnap" title="Copy a 1600×1200 image without the HUD">⧉ snap</button>
+</div>
+<div id="legend" class="hud">
+  <b>コア</b> = クラス（行数で大きさ）／ 球 = フィールド、八面体 = property、立方体 = クラス変数、琥珀色 = __init__ 以外でも書き換わる<br>
+  <b>ゲート</b> = メソッド（球面上にソース順で上から並ぶ。行数で大きさ、10 行ごとに目盛り 1 本）／ 切れ目のある明るいリング = public、青緑 = internal、暗い青 = class-local、二重リング = 特殊メソッド<br>
+  <b>外側の弧</b> = 同じクラス内の呼び出し（光の粒が流れる向き）／ <b>内向きの線</b> = 値の参照（水色 = 読み、琥珀色 = 書き）<br>
+  ドラッグで回転、ホイールで拡大、ゲートに触れると関係する線だけが光る<br>
+  <b>アラート</b> = <span style="color:#ff6b7d">⚠ 赤の点滅 = 問題の箇所</span>／<span style="color:#ffc070">⚠ 琥珀色 = 攻撃の通り道</span>／<span style="color:#7dffc0">✓ 緑 = 修正で加わった・変わった箇所</span>
+</div>
+<div id="info" class="hud"></div>
+
+<script src="data.js"></script>
+<script src="alerts.js"></script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
+import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
+import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=7";
+import { applyBackground } from "./textures.js?v=3";
+import { makeSnapshot, copyCanvas, toast } from "./snapshot.js?v=3";
+
+const T = window.THEME, S = T.scene;
+document.getElementById("labelcss").textContent = LABEL_CSS;
+T.mountPicker(document.getElementById("controls"));
+T.carry(document.getElementById("lnkSystem"));
+const DATA = window.TINYDB;
+
+const app = document.getElementById("app");
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.toneMapping = S.toneMapping === "none" ? THREE.NoToneMapping : THREE.ACESFilmicToneMapping;
+app.appendChild(renderer.domElement);
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(innerWidth, innerHeight);
+Object.assign(labelRenderer.domElement.style, { position: "fixed", inset: "0", pointerEvents: "none" });
+app.appendChild(labelRenderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(S.bg);
+scene.fog = new THREE.FogExp2(S.bg, 0.00035);
+const redrawBackground = applyBackground(scene, S, renderer);
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 20000);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.autoRotate = true;
+controls.autoRotateSpeed = 0.45;
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+if (S.bloom) composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), ...S.bloom));
+composer.addPass(new OutputPass());
+
+{ // 星
+  const n = 2500, pos = new Float32Array(n * 3);
+  for (let i = 0; i < n; i++) {
+    const v = new THREE.Vector3().randomDirection().multiplyScalar(2500 + Math.random() * 4000);
+    pos.set([v.x, v.y, v.z], i * 3);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: S.stars, size: 2.2, transparent: true, opacity: .55 * S.starOpacity, fog: false })));
+}
+
+let planet = null, picker = null, grid = null;
+
+function fitCamera(radius) {
+  const vf = THREE.MathUtils.degToRad(camera.fov) / 2;
+  const hf = Math.atan(Math.tan(vf) * camera.aspect);
+  const dist = radius / Math.sin(Math.min(vf, hf));
+  camera.position.copy(new THREE.Vector3(0.3, 0.25, 1).normalize().multiplyScalar(dist));
+}
+
+function build(name) {
+  if (planet) {
+    planet.group.traverse(o => { if (o.isCSS2DObject) o.element.remove(); o.geometry?.dispose?.(); });
+    scene.remove(planet.group);
+    scene.remove(grid);
+  }
+  const C = DATA.classes[name];
+  planet = buildPlanet(C);
+  picker = gatePicker(planet);
+  scene.add(planet.group);
+  grid = new THREE.Mesh(new THREE.SphereGeometry(planet.R * 2.6, 24, 16), basic(S.grid, Math.min(1, .07 * S.gridOpacity), { wireframe: true, fog: false }));
+  scene.add(grid);
+  fitCamera(planet.R * 1.75);
+  controls.target.set(0, 0, 0);
+  controls.update();
+  document.getElementById("title").textContent = C.name;
+  const A = window.ALERTS?.classes?.[C.name];
+  document.getElementById("subtitle").textContent = `yaml.${C.module}` + (C.bases.length ? `  ·  extends ${C.bases.join(", ")}` : "") +
+    (A ? `  ·  ${A.role === "fix" ? "✓" : "⚠"} ${window.ALERTS.id} (${A.role})` : "");
+  setHover(null);
+}
+
+const sel = document.getElementById("cls");
+for (const name of Object.keys(DATA.classes).sort((a, b) => DATA.classes[b].lines - DATA.classes[a].lines)) {
+  const o = document.createElement("option");
+  o.value = name;
+  o.textContent = `${name} (${DATA.classes[name].lines})`;
+  sel.appendChild(o);
+}
+const asked = new URLSearchParams(location.search).get("c");
+// 指定がない・見つからないときは一番大きいクラス
+const initial = DATA.classes[asked] ? asked
+  : Object.keys(DATA.classes).reduce((a, b) => DATA.classes[b].lines > DATA.classes[a].lines ? b : a);
+sel.value = DATA.classes[initial] ? initial : "Table";
+sel.onchange = () => build(sel.value);
+
+const btnLabels = document.getElementById("btnLabels");
+btnLabels.onclick = () => {
+  btnLabels.classList.toggle("on");
+  document.body.classList.toggle("hide-labels", !btnLabels.classList.contains("on"));
+};
+const btnRotate = document.getElementById("btnRotate");
+btnRotate.onclick = () => { controls.autoRotate = !controls.autoRotate; btnRotate.classList.toggle("on", controls.autoRotate); };
+
+const info = document.getElementById("info");
+function setHover(G) {
+  planet.setHover(G);
+  if (!G) { info.style.display = "none"; return; }
+  const C = planet.C;
+  const out = C.wires.filter(w => w.from === G.data.name).map(w => w.to);
+  const inn = C.wires.filter(w => w.to === G.data.name).map(w => w.from);
+  const vals = C.spokes.filter(s => s.gate === G.data.name);
+  info.style.display = "block";
+  info.innerHTML = `<h2>${G.data.name}()</h2>
+    <div><span class="k">lines</span> ${G.data.lines} · <span class="k">${G.data.vis}</span>${G.data.dunder ? " · dunder" : ""}${G.data.abstract ? " · abstract" : ""}</div>
+    <div><span class="k">calls →</span> ${out.join(", ") || "—"}</div>
+    <div><span class="k">called by ←</span> ${inn.join(", ") || "—"}</div>
+    <div><span class="k">values</span> ${vals.map(s => (s.op === "write" ? "✎" : "") + s.value).join(", ") || "—"}</div>` +
+    (G.alert ? `<div style="margin-top:6px;color:${{ problem: "#ff6b7d", path: "#ffc070", fix: "#7dffc0" }[G.alert.role]}">` +
+      `${G.alert.role === "fix" ? "✓" : "⚠"} ${window.ALERTS.id} · ${G.alert.role}<br>${G.alert.note}</div>` : "");
+}
+
+const ray = new THREE.Raycaster(), mouse = new THREE.Vector2();
+renderer.domElement.addEventListener("pointermove", e => {
+  if (!planet) return;
+  mouse.set(e.clientX / innerWidth * 2 - 1, -e.clientY / innerHeight * 2 + 1);
+  ray.setFromCamera(mouse, camera);
+  const hit = ray.intersectObjects(picker.discs, false)[0];
+  const G = hit ? picker.find(hit.object) : null;
+  if (G !== planet.hovered) setHover(G);
+});
+
+// ---------- 画像としてコピー（HUD なしの 4:3） ----------
+const SNAP_W = 1600, SNAP_H = 1200;
+const snap = makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground,
+  title: "PyYAML 5.3.1", logo: "code-orrery" });
+document.getElementById("btnSnap").onclick = async () => {
+  try {
+    await copyCanvas(snap(SNAP_W, SNAP_H));
+    toast(`Copied ${SNAP_W}×${SNAP_H} image to clipboard`);
+  } catch (e) { toast(`Copy failed: ${e.message}`, 4000); }
+};
+window.__snap = snap; // 確かめる用
+
+addEventListener("resize", () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+  labelRenderer.setSize(innerWidth, innerHeight);
+  composer.setSize(innerWidth, innerHeight);
+});
+
+const clock = new THREE.Clock();
+function tick() {
+  const t = clock.getElapsedTime();
+  controls.update();
+  if (planet) { planet.update(t, camera); grid.rotation.y = t * 0.01; }
+  composer.render();
+  labelRenderer.render(scene, camera);
+  requestAnimationFrame(tick);
+}
+build(sel.value);
+tick();
+</script>
+</body>
+</html>

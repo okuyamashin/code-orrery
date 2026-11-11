@@ -1,0 +1,1041 @@
+{
+ "title": "PHP2Shell (CVE-2026-109618 / CVE-2026-109619) \u2014 fixed in 8.4.27",
+ "graph": "analysis/php/callgraph-8.4.27.json",
+ "forward_hops": 1,
+ "reverse_hops": 1,
+ "seeds": [
+  "main/rfc1867.c::rfc1867_post_handler",
+  "ext/session/session.c::php_session_rfc1867_callback",
+  "ext/session/session.c::php_session_rfc1867_update",
+  "ext/session/session.c::php_session_rfc1867_cleanup",
+  "ext/session/session.c::php_session_initialize",
+  "ext/session/session.c::ps_encode_php_serialize",
+  "ext/session/session.c::ps_decode_php_serialize",
+  "ext/session/session.c::ps_decode_php",
+  "main/SAPI.c::sapi_handle_post",
+  "main/main.c::php_request_startup",
+  "main/main.c::php_request_shutdown",
+  "Zend/zend_alloc.c::zend_handle_delayed_oom",
+  "Zend/zend_alloc.c::_emalloc",
+  "Zend/zend.c::_zend_bailout"
+ ],
+ "files": {
+  "Zend/zend_alloc.c": {
+   "functions": [
+    {
+     "key": "Zend/zend_alloc.c::_emalloc",
+     "name": "_emalloc",
+     "line": 2874,
+     "lines": 9,
+     "dist": 0,
+     "role": "problem",
+     "calls_to": [
+      "Zend/zend_alloc.c::zend_mm_alloc_heap"
+     ]
+    },
+    {
+     "key": "Zend/zend_alloc.c::zend_handle_delayed_oom",
+     "name": "zend_handle_delayed_oom",
+     "line": 3642,
+     "lines": 53,
+     "dist": 0,
+     "role": "fix",
+     "calls_to": [
+      "Zend/zend.c::zend_error_zstr_at",
+      "Zend/zend_alloc.c::zend_mm_oom_info_dtor",
+      "Zend/zend_string.h::zend_string_init",
+      "Zend/zend_string.h::zend_string_release"
+     ]
+    },
+    {
+     "key": "Zend/zend_alloc.c::zend_mm_oom_info_dtor",
+     "name": "zend_mm_oom_info_dtor",
+     "line": 476,
+     "lines": 11,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_release"
+     ]
+    },
+    {
+     "key": "Zend/zend_alloc.c::zend_mm_alloc_heap",
+     "name": "zend_mm_alloc_heap",
+     "line": 1603,
+     "lines": 53,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_alloc.c::_safe_emalloc",
+     "name": "_safe_emalloc",
+     "line": 2932,
+     "lines": 6,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_alloc.c::_emalloc"
+     ]
+    },
+    {
+     "key": "Zend/zend_alloc.c::_ecalloc",
+     "name": "_ecalloc",
+     "line": 2960,
+     "lines": 10,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_alloc.c::_emalloc"
+     ]
+    },
+    {
+     "key": "Zend/zend_alloc.c::_estrdup",
+     "name": "_estrdup",
+     "line": 2971,
+     "lines": 14,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_alloc.c::_emalloc"
+     ]
+    },
+    {
+     "key": "Zend/zend_alloc.c::_estrndup",
+     "name": "_estrndup",
+     "line": 2986,
+     "lines": 13,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_alloc.c::_emalloc"
+     ]
+    }
+   ],
+   "min_dist": 0,
+   "tier": "core"
+  },
+  "ext/session/session.c": {
+   "functions": [
+    {
+     "key": "ext/session/session.c::php_session_initialize",
+     "name": "php_session_initialize",
+     "line": 419,
+     "lines": 99,
+     "dist": 0,
+     "role": "fix",
+     "calls_to": [
+      "Zend/zend.c::zend_throw_error",
+      "Zend/zend_execute_API.c::zend_get_executed_filename_ex",
+      "Zend/zend_execute_API.c::zend_get_executed_lineno",
+      "Zend/zend_string.h::zend_string_copy",
+      "Zend/zend_string.h::zend_string_release_ex",
+      "ext/session/session.c::php_session_abort",
+      "ext/session/session.c::php_session_cleanup_filename",
+      "ext/session/session.c::php_session_decode",
+      "ext/session/session.c::php_session_gc",
+      "ext/session/session.c::php_session_track_init",
+      "main/main.c::php_error_docref"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::ps_encode_php_serialize",
+     "name": "ps_encode_php_serialize",
+     "line": 986,
+     "lines": 12,
+     "dist": 0,
+     "role": null,
+     "calls_to": [
+      "ext/session/session.c::php_session_serialize_init"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::ps_decode_php_serialize",
+     "name": "ps_decode_php_serialize",
+     "line": 1000,
+     "lines": 30,
+     "dist": 0,
+     "role": "path",
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_update_ind",
+      "Zend/zend_string.h::zend_string_release_ex",
+      "ext/session/session.c::php_session_unserialize_init"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::ps_decode_php",
+     "name": "ps_decode_php",
+     "line": 1133,
+     "lines": 47,
+     "dist": 0,
+     "role": "path",
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_init",
+      "Zend/zend_string.h::zend_string_release_ex",
+      "ext/session/session.c::php_session_normalize_vars",
+      "ext/session/session.c::php_session_unserialize_init",
+      "ext/session/session.c::php_set_session_var"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_session_rfc1867_update",
+     "name": "php_session_rfc1867_update",
+     "line": 3202,
+     "lines": 38,
+     "dist": 0,
+     "role": "path",
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_update",
+      "ext/session/session.c::php_check_cancel_upload",
+      "ext/session/session.c::php_session_flush",
+      "ext/session/session.c::php_session_initialize"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_session_rfc1867_cleanup",
+     "name": "php_session_rfc1867_cleanup",
+     "line": 3241,
+     "lines": 15,
+     "dist": 0,
+     "role": "path",
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_del",
+      "ext/session/session.c::php_session_flush",
+      "ext/session/session.c::php_session_initialize"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_session_rfc1867_callback",
+     "name": "php_session_rfc1867_callback",
+     "line": 3257,
+     "lines": 197,
+     "dist": 0,
+     "role": "path",
+     "calls_to": [
+      "Zend/zend_API.c::add_assoc_bool_ex",
+      "Zend/zend_API.c::add_assoc_long_ex",
+      "Zend/zend_API.c::add_assoc_null_ex",
+      "Zend/zend_API.c::add_assoc_string_ex",
+      "Zend/zend_API.c::add_assoc_zval_ex",
+      "Zend/zend_execute_API.c::zend_delete_global_variable",
+      "Zend/zend_hash.c::zend_hash_str_find",
+      "Zend/zend_smart_str.h::smart_str_0",
+      "Zend/zend_smart_str.h::smart_str_appendl",
+      "Zend/zend_smart_str.h::smart_str_appends",
+      "Zend/zend_smart_str.h::smart_str_free",
+      "Zend/zend_string.h::zend_string_init",
+      "Zend/zend_string.h::zend_string_release_ex",
+      "ext/session/session.c::php_rinit_session",
+      "ext/session/session.c::php_rinit_session_globals",
+      "ext/session/session.c::php_rshutdown_session_globals",
+      "ext/session/session.c::php_session_rfc1867_cleanup",
+      "ext/session/session.c::php_session_rfc1867_early_find_sid",
+      "ext/session/session.c::php_session_rfc1867_update",
+      "main/SAPI.c::sapi_get_request_time"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_rinit_session_globals",
+     "name": "php_rinit_session_globals",
+     "line": 108,
+     "lines": 15,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_cleanup_filename",
+     "name": "php_session_cleanup_filename",
+     "line": 125,
+     "lines": 8,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_release"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_rshutdown_session_globals",
+     "name": "php_rshutdown_session_globals",
+     "line": 136,
+     "lines": 33,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_release",
+      "Zend/zend_string.h::zend_string_release_ex",
+      "ext/session/session.c::php_session_cleanup_filename"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_set_session_var",
+     "name": "php_set_session_var",
+     "line": 208,
+     "lines": 9,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_update"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_session_track_init",
+     "name": "php_session_track_init",
+     "line": 236,
+     "lines": 17,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_execute_API.c::zend_delete_global_variable",
+      "Zend/zend_hash.c::zend_hash_update_ind",
+      "Zend/zend_string.h::zend_string_release_ex"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_session_decode",
+     "name": "php_session_decode",
+     "line": 274,
+     "lines": 15,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_gc",
+     "name": "php_session_gc",
+     "line": 389,
+     "lines": 29,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_normalize_vars",
+     "name": "php_session_normalize_vars",
+     "line": 578,
+     "lines": 14,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_unserialize_init",
+     "name": "php_session_unserialize_init",
+     "line": 970,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_serialize_init",
+     "name": "php_session_serialize_init",
+     "line": 978,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_flush",
+     "name": "php_session_flush",
+     "line": 1767,
+     "lines": 9,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_abort",
+     "name": "php_session_abort",
+     "line": 1783,
+     "lines": 11,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_session_reset",
+     "name": "php_session_reset",
+     "line": 1796,
+     "lines": 8,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "ext/session/session.c::php_session_initialize"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_rinit_session",
+     "name": "php_rinit_session",
+     "line": 2923,
+     "lines": 35,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "ext/session/session.c::php_rinit_session_globals"
+     ]
+    },
+    {
+     "key": "ext/session/session.c::php_session_rfc1867_early_find_sid",
+     "name": "php_session_rfc1867_early_find_sid",
+     "line": 3169,
+     "lines": 16,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "ext/session/session.c::php_check_cancel_upload",
+     "name": "php_check_cancel_upload",
+     "line": 3186,
+     "lines": 15,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_str_find"
+     ]
+    }
+   ],
+   "min_dist": 0,
+   "tier": "core"
+  },
+  "main/rfc1867.c": {
+   "functions": [
+    {
+     "key": "main/rfc1867.c::rfc1867_post_handler",
+     "name": "rfc1867_post_handler",
+     "line": 688,
+     "lines": 780,
+     "dist": 0,
+     "role": "problem",
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_destroy",
+      "Zend/zend_llist.c::zend_llist_clean",
+      "Zend/zend_llist.c::zend_llist_destroy",
+      "Zend/zend_llist.c::zend_llist_init",
+      "Zend/zend_string.h::zend_string_release_ex",
+      "main/rfc1867.c::add_protected_variable",
+      "main/rfc1867.c::multipart_buffer_eof",
+      "main/rfc1867.c::multipart_buffer_headers",
+      "main/rfc1867.c::multipart_buffer_new",
+      "main/rfc1867.c::multipart_buffer_read",
+      "main/rfc1867.c::multipart_buffer_read_body",
+      "main/rfc1867.c::php_mime_get_hdr_value",
+      "main/rfc1867.c::register_http_post_files_variable",
+      "main/rfc1867.c::register_http_post_files_variable_ex",
+      "main/rfc1867.c::safe_php_register_variable"
+     ]
+    },
+    {
+     "key": "main/rfc1867.c::add_protected_variable",
+     "name": "add_protected_variable",
+     "line": 121,
+     "lines": 6,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::safe_php_register_variable",
+     "name": "safe_php_register_variable",
+     "line": 136,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::register_http_post_files_variable",
+     "name": "register_http_post_files_variable",
+     "line": 154,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "main/rfc1867.c::safe_php_register_variable"
+     ]
+    },
+    {
+     "key": "main/rfc1867.c::register_http_post_files_variable_ex",
+     "name": "register_http_post_files_variable_ex",
+     "line": 160,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::multipart_buffer_eof",
+     "name": "multipart_buffer_eof",
+     "line": 257,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::multipart_buffer_new",
+     "name": "multipart_buffer_new",
+     "line": 263,
+     "lines": 28,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::multipart_buffer_headers",
+     "name": "multipart_buffer_headers",
+     "line": 388,
+     "lines": 77,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "main/rfc1867.c::php_mime_get_hdr_value"
+     ]
+    },
+    {
+     "key": "main/rfc1867.c::php_mime_get_hdr_value",
+     "name": "php_mime_get_hdr_value",
+     "line": 466,
+     "lines": 18,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::multipart_buffer_read",
+     "name": "multipart_buffer_read",
+     "line": 613,
+     "lines": 41,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/rfc1867.c::multipart_buffer_read_body",
+     "name": "multipart_buffer_read_body",
+     "line": 659,
+     "lines": 22,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "main/rfc1867.c::multipart_buffer_read"
+     ]
+    }
+   ],
+   "min_dist": 0,
+   "tier": "core"
+  },
+  "main/main.c": {
+   "functions": [
+    {
+     "key": "main/main.c::php_request_startup",
+     "name": "php_request_startup",
+     "line": 1835,
+     "lines": 75,
+     "dist": 0,
+     "role": null,
+     "calls_to": [
+      "Zend/zend.c::zend_activate",
+      "Zend/zend_API.c::zend_activate_modules",
+      "Zend/zend_execute_API.c::zend_set_timeout",
+      "main/SAPI.c::sapi_activate",
+      "main/output.c::php_output_activate",
+      "main/output.c::php_output_set_implicit_flush",
+      "main/output.c::php_output_start_user"
+     ]
+    },
+    {
+     "key": "main/main.c::php_request_shutdown",
+     "name": "php_request_shutdown",
+     "line": 1925,
+     "lines": 30,
+     "dist": 0,
+     "role": "fix",
+     "calls_to": []
+    },
+    {
+     "key": "main/main.c::php_error_docref",
+     "name": "php_error_docref",
+     "line": 1204,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 0,
+   "tier": "core"
+  },
+  "main/SAPI.c": {
+   "functions": [
+    {
+     "key": "main/SAPI.c::sapi_handle_post",
+     "name": "sapi_handle_post",
+     "line": 161,
+     "lines": 12,
+     "dist": 0,
+     "role": "path",
+     "calls_to": [
+      "Zend/zend_alloc.c::zend_handle_delayed_oom"
+     ]
+    },
+    {
+     "key": "main/SAPI.c::sapi_activate",
+     "name": "sapi_activate",
+     "line": 434,
+     "lines": 54,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_llist.c::zend_llist_init"
+     ]
+    },
+    {
+     "key": "main/SAPI.c::sapi_get_request_time",
+     "name": "sapi_get_request_time",
+     "line": 1092,
+     "lines": 15,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 0,
+   "tier": "core"
+  },
+  "Zend/zend.c": {
+   "functions": [
+    {
+     "key": "Zend/zend.c::_zend_bailout",
+     "name": "_zend_bailout",
+     "line": 1255,
+     "lines": 15,
+     "dist": 0,
+     "role": "problem",
+     "calls_to": [
+      "Zend/zend.c::zend_output_debug_string"
+     ]
+    },
+    {
+     "key": "Zend/zend.c::zend_activate",
+     "name": "zend_activate",
+     "line": 1315,
+     "lines": 15,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend.c::zend_error_zstr_at",
+     "name": "zend_error_zstr_at",
+     "line": 1433,
+     "lines": 162,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_copy"
+     ]
+    },
+    {
+     "key": "Zend/zend.c::zend_throw_error",
+     "name": "zend_throw_error",
+     "line": 1777,
+     "lines": 30,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_release"
+     ]
+    },
+    {
+     "key": "Zend/zend.c::zend_output_debug_string",
+     "name": "zend_output_debug_string",
+     "line": 1869,
+     "lines": 24,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend.c::zend_execute_script",
+     "name": "zend_execute_script",
+     "line": 1933,
+     "lines": 31,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_alloc.c::zend_handle_delayed_oom"
+     ]
+    }
+   ],
+   "min_dist": 0,
+   "tier": "core"
+  },
+  "main/output.c": {
+   "functions": [
+    {
+     "key": "main/output.c::php_output_activate",
+     "name": "php_output_activate",
+     "line": 159,
+     "lines": 13,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/output.c::php_output_start_user",
+     "name": "php_output_start_user",
+     "line": 432,
+     "lines": 15,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "main/output.c::php_output_set_implicit_flush",
+     "name": "php_output_set_implicit_flush",
+     "line": 740,
+     "lines": 8,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "Zend/zend_smart_str.h": {
+   "functions": [
+    {
+     "key": "Zend/zend_smart_str.h::smart_str_free",
+     "name": "smart_str_free",
+     "line": 101,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_smart_str.h::smart_str_0",
+     "name": "smart_str_0",
+     "line": 106,
+     "lines": 5,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_smart_str.h::smart_str_appendl",
+     "name": "smart_str_appendl",
+     "line": 200,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_smart_str.h::smart_str_appends",
+     "name": "smart_str_appends",
+     "line": 208,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "Zend/zend_llist.c": {
+   "functions": [
+    {
+     "key": "Zend/zend_llist.c::zend_llist_init",
+     "name": "zend_llist_init",
+     "line": 24,
+     "lines": 9,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_llist.c::zend_llist_destroy",
+     "name": "zend_llist_destroy",
+     "line": 102,
+     "lines": 17,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_llist.c::zend_llist_clean",
+     "name": "zend_llist_clean",
+     "line": 121,
+     "lines": 5,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_llist.c::zend_llist_destroy"
+     ]
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "sapi/cli/php_cli_server.c": {
+   "functions": [
+    {
+     "key": "sapi/cli/php_cli_server.c::php_cli_server_request_startup",
+     "name": "php_cli_server_request_startup",
+     "line": 2239,
+     "lines": 14,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_hash.c::zend_hash_str_find",
+      "main/main.c::php_request_startup"
+     ]
+    },
+    {
+     "key": "sapi/cli/php_cli_server.c::php_cli_server_request_shutdown",
+     "name": "php_cli_server_request_shutdown",
+     "line": 2255,
+     "lines": 9,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "main/main.c::php_request_shutdown"
+     ]
+    },
+    {
+     "key": "sapi/cli/php_cli_server.c::php_cli_server_dispatch",
+     "name": "php_cli_server_dispatch",
+     "line": 2309,
+     "lines": 62,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "main/main.c::php_request_shutdown",
+      "sapi/cli/php_cli_server.c::php_cli_server_request_shutdown",
+      "sapi/cli/php_cli_server.c::php_cli_server_request_startup"
+     ]
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "Zend/zend_string.h": {
+   "functions": [
+    {
+     "key": "Zend/zend_string.h::zend_string_init",
+     "name": "zend_string_init",
+     "line": 215,
+     "lines": 8,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_string.h::zend_string_copy",
+     "name": "zend_string_copy",
+     "line": 252,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_string.h::zend_string_release",
+     "name": "zend_string_release",
+     "line": 424,
+     "lines": 8,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_string.h::zend_string_release_ex",
+     "name": "zend_string_release_ex",
+     "line": 433,
+     "lines": 14,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "Zend/zend_execute_API.c": {
+   "functions": [
+    {
+     "key": "Zend/zend_execute_API.c::zend_get_executed_filename_ex",
+     "name": "zend_get_executed_filename_ex",
+     "line": 667,
+     "lines": 18,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_execute_API.c::zend_get_executed_lineno",
+     "name": "zend_get_executed_lineno",
+     "line": 687,
+     "lines": 26,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_execute_API.c::zend_call_function",
+     "name": "zend_call_function",
+     "line": 810,
+     "lines": 289,
+     "dist": -1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend.c::zend_throw_error",
+      "Zend/zend_alloc.c::zend_handle_delayed_oom",
+      "Zend/zend_string.h::zend_string_release_ex"
+     ]
+    },
+    {
+     "key": "Zend/zend_execute_API.c::zend_set_timeout",
+     "name": "zend_set_timeout",
+     "line": 1673,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_execute_API.c::zend_delete_global_variable",
+     "name": "zend_delete_global_variable",
+     "line": 1829,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "Zend/zend_API.c": {
+   "functions": [
+    {
+     "key": "Zend/zend_API.c::add_assoc_long_ex",
+     "name": "add_assoc_long_ex",
+     "line": 1952,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_API.c::add_assoc_null_ex",
+     "name": "add_assoc_null_ex",
+     "line": 1961,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_API.c::add_assoc_bool_ex",
+     "name": "add_assoc_bool_ex",
+     "line": 1970,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_API.c::add_assoc_string_ex",
+     "name": "add_assoc_string_ex",
+     "line": 2006,
+     "lines": 7,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_API.c::add_assoc_zval_ex",
+     "name": "add_assoc_zval_ex",
+     "line": 2051,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_API.c::zend_activate_modules",
+     "name": "zend_activate_modules",
+     "line": 3408,
+     "lines": 14,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  },
+  "Zend/zend_hash.c": {
+   "functions": [
+    {
+     "key": "Zend/zend_hash.c::zend_hash_update",
+     "name": "zend_hash_update",
+     "line": 1165,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_hash.c::zend_hash_update_ind",
+     "name": "zend_hash_update_ind",
+     "line": 1175,
+     "lines": 4,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    },
+    {
+     "key": "Zend/zend_hash.c::zend_hash_del",
+     "name": "zend_hash_del",
+     "line": 1757,
+     "lines": 31,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_release"
+     ]
+    },
+    {
+     "key": "Zend/zend_hash.c::zend_hash_destroy",
+     "name": "zend_hash_destroy",
+     "line": 1950,
+     "lines": 80,
+     "dist": 1,
+     "role": null,
+     "calls_to": [
+      "Zend/zend_string.h::zend_string_release"
+     ]
+    },
+    {
+     "key": "Zend/zend_hash.c::zend_hash_str_find",
+     "name": "zend_hash_str_find",
+     "line": 2915,
+     "lines": 11,
+     "dist": 1,
+     "role": null,
+     "calls_to": []
+    }
+   ],
+   "min_dist": 1,
+   "tier": "periphery"
+  }
+ }
+}

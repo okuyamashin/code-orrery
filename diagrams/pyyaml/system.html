@@ -69,6 +69,9 @@
     border: 1px solid var(--accent); color: var(--hi); background: var(--play-bg);
     box-shadow: 0 0 24px var(--glow), inset 0 0 18px var(--glow-in); }
   #play button:hover { background: var(--play-hover); }
+  #play .btns { display: flex; gap: 10px; }
+  #play #btnIncident { border-color: #ff3550; color: #ffd0d6; background: rgba(60, 4, 14, .78); }
+  #play #btnIncident:hover { background: rgba(110, 10, 30, .85); }
   #play .hint { font-size: 12px; color: var(--muted); text-shadow: 0 0 6px var(--shadow); }
   #caption { left: 50%; bottom: 74px; transform: translateX(-50%); width: min(760px, calc(100vw - 32px));
     background: var(--cap-bg); border: 1px solid var(--cap-line); border-radius: 8px; padding: 14px 18px 12px;
@@ -80,6 +83,8 @@
   #caption .ja::after { content: "▍"; color: var(--accent); animation: blink 1s steps(1) infinite; }
   #caption .bar { display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-top: 8px; }
   #caption .step { font: 11px var(--font-mono); color: var(--muted); }
+  body.incident #caption { border-color: #ff3550; box-shadow: 0 0 30px rgba(255, 53, 80, .25); }
+  body.incident #caption .ttl { color: #ffd0d6; }
   @keyframes blink { 50% { opacity: 0; } }
   body.touring #info { display: none !important; }
   /* 動画書き出し用の描画モード */
@@ -100,8 +105,8 @@
 </div>
 <div id="info" class="hud"></div>
 <div id="play" class="hud">
-  <button id="btnPlay">▶ PLAY</button>
-  <div class="hint">Narrated tour of PyYAML 5.3.1 (sound on)</div>
+  <div class="btns"><button id="btnPlay">▶ PLAY</button><button id="btnIncident" hidden>⚠ INCIDENT</button></div>
+  <div class="hint">PLAY: tour of PyYAML 5.3.1 · INCIDENT: the story of CVE-2020-1747 (sound on)</div>
 </div>
 <div id="caption" class="hud">
   <div class="ttl" id="capTitle"></div>
@@ -526,11 +531,13 @@ function speak(text, run) {
 }
 
 // 字幕を機械的に 1 文字ずつ打ち出す
+let typeTimer = null;
 function typeText(text, run) {
+  clearInterval(typeTimer);  // next で飛ばした前の場面の打ち出しを止める
   cap.ja.textContent = "";
   let i = 0;
-  const timer = setInterval(() => {
-    if (tour !== run) return clearInterval(timer);
+  const timer = typeTimer = setInterval(() => {
+    if (tour !== run || run.skip) return clearInterval(timer);
     cap.ja.textContent = text.slice(0, ++i);
     if (i >= text.length) clearInterval(timer);
   }, 22);
@@ -574,9 +581,6 @@ function scenes() {
   return [
     { kind: "overview", title: DATA.package.name, sub: `${names.length} classes · ${nm} modules`,
       src: DATA.package.doc ? "docstring of yaml + analysis" : "narration + analysis", text: intro },
-    // 脆弱性アラートの場面: 問題の惑星に寄って、何が起きたかを語る
-    ...(AL && N.alert ? [{ kind: "planet", name: AL.focus, title: `⚠ ${AL.id}`, sub: `${AL.date} · fixed in ${AL.fixedIn}`,
-      src: "alerts.js", text: N.alert }] : []),
     ...N.order.filter(n => DATA.classes[n]).map(n => {
       const C = DATA.classes[n];
       const doc = N.fallback[n] || (C.doc ? plain(C.doc) : "");
@@ -588,13 +592,66 @@ function scenes() {
   ];
 }
 
-async function runTour(start = 0) {
+// インシデント専用ツアーの場面（alerts.js の tour）
+function incidentScenes() {
+  return (AL?.tour || []).filter(sc => !sc.cls || (DATA.classes[sc.cls] && (!sc.gate || planets[sc.cls].gates[sc.gate])))
+    .map(sc => ({ ...sc, name: sc.cls || null, src: `${AL.id} · alerts.js` }));
+}
+// ?tour=incident のとき（動画書き出しなど）はインシデントのツアーを使う
+const TOUR_MODE = new URLSearchParams(location.search).get("tour") === "incident" ? "incident" : "normal";
+const tourScenes = mode => (mode === "incident" ? incidentScenes() : scenes());
+
+// ゲートに関係する線（同じクラスの弧と、クラスをまたぐ線）だけを光らせる
+function highlightGate(name, G) {
+  const p = planets[name];
+  p.setHover(G);
+  if (!G) { emphasize(name); return; }
+  for (const l of links) {
+    const on = (l.from.cls === name && l.from.name === G.data.name) || (l.to.cls === name && l.to.name === G.data.name);
+    for (const o of l.parts) o.material.opacity = on ? 1 : 0.04;
+  }
+}
+
+// ゲートに寄っているあいだは、ほかの惑星の名前を隠して見やすくする（null で元に戻す）
+function soloLabels(name) {
+  for (const n of names) planets[n].coreLabel.visible = !name || n === name;
+}
+
+// 惑星のゲートに寄る: ゲートの外向きの方向から、少し斜め上に引いて見る
+function focusGate(name, gate) {
+  soloLabels(name);
+  if (focused !== name) focus(name);
+  const p = planets[name], G = p.gates[gate];
+  const pos = p.gateWorld(gate);
+  const out = pos.clone().sub(p.group.position).normalize();
+  const dir = out.clone().add(new THREE.Vector3(0, 0.25, 0)).normalize();
+  flyTo(pos.clone().lerp(p.group.position, 0.3), fitDistance(p.R * 0.7), dir);
+  highlightGate(name, G);
+}
+
+// 場面ごとのカメラ
+function stage(sc, first) {
+  if (sc.kind !== "gate") soloLabels(null);
+  if (sc.kind === "overview") {
+    focus(null);
+    // 全景はゆっくり寄っていく
+    flyTo(new THREE.Vector3(), fitDistance(sysRadius) * 0.92, new THREE.Vector3(0.35, 0.45, 1).normalize());
+    fly.dur = first ? 0.01 : 2.4;
+  } else if (sc.kind === "gate") {
+    focusGate(sc.name, sc.gate);
+  } else {
+    focus(sc.name);
+  }
+}
+
+async function runTour(start = 0, mode = "normal") {
   const run = { skip: false };
   tour = run;
   document.body.classList.add("touring");
   playBox.style.display = "none";
   cap.box.style.display = "block";
-  const all = scenes();
+  const all = tourScenes(mode);
+  document.body.classList.toggle("incident", mode === "incident");
   for (let i = start; i < all.length; i++) {
     if (tour !== run) return;
     run.skip = false;
@@ -602,14 +659,7 @@ async function runTour(start = 0) {
     cap.title.innerHTML = `${sc.title}<small>${sc.sub}</small>`;
     cap.en.textContent = sc.src ? `— ${sc.src}` : "";
     cap.step.textContent = `${i + 1} / ${all.length}`;
-    if (sc.kind === "overview") {
-      focus(null);
-      // 全景はゆっくり寄っていく
-      flyTo(new THREE.Vector3(), fitDistance(sysRadius) * 0.92, new THREE.Vector3(0.35, 0.45, 1).normalize());
-      fly.dur = 2.4;
-    } else {
-      focus(sc.name);
-    }
+    stage(sc, false);
     cap.ja.textContent = "";
     await sleep(i === start ? 600 : 1500);
     if (tour !== run) return;
@@ -626,12 +676,19 @@ function stopTour() {
   if ("speechSynthesis" in window) speechSynthesis.cancel();
   cap.box.style.display = "none";
   playBox.style.display = "flex";
-  document.body.classList.remove("touring");
+  document.body.classList.remove("touring", "incident");
+  soloLabels(null);
 }
 
 document.getElementById("btnPlay").onclick = () => {
   if ("speechSynthesis" in window) { speechSynthesis.cancel(); pickVoice(); }
-  runTour(0);
+  runTour(0, "normal");
+};
+const btnIncident = document.getElementById("btnIncident");
+btnIncident.hidden = !AL?.tour?.length;
+btnIncident.onclick = () => {
+  if ("speechSynthesis" in window) { speechSynthesis.cancel(); pickVoice(); }
+  runTour(0, "incident");
 };
 document.getElementById("btnStop").onclick = stopTour;
 document.getElementById("btnNext").onclick = () => { if (tour) { tour.skip = true; speechSynthesis?.cancel(); } };
@@ -656,15 +713,8 @@ renderer.domElement.addEventListener("pointermove", e => {
   const pk = gatePicker(p);
   const hit = ray.intersectObjects(pk.discs, false)[0];
   const G = hit ? pk.find(hit.object) : null;
-  if (G === p.hovered) return;
-  p.setHover(G);
-  // ゲートに関係するクラス間の線だけを光らせる
-  if (G) {
-    for (const l of links) {
-      const on = (l.from.cls === focused && l.from.name === G.data.name) || (l.to.cls === focused && l.to.name === G.data.name);
-      for (const o of l.parts) o.material.opacity = on ? 1 : 0.04;
-    }
-  } else emphasize(focused);
+  if (G === p.hovered || tour) return;  // ツアー中はツアーが選んだゲートを光らせたままにする
+  highlightGate(focused, G);
 });
 
 addEventListener("resize", () => {
@@ -710,8 +760,8 @@ else {
   let timeline = [], all = [], current = -1, lastT = 0;
   playBox.style.display = "none";
   window.__render = {
-    scenes: () => scenes().map(s => ({ title: s.title, sub: s.sub, src: s.src, text: s.text, kind: s.kind, name: s.name || null })),
-    setup(tl) { timeline = tl; all = scenes(); current = -1; lastT = 0; cap.box.style.display = "block"; },
+    scenes: () => tourScenes(TOUR_MODE).map(s => ({ title: s.title, sub: s.sub, src: s.src, text: s.text, kind: s.kind, name: s.name || null })),
+    setup(tl) { timeline = tl; all = tourScenes(TOUR_MODE); current = -1; lastT = 0; cap.box.style.display = "block"; },
     frame(t) {
       virtualTime = t;
       const i = timeline.findIndex(s => t >= s.start && t < s.end);
@@ -721,11 +771,7 @@ else {
         current = k;
         cap.title.innerHTML = `${sc.title}<small>${sc.sub}</small>`;
         cap.en.textContent = sc.src ? `— ${sc.src}` : "";
-        if (sc.kind === "overview") {
-          focus(null);
-          flyTo(new THREE.Vector3(), fitDistance(sysRadius) * 0.92, new THREE.Vector3(0.35, 0.45, 1).normalize());
-          fly.dur = k === 0 ? 0.01 : 2.4;
-        } else focus(sc.name);
+        stage(sc, k === 0);
       }
       // 字幕は読み上げの長さに合わせて打ち出す
       const u = Math.max(0, Math.min(1, (t - tl.speechStart) / tl.speechDur));

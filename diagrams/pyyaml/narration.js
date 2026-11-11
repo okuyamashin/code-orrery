@@ -4,12 +4,6 @@
 window.NARRATION = {
   // yaml/__init__.py has no module docstring
   packageDoc: "PyYAML reads and writes YAML, the human-friendly data format, for Python.",
-  // 脆弱性アラートの場面（全景のすぐあと、FullConstructor に寄って語る）
-  alert: "This is PyYAML 5.3.1, the version that fixed CVE-2020-1747, in March 2020. " +
-    "Before the fix, loading an untrusted document with full_load could run code chosen by the attacker. " +
-    "The weak spot was here, in FullConstructor, at the gate set python instance state, blinking red. " +
-    "It copied names from the document into a new object without checking them, so a method like extend could be replaced. " +
-    "The amber gates are the path the attack took. The green gates were added by the fix: every name is now checked against a blacklist first.",
   outro: "That is the main path of PyYAML. Click any planet to fly back to it.",
   outroVideo: "That is the main path of PyYAML: from characters, to tokens, to events, to nodes, to Python objects, and back.",
   // Visiting order: the loading path first, then the dumping path.

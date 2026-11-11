@@ -2,9 +2,16 @@
 // class_sphere.html（1クラス）と system.html（惑星系）の両方から使う。
 import * as THREE from "three";
 import { CSS2DObject } from "three/addons/renderers/CSS2DRenderer.js";
+import { sphereTexture } from "./textures.js?v=2";
 
-export const COLORS = { public: 0x55d8f0, internal: 0x2a9f94, private: 0x2f5a96 };
-export const READ = 0x4fb8e6, WRITE = 0xffa53a, WIRE = 0x4a86d8;
+// 色は theme.js（window.THEME）から取る。読み込まれていなければ元の配色
+const T = window.THEME || null;
+const S = T ? T.scene : { gateFill: 0x04142b, valueFill: 0x072040, valueFillMut: 0x3a2300, shell: 0x123a6a, shellOpacity: 1,
+  coreInner: 0x03142c, coreRim: 0x3aa8f0, wirePulse: 0xbfefff, lineOpacity: 1 };
+// 線の不透明度にテーマの倍率を掛ける（明るい背景では線が薄く見えるため）
+const LO = o => Math.min(1, o * (S.lineOpacity ?? 1));
+export const COLORS = T ? T.vis : { public: 0x55d8f0, internal: 0x2a9f94, private: 0x2f5a96 };
+export const READ = T ? T.read : 0x4fb8e6, WRITE = T ? T.write : 0xffa53a, WIRE = T ? T.wire : 0x4a86d8;
 
 export const gateRadius = lines => 9 + 2.6 * Math.sqrt(lines);
 
@@ -38,7 +45,7 @@ function makeGate(gate) {
   const r = gateRadius(gate.lines);
   const color = COLORS[gate.vis];
   const g = new THREE.Group();
-  g.add(new THREE.Mesh(new THREE.CircleGeometry(r, 48), basic(0x04142b, .92)));
+  g.add(new THREE.Mesh(new THREE.CircleGeometry(r, 48), basic(S.gateFill, .92)));
   const tube = gate.vis === "public" ? 1.5 : 1.1;
   if (gate.abstract) {
     const pts = new THREE.EllipseCurve(0, 0, r, r).getPoints(64).map(p => new THREE.Vector3(p.x, p.y, 0.5));
@@ -71,7 +78,7 @@ function valueMesh(v) {
   const geo = v.kind === "property" ? new THREE.OctahedronGeometry(8)
             : v.kind === "classvar" ? new THREE.BoxGeometry(10, 10, 10)
             : new THREE.SphereGeometry(6, 20, 14);
-  const m = new THREE.Mesh(geo, basic(v.mutated ? 0x3a2300 : 0x072040));
+  const m = new THREE.Mesh(geo, basic(v.mutated ? S.valueFillMut : S.valueFill));
   m.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo, 1), new THREE.LineBasicMaterial({ color })));
   if (v.kind === "field") m.add(new THREE.Mesh(new THREE.SphereGeometry(6.6, 20, 14), basic(color, .35, { wireframe: true })));
   return m;
@@ -114,18 +121,31 @@ export function buildPlanet(C) {
   const area = radii.reduce((s, r) => s + (r + 26) ** 2, 0);
   const R = Math.max(Math.sqrt(area / (4 * 0.42)), valR + gmax + 110);
 
-  const shell = new THREE.Mesh(new THREE.SphereGeometry(R, 48, 32), basic(0x123a6a, .035, { wireframe: true }));
+  const shell = new THREE.Mesh(new THREE.SphereGeometry(R, 48, 32), basic(S.shell, Math.min(1, .035 * S.shellOpacity), { wireframe: true }));
   group.add(shell);
+  // テーマによっては外殻に模様を貼る（半透明。ゲートは同じ半径の上に重なる）
+  const skin = (pattern, radius, opacity, segs) => {
+    const map = pattern && sphereTexture(pattern, S.patternInk, S.patternAccent);
+    if (!map) return null;
+    const m = new THREE.Mesh(new THREE.SphereGeometry(radius, segs, segs / 2),
+      new THREE.MeshBasicMaterial({ map, transparent: true, opacity, depthWrite: false, side: THREE.FrontSide }));
+    m.renderOrder = -1;
+    return m;
+  };
+  const shellSkin = skin(S.shellPattern, R * 0.995, S.shellPatternOpacity ?? .5, 64);
+  if (shellSkin) group.add(shellSkin);
 
   // コア
   const core = new THREE.Group();
-  const coreMat = fresnelMaterial(0x03142c, 0x3aa8f0);
+  const coreMat = fresnelMaterial(S.coreInner, S.coreRim);
   const coreMesh = new THREE.Mesh(new THREE.SphereGeometry(coreR, 64, 48), coreMat);
   core.add(coreMesh);
-  core.add(new THREE.Mesh(new THREE.IcosahedronGeometry(coreR * 1.13, 2), basic(0x3aa8f0, .08, { wireframe: true })));
-  const tick = new THREE.Mesh(new THREE.TorusGeometry(coreR + 14, 2, 6, 120), basic(0x3aa8f0, .22));
+  core.add(new THREE.Mesh(new THREE.IcosahedronGeometry(coreR * 1.13, 2), basic(S.coreRim, .08, { wireframe: true })));
+  const tick = new THREE.Mesh(new THREE.TorusGeometry(coreR + 14, 2, 6, 120), basic(S.coreRim, .22));
   tick.rotation.x = Math.PI / 2;
   core.add(tick);
+  const coreSkin = skin(S.corePattern, coreR * 1.02, S.corePatternOpacity ?? .6, 48);
+  if (coreSkin) core.add(coreSkin);
   group.add(core);
   const coreLabel = label("core-lbl",
     `<div class="n">${C.name}</div><div class="s">${C.lines} lines · ${C.gates.length} gates · ${C.values.length} values</div>`,
@@ -170,7 +190,7 @@ export function buildPlanet(C) {
     const a = G.dir.clone().multiplyScalar(R - 2);
     const curve = new THREE.QuadraticBezierCurve3(a, G.dir.clone().multiplyScalar(valR * .6), vpos[s.value]);
     const color = s.op === "write" ? WRITE : READ;
-    const base = s.op === "write" ? .55 : .25;
+    const base = LO(s.op === "write" ? .55 : .25);
     const line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(32)),
       new THREE.LineBasicMaterial({ color, transparent: true, opacity: base }));
     line.userData.base = base;
@@ -194,14 +214,14 @@ export function buildPlanet(C) {
       pts.push(slerpDir(A.dir, B.dir, t).normalize().multiplyScalar(R + 3 + h * Math.sin(Math.PI * t)));
     }
     const curve = new THREE.CatmullRomCurve3(pts);
-    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 64, 0.55, 6), basic(WIRE, .55));
-    tube.userData.base = .55;
+    const tube = new THREE.Mesh(new THREE.TubeGeometry(curve, 64, 0.55, 6), basic(WIRE, LO(.55)));
+    tube.userData.base = LO(.55);
     group.add(tube);
     const cone = new THREE.Mesh(new THREE.ConeGeometry(3.2, 9, 10), basic(WIRE, .9));
     cone.position.copy(curve.getPointAt(0.97));
     cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), curve.getTangentAt(0.97));
     group.add(cone);
-    const pulse = new THREE.Mesh(new THREE.SphereGeometry(1.8, 10, 8), basic(0xbfefff));
+    const pulse = new THREE.Mesh(new THREE.SphereGeometry(1.8, 10, 8), basic(S.wirePulse));
     group.add(pulse);
     wires.push({ curve, tube, cone, pulse, phase: Math.random(), speed: 0.12 + 40 / curve.getLength() });
     A.links.push(tube, cone, pulse);
@@ -251,14 +271,17 @@ export function gatePicker(planet) {
 
 /** HTML の共通スタイル（ラベル類） */
 export const LABEL_CSS = `
-  .lbl { font: 11px Menlo, monospace; white-space: nowrap; text-shadow: 0 0 6px #000, 0 0 2px #000;
+  .lbl { font: 11px var(--font-mono, Menlo, monospace); white-space: nowrap;
+    text-shadow: 0 0 6px var(--shadow, #000), 0 0 2px var(--shadow, #000);
     transform: translateY(-18px); transition: opacity .15s; }
   .lbl small { display: block; font-size: 9.5px; opacity: .7; }
-  .lbl.public { color: #c9f5ff; } .lbl.internal { color: #8fe0d6; } .lbl.private { color: #7fa6d8; }
-  .vlbl { font: 10px Menlo, monospace; color: #b7e6ff; text-shadow: 0 0 4px #000; transform: translateY(-12px); }
-  .vlbl.mut { color: #ffd08a; }
-  .core-lbl { text-align: center; text-shadow: 0 0 10px #000; pointer-events: none; }
-  .core-lbl .n { font: 700 22px Menlo, monospace; color: #f0fbff; letter-spacing: 1px; }
-  .core-lbl .s { font: 11px Menlo, monospace; color: #8fd0ff; }
+  .lbl.public { color: var(--lbl-public, #c9f5ff); } .lbl.internal { color: var(--lbl-internal, #8fe0d6); }
+  .lbl.private { color: var(--lbl-private, #7fa6d8); }
+  .vlbl { font: 10px var(--font-mono, Menlo, monospace); color: var(--vlbl, #b7e6ff); text-shadow: 0 0 4px var(--shadow, #000);
+    transform: translateY(-12px); }
+  .vlbl.mut { color: var(--vlbl-mut, #ffd08a); }
+  .core-lbl { text-align: center; text-shadow: 0 0 10px var(--shadow, #000); pointer-events: none; }
+  .core-lbl .n { font: 700 22px var(--font-display, Menlo, monospace); color: var(--core-n, #f0fbff); letter-spacing: 1px; }
+  .core-lbl .s { font: 11px var(--font-mono, Menlo, monospace); color: var(--core-s, #8fd0ff); }
   .hide-labels .lbl, .hide-labels .vlbl { visibility: hidden; }
 `;

@@ -20,50 +20,51 @@
 <meta name="twitter:description" content="tinydb's Python source code as a planetary system in a 3D net space. Press PLAY for a narrated tour.">
 <meta name="twitter:image" content="https://okuyamashin.github.io/code-orrery/tinydb/preview.jpg">
 <meta name="twitter:image:alt" content="Glowing planets connected by lines of light: the classes of tinydb">
+<script src="theme.js?v=4"></script>
 <style>
-  :root { --fg: #cfefff; --muted: #6f93bd; --line: #1b4f8a; }
-  html, body { margin: 0; height: 100%; background: #02060f; color: var(--fg); overflow: hidden;
-    font-family: -apple-system, "Hiragino Sans", sans-serif; }
+  /* 色と書体は theme.js が CSS 変数として当てる */
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); overflow: hidden;
+    font-family: var(--font-ui); }
   #app { position: fixed; inset: 0; }
   .hud { position: fixed; z-index: 10; pointer-events: none; }
   .hud * { pointer-events: auto; }
   #top { top: 16px; left: 20px; }
-  #top h1 { margin: 0 0 4px; font: 700 18px Menlo, monospace; letter-spacing: 2px; color: #e6f9ff; }
-  #top .sub { font: 12px Menlo, monospace; color: var(--muted); }
+  #top h1 { margin: 0 0 4px; font: 700 18px var(--font-display); letter-spacing: 2px; color: var(--title); }
+  #top .sub { font: 12px var(--font-mono); color: var(--muted); }
   #nav { top: 76px; left: 20px; display: flex; flex-direction: column; gap: 3px; }
   #nav button { text-align: left; }
   #controls { top: 16px; right: 20px; display: flex; gap: 8px; }
-  button, a.btn { background: rgba(6, 26, 51, .85); color: var(--fg); border: 1px solid var(--line); border-radius: 4px;
-    padding: 4px 8px; font: 12px Menlo, monospace; cursor: pointer; text-decoration: none; }
-  button.on, #nav button.cur { border-color: #6fe8ff; color: #e6fbff; }
+  button, a.btn, select { background: var(--btn); color: var(--fg); border: 1px solid var(--line); border-radius: 4px;
+    padding: 4px 8px; font: 12px var(--font-mono); cursor: pointer; text-decoration: none; }
+  button.on, #nav button.cur { border-color: var(--accent); color: var(--hi); }
   #nav button small { color: var(--muted); margin-left: 6px; }
-  #info { right: 20px; bottom: 16px; width: 300px; max-height: 46vh; overflow: auto; font: 12px Menlo, monospace;
-    color: var(--fg); background: rgba(3, 16, 34, .85); border: 1px solid var(--line); border-radius: 6px;
+  #info { right: 20px; bottom: 16px; width: 300px; max-height: 46vh; overflow: auto; font: 12px var(--font-mono);
+    color: var(--fg); background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
     padding: 10px 12px; display: none; }
-  #info h2 { margin: 0 0 6px; font-size: 14px; color: #e6fbff; }
+  #info h2 { margin: 0 0 6px; font-size: 14px; color: var(--hi); }
   #info .k { color: var(--muted); }
   #info ul { margin: 4px 0 8px; padding-left: 16px; }
   .core-lbl.small .n { font-size: 15px; }
   .core-lbl.small .s { display: none; }
-  .mod-lbl { font: 600 14px Menlo, monospace; letter-spacing: 4px; color: #3d6fa8; text-shadow: 0 0 8px #000; }
+  .mod-lbl { font: 600 14px var(--font-mono); letter-spacing: 4px; color: var(--mod); text-shadow: 0 0 8px var(--shadow); }
   @media (max-width: 700px) { #nav { display: none; } }
   /* ツアー: 再生ボタンは見る邪魔にならないよう左下に置く */
   #play { left: 20px; bottom: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
-  #play button { font: 700 15px Menlo, monospace; letter-spacing: 3px; padding: 11px 26px; border-radius: 40px;
-    border: 1px solid #6fe8ff; color: #e6fbff; background: rgba(4, 30, 60, .78);
-    box-shadow: 0 0 24px rgba(80, 200, 255, .45), inset 0 0 18px rgba(80, 200, 255, .25); }
-  #play button:hover { background: rgba(10, 60, 110, .85); }
-  #play .hint { font-size: 12px; color: var(--muted); text-shadow: 0 0 6px #000; }
+  #play button { font: 700 15px var(--font-display); letter-spacing: 3px; padding: 11px 26px; border-radius: 40px;
+    border: 1px solid var(--accent); color: var(--hi); background: var(--play-bg);
+    box-shadow: 0 0 24px var(--glow), inset 0 0 18px var(--glow-in); }
+  #play button:hover { background: var(--play-hover); }
+  #play .hint { font-size: 12px; color: var(--muted); text-shadow: 0 0 6px var(--shadow); }
   #caption { left: 50%; bottom: 74px; transform: translateX(-50%); width: min(760px, calc(100vw - 32px));
-    background: rgba(2, 14, 30, .78); border: 1px solid #1f5c9c; border-radius: 8px; padding: 14px 18px 12px;
-    box-shadow: 0 0 30px rgba(40, 140, 255, .18); display: none; }
-  #caption .ttl { font: 700 20px Menlo, monospace; color: #f0fbff; letter-spacing: 2px; }
-  #caption .ttl small { font: 12px Menlo, monospace; color: var(--muted); margin-left: 10px; letter-spacing: 0; }
-  #caption .en { font: italic 11px Menlo, monospace; color: #5f8fbf; margin: 4px 0 8px; }
-  #caption .ja { font: 14.5px/1.7 Menlo, monospace; color: #dff5ff; min-height: 3.4em; }
-  #caption .ja::after { content: "▍"; color: #6fe8ff; animation: blink 1s steps(1) infinite; }
+    background: var(--cap-bg); border: 1px solid var(--cap-line); border-radius: 8px; padding: 14px 18px 12px;
+    box-shadow: 0 0 30px var(--cap-glow); display: none; }
+  #caption .ttl { font: 700 20px var(--font-display); color: var(--cap-title); letter-spacing: 2px; }
+  #caption .ttl small { font: 12px var(--font-mono); color: var(--muted); margin-left: 10px; letter-spacing: 0; }
+  #caption .en { font: italic 11px var(--font-mono); color: var(--cap-src); margin: 4px 0 8px; }
+  #caption .ja { font: 14.5px/1.7 var(--font-mono); color: var(--cap-text); min-height: 3.4em; }
+  #caption .ja::after { content: "▍"; color: var(--accent); animation: blink 1s steps(1) infinite; }
   #caption .bar { display: flex; gap: 8px; justify-content: space-between; align-items: center; margin-top: 8px; }
-  #caption .step { font: 11px Menlo, monospace; color: var(--muted); }
+  #caption .step { font: 11px var(--font-mono); color: var(--muted); }
   @keyframes blink { 50% { opacity: 0; } }
   body.touring #info { display: none !important; }
   /* 動画書き出し用の描画モード */
@@ -80,7 +81,8 @@
   <button id="btnAll">overview</button>
   <button id="btnLabels" class="on">labels</button>
   <button id="btnRotate" class="on">rotate</button>
-  <a class="btn" href="class_sphere.html">single</a>
+  <a class="btn" id="lnkSingle" href="class_sphere.html">single</a>
+  <button id="btnSnap" title="Copy a 1600×1200 image without the HUD">⧉ snap</button>
 </div>
 <div id="info" class="hud"></div>
 <div id="play" class="hud">
@@ -111,9 +113,15 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
-import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=3";
+import { buildPlanet, gatePicker, basic, LABEL_CSS } from "./planet.js?v=7";
+import { applyBackground } from "./textures.js?v=3";
+import { makeSnapshot, copyCanvas, toast } from "./snapshot.js?v=2";
 
+const T = window.THEME, S = T.scene;
+const LO = o => Math.min(1, o * (S.lineOpacity ?? 1));
 document.getElementById("labelcss").textContent = LABEL_CSS;
+T.mountPicker(document.getElementById("controls"));
+T.carry(document.getElementById("lnkSingle"));
 const DATA = window.TINYDB;
 // ?render=1 のときは、外から時刻を指定して 1 コマずつ描く（動画書き出し用）
 const RENDER = new URLSearchParams(location.search).has("render");
@@ -122,14 +130,14 @@ const now = () => RENDER ? virtualTime : clock.getElapsedTime();
 if (RENDER) document.body.classList.add("render", "touring");
 
 const LINK = {
-  call:     { color: 0xb8f6ff, r: 1.6, label: "メソッド呼び出し" },
-  ctor:     { color: 0x5cf08a, r: 2.2, label: "生成（クラスの呼び出し）" },
-  impl:     { color: 0xff7ad9, r: 1.6, label: "暗黙の呼び出し・委譲" },
-  super:    { color: 0x7ab8ff, r: 1.2, label: "super()" },
-  override: { color: 0xc99bff, r: 1.0, label: "上書き" },
-  read:     { color: 0x5fd4ff, r: 1.0, label: "フィールド読み", dashed: true },
-  write:    { color: 0xffb347, r: 1.0, label: "フィールド書き", dashed: true },
-  hold:     { color: 0x3cc6c8, r: 0.9, label: "値が持つクラス", dashed: true },
+  call:     { color: T.link.call,     r: 1.6, label: "メソッド呼び出し" },
+  ctor:     { color: T.link.ctor,     r: 2.2, label: "生成（クラスの呼び出し）" },
+  impl:     { color: T.link.impl,     r: 1.6, label: "暗黙の呼び出し・委譲" },
+  super:    { color: T.link.super,    r: 1.2, label: "super()" },
+  override: { color: T.link.override, r: 1.0, label: "上書き" },
+  read:     { color: T.link.read,     r: 1.0, label: "フィールド読み", dashed: true },
+  write:    { color: T.link.write,    r: 1.0, label: "フィールド書き", dashed: true },
+  hold:     { color: T.link.hold,     r: 0.9, label: "値が持つクラス", dashed: true },
 };
 
 // ---------- シーン ----------
@@ -137,7 +145,7 @@ const app = document.getElementById("app");
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
 renderer.setSize(innerWidth, innerHeight);
-renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMapping = S.toneMapping === "none" ? THREE.NoToneMapping : THREE.ACESFilmicToneMapping;
 app.appendChild(renderer.domElement);
 const labelRenderer = new CSS2DRenderer();
 labelRenderer.setSize(innerWidth, innerHeight);
@@ -145,8 +153,9 @@ Object.assign(labelRenderer.domElement.style, { position: "fixed", inset: "0", p
 app.appendChild(labelRenderer.domElement);
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x02060f);
-scene.fog = new THREE.FogExp2(0x02060f, 0.00008);
+scene.background = new THREE.Color(S.bg);
+scene.fog = new THREE.FogExp2(S.bg, 0.00008);
+const redrawBackground = applyBackground(scene, S, renderer);
 const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 1, 80000);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
@@ -155,7 +164,7 @@ controls.autoRotateSpeed = 0.25;
 
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
-composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), 0.6, 0.4, 0.28));
+if (S.bloom) composer.addPass(new UnrealBloomPass(new THREE.Vector2(innerWidth, innerHeight), ...S.bloom));
 composer.addPass(new OutputPass());
 
 // 決まった乱数（毎回同じ配置にする）
@@ -171,7 +180,7 @@ const rand = () => ((seed = (seed * 1103515245 + 12345) % 2147483648) / 21474836
   }
   const g = new THREE.BufferGeometry();
   g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0x9fd8ff, size: 6, transparent: true, opacity: .6, fog: false })));
+  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: S.stars, size: 6, transparent: true, opacity: .6 * S.starOpacity, fog: false })));
 }
 
 // 遠くからでも惑星が見えるように、加算合成の光暈（ハロー）を重ねる
@@ -180,10 +189,7 @@ const haloTex = (() => {
   c.width = c.height = 256;
   const g = c.getContext("2d");
   const grd = g.createRadialGradient(128, 128, 0, 128, 128, 128);
-  grd.addColorStop(0, "rgba(120,200,255,0.55)");
-  grd.addColorStop(0.25, "rgba(60,150,240,0.28)");
-  grd.addColorStop(0.6, "rgba(30,90,200,0.08)");
-  grd.addColorStop(1, "rgba(0,0,0,0)");
+  for (const [at, c] of S.halo) grd.addColorStop(at, c);
   g.fillStyle = grd;
   g.fillRect(0, 0, 256, 256);
   return new THREE.CanvasTexture(c);
@@ -194,8 +200,8 @@ const names = Object.keys(DATA.classes);
 const planets = {};
 for (const n of names) {
   const p = buildPlanet(DATA.classes[n]);
-  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTex, blending: THREE.AdditiveBlending,
-    depthWrite: false, transparent: true, opacity: .55 }));
+  const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTex, blending: S.haloAdditive ? THREE.AdditiveBlending : THREE.NormalBlending,
+    depthWrite: false, transparent: true, opacity: S.haloOpacity }));
   halo.scale.setScalar(p.R * 2.2);
   p.group.add(halo);
   p.setDetail(false);
@@ -277,11 +283,11 @@ for (const n of names) {
 const sysRadius = Math.max(...names.map(n => planets[n].group.position.length() + planets[n].R * 1.1));
 
 // 背景の大きな格子球
-const grid = new THREE.Mesh(new THREE.SphereGeometry(sysRadius * 2.2, 36, 24), basic(0x0d2a52, .06, { wireframe: true, fog: false }));
+const grid = new THREE.Mesh(new THREE.SphereGeometry(sysRadius * 2.2, 36, 24), basic(S.grid, Math.min(1, .06 * S.gridOpacity), { wireframe: true, fog: false }));
 scene.add(grid);
 
 // モジュール名
-const modules = {};
+const modules = Object.create(null);  // モジュール名 "constructor" などが Object の既定プロパティとぶつからないように
 for (const n of names) (modules[DATA.classes[n].module] ||= []).push(n);
 for (const [m, members] of Object.entries(modules)) {
   const c = new THREE.Vector3();
@@ -310,18 +316,18 @@ for (const h of DATA.inherits) {
     // 途切れた細い管（型チェック時だけの継承）
     const seg = 60, gap = 40;
     for (let y = -len / 2; y < len / 2 - seg; y += seg + gap) {
-      const m = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, seg, 10, 1, true), basic(0xffb347, .55));
+      const m = new THREE.Mesh(new THREE.CylinderGeometry(5, 5, seg, 10, 1, true), basic(T.conduit.typecheck, .55));
       m.position.y = y + seg / 2;
       g.add(m);
     }
   } else {
-    g.add(new THREE.Mesh(new THREE.CylinderGeometry(22, 22, len, 24, 1, true), basic(0x0a3a78, .35)));
-    g.add(new THREE.Mesh(new THREE.CylinderGeometry(9, 9, len, 16, 1, true), basic(0x2a8cf0, .45)));
-    g.add(new THREE.Mesh(new THREE.CylinderGeometry(2.4, 2.4, len, 8, 1, true), basic(0xa8ecff)));
+    g.add(new THREE.Mesh(new THREE.CylinderGeometry(22, 22, len, 24, 1, true), basic(T.conduit.outer, .35)));
+    g.add(new THREE.Mesh(new THREE.CylinderGeometry(9, 9, len, 16, 1, true), basic(T.conduit.mid, .45)));
+    g.add(new THREE.Mesh(new THREE.CylinderGeometry(2.4, 2.4, len, 8, 1, true), basic(T.conduit.inner)));
     // 流れる光
     const flow = [];
     for (let i = 0; i < 6; i++) {
-      const p = new THREE.Mesh(new THREE.SphereGeometry(4, 10, 8), basic(0xe6fbff));
+      const p = new THREE.Mesh(new THREE.SphereGeometry(4, 10, 8), basic(T.conduit.flow));
       g.add(p);
       flow.push(p);
     }
@@ -355,19 +361,19 @@ for (const l of DATA.links) {
   let line;
   if (st.dashed) {
     line = new THREE.Line(new THREE.BufferGeometry().setFromPoints(curve.getPoints(80)),
-      new THREE.LineDashedMaterial({ color: st.color, dashSize: 14, gapSize: 10, transparent: true, opacity: .8 }));
+      new THREE.LineDashedMaterial({ color: st.color, dashSize: 14, gapSize: 10, transparent: true, opacity: LO(.8) }));
     line.computeLineDistances();
   } else {
-    line = new THREE.Mesh(new THREE.TubeGeometry(curve, 80, st.r, 6), basic(st.color, .7));
+    line = new THREE.Mesh(new THREE.TubeGeometry(curve, 80, st.r, 6), basic(st.color, LO(.7)));
   }
-  line.userData.base = st.dashed ? .8 : .7;
+  line.userData.base = LO(st.dashed ? .8 : .7);
   scene.add(line);
   const cone = new THREE.Mesh(new THREE.ConeGeometry(st.r * 3 + 3, st.r * 7 + 8, 10), basic(st.color, .9));
   cone.position.copy(curve.getPointAt(.985));
   cone.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), curve.getTangentAt(.985));
   cone.userData.base = .9;
   scene.add(cone);
-  const pulse = new THREE.Mesh(new THREE.SphereGeometry(st.r * 1.8 + 1.5, 10, 8), basic(0xffffff, .95));
+  const pulse = new THREE.Mesh(new THREE.SphereGeometry(st.r * 1.8 + 1.5, 10, 8), basic(S.linkPulse, .95));
   pulse.userData.base = .95;
   scene.add(pulse);
   links.push({ ...l, curve, parts: [line, cone, pulse], pulse, phase: rand(), speed: 0.08 + 120 / curve.getLength() });
@@ -414,12 +420,12 @@ const info = document.getElementById("info");
 function showPlanetInfo(name) {
   const outL = links.filter(l => l.from.cls === name), inL = links.filter(l => l.to.cls === name);
   const fmt = e => e.at === "core" ? `${e.cls}` : `${e.cls}.${e.name}`;
-  const li = (arr, side) => arr.map(l => `<li><span style="color:#${LINK[l.kind].color.toString(16).padStart(6, "0")}">●</span> ${fmt(side === "out" ? l.from : l.to)} → ${fmt(side === "out" ? l.to : l.from)}</li>`).join("");
+  const li = (arr, side) => arr.map(l => `<li><span style="color:${T.hex(LINK[l.kind].color)}">●</span> ${fmt(side === "out" ? l.from : l.to)} → ${fmt(side === "out" ? l.to : l.from)}</li>`).join("");
   const C = DATA.classes[name];
   info.style.display = "block";
   info.innerHTML = `<h2>${name}</h2><div class="k">tinydb.${C.module} · ${C.lines} lines · ${C.gates.length} gates · ${C.values.length} values</div>
     <div class="k" style="margin-top:6px">outgoing</div><ul>${li(outL, "out") || "<li>—</li>"}</ul>
-    <div class="k">incoming</div><ul>${inL.map(l => `<li><span style="color:#${LINK[l.kind].color.toString(16).padStart(6, "0")}">●</span> ${fmt(l.from)} → ${fmt(l.to)}</li>`).join("") || "<li>—</li>"}</ul>`;
+    <div class="k">incoming</div><ul>${inL.map(l => `<li><span style="color:${T.hex(LINK[l.kind].color)}">●</span> ${fmt(l.from)} → ${fmt(l.to)}</li>`).join("") || "<li>—</li>"}</ul>`;
 }
 
 function focus(name) {
@@ -626,6 +632,18 @@ renderer.domElement.addEventListener("pointermove", e => {
     }
   } else emphasize(focused);
 });
+
+// ---------- 画像としてコピー（HUD なしの 4:3） ----------
+const SNAP_W = 1600, SNAP_H = 1200;
+const snap = makeSnapshot({ renderer, composer, camera, scene, labelRenderer, redrawBackground,
+  title: DATA.package.name, logo: "code-orrery" });
+document.getElementById("btnSnap").onclick = async () => {
+  try {
+    await copyCanvas(snap(SNAP_W, SNAP_H));
+    toast(`Copied ${SNAP_W}×${SNAP_H} image to clipboard`);
+  } catch (e) { toast(`Copy failed: ${e.message}`, 4000); }
+};
+window.__snap = snap; // 確かめる用
 
 addEventListener("resize", () => {
   camera.aspect = innerWidth / innerHeight;

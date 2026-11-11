@@ -28,6 +28,8 @@ The slice is built by a small pipeline: a C call graph (`analysis/c_callgraph.py
 
 **Incident tour:** <https://okuyamashin.github.io/code-orrery/php/system.html?tour=incident> (press **⚠ INCIDENT**)
 
+**Video:** [How a File Upload Could Corrupt a PHP Request: PHP2Shell (CVE-2026-109618) Visualized in 3D](https://youtu.be/C8eQW-XPM50)
+
 ## Quick start
 
 ```bash

@@ -317,7 +317,7 @@ for (const [m, members] of Object.entries(modules)) {
   const top = Math.max(...members.map(n => planets[n].group.position.y + planets[n].R));
   const d = document.createElement("div");
   d.className = "mod-lbl";
-  d.textContent = `${m}.py`;
+  d.textContent = m;  // モジュール = ディレクトリ（C は拡張子を付けない）
   const o = new CSS2DObject(d);
   o.position.set(c.x, top + 120, c.z);
   scene.add(o);
@@ -433,7 +433,7 @@ function alertHtml(name) {
 const totalLines = names.reduce((s, n) => s + DATA.classes[n].lines, 0);
 document.getElementById("pkgtitle").textContent = DATA.package.name;
 document.getElementById("subtitle").textContent =
-  `${names.length} classes · ${Object.keys(modules).length} modules · ${totalLines} lines in methods · ${DATA.links.length} cross-class links`;
+  `${names.length} files · ${Object.keys(modules).length} directories · ${totalLines} lines in functions · ${DATA.links.length} cross-file links`;
 
 let focused = null;
 let fly = null; // { from, to, fromT, toT, t0, dur }

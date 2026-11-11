@@ -18,6 +18,16 @@ The second target is [PyYAML](https://github.com/yaml/pyyaml) and a real vulnera
 
 **Video:** [How a YAML File Could Run Code: PyYAML CVE-2020-1747 Visualized in 3D](https://youtu.be/0nHSaGo6n2M)
 
+### Incident view: PHP2Shell (a slice of C)
+
+The third target is [php-src](https://github.com/php/php-src), the engine behind PHP — written in C, with almost 6,000 functions. Showing all of it would explain nothing, so this view is a **slice**: only the files on one request path, plus their immediate neighbours. Here a file is a planet and a function is a gate.
+
+The incident is [PHP2Shell](https://nvd.nist.gov/vuln/detail/CVE-2026-109618) (CVE-2026-109618 / CVE-2026-109619, October 2026): when PHP ran out of memory it jumped straight out of a half-finished request, and a large upload with session upload-progress could reach that state. The model is the fixed release, 8.4.27 — where the bug lived blinks red, the path to it pulses amber, and what the fix hardened glows green.
+
+The slice is built by a small pipeline: a C call graph (`analysis/c_callgraph.py`), a slicer that keeps only the neighbourhood of a few seed functions (`analysis/slice_incident.py`), and exporters to the viewer's data and alert layers (`analysis/export_c3d.py`, `analysis/gen_alerts.py`).
+
+**Incident tour:** <https://okuyamashin.github.io/code-orrery/php/system.html?tour=incident> (press **⚠ INCIDENT**)
+
 ## Quick start
 
 ```bash

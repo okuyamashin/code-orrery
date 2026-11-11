@@ -686,6 +686,11 @@ document.getElementById("btnPlay").onclick = () => {
 };
 const btnIncident = document.getElementById("btnIncident");
 btnIncident.hidden = !AL?.tour?.length;
+// ?tour=incident で開いたときは、インシデントのツアーを主役にする（読み上げはボタンを押してから始まる）
+if (TOUR_MODE === "incident" && !btnIncident.hidden) {
+  document.getElementById("btnPlay").hidden = true;
+  playBox.querySelector(".hint").textContent = "Press INCIDENT for the narrated story of CVE-2020-1747 (sound on)";
+}
 btnIncident.onclick = () => {
   if ("speechSynthesis" in window) { speechSynthesis.cancel(); pickVoice(); }
   runTour(0, "incident");
@@ -731,6 +736,7 @@ const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 camera.position.set(0, sysRadius * 0.6, fitDistance(sysRadius));
 focus(null);
 fly.dur = 0.01;
+if (TOUR_MODE === "incident" && !RENDER && AL) focus(AL.focus);  // 問題の惑星へ寄って待つ
 
 function drawFrame(t, dt) {
   if (fly) {

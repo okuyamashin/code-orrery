@@ -49,6 +49,12 @@
     padding: 8px 12px; font: 13px Menlo, monospace; background: rgba(6, 26, 51, .85); }
   .links a.primary { border-color: var(--accent); box-shadow: 0 0 14px rgba(111, 232, 255, .25); }
   .links a:hover { background: rgba(10, 50, 95, .9); }
+  .card.incident { border-color: #6a1c2a; box-shadow: 0 0 40px rgba(255, 53, 80, .12); }
+  .card.incident a.shot::after { content: "⚠ INCIDENT"; border-color: #ff3550; color: #ffd0d6; background: rgba(60, 4, 14, .75);
+    box-shadow: 0 0 24px rgba(255, 53, 80, .45); }
+  .cve { font-size: 15px; color: #ff6b7d; margin-left: 8px; letter-spacing: 1px; }
+  .links a.primary.alert { border-color: #ff3550; box-shadow: 0 0 14px rgba(255, 53, 80, .3); color: #ffd0d6; }
+  .body code { font: 13px Menlo, monospace; color: #cfefff; }
   .legend { margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px 22px;
     font-size: 13px; color: #b7d8f2; }
   .legend div b { color: #eefbff; font-weight: 600; }
@@ -84,6 +90,28 @@
     </div>
   </section>
 
+  <section class="card incident">
+    <a class="shot" href="pyyaml/system.html?tour=incident" aria-label="Open the PyYAML incident tour">
+      <img src="pyyaml/preview.jpg" alt="PyYAML 5.3.1 as a planetary system, with the FullConstructor planet blinking red" width="1920" height="1080" loading="lazy">
+    </a>
+    <div class="body">
+      <h2>PyYAML <span class="cve">⚠ CVE-2020-1747</span></h2>
+      <div class="meta">89 classes · 17 modules · PyYAML 5.3.1 (fixed release) · March 2020</div>
+      <p>An incident tour. <a href="https://github.com/yaml/pyyaml" style="color:#8fc4ee">PyYAML</a> 5.3 could run arbitrary code when loading an untrusted document with <code>full_load</code>.
+        The model is the fixed release, 5.3.1: the method that was the problem blinks red, the attack path pulses amber, and what the fix added glows green.
+        Press <b>⚠ INCIDENT</b> for a narrated story: the library, the incident, the problem, and the fix.</p>
+      <p style="color:#9dbcd8;font-size:13.5px">脆弱性インシデントのツアーです。PyYAML 5.3 には、信頼できない YAML を <code>full_load</code> で読むと任意のコードが実行され得る問題がありました。
+        モデルは修正後の 5.3.1 で、問題だったメソッドが赤く点滅し、攻撃の通り道が琥珀色、修正で加わった箇所が緑に光ります。
+        <b>⚠ INCIDENT</b> を押すと、ライブラリ → インシデント → 問題箇所 → 修正箇所 の順に読み上げ付きで説明します（音が出ます）。</p>
+      <div class="links">
+        <a class="primary alert" href="pyyaml/system.html?tour=incident">⚠ Incident tour · CVE-2020-1747</a>
+        <a href="pyyaml/system.html">Planetary system · library tour</a>
+        <a href="pyyaml/class_sphere.html?c=FullConstructor">FullConstructor</a>
+        <a href="https://github.com/yaml/pyyaml/pull/386">The fix (yaml/pyyaml#386)</a>
+      </div>
+    </div>
+  </section>
+
   <section class="legend" aria-label="How to read it">
     <div><b>Planet</b> = class. Size grows with lines of code.</div>
     <div><b>Gate</b> = method. Bright ring with an opening = public, dark ring = private.</div>
@@ -96,10 +124,11 @@
   </section>
 
   <footer>
-    The structure comes from static analysis, so some dynamic calls are inferred or missing. Descriptions are read from tinydb's own docstrings.<br>
+    The structure comes from static analysis, so some dynamic calls are inferred or missing. Descriptions are read from tinydb's own docstrings; PyYAML has few docstrings, so its tour text is written by hand.<br>
     Needs a WebGL-capable browser. Three.js is loaded from a CDN.<br>
     Source: <a href="https://github.com/okuyamashin/code-orrery">github.com/okuyamashin/code-orrery</a> (MIT) ·
-    tinydb by Markus Siemens (<a href="https://github.com/msiemens/tinydb">MIT</a>)
+    tinydb by Markus Siemens (<a href="https://github.com/msiemens/tinydb">MIT</a>) ·
+    PyYAML by Kirill Simonov and contributors (<a href="https://github.com/yaml/pyyaml">MIT</a>)
   </footer>
 </main>
 </body>

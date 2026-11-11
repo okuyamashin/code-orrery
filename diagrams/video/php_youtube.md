@@ -1,7 +1,7 @@
 # YouTube 用の文面（PHP2Shell / php-src）
 
 動画ファイル: `php_tour_1080p.mp4`（1920×1080, 30fps, 2:14）
-字幕: `php_tour_1080p.en.srt`（英語）
+字幕: `php_tour_1080p.en.srt`（英語） / `php_tour_1080p.ja.srt`（日本語、`php_subtitles_ja.json` の訳から生成）
 サムネイル: `php_tour_1080p.thumbnail.png`
 チャプター元: `php_tour_1080p.chapters.txt`
 
